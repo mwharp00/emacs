@@ -1,0 +1,5 @@
+300: ftp://ftp.jpl.org/pub/elisp/apel/
+200: filename content-length last-modified file-type
+201: ".message" 109 Sun%2C%2027%20May%202003%2000%3A00%3A00 FILE 
+201: "apel-10.7.tar.gz" 125811 Sun%2C%2014%20Feb%202007%2000%3A00%3A00 FILE 
+201: "snapshots" 0 Sun%2C%2007%20Sep%202008%2000%3A00%3A00 DIRECTORY 
