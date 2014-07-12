@@ -1,0 +1,790 @@
+(set-background-color "blue")
+(package-initialize)
+(setq load-path (cons "~/elisp" load-path))
+;;(setq load-path (add-to-list 'load-path "~/elisp/org-7.7/lisp/"))
+;;(setq load-path (add-to-list 'load-path "~/elisp/org-7.7/contrib/lisp/"))
+(setq load-path (add-to-list 'load-path "~/elisp/lisp"))
+(add-to-list 'load-path (expand-file-name "~/elisp"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/elpa"))
+
+(let ((default-directory "~/emacs.d/elpa"))
+  (normal-top-level-add-subdirs-to-load-path))
+(setq load-path (add-to-list 'load-path "~/elisp/muse-latest/lisp"))
+(add-to-list 'load-path "~/elisp/planner-3.42")
+(add-to-list 'load-path "~/elisp/planner-3.42/contrib")
+(add-to-list 'load-path "~/elisp/remember-2.0")
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d")
+(add-to-list 'load-path "~/AppData/Roaming")
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d/")
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d/elpa")
+;;(add-to-list 'load-path "C:/Users/mharp/.emacs.d/elpa/org-20131209")
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d/elpa/cygwin-mount-2001")
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d/elpa/xml-rpc-20130423.1656")
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d/elpa/xahk-mode-1.2.1")
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d/elpa/helm-20140317.326")
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d/elpa/dired+-20140216.1552")
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d/elpa/iy-go-to-char-20130901.729")
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d/elpa/ace-jump-mode-20140207.530")
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d/elpa/w3m-20140420.2007")
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d/elpa/deft-20131027.757")
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d/elpa/org-bullets-20131106.1108")
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d/elpa/org-outlook-20121212.1658") 
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d/elpa/org-journal-20140310.132")
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d/elpa/org-toodledo-20140331.606")
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d/elpa/switch-window-20130914.1540")
+(add-to-list 'load-path "C:/Users/mharp/.emacs.d/elpa/remind-conf-mode.10")
+(add-to-list 'load-path "C:/cygwin/bin")
+(setq load-path (cons "~/.emacs.d/org2blog/" load-path))
+;; (require 'org2blog-autoloads)
+;;(add-to-list 'load-path "~/elisp/yasnippet-0.5.6")
+;;(add-to-list 'load-path "~/elisp/sunrise-commander")
+;;(setq load-path (add-to-list 'load-path "C:/Users/mharp/elisp/emacs-w3m/emacs-w3m"))
+;;(add-to-list 'load-path "~/.emacs.d/snippets")
+
+(setq debug-on-error t)
+;; Sets your shell to use cygwin's bash, if Emacs finds it's running
+;; under Windows and c:\cygwin exists. Assumes that C:\cygwin\bin is
+;; not already in your Windows Path (it generally should not be).
+;;
+(let* ((cygwin-root "c:/cygwin")
+       (cygwin-bin (concat cygwin-root "/bin")))
+  (when (and (eq 'windows-nt system-type)
+  	     (file-readable-p cygwin-root))
+    
+    (setq exec-path (cons cygwin-bin exec-path))
+    (setenv "PATH" (concat cygwin-bin ";" (getenv "PATH")))
+    
+    ;; By default use the Windows HOME.
+    ;; Otherwise, uncomment below to set a HOME
+    ;;      (setenv "HOME" (concat cygwin-root "/home/eric"))
+    
+    ;; NT-emacs assumes a Windows shell. Change to bash.
+    (setq shell-file-name "bash")
+    (setenv "SHELL" shell-file-name) 
+    (setq explicit-shell-file-name shell-file-name) 
+    
+    ;; This removes unsightly ^M characters that would otherwise
+    ;; appear in the output of java applications.
+    (add-hook 'comint-output-filter-functions 'comint-strip-ctrl-m)))
+;; (setq w32-get-true-file-attributes nil)
+;; (if (equal system-type 'windows-nt)
+;;    (progn
+;;      (if (require 'cygwin-mount nil t)
+;; 	  (progn
+;; 	    (setq cygwin-mount-cygwin-bin-directory "C:\\cygwin\\bin")
+ ;; 	    (cygwin-mount-activate)))))
+;; These don't work because of crlf issues?
+;;(setq shell-file-name "bash")
+;;(setenv "SHELL" shell-file-name)
+;;(setq explicit-shell-file-name shell-file-name)
+;;      (setenv "PATH" (concat "C:\\cygwin\\bin;" (getenv "PATH")))
+;;      (setq exec-path (cons "c:/cygwin/bin" exec-path))))
+;;(setq cygwin-mount-cygwin-bin-directory "C:\cygwin\bin")
+(require 'org)
+
+(require 'auto-install)
+(require 'remember)
+(require 'helm-config)
+(require 'iy-go-to-char)
+(require 'ace-jump-mode)
+;;(require 'cygwin-mount)
+;;(cygwin-mount-activate)
+;;(setq evernote-ruby-command "C:/cygwin/bin")
+;; (require 'evernote-mode)
+(require 'xml-rpc)
+(require 'dired+)
+(require 'switch-window)
+  (require 'undo-tree) 
+(autoload 'remind-conf-mode "remind-conf-mode" "Mode to help with remind files" t)
+(add-to-list 'auto-mode-alist '("\\.rem\\'" . remind-conf-mode))
+(setq auto-mode-alist
+(cons '(".reminders$" . remind-conf-mode) auto-mode-alist))
+
+(set-background-color "pink")
+
+;; Then you can bind functions like:
+;;
+(global-set-key (kbd "C-c f") 'iy-go-to-char)
+(global-set-key (kbd "C-c b") 'iy-go-to-char-backward)
+(global-set-key (kbd "C-c ;") 'iy-go-to-char-continue)
+(global-set-key (kbd "C-c ,") 'iy-go-to-char-continue-backward)
+(global-set-key (kbd "C-c j") 'ace-jump-mode)
+
+
+(setq auto-install-save-confirm nil)
+(auto-install-compatibility-setup)
+(setq w32-pass-apps-to-system nil
+      w32-apps-modifier 'super)
+(set-face-attribute 'default nil :font "Lucida Console-12") 
+(set-background-color "pink")
+     (setq sentence-end-double-space nil)
+;;     (org-remember-insinuate)
+;;(require 'yasnippet)
+;;(yas/initialize)
+;;(yas/load-directory "~/.emacs.d/snippets")
+;;
+;; For more information and detailed usage, refer to the project page:
+;;      http://code.google.com/p/yasnippet/
+
+;; Add the original Emacs Lisp Package Archive
+;;(add-to-list 'package-archives
+;;             '("elpa" . "http://tromey.com/elpa/"))
+;; Add the user-contributed repository
+;;(add-to-list 'package-archives
+;;             '("marmalade" . "http://marmalade-repo.org/packages/"))
+
+;; Use a bar cursor when mark is active and a region exists.
+(defun th-activate-mark-init ()
+  (setq cursor-type 'bar))
+(add-hook 'activate-mark-hook 'th-activate-mark-init)
+
+(defun th-deactivate-mark-init ()
+  (setq cursor-type 'box))
+(add-hook 'deactivate-mark-hook 'th-deactivate-mark-init)
+
+;; Use a red cursor in overwrite-mode
+;;(defvar th--default-cursor-color "black")
+(defadvice overwrite-mode (after th-overwrite-mode-change-cursor activate)
+  "Change cursor color in override-mode."
+  (if overwrite-mode
+      (progn
+        (setq th--default-cursor-color
+              (let ((f (face-attribute 'cursor :background)))
+                (if (stringp f)
+                    f
+                  th--default-cursor-color)))
+        (set-cursor-color "red"))
+    (set-cursor-color th--default-cursor-color)))
+
+(require 'cl)
+(defconst animate-n-steps 3)
+(require 'cl)
+;;(random t)
+;;(defun totd ())
+;;  (interactive)
+;;  (let* ((commands (loop for s being the symbols
+;;                      when (commandp s) collect s))
+;;         (command (nth (random (length commands)) commands)))
+;;    (animate-string (concat ";; Initialization successful, welcome to "
+;;                            ((substring (emacs-version) 0 16)
+;;                            "\n"
+;;                            "Your tip for the day is:\n========================\n\n"
+;;                                (save-excursion
+;;				  (describe-function command)
+;;				  (switch-to-buffer "*Help*")
+;;				  (buffer-string)
+;;                            (delete-other-windows)
+;;                            "\n\nInvoke with:\n\n"
+;;                            (where-is command t)
+;;                            (delete-other-windows) 
+;;                            )0 0))))
+;;
+;;(add-hook 'after-init-hook 'totd)  
+;;(require 'tbemail)
+;; http://jblevins.org/projects/deft /
+(set-buffer-file-coding-system 'unix)
+(when (require 'deft nil 'noerror) 
+  (setq
+   deft-extension "org"
+   deft-directory "~/Dropbox/deft/"
+   deft-text-mode 'org-mode)
+  (global-set-key (kbd "<f8>") 'deft))
+(setq deft-use-filename-as-title t)
+(require 'deft)
+(require 'calfw)
+(require 'calfw-org)
+(autoload 'remind-conf-mode "remind-conf-mode" "Mode to help with remind files" t)
+(setq cua-enable-cua-keys nil) ;; only rectangles
+(cua-mode t)
+(setq default-major-mode 'text-mode)
+(setq w32-list-proportioanal-fonts t)
+(setq deft-use-filename-as-title t)
+;;(set-face-font 'default "-outline-Bitstream Vera Sans Mono-normal-r-normal-normal-15-112-96-96-c-*-iso8859-1")
+;;Fontconfig: "DejaVu Sans Mono-12"
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+;;(require 'color-theme)
+;;    (color-theme-initialize)
+;;    (color-theme-arjen)
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(add-to-list 'auto-mode-alist '("\\.srvm\\'" . sr-virtual-mode))
+(add-to-list 'auto-mode-alist '("\\.*rc$" . conf-unix-mode))
+(add-to-list 'auto-mode-alist '("\\.rem\\'" . remind-conf-mode))
+;;(autoload 'flashcard-mode "flashcard" nil t)
+;;(add-to-list 'auto-mode-alist '("\\.deck\\'" . flashcard-mode))
+
+(setq org-directory "~/org/")
+(setq org-default-notes-file "~/org/sync/refile.org")
+(define-key global-map "\C-cc" 'org-capture)
+(autoload 'xahk-mode "xahk-mode" "Load xahk-mode for editing AutoHotkey scripts." t)
+(add-to-list 'auto-mode-alist '("\\.ahk\\'" . xahk-mode))
+
+;;(setq remember-annotation-functions '(org-remember-a (define-key global-map "\C-cr" 'org-remember)))
+
+;;  (add-hook 'remember-mode-hook 'org-remember-apply-template)
+;;  (define-key global-map [(control meta ?r)] 'remember)
+(set-background-color "yellow")
+(setq shell-file-name "bash")
+(setenv "SHELL" shell-file-name)
+(cond  ((eq window-system 'w32)
+	(setq tramp-default-method "scpx"))
+       (t
+	(setq tramp-default-method "scpc")))
+(setq delete-by-moving-to-trash t)
+;;  (set-background-color "pink")
+(if (file-directory-p "c:/cygwin/bin")
+    (add-to-list 'exec-path "c:/cygwin/bin"))
+(require 'muse)
+(require 'muse-mode)
+(require 'muse-colors)
+(require 'muse-wiki)
+(setq muse-wiki-allow-nonexistent-wikiword t)
+(require 'muse-publish)
+(require 'muse-html) ;;; allow derive style from "html" and "xhtml"
+(require 'muse-xml)  ;;; allow derive style from "xml"
+(require 'muse-latex)
+(require 'muse-journal)
+(require 'muse-project)  ;; publish files in projects
+(setq muse-project-alist
+      '(("WikiPlanner"
+	 ("~/Plans/"           ;; where your Planner pages are located
+	  :default "TaskPool" ;; use value of `planner-default-page'
+	  :major-mode planner-mode
+	  :visit-link planner-visit-link)
+	 
+	 ;; This next part is for specifying where Planner pages
+	 ;; should be published and what Muse publishing style to
+	 ;; use.  In this example, we will use the XHTML publishing
+	 ;; style.
+	 
+	 (:base "planner-xhtml"
+		;; where files are published to
+		;; (the value of `planner-publishing-directory', if
+		;;  you have a configuration for an older version
+		;;  of Planner)
+		:path "~/public_html/Plans"))))
+
+
+(require 'planner)
+
+;;  (require 'planner)
+;;  (require 'remember)
+;;  (require 'remind)
+;;  (require 'planner-id)
+(require 'planner-diary)
+(require 'org-journal)
+;;  (require 'remember-planner)
+;; (require 'ljupdate)
+;;(require 'org-install)
+;;  (require 'sunrise-commander)
+(load "escreen")
+(escreen-install)
+(setq dired-dwim-target t)
+;;(add-to-list 'load-path "~/elisp/remember-1.9")                    
+;; (require 'remember-autoloads)
+;;   (setq remember-data-file "~/org/notes.org")
+
+(setq org-remember-templates
+      '(("Tasks" ?t "* TODO %?\n  %i\n  %a" "~/org/todo/taskpool.org")
+        ("Journal" ?j "* %^t\n ETOH %?\n move %^{}\n diet %^{}\n type %^{}\n + %^{}" "~/org/JOURNAL.org")
+        ("Bill" ?b "* %^{Payee}\n  Due %^{}\n Amount %^{}" "~/org/paybill.org") 
+	("Appointments" ?a "* Appointment: %?\n%^T\n%i\n  %a" "~/org/todo.org")))
+;; REPLACES ORIGINAL in `C source code' (dumped)
+;; redefine require to leave a trace of packages being loaded
+(if (not (fboundp 'orig-require))
+    (fset 'orig-require (symbol-function 'require))
+  (message "The code to redefine `require' should not be loaded twice"))
+
+(defvar my/require-depth 0)
+
+(defun require (feature &optional filename noerror)
+  "Leave a trace of packages being loaded."
+  (cond ((member feature features)
+	 (message "%sRequiring `%s' (already loaded)"
+		  (concat (make-string (* 2 my/require-depth) ? )
+			  "+-> ")
+		  feature))
+	(t
+	 (message "%sRequiring `%s'"
+		  (concat (make-string (* 2 my/require-depth) ? )
+			  "+-> ")
+		  feature)
+	 (let ((my/require-depth (+ 1 my/require-depth)))
+	   (orig-require feature filename noerror))
+	 (message "%sRequiring `%s'...done"
+		  (concat (make-string (* 2 my/require-depth) ? )
+			  "+-> ")
+		  feature))))
+(set-background-color "blue")
+;; Set to the location of your Org files on your local system
+(setq org-directory "~/org")
+;; Set to the name of the file where new notes will be stored
+(setq org-mobile-inbox-for-pull "~/org/flagged.org")
+;; Set to <your Dropbox root directory>/MobileOrg.
+(setq org-mobile-directory "~/Dropbox/MobileOrg")
+
+(setq remember-annotation-functions '(org-remember-annotation))
+(setq remember-handler-functions '(org-remember-handler))
+(eval-after-load 'remember
+  '(add-hook 'remember-mode-hook 'org-remember-apply-template))
+(global-set-key (kbd "C-c r") 'remember)                                        
+(require 'org)
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))                         
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(setq org-todo-keywords
+      '((sequence "TODO" "FEEDBACK" "VERIFY" "|" "DONE" "DELEGATED")))
+(setq org-agenda-include-diary t)
+(setq org-agenda-include-all-todo t)
+(setq org-hide-leading-stars t)
+(setq org-startup-folded nil )
+(defalias 'list-buffers 'ibuffer)
+(setq visible-bell t)
+(desktop-save-mode 1)
+(tooltip-mode 1)
+(setq tooltip-use-echo-area t)
+;;   (setq w32shell-cygwin-bin "E:\\cygwin\\bin")
+(setq delete-by-moving-to-trash t)
+(server-start)
+(add-to-list 'load-path "~/.emacs.d/elpa/org-20130114")
+(require 'org-protocol)
+
+;;Targets include this file and any file contributing to the agenda - up to 9 levels deep
+(setq org-refile-targets (quote ((nil :maxlevel . 4)
+                                 (org-agenda-files :maxlevel . 4))))
+
+;; Use full outline paths for refile targets - we file directly with IDO
+(setq org-refile-use-outline-path t)
+
+;; Targets complete directly with IDO
+(setq org-outline-path-complete-in-steps nil)
+
+;; Allow refile to create parent tasks with confirmation
+(setq org-refile-allow-creating-parent-nodes (quote confirm))
+
+;; Use IDO for both buffer and file completion and ido-everywhere to t
+(setq org-completion-use-ido t)
+(setq ido-everywhere t)
+(setq ido-max-directory-size 100000)
+(ido-mode (quote both))
+
+(column-number-mode t)
+(global-visual-line-mode 1)
+(setq w3m-command "c:/cygwin/bin/w3m.exe")
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+;;(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+;;(define-key mode-specific-map [?a] 'org-agenda)
+;;(eval-after-load "org"
+;;  '(progn
+;;     (define-prefix-command 'org-todo-state-map))
+;;     (define-key org-mode-map "\C-cx" 'org-todo-state-map)
+;;     (define-key org-todo-state-map "x"
+;;       #'(lambda nil (interactive) (org-todo "CANCELLED")))
+(set-background-color "green")
+(setq <apps> 'super) ;; Menu key
+(defun dired-back-to-top ()
+  (interactive)
+  (beginning-of-buffer)
+  (next-line 2))
+
+(define-key dired-mode-map
+  (vector 'remap 'beginning-of-buffer) 'dired-back-to-top)
+
+(defun dired-jump-to-bottom ()
+  (interactive)
+  (end-of-buffer)
+  (next-line -1))
+
+(define-key dired-mode-map
+  (vector 'remap 'end-of-buffer) 'dired-jump-to-bottom)
+
+(setq org-capture-templates
+      '(("b" "Todo" entry (file+headline "~/org/sync/todo.index.org" "Pay Bills")
+	 "* TODO %?\n  %^t\n  %^{amount}")))
+;;   (set-background-color "pink")
+;;  (setenv "HOME" "E:\cygwin\home\mharp")
+;;     (define-key org-todo-state-map "d"
+;;       #'(lambda nil (interactive) (org-todo "DONE")))
+;;     (define-key org-todo-state-map "f"
+;;       #'(lambda nil (interactive) (org-todo "DEFERRED")))
+;;     (define-key org-todo-state-map "l"
+;;       #'(lambda nil (interactive) (org-todo "DELEGATED")))
+;;     (define-key org-todo-state-map "s"
+;;       #'(lambda nil (interactive) (org-todo "STARTED")))
+;;     (define-key org-todo-state-map "w"
+;;       #'(lambda nil (interactive) (org-todo "WAITING")))
+;;
+;;     (define-key org-agenda-mode-map "\C-n" 'next-line)
+;;     (define-key org-agenda-keymap "\C-n" 'next-line)
+;;     (define-key org-agenda-mode-map "\C-p" 'previous-line)
+;;     (define-key org-agenda-keymap "\C-p" 'previous-line))
+;;
+;;(require 'remember)
+
+;;(add-hook 'remember-mode-hook 'org-remember-apply-template)
+
+;; (define-key global-map [(control meta ?r)] 'remember)
+;;(custom-set-variables
+
+;; '(org-agenda-files (quote ("~/todo.org")))
+;;
+;; '(org-default-notes-file "~/notes.org")
+;;
+;; '(org-agenda-ndays 7)
+;;
+;; '(org-deadline-warning-days 14)
+;;
+;; '(org-agenda-show-all-dates t)
+;;
+;; '(org-agenda-skip-deadline-if-done t)
+;;
+;; '(org-agenda-skip-scheduled-if-done t)
+;;
+;; '(org-agenda-start-on-weekday nil)
+;;
+;; '(org-reverse-note-order t)
+;;
+;; '(org-fast-tag-selection-single-key (quote expert))
+;;
+;; '(org-agenda-custom-commands
+;;
+;;   (quote (("d" todo "DELEGATED" nil)
+;;
+;;           ("c" todo "DONE|DEFERRED|CANCELLED" nil)
+;;
+;;           ("w" todo "WAITING" nil)
+;;
+;;           ("W" agenda "" ((org-agenda-ndays 21)))
+;;
+;;    ("A" agenda ""
+;;
+;;      ((org-agenda-skip-function
+;;
+;;       (lambda nil
+;;
+;;             (org-agenda-skip-entry-if (quote notregexp) "\\=.*\\[#A\\]")))
+;;
+;;             (org-agenda-ndays 1)
+;;
+;;           (org-agenda-overriding-header "Today's Priority #A tasks: ")))
+;;
+;;     ("u" alltodo ""
+;;
+;;     ((org-agenda-skip-function
+;;
+;;       (lambda nil
+;;
+;;             (org-agenda-skip-entry-if (quote scheduled) (quote deadline)
+;;
+;;                                     (quote regexp) "<[^>\n]+>")))
+;;
+;;           (org-agenda-overriding-header "Unscheduled TODO entries: "))))))
+;;
+;; '(org-remember-store-without-prompt t)
+;;
+;; '(org-remember-templates
+;;
+;;   (quote ((116 "* TODO %?\n  %u" "~/todo.org" "Tasks")
+;;
+;;           (110 "* %u %?" "~/notes.org" "Notes"))))
+;;
+;; '(remember-annotation-functions (quote (org-remember-annotation)))
+;;
+;; '(remember-handler-functions (quote (org-remember-handler))))
+
+;;;(setq evernote-enml-formatter-command '("w3m" "-dump" "-I" "UTF8" "-O" "UTF8"))
+;;(global-set-key "\C-cec" 'evernote-create-note)
+;;(global-set-key "\C-ceo" 'evernote-open-note)
+;;(global-set-key "\C-ces" 'evernote-search-notes)
+;;(global-set-key "\C-ceS" 'evernote-do-saved-search)
+;;(global-set-key "\C-cew" 'evernote-write-note)
+;;(global-set-key "\C-cep" 'evernote-post-region)
+;;(global-set-key "\C-ceb" 'evernote-browser)
+(defun reindent-whole-buffer ()
+  "Reindent the whole buffer."
+  (interactive)
+  (indent-region (point-min)
+                 (point-max)))
+
+
+
+(defun insert-date-stamp()
+  (interactive)
+  (insert (org-read-date)))
+;;(set-background-color "white")
+(global-set-key (kbd "<f5> b") 'shell-command)
+(global-set-key (kbd "<f5> s") 'replace-string)
+(global-set-key (kbd "<f5> c") 'org-w3m-copy-for-org-mode)
+(global-set-key (kbd "<f5> l") 'getskd)
+(global-set-key (kbd "<f9>") 'escreen-prefix)
+(global-set-key (kbd "s-c") 'calendar)
+(global-set-key (kbd "s-d") 'insert-date-stamp)
+(global-set-key (kbd "s-i") 'imenu-anywhere)
+(global-set-key (kbd "s-t") 'orgtbl-mode)
+(global-set-key (kbd "s-r") 'revert-buffer)
+(global-set-key (kbd "s-s") 'mwh-create-set)
+(global-set-key (kbd "s-q") 'reindent-whole-buffer)
+(global-set-key (kbd "<f7> t") 'planner-create-task-from-buffer)
+(global-set-key (kbd "<f7> r") 'remember)
+(global-set-key (kbd "<f7> c") 'remember-region)
+(global-set-key (kbd "<f7> n") 'planner-create-note-from-task)
+;; Write backup files to own directory
+(setq backup-directory-alist
+      `(("." . ,(expand-file-name
+                 (concat user-emacs-directory "backups")))))
+
+;; Make backups of files, even when they're in version control
+(setq vc-make-backup-files t)
+
+;;; boilerplate
+;; Have a directory reserved for "boilerplate" text to insert
+(defun boilerplate-insert ()
+  "Insert a file from a boilerplate directory"
+  (interactive
+   (let  ((default-directory "~/.private/boilerplate"))
+     (ido-insert-file)))
+  )
+
+(global-set-key (kbd "C-c i") 'boilerplate-insert)
+
+;; save history between sessions  
+(setq savehist-additional-variables    ;; also save...  
+      '(search-ring regexp-search-ring compile-history)    ;; search and history  
+      savehist-file "~/.emacs.d/savehist") ;; where to save  
+(savehist-mode t)                      ;; do customization before activate
+
+;;(setq planner-project "WikiPlanner")  
+;;  (setq muse-project-alist
+;;        '(("WikiPlanner"        ;; use value of `planner-project'
+;;           ("~/Plans"           ;; where your Planner pages are located
+;;            :default "TaskPool" ;; use value of `planner-default-page'
+;;            :major-mode planner-mode
+;;            :visit-link planner-visit-link))))
+;;     (require 'planner)
+;;(setq w32-get-true-file-attributes nil)
+;;           (:base "planner-xhtml"
+;;                :path "~/proj/notmine/planner-out"))
+;;          ))
+;;(set-background-color "pink")
+;;(setq w32shell-cygwin-bin "c:\\cygwin\\bin")
+;;(require 'w32shell)
+;;(w32shell-add-emacs)
+;; (w32shell-set-shell "cygwin")cuz (void-function cygwin-mount-activate)
+(defun cygwin-shell ()
+  "Run cygwin bash in shell mode."
+  (interactive)
+  (let ((explicit-shell-file-name "c:/cygwin/bin/bash"))
+    (call-interactively 'shell)))
+(setq explicit-bash-args '("--login" "-i"))
+;;   (setq planner-day-page-template
+;;              "* Tasks\n\n\n* Schedule\n\n\n* Diary\n\n\n* Notes")
+
+;;  (and (= emacs-major-version 23) 
+;;  (defun server-ensure-safe-dir (dir) "Noop" t)
+(require 'ido)
+(ido-mode t)
+(require 'w3m-ems)
+(require 'w3m)
+;;(require 'w3m-load)
+;;  (set-background-color "pink")
+;;  (require 'tex-mik)
+;;  (autoload 'gtypist-mode "~/elisp/gtypist-mode")
+
+;;  (setq planner-diary-use-diary t)
+(defun copy-line (&optional arg)
+  "Do a kill-line but copy rather than kill.  This function directly calls
+kill-line, so see documentation of kill-line for how to use it including prefix
+argument and relevant variables.  This function works by temporarily making the
+buffer read-only, so I suggest setting kill-read-only-ok to t."
+  (interactive "P")
+  (toggle-read-only 1)
+  (kill-line arg)
+  (toggle-read-only 0))
+
+(setq-default kill-read-only-ok t)
+(global-set-key "\C-c\C-k" 'copy-line)
+
+(require 'browse-kill-ring)
+(browse-kill-ring-default-keybindings)
+
+;;  (set-frame-height (selected-frame) 32)
+;;  (set-frame-width (selected-frame) 80)
+;;
+(planner-diary-insinuate)
+;;  (setq mark-diary-entries-in-calendar t)
+;;  (add-hook 'diary-display-hook 'fancy-diary-display)
+;;  (planner-insinuate-calendar)
+;;  (setq remember-handler-functions '(remember-planner-append))
+;;  (setq remember-annotation-functions planner-annotation-functions)
+(setq planner-carry-tasks-forward 0)
+;;   (require 'org)
+;;   (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+;; (define-key global-map "\C-cl" 'org-store-link)
+;; (define-key global-map "\C-ca" 'org-agenda)
+;; (setq org-log-done t)
+;; Lastly, here is another snippet for your .emacs file.  It creates a
+;; keybinding in planner-mode, C-c C-w, which jumps you to the
+;; Schedule section of that file.
+
+;; (defun planner-goto-schedule ()
+;;   (interactive)
+;;   (goto-char (point-min))
+;;   (unless (re-search-forward "^\\* Schedule\n\n" nil t)
+;;     (re-search-forward "^\\* Notes")
+;;     (beginning-of-line)
+;;     (insert "* Schedule\n\n\n\n")
+;;     (forward-line -2)))
+
+;; (eval-after-load "planner"
+;;   '(progn
+;;      (define-key planner-mode-map [(control ?c) (control ?w)]
+;;        'planner-goto-schedule)))
+;;(plan)
+;; ;; To include .reminders as a shell mode
+
+;;  (setq auto-mode-alist
+;;        (cons '(".reminders$" . shell-script-mode) auto-mode-alist))
+;;
+;;(add-hook 'sh-mode-hook
+;;
+;;     (lambda ()
+;;       (auto-fill-mode nil)))
+;;;; Lastly, here is another snippet for your .emacs file.  It creates a
+;;;; keybinding in planner-mode, C-c C-w, which jumps you to the
+;;;; Schedule section of that file.
+;;
+;; (defun planner-goto-schedule ()
+;;   (interactive)
+;;   (goto-char (point-min))
+;;   (unless (re-search-forward "^\\* Schedule\n\n" nil t)
+;;     (re-search-forward "^\\* Notes")
+;;     (beginning-of-line)
+;;     (insert "* Schedule\n\n\n\n")
+;;     (forward-line -2)))
+;;
+;; (eval-after-load "planner"
+;;   '(progn
+;;      (define-key planner-mode-map [(control ?c) (control ?w)]
+;;        'planner-goto-schedule)))
+;;(plan)
+;; ;; To include .reminders as a shell mode
+ (setq auto-mode-alist
+     (cons '(".reminders$" . remind-conf-mode) auto-mode-alist))
+;;
+;;  (setq auto-mode-alist
+;;        (cons '(".reminders$" . shell-script-mode) auto-mode-alist))
+;;
+;;(add-hook 'sh-mode-hook
+;;
+;;     (lambda ()
+;;       (auto-fill-mode nil)))
+;;   (setq-default ispell-program-name "E:\\cygwin\\bin\\aspell.exe")
+;;   (setq text-mode-hook ' (lambda()
+;;(flyspell-mode t)
+;;))
+;; (autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
+;; (add-hook 'message-mode-hook 'turn-on-flyspell)
+;; (add-hook 'text-mode-hook 'turn-on-flyspell)
+;; (defun turn-on-flyspell ()
+;;   "Force flyspell-mode on using a positive arg.  For use in hooks."
+;;  (interactive)
+;;   (flyspell-mode 1))
+
+;;(global-font-lock-mode t)
+;; Faster point movement
+(load-theme 'wombat t)
+
+(global-set-key "\M-\C-p" 
+		'(lambda () (interactive) (previous-line 5)))
+
+(global-set-key "\M-\C-n" 
+		'(lambda () (interactive) (next-line 5)))
+(setq initial-scratch-message nil)
+
+;;(defun cygwin-shell ()
+;;  "Run cygwin bash in shell mode."
+;;  (interactive)
+;;  (let ((explicit-shell-file-name "E:/cygwin/bin/bash"))
+;;    (call-interactively 'shell)))
+
+(fset 'getskd
+      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([134217747 83 75 68 32 91 48 45 57 93 91 48 45 57 93 13 1 67108896 5 134217847 24 111 25 return 24 111] 0 "%d")) arg)))
+
+(fset 'mwh-create-set
+      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([f9 2 24 48 f9 99 24 2 24 48 f9 99 24 98 111 return f9 99 24 98 116 111 return 24 51 24 111 24 98 114 101 return f9 99 24 98 105 110 112 return 24 51 24 111 24 98 100 114 97 return f9 99 24 98 114 110 return 21 tab 21 tab f9 99 24 98 102 117 return 21 tab 21 tab f9 48 f9 2] 0 "%d")) arg)))
+
+(fset 'leg-w-ground-time
+      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([134217830 134217830 134217830 134217792 24 114 115 97 134217830 134217792 24 114 115 98 134217830 134217792 24 114 115 99 134217830 6 6 67108896 134217792 24 114 115 100 134217830 134217792 24 114 115 101 134217830 6 6 6 67108896 134217792 134217792 24 114 115 102 134217830 134217830 6 6 6 6 6 6 6 67108896 134217792 134217792 24 114 115 103 134217830 134217830 14 1 134217790 return up 24 114 105 97 134217830 24 114 105 98 134217830 24 114 105 100 134217830 24 114 105 99 134217830 24 114 105 101 134217830 24 114 105 102 134217830 134217830 24 114 105 103 134217830 134217830 return] 0 "%d")) arg)))
+
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" . 
+               "http://marmalade-repo.org/packages/") t)
+(add-to-list 'package-archives
+             '("elpa" . "http://tromey.com/elpa/") t)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives 
+	     '("org" . "http://orgmode.org/elpa/") t)
+;;(set-background-color "pink")
+;;(custom-set-variables
+;; custom-set-variables was added by Custom.
+;; If you edit it by hand, you could mess it up, so be careful.
+;; Your init file should contain only one such instance.
+;; If there is more than one, they won't work right.
+;; '(tool-bar-mode nil))
+;;(custom-set-faces
+;; custom-set-faces was added by Custom.
+;; If you edit it by hand, you could mess it up, so be careful.
+;; Your init file should contain only one such instance.
+;; If there is more than one, they won't work right.
+;; )
+
+(put 'upcase-region 'disabled nil)
+
+(put 'downcase-region 'disabled nil)
+;;(set-background-color "pink")
+;;(custom-set-variables
+;; custom-set-variables was added by Custom.
+;; If you edit it by hand, you could mess it up, so be careful.
+;; Your init file should contain only one such instance.
+;; If there is more than one, they won't work right.
+'(custom-safe-themes (quote ("1f2b1f771fb60d7fb0f31d7adfc1e1c4524c7318c3aeb100ad6fab4dce389c0b" "485737acc3bedc0318a567f1c0f5e7ed2dfde3fb" default)))
+'(exec-path (quote ("c:/Program Files/MiKTeX 2.9/miktex/bin" "C:/WINDOWS/System32" "C:/WINDOWS" "C:/WINDOWS/System32/Wbem" "C:/cygwin/bin" "C:/cygwin/usr/local/bin" "C:/cygwin/usr/X11R6/bin" "C:/Program Files/QuickTime/QTSystem/" "C:/emacs/emacs-24.3/bin" "F:/Hold/winpack/bin")))
+'(explicit-shell-file-name "C:/cygwin/bin/bash")
+'(muse-project-alist (quote (("WikiPlanner" ("~/Plans/" "TaskPool")))))
+'(org-agenda-files (quote ("~/org/sync/FutureMedia.org" "~/elisp/fromgcal.org" "~/org/sync/+Rtoday.org" "~/org/sync/todo.index.org" "~/org/sync/taskpool.org" "~/org/sync/todo.index.org")))
+'(org-export-author-info nil)
+'(org-export-html-postamble nil)
+'(org-export-html-preamble nil)
+'(org-export-skip-text-before-1st-heading t)
+'(org-journal-dir "~/docs/journal/")
+'(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-irc org-mew org-mhe org-protocol org-rmail org-vm org-wl org-w3m org2rem)))
+'(package-enable-at-startup nil)
+'(planner-use-other-window nil)
+'(recentf-mode t)
+'(show-paren-mode t)
+'(tool-bar-mode nil)
+'(w32shell-shell (quote cygwin))
+
+;;change w3m user-agent to android
+(setq w3m-user-agent "Mozilla/5.0 (Linux; U; Android 2.3.3; zh-tw; HTC_Pyramid Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.")
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "White" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "outline" :family "Lucida Sans Typewriter")))))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
+ '(custom-safe-themes (quote ("bf648fd77561aae6722f3d53965a9eb29b08658ed045207fe32ffed90433eb52" "4dacec7215677e4a258e4529fac06e0231f7cdd54e981d013d0d0ae0af63b0c8" "6bc195f4f8f9cf1a4b1946a12e33de2b156ce44e384fbc54f1bae5b81e3f5496" default)))
+ '(org-capture-templates (quote (("b" "bill" entry (file+headline "~/org/sync/todo.index.org" "Pay Bills") "* TODO %?
+  %^t
+  %^{amount}"))))
+ '(org-journal-dir "~/docs/journal/"))
+(set-face-attribute 'default nil :font "Lucida Console-12") 

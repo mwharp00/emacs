@@ -1,0 +1,105 @@
+         PILOT TRIP TRADE WITH OPEN TIME STATUS                 
+                   680672 HARPSTER MW                           
+                   AS OF 24MAY13/1139                           
+  SEQ DATE   TTOT STATUS   POSTED   DROP TYPE                   
+14941/31MAY     RED                                             
+30585/03JUN     RED                                             
+30395/20JUN     RED                                             
+30446/27JUN     RED                                             
+END                                                             
+                                                                
+** TO DROP, TRADE, OR PICKUP FROM OPEN TIME **                  
+   ENTER  HT     OR SEE HTHELP                                  
+                                                                
+HSS/FO/30585/03JUN«                                             
+SEQ 30585       BASE SLT  SEL  173 ORG SCH DOM S80              
+F/O  ADAMS RE               EMP NBR 635046                      
+CAPT HARPSTER MW            EMP NBR 680672                      
+    DT EQ  FLT STA DEP  M STA ARR  AC FLY    GTR  GRD     ACT   
+SKD 03 22 1723 STL 1810 D DFW 2005    1.55        1.35          
+SKD 03 22 2237 DFW 2140   SMF 2320    3.40                      
+D/P SKD  5.35        P/C  0.00  TL  5.35                        
+HALF DAY COUNT SMF  2                                           
+SKD ONDUTY  8.25 ODL  11.30                                     
+SKD 04 22  472 SMF 1205 L DFW 1730    3.25        0.45          
+SKD 04 22  635 DFW 1815   IAH 1915    1.00        0.40          
+SKD 04 22 1622 IAH 1955 D DFW 2105    1.10        1.30          
+SKD 04 EF 1069 DFW 2235   DEN 2330    1.55                      
+D/P SKD  7.30        P/C  0.00  TL  7.30                        
+HALF DAY COUNT DEN  3                                           
+SKD ONDUTY 11.40 ODL  16.15                                     
+SKD 05 EF 1752 DEN 1700 D ORD 2030    2.30        1.40          
+SKD 05 EF 1865 ORD 2210   STL 2315    1.05                      
+D/P SKD  3.35        P/C  0.00  TL  3.35                        
+SKD ONDUTY  6.30                                                
+SEQ SKD 16.40        P/C  0.00  TL 16.40 TAFB  54.20            
+HSS/FO/30395/20JUN«                                             
+SEQ 30395       BASE SLT  SEL  173 ORG SCH DOM S80              
+F/O  HUEMME EE              EMP NBR 640285                      
+CAPT HARPSTER MW            EMP NBR 680672                      
+    DT EQ  FLT STA DEP  M STA ARR  AC FLY    GTR  GRD     ACT   
+SKD 20 22 1092 STL 1400   LGA 1735    2.35                      
+D/P SKD  2.35        P/C  0.25E TL  3.00                        
+HALF DAY COUNT LGA  2                                           
+SKD ONDUTY  3.50 ODL  11.10                                     
+SKD 21 22  301 LGA 0600 B ORD 0725    2.25        1.00          
+SKD 21 22 1156 ORD 0825   DCA 1115    1.50        0.40          
+SKD 21 22 1120 DCA 1155 L ORD 1255    2.00                      
+D/P SKD  6.15        P/C  0.00  TL  6.15                        
+HALF DAY COUNT ORD  3                                           
+SKD ONDUTY  9.10 ODL  15.50                                     
+SKD 22 22 2301 ORD 0600 B DFW 0820    2.20        0.45          
+SKD 22 22 2334 DFW 0905   ORD 1125    2.20        2.20          
+SKD 22 22 1120 ORD 1345   STL 1450    1.05                      
+D/P SKD  5.45        P/C  0.00  TL  5.45                        
+SKD ONDUTY 10.05                                                
+SEQ SKD 14.35        P/C  0.25  TL 15.00 TAFB  50.05            
+HSS/FO/30446/27JUN«                                             
+SEQ 30446       BASE SLT  SEL  173         DOM S80              
+F/O  SCHNEIDER GW           EMP NBR 139825                      
+CAPT HARPSTER MW            EMP NBR 680672                      
+    DT EQ  FLT STA DEP  M STA ARR  AC FLY    GTR  GRD     ACT   
+SKD 27 22 2149 STL 1820 D DFW 2010    1.50        1.10          
+SKD 27 22  871 DFW 2120   SLC 2300    2.40                      
+D/P SKD  4.30        P/C  0.00  TL  4.30                        
+HALF DAY COUNT SLC  2                                           
+SKD ONDUTY  6.55 ODL  12.00                                     
+SKD 28 22  878 SLC 1215 L DFW 1555    2.40        1.30          
+SKD 28 EF  473 DFW 1725   GDL 1950    2.25                      
+D/P SKD  5.05        P/C  0.00  TL  5.05                        
+HALF DAY COUNT GDL  2                                           
+SKD ONDUTY  7.50 ODL  10.50                                     
+SKD 29 EF 1034 GDL 0755 B DFW 1030    2.35        1.30          
+SKD 29 EF 2055 DFW 1200 L PDX 1355    3.55                      
+D/P SKD  6.30        P/C  0.00  TL  6.30                        
+HALF DAY COUNT PDX  3                                           
+SKD ONDUTY  9.15 ODL  14.50                                     
+SKD 30 EF 1782 PDX 0600 B DFW 1145    3.45        1.05          
+SKD 30 22 1540 DFW 1250   STL 1430    1.40                      
+D/P SKD  5.25        P/C  0.00  TL  5.25                        
+SKD ONDUTY  7.45                                              ¥ 
+MD«                                                             
+F/O  SCHNEIDER GW           EMP NBR 139825                     ¥
+CAPT HARPSTER MW            EMP NBR 680672                      
+    DT EQ  FLT STA DEP  M STA ARR  AC FLY    GTR  GRD     ACT   
+SKD 27 22 2149 STL 1820 D DFW 2010    1.50        1.10          
+SKD 27 22  871 DFW 2120   SLC 2300    2.40                      
+D/P SKD  4.30        P/C  0.00  TL  4.30                        
+HALF DAY COUNT SLC  2                                           
+SKD ONDUTY  6.55 ODL  12.00                                     
+SKD 28 22  878 SLC 1215 L DFW 1555    2.40        1.30          
+SKD 28 EF  473 DFW 1725   GDL 1950    2.25                      
+D/P SKD  5.05        P/C  0.00  TL  5.05                        
+HALF DAY COUNT GDL  2                                           
+SKD ONDUTY  7.50 ODL  10.50                                     
+SKD 29 EF 1034 GDL 0755 B DFW 1030    2.35        1.30          
+SKD 29 EF 2055 DFW 1200 L PDX 1355    3.55                      
+D/P SKD  6.30        P/C  0.00  TL  6.30                        
+HALF DAY COUNT PDX  3                                           
+SKD ONDUTY  9.15 ODL  14.50                                     
+SKD 30 EF 1782 PDX 0600 B DFW 1145    3.45        1.05          
+SKD 30 22 1540 DFW 1250   STL 1430    1.40                      
+D/P SKD  5.25        P/C  0.00  TL  5.25                        
+SKD ONDUTY  7.45                                                
+SEQ SKD 21.30        P/C  0.00  TL 21.30 TAFB  69.25            
+                                                                

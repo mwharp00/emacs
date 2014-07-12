@@ -1,0 +1,264 @@
+
+Len and Celestia-
+
+On Sat, Mar 8, 2014 at 12:13 PM, Leonard Harpster <len.harpster@gmail.com wrote:
+ 
+>At work there is a battle for keyboard layout supremacy. I'm the only
+>Dvorak user and this has gotten me some curiosity from the Qwerty
+>flock. There have been a series of online speed typing tests that four
+>of us have taken. So far, I'm dead last. But there have been some
+>interesting developments. The leader in typing speed (+100 WPM) was
+>converted due to arguments about Dvorak being more comfortable. Typing
+>'the' was a major selling point. The the the the the the. It's
+>glorious. The second fastest, a piano player, has said that if I can
+>top his score of 80 WPM, he would switch. And the third will almost
+>certainly cave once the others have switched. To top it off, he's a
+>keyboard connoisseur; Dvorak represents the final frontier. I'm at
+>around 65 WPM and I'm practicing when I can. The Dvorak outlook at HP
+>is good.
+
+Even though I use and like the layout, I'm not much of a
+evangelist. Lenny Kubiak, when I asked him secrets of business success
+(this during the time I was constantly looking out for something
+intelligent to say regarding No. 1 son's attempt to find his way in
+the economy) said, "For me, it is typing. I can type 120 wpm while I
+am having a conversation with someone." Qwerty. That said, I have
+followed a ton of threads, emacs and otherwise, that cover layouts,
+keyboards, and RSI. Kathleen is fast (qwerty) but has had RSI
+issues. She solved it w/ ergonomics. A keyboard caddy, Goldtouch
+keyboard and a vertical mouse. Me, I was going along w/ Dragon Nat
+Speak saying dictating sure is different than writing!?! Now as I am
+well into my baby steps with touch-typing, the most important thing
+for me is the the swapping of control and alt for C- and M-. That way
+I can curl my thumb under to hit the key next to the space bar. Since
+the caps lock has no C- duties, I mapped it to Backspace. As long as
+we are here, do you have a docs key between the right and left Alt and
+Control keys? I map that to Super in emacs. Don't worry Celestia,
+emacs will be in a separate post. But here, in W32 (easier to type
+ than Windoze) there is AHK -- AutoHotKey. Essential tool. Good enough
+that there is a port to Linux. Get it. Create a file -- mine is
+swap.keys.ahk -- .ahk is the required part. In the file:
+
+
+;; Remap Keys in Windows.
+LAlt::LCtrl
+RAlt::RCtrl
+RCtrl::RAlt
+Capslock::BS
+LCtrl::LAlt
+
+
+Put it where you can find it. Double click - it calls and runs. Oh and
+the glory of the dvorak "the" for me, it is hyphen on the right
+pinky. All day long, I'm ready: ----- :)<-- my first emoticon...
+
+
+> Speaking of another difficult and unpopular computer choice, I'd
+>like to use emacs at work. My goal is to be able to use emacs as an
+>IDE for Python and LaTex. I haven't really had a reason to use those
+>two programs in the course of my work, but maybe that's due to the
+>slowness of using Windows native shortcuts? Last time we spoke, you
+>were thinking that you'd like to help jumpstart Emacs usage at
+>work. If you are still interested, it would be awesome to have a
+>.emacs file that I could just plug into the emacs I have at work. I'm
+>not sure which emacs I'm using; I downloaded it in August. When I go
+>to work on Monday, I'll send a follow-up email with that info.
+
+
+As stated above, separate cover...
+
+>Here's an update
+>from work; I'm running emacs 24.3.1.
+
+That's good, 24.4 is not out yet. Soon...   
+
+>Also, we have revised and solidifed our future housing plans! We are
+>definitely moving out on May 1st; our apartment complex made the
+>choice easy by raising our rent by $250/month. The current plan of
+>record is to move into a smaller cheaper place and furiously
+>save. This will allow us to buy a cheap house in vancouver (~150k)
+>that we can then pay off in a matter of ~5 years. This will allow us
+>to then sell it and move to lovely portland with 150k in our
+>pockets. I would like to draw on your knowledge as a real estate
+>mogul; what do you think? Can you help us to estimate the cost of home
+>owning?
+
+You remember when I was visiting SD; looking at some math notation. I
+express shock. You, "Dad, it is just a language." A cartoon: 2 people
+in a room with a blackboard covered w/ math. But in the middle of it
+is this plain language: then a miracle appears. Then the notation
+continues...  Now I am not being critical and I am not saying that
+this chain of events are unlikely (or impossible like a miracle), just
+that there are some unexamined things here. I think the caption may
+have been, "you may need to flesh out this part here..." So in the
+grand fleshout tradition (there is no such tradition - I made it up)
+Leave current digs, move to cheaper digs, save, buy, save so that you
+pay off principal, sell, and then buy. The first two are not really
+rich in money concepts in that they are more like decisions. I am
+willing to pay X to live like Y. Financially savvy individuals might
+stay even with the rent increase; others may go. We talked about the
+cheapest in the context of your lunch group -- it is a fool's
+errand. "So living in my van, I pay no home or rental insurance..."
+Who cares? A good way to think about these sorts of decisions -- you
+paid rent in a cool San Diego neighborhood. Liked it, even though it
+was a higher proportion of your income than the current L55 place. The
+prospect of saving enough to purchase in that place is onerous. It
+would take years. You did it and liked it and moved on. Call this the
+"this is your life" principle. In other words, I've been living for
+tomorrow my whole life and then I died. Dammit!
+
+Or this one: A lot of us are working harder than we want, at things we
+   don't like to do. Why? ...In order to afford the sort of existence
+   we don't care to live.  -Bradford Angier
+
+Now a money principle: You must know what you are paying. A great book
+from my youth -- Your Money or Your Life really illuminated this. Get
+a job. It pays X. Does it? Need another car, more insurance, more
+wardrobe (assuming a Value Village shopper like my son, this would be
+NA) and doggie daycare. Now maybe you still take the job, but you
+understand the arithmetic. Same as choosing where you live; taxes,
+commute expenses, and time spent for both of you on the road. All must
+be considered. Quantify everything that can be quantified. When you
+are looking at uncertain things in the future, you still must
+quantify. That means take your best guess and then revisit it and
+continue to refine it. Is that a Bayesian process? Can you predict the
+weekly driving to be done in three years time? That's OK,
+guess. What's the motorcycle cost? What will be the replacement for
+the car? When?
+
+So what we are talking about here is a budget. We are at another money
+concept here. I read one financial planner that puts every client
+through a budget exercise. Now if you are making 20,000 a month; why
+go through an exercise of estimating what you spend on food? The
+reason is that it is still useful to identify overspending; spending
+that does not reflect your own priorities. Also, she notes that most
+can cut one third of their spending with out significant pain. The
+goal is not to necessarily cut, but to know that you can. A budget
+should be a no fear thing. These are my priorities. This is what we
+want. They are reflected in how much I spend and what I spend it
+on. There is another level of complexity in a marriage. Two people and
+one budget that each has to buy into. I have no formula for you here
+other than to be explicit and to use tit-for-tat principles. You have
+a ton of really important things that you have to collaborate on --
+sex, children, food... A budget should be small potatoes. Going back
+to the previous planner, we went from quantification to a budget, but
+she goes further. You need quantification in assets, liabilities, and
+future needs to obtain goals. Because this goes so deep into so many
+aspects of life, she recommends a bite-size approach. Get a steno
+notebook and spend 20 min. every other day putting together your
+plan. What is the match in HP's 401(k)? Put it in dere. Any bennies
+with HP stock? What will your income be in 5 years? Where you are now
+is a pretty simple state. But the principles apply lifelong. Net
+worth, income, expenses, long-term goals, long-term savings, and other
+balances will be a fixture from here on out. What is important to you
+two? At this level investing is just a piece. All this is foundational
+to decisions for example, of paying down principal. The $150,000 in
+your pocket is money paid to you as wages, and that is net, after
+taxes.
+
+Now let's turn to the real estate question. To my mind, there is one
+clear benefit to buying a home and that is the mortgage interest
+deduction. This works out to a small subsidy for the amount of your
+mortgage payment that is interest. Your plan of paying off early
+changes that equation. But remember that you are also assuming
+responsibility for a property that could create hugely expensive
+demands on you. You will think "man, how cool would it be to simply
+call the landlord -- sorry, the sewage pipe broke... But that is just
+the fine print. Like many, and like me (though now less and less, it
+is an age thing), you want to own a house. The mortgage interest
+deduction probably covers a good percentage of your costs of
+maintenance of the physical plant. I like your first post
+better. Here's why: Don't really have the money -- good. Where you are
+at is implied. See above for sketchy budget info. Not worth my time to
+type or locate a bazillion links. Here is one: [[http://www.bettermoneyhabits.com/en/videos/khan-partnership.html#fbid%3DVS_p4V2EHDB][Khan Academy and Bank
+of America Partnership from Better Money Habits]] Don't really know
+where we want to live -- good. A set of questions to research is
+implied. Here is an awesome tool: [[http://www.washingtonpost.com/sf/local/2013/11/09/washington-a-world-apart/][zip code demographics]]. The
+granularity is, of course at the level of the zipcode, so my place in
+St Louis shows up more down than it really is as it includes a ghetto
+N of Delmar. 63112 if you wish to see. Here's the thing, you also have
+to make guesses about the future. The neighborhood did become bombed
+out in the 70s -- Ernst and Frances stayed but they didn't love their
+life with bars on the windows. Not relevent? Yes, it is. It is a
+particular kind of real estate risk, neighborhoods change over
+time. By definition you deal with it because you pay for the hot
+neighborhood and get the pedestrian one at a discount. Over time --
+key real estate concept -- things get better and better for you. The
+dollars you pay to your fixed rate mortgage get cheaper and
+cheaper. The value of the home also appreciates. The virtue of
+inflation (!?!) does all this for you. But it takes years, hopefully
+not years punctuated w/ 50% drops like 2008. Short term, the
+transaction costs will skin you alive. So start the process. And why
+limit your search now? It is free to research. Throw in the 1 bdrm in
+the sexy Portland youth ghetto. Condo fees? Loft development failed?
+Oregon state taxes? Really close to HP? Really close to Celestia's
+school? Seriously, you two learned in SoCal -- spend small amounts of
+time on the road...
+
+On to investment, yes save 10% and invest 100% of it. You want
+something to set and forget for decades. You two are busy improving
+your skills; you don't need to learn the intricacies of this
+discipline. If there is intellectual curiosity, a library book:
+Capital Ideas: The Improbable Origins of Modern Wall Street by Peter
+L. Bernstein
+
+75% of those who study and work hard in this field do worse than
+this. Simply buy very inexpensive index funds or ETFs that mirror the
+global economy. In 2008, it was something like US 41%, developed world
+EAFE Europe, Asia, and Far East 47% and the developing world 12%.
+
+BTW, investing in yourselves is wonderful. The returns are great and
+the serendipity factor is off the charts. It doesn't count against the
+10% savings but it should be budgeted and funded as a great
+investment.
+ 
+The order to do these things are tied for first, pay off debt and do
+the 401(k) matching funds. Second, more saving that is tax
+advantaged. This is tax deducted. Emergency funds -- you can probably
+do without and just rely on a sob story to open the Daddy-O, Baby
+purse strings.
+
+"One thing at a time. Most important thing first. Start now." Save 10%
+of gross.
+
+While gains and losses do affect your wealth, it is far more important
+to focus on your process than on your performance. Develop and stick
+to a consistent, well-defined approach to investing based on what has
+been proven to work over the long term... AAII
+
+==
+
+Perhaps the check writing was abrupt, but I wanted to convey the fact that I am in. 
+
+You can subcontract as you wish, so long as it makes economic sense. 
+
+Record keeping can be done as you wish. If you want to send the info in email -- that's fine. If you would rather do it long hand, you could make copies and send them in the mail.
+
+Rate of pay was not discussed, and maybe that is just as well. $15/hr is $120 for an 8 hr day and $20 of course is $160. Maybe using these 
+
+==
+
+I have my schedule and unfortunately my last day off is 5 June. I will be on my way to the tropics when Nicky is getting his diploma. I talked to Grace and she is planning on making it. I also have news on the Grace front. She passed her examination. Maybe that should be a capital letter. I know that champagne was poured after the several hour oral. Only four years to go!
+
+Any progress on the gift identification project? If I should call Nicky to analyze the situation, let me know.
+
+== 
+
+I started this initial e-mail weeks ago. I was struggling with all of these angles regarding pay rates, estimates, bookkeeping and priorities. It turned out that the best thing to do was to step back and let Donetta and Taylor go to work. The phone call brought the great news that the outside was already nearly done (I concur on waiting on the mulch) and noticed by the neighbors.
+
+I am not saying that being a slow writer is a good thing; but it worked out well in this situation.
+
+I apologize if on that Friday it seemed abrupt at the end of our conversation. Maybe there were so many decisions to be made that I got exhausted. But I also wanted to demonstrate that I was "in".  So that is how the check came about.
+
+I don't know how good my notes are, but I will try to put together a sheet of items that we can work from. I'm sure together we can come up with a complete list. I do understand that there are many, many decisions that remain to be made inside the house. There is probably no reason to work on a timeline until the decisions on the big items like kitchen redo and the like are resolved. I also need to do some sort of inventory so that we know which things are staying and which are going to my home in New York and the possible future flophouse in Miami.
+
+I will be in St. Louis on 5 June for my flight physical. We will talk before then.
+
+Thanks again for the good work.
+
+
+
+-- 
+ --
+Mark W Harpster
+mwharp@gmail.com

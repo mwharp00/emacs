@@ -1,0 +1,7 @@
+1::TouchpadToggle()
+TouchpadToggle() {
+	SynAPI:=ComObjCreate("SynCtrl.SynAPICtrl"), SynDev:=ComObjCreate("SynCtrl.SynDeviceCtrl")
+	SynAPI.Initialize
+	SynDev.Select(SynAPI.FindDevice(0,2,-1))
+	SynDev.SetLongProperty(268435825, State:=(!SynDev.GetLongProperty(268435825) ? 1 : 0))
+}

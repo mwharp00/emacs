@@ -1,0 +1,2875 @@
+Org Org
+
+** Templates
++ 
+I think this template is very specific to the way you organize your
+project.  Maybe you could write your own function like this :
+
+(defun my-insert-org-template ()
+   "Insert an interactive template."
+   (interactive)
+   (let ((comment (read-from-minibuffer "COMMENT: ")))
+     (insert 
+   "*** " comment " Template
+
+***** Quick Info
+     |-----------------+---|
+     | Problem Report  |   |
+     | Release         |   |
+     | estimate        |   |
+     |-----------------+---|
+     | Begin Code      |   |
+     | Base Code Done  |   |
+     | Extra Code Done |   |
+     | Testing Done    |   |
+     |-----------------+---|
+     | Code Level      |   |
+     | Build ENV       |   |
+     |-----------------+---|
+
+***** Status Log
+
+***** [/] Investigate
+     - [] Question 1
+
+***** [/] Base Work
+     - [ ] step 1
+
+***** [/] Extra Credit Work
+     - [*] step 1
+
+***** Verification
+     - [0/0] Base test set
+       - [ ] Test 1")))
+
+You can interactively prompt for other strings than "COMMENT" and
+insert them into the template.  This is just to give you the idea.
+
+** Install script
+ o #!/bin/sh
+
+# script to automate pullingthe latest org from Carsten's site
+# PJP pete@smtl.co.uk
+# $Revision: 1.1 $
+# $Log: update-org.sh,v $
+# Revision 1.1  2007/04/26 05:53:54  pete
+# Initial revision
+#
+
+# set up some variables
+# EDIT THESE.!!!
+
+# directory where the org directory is located
+DIR=$HOME/emacs/lisp 
+ORGDIR=$DIR/org
+TMP=/tmp
+TMPTAR=$TMP/org.tar.gz
+# This is where I keep my copy of CVS emacs. 
+EMACSBIN=/usr/local/emacs-cvs/bin/emacs
+#EMACSBIN=/usr/local/bin/emacs
+
+# you should not need to edit anything else below here
+
+# go to the tmp dir
+cd $TMP
+
+# make sure we have the lisp dir
+mkdir -p $DIR
+
+# get the tar file
+wget http://staff.science.uva.nl/~dominik/Tools/org/org.tar.gz
+
+# ORGDIR is a symbolic link. We get rid of it
+rm $ORGDIR
+
+# cd to the lisp directory
+cd $DIR
+
+# unpack the tar file
+tar xzvf $TMPTAR
+
+# what is the new directory name?
+ORGVER=`tar tvf $TMPTAR | head -1 | sed 's/  */ /g' | cut -d' ' -f6`
+
+# remake the link...
+ln -s $ORGVER org
+
+# make ...
+cd $ORGDIR
+mv Makefile Makefile.orig
+sed s:EMACS=emacs:EMACS=$EMACSBIN: < Makefile.orig > Makefile
+make
+ 
+* Operation
+** Display
+ - > First, I avoid losing context in a different way.  I have one emacs
+> session that is always running to take care of 'administrative matter'
+> and it is were I do most of my org-mode/project planning and tracking.
+>  When I'm in the middle of doing something with a project, I have it's
+> tree open in an indirect buffer.  I have one frame with just agenda's
+> todo list in it for reporting and another frame with three windows (or
+> so) so I can look at a few things at once.  Since each project is in
+> it's own buffer, I can get context just be where I left the cursor.
+> For my uses, what I would love is a way to have org-mode remember how
+> a subtree was folded so I could hide a subtree and then reopen it
+> later with all of it children exposed or hidden as they were before.
+> I like to use hiding for context in a project, but I get by without
+> it.
+
+ - I've never knowingly used indirect buffers, and I'll certainly take a
+look at them as I can see how I might find them useful.  I frequently
+use org-narrow-to-subtree which I find useful for hiding irrelevant
+details.  Incidentally it would be nice to be able to set follow mode
+to automatically narrow to the current agenda selection.
+
+ - I've personally taken to using follow mode, and having my org-mode
+Emacs session split vertically into two panes, with the agenda on the
+right. I then navigate my org file via the open agenda buffer with
+follow mode. I'm guessing that your method doesn't (easily) allow you
+to jump from the agenda to your projects indirect buffer, which is a
+feature I quite like using.
+ - >> I currently have a large knowledge-base in a single org file (>5k
+>> lines of code). When exporting certain sections I would like to
+>> exclude the rest completely.
+>
+> I'd very much appreciate your proposed feature and propose an
+> additional idea, which has been on my mind for a while: it would be
+> very nice to be able export subsections of a file to different
+> export-files, maybe by using #+CATEGORY or another keyword. I like
+> having all my information in one file, but exporting this as a
+> singe webpage always lookes a mess.....
+>
+> At the moment I use the following approach as a workaround:
+>
+> 1. move to subtree which should be exported
+> 2. M-x org-narrow-to-subtree (or C-x n s)
+> 3. manually adapt the heading-level via M-<left>
+> 4. M-x org-export (or C-c C-e)
+> 5. re-adapt heading-level and finally
+> 6. M-x widen (or C-x n w)
+>
+> which is quite quick....
+
+** Scheduling
+ - > I'm curious if anyone has come up with a nice way to make this todo
+> list, organize it, but have it link back to your next actions for
+> your projects.
+
+> I've tried tagging TODOs with :today:, but you can't reorder them in
+> the agenda match tag window. What I normally do now is schedule the
+> TODOs for today and then I archive them in the agenda view with $ to
+> complete them. The biggest problem with this is that I can't reorder
+> the scheduled TODOs to reflect the priority or order in which I want
+> to do them, and I clutter up my calendar view of the day.
+
+ - Maybe *I'm* missing something, but this seems more complicated than
+necessary. I organise actions under projects, as you do, then I use
+C-a a (org-agenda-list) to display the current week's actions, sorted
+by date and priority. Pressing t in agenda mode will toggle the
+todo/done state.  
+
+ - Here is a brief overview of how i use org-mode to
+solve (workaround?) the issue you raised :
+
+- I use a "NEXT" state for the next actions (i admittedly suppose most of
+  the next actions should be done on ... today)
+
+- Tags are only related to the context or the /kind/ of actions (:work:,
+  :home: or :reading:, :writing:), making it easy to know what i can do
+  depending on what i want to do
+
+- I manually order the NEXT actions within a project so that they appear in
+  the right order in the agenda view
+
+- I manually order the project themselves (either within a file or by using
+  C-c [ and C-c ]) so that projects appear in the right order
+
+- I schedule a task if it has to be done on a specific day.
+
+** Templates
++ I frequently want to stuff the subject of an email into a heading and
+have a link to the mail in the text.  For this, I use remember
+templates.  However, none of the standard templates to quite what I
+wish.  I want to edit as little as possible when remembering things,
+so I made a new %-escape: %s
+
+In case others find it useful, here's a patch.  My org.el is version
+4.50.
+
+--- org.el.~1.1.~       2006-09-25 10:43:26.000000000 +0200
++++ org.el      2007-01-30 11:47:53.000000000 +0100
+@@ -1212,6 +1212,7 @@
+   %a  annotation, normally the link created with org-store-link
+   %i  initial content, the region when remember is called with C-u.
+       If %i is indented, the entire inserted text will be indented as well.
++  %s  If the annotation is a link to an email, the subject of that email.
+   %?  This will be removed, and the cursor placed at this position."
+   :group 'org-remember
+   :type '(repeat :tag "enabled"
+@@ -10817,10 +10818,11 @@
+             (v-a annotation)   ; defined in `remember-mode'
+             (v-i initial)      ; defined in `remember-mode'
+             (v-n user-full-name)
+-            )
++            (v-s (progn (string-match "on: \\([^]]*\\)" annotation)
++                        (match-string 1 annotation))))
+        (unless tpl (setq tpl "")       (message "No template") (ding))
+        (insert tpl) (goto-char (point-min))
+-       (while (re-search-forward "%\\([tTuTai]\\)" nil t)
++       (while (re-search-forward "%\\([tTuUais]\\)" nil t)
+          (when (and initial (equal (match-string 0) "%i"))
+            (save-match-data
+              (let* ((lead (buffer-substring
+	      
+** Tagging
+*** There is capability in org -- see GTD integration- contexts
+*** This affects planner, also
+*** w Remember
+ - I use org-remember for keeping different kind of notes:
+- note =  how something works
+- hint = feature seems to be useful, but now I do not need it
+- bookmark for websites (I'd like to use org-mode as the only place for my web 
+  bookmarks because of tagging feature!)
+there is a part from .emacs to do this:
+
+(setq org-remember-templates
+      '((?h "* %^{Hint} %T :hint:\n  %i%?\n  %a")
+	(?n "* %^{Note} %T :note:\n  %i%?\n  %a")
+	(?b "* %a %T :bookmark:\n  %i%?")))
+
+you see, there are tags inserted to every note in the headline, now if
+I have an org-file containing this:
+** email integration
+
+ - Funnily enough, I implemented exactly this idea about 15 months ago,
+except that my implementation uses mairix (the mail indexer), and is
+mode-agnostic.  I use mutt as my mail reader, so the usage workflow is
+this:
+
+  1. Read a mail which requires a TODO action
+
+  2. Hit a keypress combo which triggers a Perl script acting on the
+     mail to extract the Message-ID and dump it to a predictably-named
+     temporary file, which can be considered as a dedicated clipboard.
+
+  3. In emacs, hit another keypress combo to yank the contents of the
+     clipboard into a new item in my TODO.org file as a link, e.g.:
+
+       * NEXTACTION [#B] read this email about blah blah
+         <mairix://m:4679BAC0.4057103@spiers.net>
+
+  4. Archive the mail anywhere, safe in the knowledge that later on,
+     moving the point over this mairix:// link within emacs and
+     pressing another keypress combo will perform a mairix search for
+     this Message-ID, and launch a mutt window displaying the mail,
+     regardless of wherever it's been archived.
+
+At first I thought that this was just a cute little trick, but it's
+proved itself to be an absolute god-send:
+
+  - emails can be converted into TODO items and cleared out of my
+    inbox within seconds.  Anyone trying to follow GTD already knows
+    the huge value of being able to quickly process an inbox.
+
+  - Having mail linked to like this (and in general having it indexed
+    and instantly searchable) means that I no longer have to make sure
+    mails are carefully archived in the right folder according to
+    topic.  This used to be very time-consuming, and didn't always
+    work, e.g. when a single mail covered more than one topic.  These
+    days, I simply have one archive folder per month to keep folder
+    sizes manageable.
+
+  - The URL-like syntax allows me to store hyperlinks which trigger
+    more complex queries rather than just searching for a single
+    message id, e.g.
+
+       <mairix://s:orgmode>
+
+    would find all mails with 'orgmode' in the subject.
+
+I made it mode-agnostic because I also wanted to be able to link to
+mails from within source code comments, log files, muse-mode, etc.
+Having said that, if there is a generic mode-agnostic hyperlinking
+framework in emacs, I really should have my wrist slapped for
+reinventing the wheel.  In particular, I do wish that org-mode and
+muse-mode had the same hyperlinking syntax ...
+
+Anyway, source code for my hacks attached.
+
+Cheers,
+Adam
+[2. text/plain; as-gtd.el]...
+
+[3. text/plain; mairix-copy-message]...
+
+[4. text/plain; Mairix.pm]...
+
+** bookmarks
+*** Emacs							      :emacs:
+***** gnus							       :gnus:
+***** org								:org:
+
+and then add a bookmark using M-x remember RET b RET to the gnus section 
+I'll get this:
+
+*** Emacs							      :emacs:
+***** gnus							       :gnus:
+***** [[http://gnus.org][gnus]] <2007-06-07 Thu 10:51>				   :bookmark:
+      bookmark notes
+***** org								:org:
+
+exploiting inheritance feature now I can search bookmarks related to
+emacs (I'll find this bookmark), to gnus (find also). cool!
+
+questions:
+
+1. is there a way for keeping dynamic list of all tags in all files,
+listed in org-agenda-files? as I see currently taglist is based on the
+open org file (dynamically updated) or on predefined list (which can
+cover all tags, but not dynamically)
+
+2. is it possible to show all (including inherited) tags in agenda tag view?
+
+feature requests:
+
+1. is it possible to implement "implicit" tags, which takes their
+value from the headline?  in the example above :emacs: tag is taken
+from headline * Emacs by hands, it would be good not to type it, but
+rather imply. the value (:emacs:) inferred from headline using some
+customizable function. this function definitely should remove illegal
+characters, spaces, timestamps, words like TODO, DONE etc. as a simple
+solution use upcase/downcase function for one-word headlines only, do
+not considering longer headlines for implicit tags creation. the
+heading level which is used for implicit tags should be customizable
+as well. it is not even necessary to print implicit tag at the end of
+headline (why to pollute space? also customizable), just imply them!
+in all other senses implicit tags should behave as usual
+
+2. the similar implicit tags can be implemented for [[bbdb:Name Surname]] 
+links. if the text after headline contains such link, the
+headline is tagged with :surname: (again value is inferred by
+customizable function). this is very convenient and fast to find
+related persons in agenda view. additionally, if for example explicit
+tag :talk: is added, you can clearly see from agenda view on which
+topics you should talk to a person, even when these topics are
+scattered around different files, no need for separate list. cool,
+isn't it? it can be even better if such implicit tags would be
+implemented for ANY kind of links, headline implicitly tagged by
+:bookmark: if http:// link encountered in the text below, by :file: if
+file: link encountered and so on. additionally if anyone implement a
+search in the link and description it will be a great desktop
+search/organizing tool!
+
+finally I'd like to note that I'm not very experienced with emacs and
+org-mode in particular, please do not blame me if my questions/requests are 
+silly.
+***** Diary
++ below is a bit of a hack i've come up with to attempt to read my
+google calendar into my org agenda. I originally started it using
+eldav, but i realised i don't have a webdav server to sync to. At the
+moment, It only works for entries that icalendar-import-file converts
+to %%(add something).
+
+The org docs imply that that is the only diary entry type that it can
+process, is this the case?
+
+Tim.
+
+--- code snip ---
+(require 'w3)
+(require 'icalendar)
+
+(setq google-ical-org-list
+     '(
+       ("http://www.google.com/calendar/ical/basic.ics"
+        "~/gettingThingsDone/CalendarPersonal.ics"
+        "~/gettingThingsDone/CalendarPersonal.org")
+       ("http://www.google.com/calendar/ical/basic.ics"
+        "~/gettingThingsDone/CalendarShared.ics"
+        "~/gettingThingsDone/CalendarShared.org")
+       ))
+
+(defun toc:goggle-to-org ()
+ "get a google calendar and convert it into org dates"
+ (interactive)
+ (with-temp-buffer
+   (let* ((glist google-ical-org-list))
+     ;; iterate through list
+     (while (setq entry (pop glist))
+       (setq google-ical-url (car entry) local-ical-file (nth 1
+entry) local-date-file (nth 2 entry))
+       ;; Delete the diary local files
+       (if (file-exists-p local-ical-file) (delete-file local-ical-file))
+       (if (file-exists-p local-date-file) (delete-file local-date-file))
+       ;; Get ical file
+       (w3-download-url google-ical-url (expand-file-name local-ical-file)
+      ;; convert to diary without leading &
+       (icalendar-import-file local-ical-file local-date-file nil)
+      ;; iCalendar leaves the buffers open
+       (kill-buffer (find-buffer-visiting local-date-file))
+       (kill-buffer (find-buffer-visiting local-ical-file))
+       ))))
+--- code snip ---
++     Scott> 1. Is there a way to do recurring events? Even if it were
+    Scott> just a function that could rewrite the dates every
+    Scott> day/week/month I find it hard to believe that so many people
+    Scott> use org-mode as a planner without this functionality.
+
+org-mode integrates pretty well with diary mode, so I use the diary file
+to keep my appointments, and org mode does a fantastic job of merging
+the diary and org mode events (deadlines, scheduled etc) for me in the
+*Org Agenda* buffer.
+
+diary mode allows you to schedule recurring events. For example, we hold
+a technical group meeting on the first friday of the month, so in my
+~/diary file I have the following:
+
+%%(diary-float t 5 1) 9:15 TG Meeting 
+
+the diary manual will explain what's going on here, the point being that
+you *can* schedule repeating events. This wiki here:
+
+   http://www.emacswiki.org/cgi-bin/wiki/DiaryMode
+
+will help a lot.
+
++ I should also have included this for repeating dates:
+
+  http://www.delorie.com/gnu/docs/elisp-manual-21/elisp_675.html
++ Calendar/Diary integration
+
+Emacs contains the calendar and diary by Edward M. Reingold. The
+calendar displays a three-month calendar with holidays from different
+countries and cultures. The diary allows you to keep track of
+anniversaries, lunar phases, sunrise/set, recurrent appointments
+(weekly, monthly) and more. In this way, it is quite complementary to
+Org-mode. It can be very useful to combine output from Org-mode with
+the diary.
+
+In order to include entries from the Emacs diary into Org-mode's
+agenda, you only need to customize the variable
+
+     (setq org-agenda-include-diary t)
+
+After that, everything will happen automatically. All diary entries
+including holidays, anniversaries etc will be included in the agenda
+buffer created by Org-mode. <SPC>, <TAB>, and <RET> can be used from
+the agenda buffer to jump to the diary file in order to edit existing
+diary entries. The i command to insert new entries for the current
+date works in the agenda buffer, as well as the commands S, M, and C
+to display Sunrise/Sunset times, show lunar phases and to convert to
+other calendars, respectively. c can be used to switch back and forth
+between calendar and agenda.
+* Problems
+* Additional Capabilities
+** Links
++ OK, I will put these functions into 4.63.
+
+As for key bindings, C-n, C-p or M-n, M-p come to
+mind - but I don't think I can give you these as default,
+so please define keys yourself.
+
+You might want to combine this with
+
+     (setq org-return-follows-link t)
+
+or
+
+     (setq org-tab-follows-link t)
+
+- Carsten
+
+On Jan 25, 2007, at 3:54, T. V. Raman wrote:
+
+> Hi,
+>
+> I need a keyboard command to move through the links in an
+> org-mode buffer; I cant find something that will do this at
+> present.
+>
+> This means that I need to use regular word navigation commands at
+> present to navigate to a link on a line before hitting c-c c-o
+> --- tab would have been a possible key to use for this but it's
+> already taken.
+>
+> Key choice aside I'd like two interactive commands, org-next-link
+> and org-previous-link --- should basically come down to executing
+> (goto-char (next-single-property-change ..)) of the right
+> property.
+** TODO Blog
++ I'm pleased to announce the availability of version 1.14 of
+org-blog. This is the first "official" release.
+
+Org-blog is an add-on to org-publish.el that allows simple blog
+publishing with Org-mode markup. You'll need org-publish.el to use
+	   it. You can obtain both from:
+
+http://dto.freeshell.org/notebook/OrgMode.html
+
+Right now, org-blog enables only very simple blogging support, with a
+front-page generator and the ability to add a blogroll using the
+:preamble or :postamble options. I'm eager to expand this support and
+add new features; I welcome suggestions and ideas from the org-mode
+community, as well as bug reports :-)
+** TODO eev mode escipts relevent?
+** Perl script for cd contents
++ I used to use Treepad on Windows  (www.treepad.com) and wrote a Perl
+module to read and write Treepad Files. These were plain text but had
+extra information to define each node in the tree.
+
+Now I use ORG mode for my outlining requirements.
+
+Today I adapted a program to create a listing of the contents
+of a CD-ROM. The program is written in Perl (not Lisp!).
+
+I use Windows, and my CD-ROM drive is F:
+I write a unique number on each CD, for example, C039
+
+To catalogue the disk, I run the command
+perl cdcat.pl C039.org F:
+
+Now I can view the file C039.org with Emacs and expand/collapse the
+directory names.
+
+
+Sample output:
+
+
+ *  f:
+ f:
+ ** Australian Piano Concertos
+f:/Australian Piano Concertos
+   01 Piano Concert Movt 1 - Ross Edwards.mp3 (6884786)
+   02 Piano Concerto Movt 2 - Ross Edwards.mp3 (10772642)
+   03 Piano Concerto Movt 3 - Ross Edwards.mp3 (4604168)
+   07 Piano Concerto - Peter Sculthorpe.mp3 (26613776)
+   Australian Piano Concertos playlist.m3u (746)
+ ** Sun Music
+f:/Sun Music
+   01 Memento Mori - Peter Sculthorpe.mp3 (20459686)
+   02 Sun Song - Peter Sculthorpe.mp3 (8521866)
+   03 Sun Music 1 - Peter Sculthorpe.mp3 (14595318)
+   04 Sun Music 2 - Peter Sculthorpe.mp3 (8466152)
+   05 Sun Music 3 - Peter Sculthorpe.mp3 (17877436)
+   06 Sun Music 4 - Peter Sculthorpe.mp3 (12673498)
+   07 From Uluru - Peter Sculthorpe.mp3 (5337404)
+   Sun Music playlist.m3u (584)
+
+
+
+
+# Save the remained of the message as a file  cdcat.pl
+
+# cdcat.pl    Modified on 29th April 2005
+
+use strict;
+use warnings;
+
+#  parse a directory structure to create an Emacs org mode file
+#  with a list of files against each node.
+
+my $outfile = shift;
+my $root    = shift;   # start directory for searching, a CD drive:  G:
+my $info    = "";      # the catalogue data being prepared
+
+defined($outfile) or $outfile = "cd.org";
+defined($root)    or die "Syntax is cdcat cdlabel CDdrive\n";
+
+open (my $fv, ">", $outfile) or die "Cannot create $outfile\n";
+my $level = 0;
+parse_dir($root, $level, $root);
+
+print $fv $info;
+close($fv);
+
+print "Analysis of $root written to $outfile\n";
+
+
+###############
+sub parse_dir {
+###############
+     my $dir      = shift;
+     my $level    = shift;
+     my $fullpath = shift;
+
+     my @dirlist = ();
+     my $filelist = "";
+
+     chdir($fullpath)        or die "chdir to $fullpath failed\n";
+     opendir(my $dirfv, ".") or die "Cannot open . in $dir\n";
+     while (my $file = readdir($dirfv)) {
+         if ( -f $file ) {
+             my $size = -s $file;
+             $filelist .= "  $file ($size)\n";
+         }
+         next if ($file eq ".");
+         next if ($file eq "..");
+         push (@dirlist, $file) if -d $file;
+     }
+
+     $info .= '*' x ( $level + 1 );
+     $info .= " $dir\n$fullpath\n$filelist";
+
+     foreach my $subdir (@dirlist) {
+        parse_dir($subdir, $level + 1,  $fullpath."/".$subdir);
+     }
+}
+
+** TODO Print using publish
+*** >> > PS. On the subject of org-publish (sort of), one of the things I like
+>> > most about org-mode is that I can have Readme.org files scattered over
+>> > a number of directories and have them all included in the agenda.
+>> > However, org-publish assumes all org files for a single project reside
+>> > in a single directory. I wonder if I am the only one who has several
+>> > directories per project?
+>>
+>> I think you can already use the :include parameter to do this - at
+>> least I hope that you can give absolute path names there.  If not, i
+>> would consider this a bug.
+>
+>
+> So either this is a bug or I'm mis-using the :include parameter.  I have
+> org-publish-project-alist set as follows:
+>
+> org-publish-project-alist is a variable defined in `org-publish.el'.
+> Its value is
+> (("bright" :base-directory "~/bright"
+>  :base-extension "org"
+>  :include ("/home/chris/bright/chr5/cng/Readme.org"
+> "/home/chris/bright/chr5/phase2/Readme.org")
+>  :publishing-directory "~/public_html/org"
+>  :with-section-numbers nil
+>  :table-of-contents t
+>  :style "<link rel=stylesheet href=\"/~chris/styles/wiki-style.css\"
+> type=\"text/css\">"))
+>
+> When I do M-x org-publish bright the *.org files in ~/bright are published,
+> but the included files are not.  I also tried with filenames relative to
+> ~/public/org; same result.  How should I be setting :include?
+** TODO Print GTD
++     Tim> I'm curious, if you don't mind me asking, how do you produce
+    Tim> your hipster cards from org mode?
+
+Hi Tim
+
+I have a simple perl script which I run from a Makefile.
+
+The perl script is at:
+
+	http://www.philfam.co.uk/pete/GTD/org-na/org-na.pl
+
+The Makefile I use is attached at the end. Basically I have a list of
+all my 'contexts' (GTD-speak) which I use as tags in org-mode. Running :
+
+    make home
+
+will make the postscript files and print them.
+
+This will therefore take:
+
+	** Get wood preservative for Shed :Shopping:
+	** Paint shed with preservative :DIY:
+
+and add the first line to the 'Shopping' card and the second to my 'DIY'
+card.
+
+I keep meaning to add some options to allow printing on A4 etc, but am
+pushed for time at the moment. :-(
+
+Don't forget - you will need to adjust the location of your org-mode
+file in the perl source, and the makefile needs to point to your printer
+which will print the index cards.
+
+Enjoy.
+
+Pete
+
+-----Makefile-------------------
+# Print out NA lists from ~/TODO/TODO.org
+
+
+home:  LaptopH.ps PhoneH.ps Home.ps Sofa.ps ComputerH.ps WaitingH.ps Shopping.ps
+work:  LaptopS.ps PhoneS.ps Office.ps TG.ps WaitingS.ps CAG.ps
+
+%.ps: %.dvi
+        dvips  $<
+
+%.dvi: %.tex
+        latex $<
+
+%.tex: TODO.org
+        /home/pete/src/org-na/org-na.pl -t $* > $@
+
+==========
+*** Flow of list from tags
+Thinking of next actions this morning while cycling to work, made me
+wonder if it is possible to vet your org mode outlines.
+
+By vet, I mean check for consistency. For example, in my case, asking
+agenda to give me a list of projects that have actions associated with
+them that are not next actions. I use the concept of :proj: tag to
+denote a project (an idea which i thank whomever is stole it from), I
+then use the TODO types to denote next action, and possibly other
+context tags.
+
+An exampl
+***** Org Project						       :proj:
+      This is an example of an ok project
+******* 10 This is a next action - email about blah		      :email:
+******* TODO This is an untimed next action to consider purple.
+
+***** Stuck Project						       :proj:
+      This is an example of a stuck project. No next actions though some tasks.
+******* Should i nuke the site from orbit? it *is* the only way to be sure.
+******* check the batteries on the cargo lifter?
+******* check out the APC
+
+***** unthought about Project					       :proj:
+  I don't even have next actions for this project :(
+
+I would like to be able to highlight up the 'stuck project' and the
+'unthought about project' automagically during my morning review.
+
+What do you think?
+
+*** Grad student flow
+I am doing postgraduate study, have two jobs and sit on a few
+committees so perhaps this busy-ness is reflected in my system.
+I use an ever-growing collection of org files, all stored in the
+~/org/ directory.
+
+Each file falls into one of the following categories:
+- a single project
+- "diary" file for one-off tasks and appointments that don't fit into
+  a project
+- reference material
+- lists of lists
+
+Regarding projects, I have a projects.org file that links to
+individual project files.  The project list is divided into different
+domains of life (personal, job 1 and job 2) and further divided into
+current/active projects, closed/archived projects and
+deferred/postponed projects.
+
+Most project files have the following level 1 headings:
+- Actions
+- Diary
+- Notes
+
+Actions can be further subdivided so I might have something like this:
+
+***** Actions
+
+******* TODO code X
+
+******* TODO ask Y what he means by "Z"
+
+I use tags like "waiting", "delegate" and people's names to identify
+actions that depend on other people.
+
+The diary section combines future appointments with notes relating to
+past appointments.
+
+The agenda view is essential for drawing all these separate files
+together and giving me an overview of what I should be doing at any
+time.  All of the files are stored in a CVS repository.
+
+It seems to me that you are mainly concerned about dynamically
+producing a list of projects.  Have you thought about using a special
+tag for the top line of all project, something like :PROJECT:?
+
+You can then get a list of all projects by making a tags search on
+:PROJECT:, for example through a custom search like
+
+(setq org-agenda-custom-commands
+       '(("p" tags "+PROJECT")))
+
+This will get you the list with `C-c a p'.
+
+You may run into problems with this approach if you have set
+org-tags-match-list-sublevels to a non-nil value, because then, due to
+tag inheritance, every headline *inside* each project will also show
+up in the resulting list.  To work around this, you may define your
+own special command like this:
+
+(defun my-org-project-list ()
+   "Get me a list of projects."
+   (interactive)
+   (let ((org-tags-match-list-sublevels nil))
+     (org-tags-view nil "+PROJECT")))
+===
+
+ have you
+(setq bbdb-north-american-phone-numbers-p nil)
+yet, which should allow you to enter numbers not conforming to
+american conventions?
+
+I keep my Outlook contacts (for my PocketPC phone) and my BBDB (which
+is the master, of course) in sync by ediffing CSV exports of both.
+
+Both BBDB and Outlook are happy with an international phone number
+format of
++CountryCode (AreaCode) RemainingNumbersSeparatedByHyphenOrSpace
+ 
+And the mobile phone services know how to interpret the + between
+varying countries of source and destination of the call.
+
+Works for me.
+
+I'm using planner/muse, which has planner-bbdb.el, but I'm not using
+that particular feature yet.
+
+I have no idea what a BBDB file is but I do use org-mode to manage my contacts.
+
+Each contact is a heading then I keep information with one data field
+per line identified with a letter. This is useful for generating compact printouts
+for my planner folder.
+
+A: Address
+H: Home phone number
+W: Word Phone number
+B: Birthdate
+M: Mobile (cell) Phone number
+E: Email address (not used much since email addresses live inside
+    my Thunderbird or Gmail account.
+F: Fax 
+
+For example:
+
+******* John Smith 
+A: 200 Pacific Highway, North Sydney, NSW 2070
+H: 9433 7645
+W:908 75431
+B:10-May-1960
+E: 
+jsmith@somewhere.com
+
+Notes about the contact go here
+
+I used to structure the contacts under major headings of Family,
+Friends, School, Work related, Financial, Restaurants,  but I am going
+to rework this using org-mode tags for various categories. A useful tag
+would be for Christmas card lists/
+
+
+
+=====
+
+>> I really love the integration of remember with org, especially the way
+>> how to insert the notes by moving within the headings-tree. 
+>>
+>> Is it possible to use this feature also for moving portions of text
+>> via regular copy/paste an org-buffer, and have org automatically adapt
+>> the header levels? I didn't find anything in the manual.
+>
+> C-c C-x C-w will cut a subtree, which you can paste with C-c C-x C-y,
+> and it will automatically adapt the header levels.  You can navigate
+> to where you want to insert it with C-c C-j, which works a lot like
+> selecting your place with org-remember.
+
+I also found C-c C-j convenient. However, it is quite weak when
+navigating through a big file with various levels of subtrees. I
+wonder would it be useful to add the support of navigating subtrees on
+the same level?
+
+======
+
+> Remember templates now support headings such as this:
+>
+>     (?i "* %^{Title}\n  %i\n  %a" "~/org/JOURNAL.org" "New Ideas")
+>
+> However one annoying issue is if I want to use the same file with
+> different headings, I can't omit the file argument in the
+> templates. Do you think we can change this?
+>
+> Best,
+
+For those who are interested, if the file name is `nil' it will use the
+value of org-default-notes-file.
+
+==============
+
+> I know C-c C-b and C-c C-f navigate on the same level. I was thinking
+> of making M-<up/down> navigate on the same level after hitting C-c
+> C-j.
+
+The keymap for org-goto has many more entries - seems like I never
+documented this properly.  Here is the complete list.  Maybe
+the n - p - f - p - u keys are what you are looking for?
+
+TAB        org-cycle
+down       outline-next-visible-heading
+up         outline-previous-visible-heading
+n          outline-next-visible-heading
+p          outline-previous-visible-heading
+f          outline-forward-same-level
+b          outline-backward-same-level
+u          outline-up-heading
+C-c C-n    outline-next-visible-heading
+C-c C-p    outline-previous-visible-heading
+C-c C-f    outline-forward-same-level
+C-c C-b    outline-backward-same-level
+C-c C-u    outline-up-heading
+
+RET        org-goto-ret
+left       org-goto-left
+right      org-goto-right
+q          org-goto-quit
+C-g        org-goto-quit
+
+0-9        digit-argument
+
+
+==============
+
+
+(I will put this up for ftp at some stage)
+-------------------------------------------------------------
+#!/bin/sh
+
+# script to automate pullingthe latest org from Carsten's site
+# PJP pete@smtl.co.uk
+# $Revision: 1.1 $
+# $Log: update-org.sh,v $
+# Revision 1.1  2007/04/26 05:53:54  pete
+# Initial revision
+#
+
+# set up some variables
+# EDIT THESE.!!!
+
+# directory where the org directory is located
+DIR=$HOME/emacs/lisp 
+ORGDIR=$DIR/org
+TMP=/tmp
+TMPTAR=$TMP/org.tar.gz
+# This is where I keep my copy of CVS emacs. 
+EMACSBIN=/usr/local/emacs-cvs/bin/emacs
+#EMACSBIN=/usr/local/bin/emacs
+
+# you should not need to edit anything else below here
+
+# go to the tmp dir
+cd $TMP
+
+# make sure we have the lisp dir
+mkdir -p $DIR
+
+# get the tar file
+wget http://staff.science.uva.nl/~dominik/Tools/org/org.tar.gz
+
+# ORGDIR is a symbolic link. We get rid of it
+rm $ORGDIR
+
+# cd to the lisp directory
+cd $DIR
+
+# unpack the tar file
+tar xzvf $TMPTAR
+
+# what is the new directory name?
+ORGVER=`tar tvf $TMPTAR | head -1 | sed 's/  */ /g' | cut -d' ' -f6`
+
+# remake the link...
+ln -s $ORGVER org
+
+# make ...
+cd $ORGDIR
+mv Makefile Makefile.orig
+sed s:EMACS=emacs:EMACS=$EMACSBIN: < Makefile.orig > Makefile
+make
+=======
+When prefixed, this new version gives choice among not-done states,
+taking "TODO" as the default.  
+
+========================================================================
+(defun org-insert-email-as-current-todo (&optional kw)
+  "Save a Gnus email into `*org-email-todo-list-buffer*' as a headline.
+If prefix is non-nil, ask for a specific state."
+  (interactive "P")
+  (let ((link (org-store-link nil)))
+    (save-window-excursion
+      (find-file *org-email-todo-list-buffer*)
+      (goto-char (point-min))
+      (let ((state (if kw (completing-read "State: " 
+					   (mapcar (lambda(x) (list x))
+						   org-not-done-keywords)
+					   nil t "TODO") "TODO"))
+	    (point (re-search-forward *org-email-todo-tree-header* 
+				      (point-max) nil)))
+	(org-end-of-subtree t)
+	(insert "\n** " state " " link))))
+  (message "Email saved in %s" *org-email-todo-list-buffer*))
+========================================================================
+
+emacs -batch -l ~/.emacs -eval '(org-batch-agenda "a")' \
+        | mail user@address.com
+
+
+With (setq org-agenda-include-diary t), the diary will
+be part of the mailing automatically.
+
+- Carsten
+
+On May 15, 2007, at 14:50, Patrick Drechsler wrote:
+
+ > Hi,
+>
+> is it possible to mail the agenda using a cron job similar to the
+> diary function `diary-mail-entries'?
+>
+> Currently I have this shell script for mailing the diary entries to
+> myself:
+>
+> --8<---------------cut here---------------start------------->8---
+> #!/bin/bash
+> ## send diary entries by mail
+> emacs \
+>     --batch \
+>     --load ~/.emacs \
+>     --load ~/.gnus \
+>     --funcall diary-mail-entries \
+>     --eval "(setq diary-mail-days 7)"
+> --8<---------------cut here---------------end--------------->8---
+>
+> It would be nice to also include the agenda in this setup.
+>
+Changes in version 5.01
+
+===========
+
+	 I would
+> like to see an easier implementation for your Portable Next Action
+> lists using the check box feature in the org-mode.  I think it's
+> better if you put all the next actions in check box list, but leave
+> the head lines for different categories.  But then I come to a
+> question.  Is there a way to list all the check box lists in a sparse
+> tree?  If there is, we can just print it.
+
+Use org-occur to create such a tree.
+
+Interactively with
+
+  C-c / \[[ X]\] RET
+
+or, if you want to do this more often, with a special command
+
+(defun my-checkbox-tree ()
+	(interactive)
+     (org-occur "\\[[ X]\\]" 'org-at-item-p))
+-----------------------
+
+
+Before I discovered org-mode (and Remember Mode)
+I had a small customisation in my .emacs file to open
+a "Journal file", go to the end of the file, insert the data
+and time, then allow me to enter a note. I would save the buffer
+and close it.
+
+Now that I am using org-mode, I made some modifications
+to write my notes to a file "journal.org" and bind a
+key combination to invoke the function.
+
+So when I am using Emacs I can quickly write notes by
+entering the command C-c n
+
+I use GNU Emacs 21.3.1 running on Windows XP
+
+Maybe this functionality could be added to org-mode?
+
+
+Here are the lines from .emacs
+
+(defun journal ()
+   (interactive)
+   ; customise the following line for your file name
+   (find-file "c:/homes/charles/journal.org")
+   (end-of-buffer)
+   (insert "\n** Topic: ")
+   (insert-datetime-string)
+   (insert "\n")
+)
+
+(global-set-key (kbd "C-c n") 'journal)
+
+(defun insert-datetime-string ()
+   "Insert a nicely formated date time string."
+   (interactive)
+   (insert (format-time-string "%Y-%m-%d %a %H:%M" ))
+)
+
+============
+
+Carsten Dominik <dominik@science.uva.nl> writes:
+>>    ------
+>>    TODO Something I really must do
+>>    ------
+>>    and get an entry like
+>>    ------
+>>    ** TODO Something I really must do
+>>       DEADLINE: <2006-03-13 Mon 10:27>
+>
+> This would be harder.  How should we guess the date/time for the
+> deadline?
+
+This is clearly something related to my own preferred method of time
+and task management rather than something I would expect anyone to
+agree with.
+
+Having said that the remember interface is, I think, about allowing
+you to make a note very quickly whilst concentrating on some other
+task.  In this case what I would like to do is automatically capture
+the TODO item with a deadline of today (the day I make the note).
+This forces the item immediately onto my agenda and then becomes
+something I should deal with.  By this I mean I have to deal with the
+note today, *not* its implied content.  At some point in the day I put
+aside time to go through these "remembered notes" and sort them out:
+quickly return a call, pass on the action elsewhere, re-schedule to a
+realistic date, copy off to another org file that is dealing with the
+issue, re-consider or re-draft a more appropriate action etc....
+
+> 1. modify the remember mechanism, basically giving the user more rope,
+> for example along these lines:
+>    - by setting a default template that could contain current time
+> stamps etc.
+>    - calling a hook before and after you edid the remember entry,
+> booth hooks could be
+>      used to modify the entry
+>    - Invoke org-mode for that buffer and install a special key (C-c 
+> C-c) to get out and file the   entry.  In particular without inserting
+> a timestamp after editing, so that TODO entries would remain active.
+
+All potentially sound good to me.
+
+> 2. Doing it the way Charles proposed, but just going to the journal
+> file and making that entry by hand.
+
+This similar to what I currently do using a home brewed mixture of
+standard Emacs bookmark functionality and escreen (to stop messing up
+whatever window configuration I happen to have running).  Not pretty
+though.  Would personally prefer something along the lines of 1.
+
+============
+
+
+In 4.05 and 4.06, the internal linking system was strongly modified,
+mostly thanks to a discussion with David Wainberg.  Before the
+changes, the only way to make a link from one location in a file to
+another location in the same file used to be:
+
+- CamelCase words, that would start a search for "camel case" when
+activated.  CamelCase for links is still supported because of backward
+compatibility, but it is not turned on by default, and I myself have
+actually stopped using it.
+
+- <file:::SearchOption>, a degenerate link to an external file that
+was in fact a link to the current file because the file name was left
+out.
+
+After discussion with David, the following modifications were put it:
+
+You can write a link as [[link text]] now.  This type of links looks
+similar to what Wiki-mode does.  The text between the brackets will be
+searched for in the current buffer.  First a search for a target like
+<<link text>> is attempted, and then more lenient searches for this
+text.  Preceding the text with a star limits the search to headlines.
+
+The HTML exporter already supports formatting and using these links,
+at least when they match a target.  Also, you can write [[link
+text][description]], and the HTML formatter will put "description" as
+the clickable text to follow this link.  This is not documented yet,
+because there is no supported way to create such links in org-mode
+yet, except for just typing them into the buffer of course.  I am
+planning to to put this in, for example for links to the different
+email systems.
+
+Another new thing are "radio targets".  If you surround a target text
+no only by double, but by triple angular brackets, like <<<find me>>>
+(press C-c C-c with the cursor on that text to tell Org-mode that
+there is a new radio target....), then each occasion of "find me" in
+the buffer will automatically become a link to this target.  This can
+be useful if you have particular locations in the file you need to
+reach often.
+
+Since jumping around with links is fun, but makes you loose your
+current location, each time you follow a link, a mark is pushed onto
+Org-modes dedicated mark ring, and you can jump back with `C-c &'.
+Using this command several times in direct succession goes back to
+earlier and earlier locations from where you have followed a link.
+
+
+============
+
+
+Hiding leading stars can now be selected on a per-file basis with a
+STARTUP option.
+
+#+STARTUP: hidestars
+
+============
+
+Version 4.27
+
+    - HTML exporter generalized to receive external options.
+      As part of the process, author, email and date have been moved to
+      the end of the HTML file.
+      This is to support David's project.
+
+    - Support for customizable file search in file links.
+
+    - BibTeX database links as first application of the above, see my
+      searate email about this.
+
+    - New option `org-agenda-todo-list-sublevels' to turn off listing
+      TODO entries that are sublevels of another TODO entry.
+
+At http://www.astro.uva.nl/~dominik/Tools/org/
+
+============
+
+
+> 1)  Do you find it to be more convenient to have one file per topic
+> (research.org, personal.org, etc), or one directory per topic with
+> more specific files within it (research/project1.org,
+> personal/finances.org)?
+
+Separate directories.  I've only used org-mode for a couple of weeks
+so maybe I'll change my mind. But so far, separate directories have
+worked best, partly because I have everything else organized in
+directories, and partly because some of my outlines are documentation
+that I check into CVS -- my colleagues probably don't care about next
+week's dinner plans.
+
+However, I sometimes use agenda mode to tie the dates and TODO's in
+all of my orgfiles into a single view.
+
+> 2)  Within an org file, do you find it more effective to maintain
+> one tree for tasks and other trees for notes, or do you mix notes
+> and tasks within the same trees?
+
+I keep them together.  For me, the fact that they're all in the same
+spot is one of the biggest org-mode selling points -- when I'm using
+org-mode to think, the TODO's and dates occur to me at the same time
+as the logical content; it's nice to just put them right there and
+move on with a minimum of fuss.  Having a pure TODO list or a calendar
+is useful, though: For me, an agenda view or a sparse tree does the
+job.
+
+> 3)  If you use remember with org, what role does it play in your
+> work flow?  When do you find yourself reaching for a remember note
+> instead of using an org link or editing an org file directly?
+
+I use it to mark places in source code or documentation.  For example,
+when I need to change unfamiliar code, I'll read through it, hitting
+"C-c l" whenever I see an important function, variable declaration,
+bug, whatever.  Then, before I change anything, I organize all those
+remembered locations into an outline with "C-C C-l".  Having them all
+in one place helps me to think about the big picture of the changes
+I'm contemplating, especially when I can mix them in with web page
+links, bibliography references, and TODO's.  I also like the fact
+that, a week later, when I've forgotten everything, I can still
+retrieve my source code browsing tracks.
+
+OK, I'm usually not quite that methodical, but I experimented with
+this approach on one difficult problem, and I found it worthwhile.
+
+This brings to mind a couple of things I'd really like to see in org mode:
+
+1.) a special link type for latex bibfile references.  Maybe clicking
+on the link could pop up a paper's author and title, with another
+RETURN key hit bringing you to the full reference in the bib file.
+Something like that...
+
+2.) a way to link to emails in Thunderbird's IMAP cache.  This is
+probably so hard that it is science fiction.
+
+> 4)  Does anyone use timeclock.el with org?  Have you found other
+> ways to track time allocation using built-in org functions?
+
+Nope.
+
+> 5)  What's the one trick you're most pleased to have discovered, or
+> the one feature that changed your routine most once you began to use
+> it?
+
+Before I started using orgmode, I was already making occasional plain
+text outlines, but as they rapidly expanded, they became too
+unwieldy. It was always possible to search them, of course, but the
+search results were still overwhelming -- it was too hard to see at a
+glance how one thing fit in relation to another.
+
+Org-mode's fast outline collapsing and moving commands made outlines
+much easier, both to understand and to edit (which for me is part of
+understanding).
+
+============
+
+
+I live in Org-Agenda Week mode. This is where I look at my tasks for
+today and for the rest of the week.
+
+So the typical use case for me is that I take notes for a certain
+project, let's say I have in my desktop-project.org 
+
+*** Desktop Training
+***** Call Trainer
+      clarify the content of the training
+***** Setup training room
+***** prepare desktop machines
+***** Training is on April 18th
+
+As you can see I mix notes and tasks. Ok, now the first three are tasks
+so I C-c C-t on them which changes desktop-project.org as follows:
+ 
+*** Desktop Training
+***** TODO Call Trainer
+      clarify the content of the training
+***** TODO Setup training room
+***** TODO prepare desktop machines
+***** Training is on April 18th
+
+I know that the training is on the 18th so I need to do the tasks this
+week, so I schedule them for sometime this week, so I do a couple of C-c
+C-s. Note that I do not use DEADLINE, as I schedule the tasks so that
+they will be done before the deadline. If I now look at my Org-Agenda I
+see the following:
+
+ALL CURRENTLY OPEN TODO ITEMS:
+  desktop-project:TODO Call Trainer
+  desktop-project:TODO Setup training room
+  desktop-project:TODO prepare desktop machines
+  work:           TODO Write Article
+Monday    10 April 2006
+  desktop-project:Scheduled:  TODO Call Trainer
+Tuesday   11 April 2006
+  desktop-project:Scheduled:  TODO prepare desktop machines
+  work:Scheduled:  TODO Write Article
+Wednesday 12 April 2006
+  desktop-project:Scheduled:  TODO Setup training room
+Thursday  13 April 2006
+Friday    14 April 2006
+Saturday  15 April 2006
+Sunday    16 April 2006
+
+Now in the week overview I can see that I also plan to write an article
+on Tuesday. This will leave me no time to prepare the desktop machines
+so I reschedule this task to Wednesday by S-right on the task.
+
+As soon as I've called the trainer I press `t' on the "Call Trainer"
+Task and this marks the task as DONE.
+
+So far everything is fine. But there are a couple of questions:
+
+     1. What is the use case of TIMESTAMP? I seem to only have a use for
+        SCHEDULED, so marking them as "Scheduled:" in the Org-Agenda
+        Week mode is superfluous for me. What do other people use it
+        for?
+     2. I would like tasks that are scheduled to no longer show up as
+        "CURRENTLY OPEN TODO ITEMS". For me open items are items that
+        have not been scheduled yet and that I need to schedule.
+     3. The sorting of items within a day is a mystery to me. I would
+        like to sort them by state (TODO, DONE) and priority. Sorting by
+        priority seems to work for the CURRENTLY OPEN TODO ITEMS but not
+        for a specific day. I modified the to '(time-up priority-down),
+        but it still sorts by category for the days. I tried to debug
+        this but did not find my way around the code
+        ((org-finalize-agenda-entries).
+     4. When doing some mucking around the code should I use org-mode
+        from Emacs CVS or the one from Carstens Website?
+
+I recently lost ~20 lbs, and the most important tool for affecting
+that change was writing down my weight every day and kept a running
+average (I used the system described in the Hacker's Diet).  Just
+seeing the trend was enough to keep me motivated to eat a little bit
+less each day, or find a small extra opportunity to be active.
+
+As a graduate student I'm not required to do much in the way of
+accounting for how I use my time, as long as certain long-term
+milestones are met.  This can make it difficult to stay on task during
+shorter stretches.  Even breaking large tasks into small ones and
+documenting my progress on them can sometimes lead to a lot of small
+tasks being put off just as long as the large one would have been.
+
+So, just like for weight loss, I want to start keeping a record of my
+daily time use.  Hopefully, once I have enough data to aggregate and
+look at the trends, I'll be able to pinpoint areas where I can improve
+and will be able to motivate myself to stay on task longer or return
+to my tasks more quickly after distractions.
+
+A guide for beginning grad students in the computer science department
+at my university suggests keeping a log file where you record your
+accomplishments at 15 minute intervals on days when you're having
+trouble being productive.  I've tried this, using an external timer
+and marking an org file with a time stamp for each entry.  I found the
+method to be both too frequent and too removed from my current task to
+be especially useful.
+
+My intention is to keep an org file (per day? per week?  per month?)
+where I track my work using timestamp ranges and links.  When I start
+on a task I'll make a time stamp and link to a resource relevant to
+the task (the file I'm editing, the article I'm reading, notes from
+the class I'm going to).  When I finish a task or change tasks, I'll
+mark the end of the time range I spent on that task (and begin a new
+one if necessary).  In some cases I'll record notes with the entry
+about what happened while I worked, to try to pin down things that are
+especially effective or especially distracting.
+
+I do think there's something to the notion of making regular progress
+reports while you work during stretches where it's hard to stay on
+task. In a case where I was following this strategy, I would still
+start an entry with a time range and a link to my current work, but I
+might include sub-entries marked with timestamps to allow me to keep
+finer-grained records of my progress.  I intend to write a nag-me
+elisp function that prompts for a new entry after a certain amount of
+time has elapsed-- hopefully with programmable prompt intervals.  I
+have a hunch that an exponential function describing the interval
+between prompts might be effective:  record often early in the task to
+get myself honed in, but record less often as time passes and I become
+more involved with the work.
+
+I believe that tagging these progress entries with a series of
+categorical tags will allow me to aggregate across similar tasks and
+do some analysis of how much time I'm spending on different tasks.
+I'd like to be able to ask questions like "How much time did I spend
+last week on project X?", "How much time did I spend last week on all
+research projects?", and "How much time did I spend last week working
+productively?".  I'm hopeful that the org/tables/calc combination will
+serve me well in pursuing this.
+
+Hope that gives you some ideas about some potential uses of timestamps
+and time ranges.  I'd welcome any comments about the ideas I've
+described here, whether people are using similar systems or have
+different approaches to the same kind of issue.
+
+============
+
+
+The *intended* difference (which may have nothing to do with
+the way things are being used...) is the following:
+
+TIMESTAMPS are for marking events or appointments.  For
+example, you can use a range to write down when a certain meeting
+will take place, or you can put a timestamp when you you are
+supposed to be somewhere, like an date for the movie theater.
+Timestamps show up in the agenda only on the specified day,
+not before, not after.  Just like writing down something in a
+paper agenda.
+
+Scheduled items on the other hand stay in the agenda for today
+until you mark them DONE.  They a like a small child complaining
+"Daddy, you promised to play football with me yesterday, you did
+not, so I will keep complaining until you do".  If you scheduled
+something for yesterday and did not make it done, it will be in
+your agenda for today until you do.  In this way,
+scheduled items are very much like deadlines - the only difference
+is that deadlines start showing up on your agenda a few days
+before they are due.  Scheduled items only show up on the
+scheduled date.  Both stay in the agenda until marked done.
+
+>      2. I would like tasks that are scheduled to no longer show up as
+>         "CURRENTLY OPEN TODO ITEMS". For me open items are items that
+>         have not been scheduled yet and that I need to schedule.
+
+Hmmm, yes, I can see how this would be useful, but this is
+not how it works now.  I'll put this on my list to think about.
+
+>      3. The sorting of items within a day is a mystery to me. I would
+>         like to sort them by state (TODO, DONE) and
+> priority. Sorting by
+>         priority seems to work for the CURRENTLY OPEN TODO ITEMS but
+> not
+>         for a specific day. I modified the to '(time-up priority-down),
+>         but it still sorts by category for the days. I tried to debug
+>         this but did not find my way around the code
+>         ((org-finalize-agenda-entries).
+
+OK, let me explain sorting, maybe this will make things clearer.
+First of all, in your agenda for a day, things are not *sorted*
+by category.  Things are collected from the different files, so
+that means *initially* the items are already in the sequence as
+given in org-agenda-files, and therefore presorted by category.
+
+Org then attempts to sort the items, but it does change the
+sequence of any two items only if it has a reason to do so, for example
+if they have different priorities.  However, two TODO entries
+from different categories have the same priority, so org-mode
+will not exchange them, and categories stay together automatically.
+
+    Here is some information about priorities, which is not yet
+    documented.
+
+    A TODO entry has priority 1.
+
+    Timestamps and ranges, and diary entries have priority 0.
+
+    A deadline has priority 100 on the day it is due.  On days before
+    becoming due the deadline has priority 10-(days to due-date)
+
+    A scheduled item has priority 99 on the day it is due.  So it is
+    going to be high in the list, but still below deadlines due today.
+
+    Explicitly specified priorities #A, #B, and #C add a value
+    of 2000, 1000, 0, respectively.  Items without explicit priority
+    are treated as being #B.
+
+    So a TODO entry normally has priority 1001.  If the same line has
+a [#A]
+    cookie, its the total priority would be 2001.
+
+    In the agenda you can check the priority of an item with the "P" key,
+    by the priority is not updated when you change the date or TODO state
+    of an item.  Refresh the agenda with "r" to make sure the correct
+    priorities are listed for "P".
+
+If you want to get the TODO entries taken apart by keyword, I guess
+I would have to assign different priorities for different TODO
+keywords.  Or make a special TODO sorting key that could be added
+to `org-agenda-sorting-strategy'.
+
+If with these explanations you still come to the conclusion that sorting
+does not work, then we have a bug to fix.
+
+============
+
+
+I did no know about get-buffer-window-list, this makes it a lot easier.
+
+- Carsten
+
+On May 12, 2006, at 3:26, Piotr Zielinski wrote:
+
+> Below is a version of autocollapse that works correctly even if
+> several windows show the same buffer.  It periodically collapses
+> outline nodes that are far from the current point position [1].
+>
+> Piotr
+>
+> [1]
+> http://zerotau.blogspot.com/2006/04/autocollapse-mode-for-emacs.html
+>
+> (defun local-fold-from-level (beg end level)
+>  (hide-region-body beg end)
+>  (goto-char beg)
+>  (unless (looking-at outline-regexp)
+>    (outline-next-visible-heading 1))
+>  (while (and (<= (point) end) (not (eobp)))
+>    (when (> (outline-level) level)
+>      (hide-subtree))
+>    (outline-next-visible-heading 1)))
+>
+>
+> (defun local-contains-point (beg end pointlist)
+>  (let ((result))
+>    (dolist (point pointlist result)
+>      (setq result (or result (and (>= point beg) (<= point end)))))))
+>
+> (defun local-auto-fold ()
+>  (save-excursion
+>    (let ((pointlist (mapcar 'window-point
+> 			     (get-buffer-window-list (current-buffer) nil t))))
+>      (message "fold: %S: %S" (current-buffer) pointlist)
+>      (beginning-of-buffer)
+>      (unless (looking-at outline-regexp)
+> 	(outline-next-visible-heading 1))
+>      (while (not (eobp))
+> 	(let ((end (save-excursion (outline-end-of-subtree) (point))))
+> 	  (if (local-contains-point (point) end pointlist)
+> 	      (outline-next-visible-heading 1)
+> 	    (local-fold-from-level (point) end (outline-level))))))))
+> 	
+> (defun local-auto-fold-all ()
+>  (save-excursion
+>    (dolist (buffer (buffer-list))
+>      (set-buffer buffer)
+>      (when (eq major-mode 'org-mode)
+> 	(local-auto-fold)))))
+> 		
+> (run-with-idle-timer 60 t 'local-auto-fold-all)
+>
+>
+============
+
+
+As a relatively new org user, I have been wanting to see a discussion
+of usage patterns and file structures. So, I'm glad you asked, and
+perhaps this will help get people talking. 
+
+Here's a little about my org usage patterns. This isn't complete
+because I've only been using org less than a week. However, I have
+imported a fair amount of material into my orgfiles, from previous
+usage of Planner and Howm. So, I have had to make decisions about how
+to structure things. 
+
+I keep one topic per file, called ~/org/Topic.org . All my org files
+are together in the ~/org folder. The filename is the default category
+for TODO items, so this is quite useful. Since I keep org-agenda-files
+list in alphabetical order, my tasks are grouped in alphabetical order
+by file when I look in the Global TODO list (C-c a t.)
+
+I have org-agenda-include-all-todo set to "nil". I don't like all the
+open tasks cluttering up my agenda. Instead, when I want to see a list
+of all open TODO, I use the Global TODO list.
+
+I don't put timestamps of any kind in a TODO until I'm ready to
+SCHEDULE it. I use C-c C-s to add a schedule timestamp. 
+
+In this way, it's easy to use (C-c a t) to find open tasks to
+schedule, and easy to see what's scheduled for today with org-agenda
+(C-c a a).
+
+I mix tasks and notes. I often have ideas about a task or perhaps a
+phone number or address, so I put those under the TODO heading. For
+example if the headline says "TODO Implement feature X" I will often
+have several ideas about the shape of the feature, and possibly
+alternative implementation possibilities. I'll usually drop these in
+as subheadings to the TODO, but these aren't TODO items in
+themselves---the headlines are useful for organizing ideas, but it's
+usually too early at this stage to make the headings into TODO. Once
+the ideas and notes have coalesced into a more definite plan, the
+headings start to become TODOs.
+
+In addition, when writing a structured document with Org, I will use
+TODO headings simply to mark that a section needs filling in.
+
+When I want to really focus on a particular project that has multiple
+open TODOs, I hide the agenda buffer and just display the particular
+project's .org file, usually in OVERVIEW mode. This hides all the
+little notes, but shows all the TODO and gives me quick access to any
+part of the file. 
+
+I try to keep TODO's in logical/temporal order when maintaining a .org
+file, so this view usually gives me an idea what the NEXTACTION should
+be. It's simple enough to navigate to that, and hit C-c C-s to
+schedule those for today. 
+
+I use only TODO and DONE as keywords. I try to make todo items small
+enough so that they're either TODO or DONE. I never found much use for
+the "in progress" marking of Planner Mode. Who knows, this may change
+in the future. 
+
+I haven't found as much use for Remember mode yet. I usually just add
+stuff where it needs to go, but perhaps when things are busier I will
+really want to be able to "braindump" to Remember.org and then
+file things away later. I have also thought about using Remember for
+journal entries / blogging (as described in the manual.)
+
+I haven't yet used Tags because I categorize things by placing them in
+the file for that topic. 
+
+============
+
+
+I've extended the HTML publishing support of Emacs Org-mode to allow
+configurable publishing of related sets of files as a complete
+website. My extensions thus far are collected in org-publish.el, and
+are used to upload and manage my entire site. 
+
+org-publish.el can currently do the following:
+
+  * Publish all one's org-files to html
+  * Upload html, images, attachments and other files to a web server
+  * Exclude selected private pages from publishing
+  * Publish a clickable index of pages
+  * Manage local timestamps, for publishing only changed files
+  * Accept plugin functions to extend range of publishable content
+
+Much more functionality is planned, toward making org-mode a more
+general authoring solution as well as a great outliner and organizer.
+
+Special thanks to the org-mode maintainer, Carsten Dominik, for his
+ideas, enthusiasm, and cooperation.
+
+You can find org-publish.el at its homepage: 
+
+http://dto.freeshell.org/notebook/OrgMode.html
+
+============
+
+
+* Main story 	
+Just discovered org-mode  about a week ago (on  #emacs).  Since then I
+have  been a  proud user.   Am using  it for  professional as  well as
+personal use.  For  professional use, I am using it to  make a kind of
+html-template  which   I  will  tweak  for   automatic  generation  of
+subsequent  html in  the  future. Sure  things  will come  up in  that
+respect.   Further,   I  am   trying  to  use   it  as   a  bug/wanted
+feature-tracking system.   As the only  developer is me, and  my input
+mostly comes from one source only, this is feasible (I just let no one
+else touch my list).  Some things have come up because of this use.  I
+use a table for listing the  bugs and features (to export to csv), and
+descriptions  are   put  in   headlines  below  that,   with  possible
+subheadlines. One thing I needed was  a way to link the fields and the
+headlines,  based  on  some  unique  identifier, and  possibly  in  an
+automatic way.  The cleanest way I have  come up with so  far is using
+the  radio link.   That  way I  just put  a  bug number  in the  table
+automatically targeting the description .  That way I can export it to
+csv -> xls (in oocalc), so the person I communicate with sees only the
+bug number itself, and not  also the brackets, that are exported as-is
+to csv.  On  this, see infra. For the generation of  a bug number link
+for in the headlines I  have created the following small function, and
+set it to a keyboard shortcut:
+
+(defcustom org-bug-number 0
+"number of current bug"
+:type 'number)
+
+(defun org-insert-bug-number (&optional skip-to)
+  "Increment the org-bug-number with 1 and insert it at point as an internal link.
+
+With numerical prefix  argument, insert the prefix number  at point as
+an internal link.  If this number is greater than the current value of
+org-bug-number, update org-bug-number to this value."
+
+  (interactive "p")
+  (insert-string "<<<"
+      (cond ((> skip-to org-bug-number) (setq org-bug-number skip-to))
+	    ((eq skip-to 1) (setq org-bug-number (1+ org-bug-number)))
+	    (t skip-to)) ">>>")
+  (org-ctrl-c-ctrl-c))
+
+...I might revise  this with the use of an alist  or something, so you
+can  have different  bug numbers  associated with  different projects,
+based on which .org file you visit.
+
+I  am thinking  of a  good way  of how  to integrate  this,  and other
+typical bug-track-sheet stuff (such  as status: TODO/DONE...) with the
+headlines. Automatic  generation of  a headline on  creation of  a new
+bug-row is  not a  good option,  I believe, since  some things  are so
+self-evident from the small description given in the table that giving
+the  bug   a  seperate   headline  would  just   be  an   exercise  in
+repetition. However, when a good and unique link between table row and
+headline could be established, an update of the one based on the other
+might be convenient. Perhaps this whole approach is flawed, because it
+is based  on the table concept  for representing bugs  (my bosses just
+said  like: ,,Kan  je die  bugs niet  gewoon ff  in  een Excel-sheetje
+stoppen?''--trans:  ``can't  you  just  put  these bugs  in  an  Excel
+sheet?''),  so that I  just began  drawing a  table. Maybe  some table
+export function  to the view  generated by C-c  C-r would be  a better
+idea. But  then, how do  you know which  words will have to  appear in
+which field?  This would require setting properties to (sequences of),
+which calls  for a different  syntax. More thinking  and code-studying
+necessary...
+
+I think using only TODO and DONE  is a good approach, as too much time
+is  easily   wasted  figuring  out  for  yourself   what  the  precise
+qualification should be.  
+* Some other things that have come up during usage:
+** option for clean export view of timestamps
+** option to leave timestamps out in export function
+** option to leave tags out in export function.
+** org-export-to-LaTeX
+** make follow-mode the default as customization option; 
+for myself, I have just hacked the code to have follow-mode always on.
+** strip links when unexportable as link
+Export description, or, when lacking, only the content of the link.
+
+When data can  be retrieved back from an  exported format, this would
+be included /as/ /option/, as one will e.g. want to communicate to and fro
+with csv tables.
+** improvement of the outcome of C-h m would be welcome.
+- all the self-inserting commands are not of great interest. Better
+  skip them, or put at least put them at the end.
+- things such as "Calls `(org-cycle t)'" do not give a reference;
+  better say "Calls org-cycle with argument t".	
+
+============
+
+
+Is it possible to have horizontal rules separating the different
+categories in the Global TODO list? That would make it much easier
+for me to read when I am hunting for tasks to schedule. 
+
+I'd like it to look like this: 
+
+  DiscreteMath:  TODO Review through Ch. 2 of LADM
+  ----------------------------------------------------------------------------
+  EmacsConfig:   TODO Reorganize and clean up file:../e/init.el
+  EmacsConfig:   TODO [#C] Configure gnus spam handling
+  ----------------------------------------------------------------------------
+  KarmaPod:      TODO Fix problem with usb backup keys not working
+  KarmaPod:      TODO Outline pod construction tutorial
+  KarmaPod:      TODO [#C] Photograph the pod
+  ----------------------------------------------------------------------------
+  OrgMode:       TODO [#A] Fix "Index.org has changed on disk" error
+  OrgMode:       TODO Draft manual chapter for org-publish
+  OrgMode:       TODO Publish e-scripts with basic fontifying
+  OrgMode:       TODO Blogging from a "blog.org" built from remember.el snippets
+  OrgMode:       TODO [#C] Post thoughts on org-mode vs planner
+  ----------------------------------------------------------------------------
+  WebSite:       TODO Flesh out KarmaPod page
+  ----------------------------------------------------------------------------
+  WhitneyStreet: TODO Complete carpet-tiling lower foyer
+  WhitneyStreet: TODO Paint kitchen
+  WhitneyStreet: TODO Send email to ADM8211 mailing list
+
+Also, I would love to be able to hit > on one of these lines, to
+schedule it for Today. 
+
+============
+
+
+1. Links that target specific text in a file, do not work properly:
+
+   - [[file:~/emacs/org-4.27/org.el::defcustom%20org%20after%20todo%20state%20change%20hook%20nil][file:~/emacs/org-4.27/org.el::defcustom org after todo state change hook nil]]
+   - [[file:~/emacs/org-4.27/org.el::defvar%20org%20todo%20line%20regexp%20nil][file:~/emacs/org-4.27/org.el::defvar org todo line regexp nil]]
+
+   The above were made with "C-c l" (org-store-link). 
+
+   When opening with C-c C-o, I expect it to locate point near the
+   search text, but it doesn't. If the file is not being visited
+   currently, it simply locates point at the beginning of the file. If
+   the file is being visited, it doesn't move point.
+
+   Am I missing something? 
+
+2. Remember support doesn't work properly. After hitting C-c C-c, the
+   little "place your text in the outline tree" help comes up, and I
+   can move the cursor a little, but I don't see ANY tree or text from
+   the outline, just a blank window behind the help text. 
+
+I'm using CVS emacs and configuring org like this: 
+
+----------------------------
+(add-to-list 'load-path "/home/dto/emacs/org-4.27")
+(load "org")
+(load "remember")
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(define-key global-map "\C-cr" 'remember)
+
+(setq org-log-done t)
+
+(setq org-fontify-emphasized-text t)
+(setq org-fontify-done-headline t)
+(setq org-agenda-include-all-todo nil)
+
+(setq org-directory "~/org")
+(setq org-default-notes-file "~/org/Remember.org")
+
+(setq org-export-html-style "<link rel=stylesheet href=\"../e/freeshell2.css\" type=\"text/css\">")
+(setq org-export-with-section-numbers nil)
+(setq org-export-with-toc nil)
+
+(setq org-reverse-note-order t)  ;; note at beginning of file by default.
+(setq org-adapt-indentation nil)
+(setq remember-annotation-functions '(org-remember-annotation))
+(setq remember-handler-functions '(org-remember-handler))
+(add-hook 'remember-mode-hook 'org-remember-apply-template)
+
+;; widen category field a little
+(setq org-agenda-prefix-format "  %-15:c%?-12t% s") 
+
+============
+
+
+I've added preliminary support for publishing e-scripts with
+org-publish.el. 
+ 
+What are e-scripts? 
+
+>From my webpage: 
+
+"plain-text documents that contain commentary, executable emacs lisp
+hyperlinks, and specially marked segments of executable shell script
+code, meant to be triggered one at a time by the user (possibly after
+some customization."
+
+E-scripts are processed by eev-mode (http://angg.twu.net/#eev )
+
+But anyway, the code is at: 
+
+http://dto.freeshell.org/e/org-publish-escript.el
+
+It's still quite preliminary, and I'm not sure if any of you actually
+use eev-mode :-) but I find eev-mode quite useful and plan to share my
+knowledge about many tasks using e-scripts. eev-mode is a sort of IDE
+and front-end to the shell. 
+
+org-publish-escript-to-html is a pluggable publishing function for
+org-publish, I intend to create a library of such functions to render
+many types of input files as smart HTML, so that people who write in
+diverse formats can publish their files as a coherent site. 
+
+Note, this plugin publishes both the original source .e file, and the
+marked up .e.html file (and inserts a header with link to the original)
+so that people can download the raw non-html file. 
+
+Example output of my org-publish-escript.el
+
+http://dto.freeshell.org/e/emacs.e.html
+http://dto.freeshell.org/e/dvd.e.html
+
+Oh, if you don't like the colors, you can set the :style keyword in
+your org-publish-project-alist. 
+
+       '("escripts" . (:base-directory "~/e/"
+			 :base-extension "e"
+			 :publishing-directory "/ssh:dto@tty.freeshell.org:~/html/e/"
+			 :publishing-function org-publish-escript-to-html))))
+
+
+So, has anyone tried out org-publish? 
+
+============
+
+
+> On May 12, 2006, at 4:39, T. V. Raman wrote:
+>>
+>>
+>> 1)     orgtbl is nice as a minor mode. Why not go once step
+>>        further and enable org as a minor mode; it would be nice
+>>        to be able to create structured lists in email.
+>
+> I don't know how this would be possible.  The org-mode keymap would
+> take over, no key from the current major mode would keep working.
+> Orgtbl used a rather complicated trick to function in tables while
+> leaving things to the major mode outside tables.  I don't see how a
+> similar trick could work for the whole file.
+>
+> One could construct a restricted minor mode with some functionality - 
+> what stuff should be in there?
+
+I know this is not what you are asking for, but I find the following
+very helpful when I want to use org-mode facilities to quickly create a
+piece of text whilst in an email message or, indeed, anywhere else:
+
+(defun popup-input-buffer ()
+  "Provide an input buffer in a specified mode."
+  (interactive)
+  (let ((buffer-name (generate-new-buffer-name "*input*"))
+        (mode (intern
+               (completing-read
+                "Mode: "
+                (mapcar (lambda (e)
+                          (list (symbol-name e)))
+                        (apropos-internal "-mode$" 'commandp))
+                nil t))))
+    (pop-to-buffer (make-indirect-buffer (current-buffer) buffer-name))
+    (narrow-to-region (point) (point))
+    (funcall mode)
+
+    (let ((map (copy-keymap (current-local-map))))
+      (define-key map (kbd "C-c C-c")
+        (lambda ()
+          (interactive)
+          (kill-buffer nil)
+          (delete-window)))
+      (use-local-map map))
+    (shrink-window-if-larger-than-buffer)))
+
+Whilst in some mode other than org-mode simply:
+
+  M-x popup-input-buffer
+  org-mode <ret>
+  [...use org-mode...]
+  C-c C-c
+
+============
+
+
+> My biggest use of org-mode export is spitting out simple ASCII lists
+> that I paste into emails.  Even so, I have picky export enhancement
+> requests:
+>
+> 1.) Add org-export-visible-as-ascii:  org-export-copy-visible
+> creates a new org file containing the visible text.  The problem for
+> me is that it's still an org-file, with all the leading *'s, linking
+> text and so on.  So, I'd like to clean it up by running
+> org-export-as-ascii over the export-visible file but
+>
+> - this is an extra step
+> - when I try to do this, I get the error message:          Wrong
+> type argument: stringp, nil
+
+
+I will take a look.  My guess is that it would be sufficient to turn
+on org-mode for that new file and save it under a different name
+before exporting.  But yes, this can and should be easier.
+
+>
+> 2.) Export with simple leading characters instead of section
+> numbers.  Maybe there's already a way to do this, but I'd like to
+> see an option for exporting headlines with leading '*' ,'o', '-''
+> and so on, instead of with long section numbers like 3.4.2.1.   For
+> html export, this could be just the standard itemized list
+> characters; for ascii, it could be something similar.  This could be
+> done with a customization variable, a prefix, or very long commands
+> like org-export-visible-as-ascii-simple...
+
+This is already there, all you need to do is to change the level at
+which the exporter switches from headlines to itemized lists.  You can
+do this using the H switch in the #+OPTIONS line, or simply using a
+prefix argument to the exporter command.
+
+For example
+
+    C-1 M-x org-export-as-html
+
+will only make headlines of level one headlines, and do level two and
+up as itemize lists.
+
+Nothing stops you from setting this to 0, to get lists only.  For
+example
+
+#+OPTIONS: H:0
+
+>
+> Also, a general question:  There's been discussion of adapting
+> muse-mode so that org-mode can eventually make use of its many
+> export capabilities.   At that same time, we've got very interesting
+> xoxo export capability and the nice new code written by David
+> O'Toole.   This is great stuff but to a new user, these multiple and
+> somewhat overlapping choices are bound to be confusing.  Will all
+> this good code eventually get merged into a unified org-mode
+> exporting system?
+
+The way I see this is the following.
+
+- The Muse maintainer Michael Olsen has talked about making Muse
+understand org-mode syntax.  While some time ago I had been
+considering to export org-mode files to Muse syntax, this is currently
+not on my TODO list.  It makes more sense to do this on the Muse side,
+so I will leave this to them.
+
+- David O'Toole has been pushing to make Org-mode more publishing
+friendly, and I fully support his org-publish.el.  This code will
+become an integral part of org.el soon - but I want to wait until a
+few people have tested it, and I can only put it into org.el once
+David has signed the papers with the FSF so that I can install this
+code into Emaccs.  My expectation is that Emacs 22.1 will role without
+org-publish, but as of 22.2 it will be part of it.  I have no idea
+what will happen to blogging, e-scripts etc, this is beyond my horizon
+at the moment.  And I agree that this has to be carefully sorted out
+or we will get a mess.  I don't want org to become like planner, a
+beast tweaked for really everything and in the process loosing its
+consistency. org-publish.el is just an extension of the existing HTML
+exporter and in this way a very logical step.
+
+============
+
+
+> My biggest use of org-mode export is spitting out simple ASCII lists
+> that I paste into emails.  Even so, I have picky export enhancement
+> requests:
+>
+> 1.) Add org-export-visible-as-ascii:  org-export-copy-visible
+> creates a new org file containing the visible text.  The problem for
+> me is that it's still an org-file, with all the leading *'s, linking
+> text and so on.  So, I'd like to clean it up by running
+> org-export-as-ascii over the export-visible file but
+
+In the next version, this is going to work as follows:
+
+The command org-export-copy-visible no longer exists.
+
+Instead there is a new command org-export-visible, bound to C-c C-x v.
+When using this command, you are prompted for another key, to specify
+the true export command.  Org-mode will then make a temporary buffer
+containing the visible part of the current buffer only, and export
+ this buffer to ascii, html, xoxo.
+============
+
+I'm pleased to announce the availability of version 1.14 of
+org-blog. This is the first "official" release.
+
+Org-blog is an add-on to org-publish.el that allows simple blog
+publishing with Org-mode markup. You'll need org-publish.el to use
+it. You can obtain both from:
+
+http://dto.freeshell.org/notebook/OrgMode.html
+
+Right now, org-blog enables only very simple blogging support, with a
+front-page generator and the ability to add a blogroll using the
+:preamble or :postamble options. I'm eager to expand this support and
+add new features; I welcome suggestions and ideas from the org-mode
+community, as well as bug reports :-)
+
+============
+
+
+    Tim> I'm curious, if you don't mind me asking, how do you produce
+    Tim> your hipster cards from org mode?
+
+Hi Tim
+
+I have a simple perl script which I run from a Makefile.
+
+The perl script is at:
+
+	http://www.philfam.co.uk/pete/GTD/org-na/org-na.pl
+
+The Makefile I use is attached at the end. Basically I have a list of
+all my 'contexts' (GTD-speak) which I use as tags in org-mode. Running :
+
+    make home
+
+will make the postscript files and print them.
+
+This will therefore take:
+
+	** Get wood preservative for Shed :Shopping:
+	** Paint shed with preservative :DIY:
+
+and add the first line to the 'Shopping' card and the second to my 'DIY'
+card.
+
+I keep meaning to add some options to allow printing on A4 etc, but am
+pushed for time at the moment. :-(
+
+Don't forget - you will need to adjust the location of your org-mode
+file in the perl source, and the makefile needs to point to your printer
+which will print the index cards.
+
+Enjoy.
+
+Pete
+
+-----Makefile-------------------
+# Print out NA lists from ~/TODO/TODO.org
+
+
+home:  LaptopH.ps PhoneH.ps Home.ps Sofa.ps ComputerH.ps WaitingH.ps Shopping.ps
+work:  LaptopS.ps PhoneS.ps Office.ps TG.ps WaitingS.ps CAG.ps
+
+%.ps: %.dvi
+        dvips  $<
+
+%.dvi: %.tex
+        latex $<
+
+%.tex: TODO.org
+        /home/pete/src/org-na/org-na.pl -t $* > $@
+
+============
+
+
+I shall explain my primitive implementation of org mode.
+
+My system is based around one big org mode file for personal stuff and
+one for work. I can edit the file in other editors (such as the one on
+my smartphone) and search for GTD context via tags. The symbol
+:TAGNAME: is unique enough to search on when i need context, and works 
+to find tagged lines using every editor i know of.
+
+External editors do not support the org mode 'file:' references, so i
+am strict about keeping only Next Actions and possible Next Actions in
+the org file. I keep reference material in a another appropriately named
+file in the same directory.
+
+an example could be:  (Where X=TODO)
+---
+* 101 things to do in Denver when you're dead                  :BORED:
+  This is about not being Bored in Denver. The full list of Denver
+  based shenanigans can be found in:
+  file:101ThingsToDoInDenverWhenYoureDead.org
+
+*** Don't loose your head 
+    People keep on saying they don't like the way i look at them?
+    file:PreferredHeadShapes.org
+
+***** X Buy a new head                                         :BUY:
+***** replace head with new one
+
+*** Go skiing                                                  :MAYBE:
+    Always wanted to Ski in Denver. 
+    file:SkiingInformation.org
+
+***** X Buy new legs                                           :BUY:
+***** probably want to buy skis that fit the feet of my new legs
+---
+
+I also make sure the context tags and the text of the item will inform
+me of the project they are related to. So I don't need the reference
+material unless referred to by the text of the Next Action, and then
+only because it does not fit in one line. 
+
+When this occurs i use a RadioName type search reference so that
+whatever the editor it can find the symbol in the file, as it should
+be unique.
+
+Does anyone else implement a GTD based system? and if so, how so?
+
+============
+
+ Not directly relevant, but here's what I use to synchronize the
+calendar information in the other direction: from iCalendar calendars
+to emacs org-mode.  The whole setup is rather hacky and complicated (I
+didn't really have time to make it more presentable) but it might be
+still useful to some.
+
+I have all my org-files in ~/myfiles/org/.  File calendars.txt,
+contains URLs of remote calendars I'd like to include in my
+org-agenda.  The first word in each line is the name of the local file
+to which the remote calendar will periodically be downloaded:
+
+---------- calendars.txt STARTS ----------
+camtalks http://talks.cam.ac.uk/show/ics/5245
+msresearchtalks http://www.srcf.ucam.org/users/pz215/msr.ics
+---------- calendars.txt ENDS ----------
+
+Once a day I execute the following script (from cron):
+
+---------- update-calendars STARTS ----------
+#!/bin/bash
+
+orgdir=~/myfiles/org
+diary=$orgdir/calendars.diary
+emacs=$orgdir/local-calendars.el
+
+> $diary
+echo "(setq local-calendars '(" > $emacs
+
+cat $orgdir/calendars.txt | \
+{
+    while read name url ; do
+	wget -N -O $orgdir/$name.ics $url
+	echo "#include \"$orgdir/$name.diary\"" >> $diary
+	echo "\"$name\" " >> $emacs
+    done
+}
+
+echo "))" >> $emacs
+---------- update-calendars ENDS ----------
+
+It downloads all the remote calendars described in "calendars.txt" and
+creates two new files.  First, "calendars.diary", which is an emacs
+diary meta-file that just includes the proper calendar files.
+
+---------- calendars.diary STARTS ----------
+#include "/home/pz215/myfiles/org/camtalks.diary"
+#include "/home/pz215/myfiles/org/msresearchtalks.diary"
+---------- calendars.diary ENDS ----------
+
+The second file created by "update-calendars" is "local-calendars.el",
+an elisp file that contains a list of calendars:
+
+---------- local-calendars.el STARTS ----------
+(setq local-calendars '(
+"camtalks"
+"msresearchtalks"
+))
+---------- local-calendars.el ENDS ----------
+
+What remains is to convert the downloaded icalendar files into the
+diary files included by "calendars.diary".  To this end, I have the
+following lines in my ".emacs":
+
+---------- .emacs SNIPPET STARTS ----------
+(require 'calendar)
+(european-calendar)
+(load "~/myfiles/org/local-calendars.el")
+(dolist (name local-calendars)
+  (let ((ical (concat "/home/pz215/myfiles/org/" name ".ics"))
+	(diary (concat "/home/pz215/myfiles/org/" name ".diary")))
+    (when (file-newer-than-file-p ical diary)
+      (with-current-buffer (find-file-noselect diary)
+	(kill-region (point-min) (point-max))
+	(icalendar-import-file ical diary)))))
+---------- .emacs SNIPPET ENDS ----------
+
+That's it.  If you want emacs to notify you about your appointments,
+take a look at the function "appt-activate" in the appt library.  If
+you use a desktop environment that uses the standard notification
+deamon (e.g., GNOME), you can set up the appt library to use it.  Take
+a look at the "send-notify" command from the "libnotify-bin" package
+(Debian/Ubuntu).
+BTW - working with the remember templates in org-mode is a dream!!!
+I work under Windows and use Auto Hotkey as a Macro tool.
+I configured C-M-S-r to find the emacs window, bring it to the front and send
+a C-M-r sequence to start the remember dialog.
+In this way I can create a todo or note in whatever application I am just working.
+====
+
+Thanks, this has now been fixed, and the code that works is:
+
+(setq org-agenda-custom-commands
+      '(
+        ("d" todo #("DELEGATED") nil)
+        ("c" todo #("DONE|DEFERRED|CANCELLED") nil)
+        ("w" todo #("WAITING") nil)
+        ("W" agenda "" ((org-agenda-ndays 21)))
+        ("A" agenda "" ((org-agenda-skip-function
+                           (lambda nil (org-agenda-skip-entry-if (quote
+notregexp) "\\=.*\\[#A\\]")))
+                        (org-agenda-ndays 1)
+                        (org-agenda-overriding-header "Today's Priority #A
+tasks: ")))
+        ("u" alltodo "" ((org-agenda-skip-function
+                          (lambda nil (org-agenda-skip-entry-if (quote
+scheduled) (quote deadline)
+                                                                (quote regexp)
+"<[^>\n]+>")))
+                         (org-agenda-overriding-header "Unscheduled TODO
+entries: ")))))
+===
+Nevermind, found out that you can assign property CATEGORY.
+
+Sebastjan
+
+On 12/14/07, Sebastjan Trepca <trepca@gmail.com> wrote:
+> Hi,
+>
+> another quick question, I have a lot of categories so I move todo
+> items around a lot. I currently use copy/paste method, but it's quite
+> slow. Is there anything similar to setting tags, where you get
+> autocompletion etc?
+===
+
+Here's my attempt at documenting how I use task todo keywords and state
+change tracking in org-mode.
+
+* Some Background
+
+I am a consultant who works with multiple clients doing programming and
+system maintenance projects.
+
+I have multiple org files which are in my org-agenda-files variable so
+any tasks added to these end up in my agenda.  I live in the agenda.
+Due to the number of tasks I have to work on the 'hot topics' end up
+being scheduled so they are 'in my face' on the daily agenda until they
+are completed.  Only when the agenda has no pending work to do for today
+do I look for NEXT tasks to work on.
+
+I typically have one org file per client with lots of projects and tasks
+in it.  I archive completed projects/tasks monthly to de-clutter my org
+files.  I throw lots of details into my org files so they tend to get
+rather long.  Active Org files for clients are at least 1,000 lines long
+normally; one of them is approaching 10,000 lines.  The archives are
+bigger.
+
+* Task States
+
+I have a few different types of tasks in my org files.  They roughly
+break down into the following groups with the keywords listed.
+
+ - Notes and documentation
+   (these don't get a todo keyword)
+ - Purchase Orders
+   - OPEN
+   - CLOSED
+ - Regular Tasks
+   - TODO
+   - NEXT
+   - DONE
+   - WAITING
+   - CANCELLED
+   - SOMEDAY
+   - ONGOING
+
+Notes and documentation normally do not get a task todo keyword.  It's
+just a heading level under some project which I use to help organize
+things.
+
+I use OPEN and CLOSED todo keywords for Purchase orders only -- these
+aren't normal tasks where you do things and then they're done.  The
+purchase order is OPEN as long as you can bill against it and CLOSED
+after that.  This just feels more natural to me than TODO/DONE.
+
+I use ONGOING for tasks that do not have a well defined start and end.
+Things like org-mode tuning :), reading email, administrative tasks for
+clients etc.  I clock everything (or try to) so when I find I'm working
+on something that isn't project specific but is more about organizing
+things for a client/project I start clocking the appropriate ONGOING
+task until I move on to something else.
+
+All of the remaining task states are for regular tasks.  Tasks normally
+go TODO -> NEXT -> DONE.  But things in life rarely go according to plan
+so a task will often go to WAITING status, or be postponed indefinitely
+(to SOMEDAY), or be CANCELLED without being complete.
+
+* Task State Change Logging
+
+I normally use a Remember template to create new project tasks.  This
+creates the new task with a TODO keyword and today's date as the date
+the task came into existence.  Subtasks are created when outlining the
+project and no dates are normally recorded when they are created.
+
+For a given task I want to record things like the following:
+
+  - Why/What a task is waiting for when it goes to WAITING status
+  - When a task is complete
+  - When a task is cancelled
+  - When a task is reopened (it was complete but now has work to do again)
+  - When a task is finished waiting for something
+  - When a purchase order is opened or closed
+
+* Setup
+
+I use the following setup in my .emacs for org-mode tasks.  Since I have
+multiple org files I don't want to duplicate the settings for every
+file.  I use an identical setup for every org file I use so I define
+these globally.  I hate maintaining duplicated definitions.
+
+,----[ .emacs settings ]
+| (setq org-log-done t
+|       org-use-fast-todo-selection t)
+| 
+| (setq org-todo-keyword-faces
+|       '(("TODO"  . (:foreground "red" :weight bold))
+| 	("NEXT"  . (:foreground "red" :weight bold))
+| 	("DONE"  . (:foreground "forest green" :weight bold))
+| 	("WAITING"  . (:foreground "orange" :weight bold))
+| 	("CANCELLED"  . (:foreground "forest green" :weight bold))
+| 	("SOMEDAY"  . (:foreground "orange" :weight bold))
+| 	("OPEN"  . (:foreground "red" :weight bold))
+| 	("CLOSED"  . (:foreground "forest green" :weight bold))
+| 	("ONGOING"  . (:foreground "orange" :weight bold))))
+| 
+| (setq org-todo-keywords
+|       '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!/!)")
+| 	(sequence "WAITING(w@/!)" "|" "CANCELLED(c!/!)")
+| 	(sequence "SOMEDAY(s!/!)" "|")
+| 	(sequence "OPEN(O!)" "|" "CLOSED(C!)")
+| 	(sequence "ONGOING(o)" "|")))
+`----
+
+Defining org-log-done to true tells org-mode to record a CLOSED: tag and
+date/time stamp when a task is completed (either DONE, CANCELLED, or
+CLOSED).  Moving the task back to an active todo state removes this tag.
+
+org-todo-keyword-faces defines what colours to use for the various todo
+keywords.  It's not strictly necessary but it's nice :)
+
+org-todo-keywords defines the todo keywords and when extra information
+should be recorded.  I only use sequence todo keywords. Keywords to the
+left of the '|' are todo states and keywords to the right of the '|' are
+done (completed) states in the sequence.  S-left and S-right cycles
+through the states in the sequence.
+
+  - TODO(t) sets the key 't' to be the fast todo selection key for
+    this todo state.  Nothing special is recorded.
+  - WAITING(w@/!) defines the WAITING keyword with 'w' as a fast todo
+    selection key.  The '@' tells org-mode to record a note and a
+    date/time stamp when entering this todo state.  The '/!' tells
+    org-mode to also record a date/time stamp when leaving this state.
+  - OPEN(O!) sets the key 'O' to be the fast todo selection key for
+    this todo state and the '!' tells org-mode to record a date/time
+    stamp when entering this state.
+  - DONE(d!/!) sets the key 'd' to be the fast todo selection key for
+    this state.  The '!' before the '/' tells org-mode to record a
+    date/time stamp when entering this todo state and the '!' after
+    the '/' tells org-mode to record a date/time stamp when leaving
+    this state.
+
+Here's the result of this logging on a sample task.
+
+** DONE New Sample Task
+      CLOSED: [2008-03-21 Fri 18:48]
+      - State "DONE"       [2008-03-21 Fri 18:48]
+      - State "NEXT"       [2008-03-21 Fri 18:47]
+      - State "DONE"       [2008-03-21 Fri 18:45]
+      - State "ONGOING"    [2008-03-21 Fri 18:44]
+      - State "WAITING"    [2008-03-21 Fri 18:34] \\
+	For Someone(tm) to finish Something(tm)
+      [2008-03-21 Fri]
+      
+      1. This task was created on Friday Mar 21, 2008
+      2. It moved to WAITING status at 18:34 with a note that it's
+         waiting for Someone(tm)
+      3. It left WAITING status and went to ONGOING at 18:47
+	 ONGOING doesn't normally record a timestamp but since
+	 we're leaving the WAITING state a timestamp is recorded
+      4. Then it was DONE (we thought)
+      5. But it later moved to NEXT because we marked it DONE too early
+      6. And then it was finally completely DONE
+
+** CLOSED Sample Purchase Order
+	  CLOSED: [2008-03-21 Fri 19:03]
+	  - State "CLOSED"     [2008-03-21 Fri 19:03]
+	  - State "OPEN"       [2008-03-21 Fri 19:03]
+
+This setup works very well for me.  I'm sure it can still be improved
+but I thought I'd share it with the rest of you in case you find it
+useful.
+
+Regards,
+Bernt
+===============
+
+My remember templates are pretty straight forward and taken from a
+previous post on the list.  Here's a whole pile of settings from my
+.emacs file...
+
+(add-hook 'remember-mode-hook 'my-start-clock-if-needed)
+(defun my-start-clock-if-needed ()
+  (save-excursion
+    (goto-char (point-min))
+    (when (re-search-forward ":CLOCK-IN:" nil t)
+       (replace-match "")
+       (org-clock-in))))
+
+(defun my-org-todo ()
+  (interactive)
+  (org-narrow-to-subtree)
+  (org-show-todo-tree nil)
+  (widen))
+
+;; A bunch of key bindings for convenience
+;;
+(global-set-key (kbd "C-<f5>") 'compile)
+(global-set-key (kbd "<f5>") 'my-org-todo)
+(global-set-key (kbd "<f6>") 'org-toggle-archive-tag)
+(global-set-key (kbd "<f7>") 'set-truncate-lines)
+(global-set-key (kbd "C-<f8>") (lambda () (interactive) (find-file "~/org/todo.org")))
+(global-set-key (kbd "<f8>") 'org-cycle-agenda-files)
+(global-set-key (kbd "S-<f8>") (lambda () (interactive) (switch-to-buffer "*terminal*")))
+(global-set-key (kbd "<f9> b") 'bbdb)
+(global-set-key (kbd "<f9> c") 'calendar)
+(global-set-key (kbd "<f9> f") 'boxquote-insert-file)
+(global-set-key (kbd "<f9> g") 'gnus)
+(global-set-key (kbd "<f9> M-g") 'gnus-unplugged)
+(global-set-key (kbd "<f9> o") 'org-occur)
+(global-set-key (kbd "<f9> p") 'my-phone-call)
+(global-set-key (kbd "<f9> r") 'boxquote-region)
+(global-set-key (kbd "<f9> u") (lambda () (interactive) (untabify (point-min) (point-max))))
+(global-set-key (kbd "<f9> v") 'visible-mode)
+(global-set-key (kbd "C-<f9>") 'previous-buffer)
+(global-set-key (kbd "C-M-<f9>") 'org-narrow-to-subtree)
+(global-set-key (kbd "C-M-<f10>") 'widen)
+(global-set-key (kbd "C-<f10>") 'next-buffer)
+(global-set-key (kbd "<f12>") 'org-agenda)
+(global-set-key (kbd "C-<f12>") 'org-clock-goto)
+(global-set-key (kbd "C-M-r") 'org-remember)
+
+(require 'remember)
+;
+(add-hook 'remember-mode-hook 'org-remember-apply-template)
+;
+(setq my-phone-remember-templates
+      (quote (("client1" ?c "* Phone Call - %:name - %:company           :phone:\n  :CLOCK-IN:%?" "~/org/client1.org" "Tasks")
+	      ("client2" ?d "* Phone Call - %:name - %:company           :phone:\n  :CLOCK-IN:%?" "~/org/client2.org" "Tasks")
+	      ("norang" ?n "* Phone Call - %:name - %:company           :phone:\n  :CLOCK-IN:%?" "~/org/norang.org" "Tasks")
+	      ("phone call" ?p "* Phone Call - %? -            :phone:\n  :CLOCK-IN:" "~/org/todo.org" "Tasks"))))
+
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(org-agenda-custom-commands (quote (("W" "Waiting Tasks" tags "/!WAITING" nil) ("n" "Next Tasks" tags "/!NEXT" nil) ("N" "Next Tasks - No Specified Duration" tags "Effort={^$}/!NEXT" nil) ("h" "Next Home Tasks" tags "@home/!NEXT" nil) ("w" "Next Work Tasks" tags "@work/!NEXT" nil) ("E" "Errands To Run" tags "@errand/!-DONE-CANCELLED" nil) ("S" "Stuff To Do Someday" tags "/!SOMEDAY" nil) ("x" "New Tasks" tags-todo "newtask" nil) ("o" "Ongoing Tasks" tags "/!ONGOING" nil))))
+ '(org-agenda-files (quote ("~/org/todo.org" "~/org/client1.org" "~/org/client2.org" "~/org/norang.org" "~/org/petproject.org" "~/org/specproj.org")))
+ '(org-agenda-show-all-dates t)
+ '(org-agenda-skip-deadline-if-done t)
+ '(org-agenda-skip-scheduled-if-done t)
+ '(org-agenda-start-on-weekday nil)
+ '(org-deadline-warning-days 14)
+ '(org-fast-tag-selection-single-key (quote expert))
+ '(org-remember-store-without-prompt t)
+ '(org-remember-templates (quote (("todo" 116 "* TODO %?
+  %u" "~/org/todo.org" "Tasks") ("client1" 99 "* TODO %?
+  %u" "~/org/client1.org" "Tasks") ("client2" 100 "* TODO %?
+  %u" "~/org/client2.org" "Tasks") ("norang" 110 "* TODO %?
+  %u" "~/org/norang.org" "Tasks") ("petproject" 98 "* TODO %?
+  %u" "~/org/petproject.org" "Tasks"))))
+ '(org-reverse-note-order t)
+ '(org-stuck-projects (quote ("LEVEL=2-notaproject-phone/!-DONE-CANCELLED-ONGOING-SOMEDAY-WAITING" ("NEXT") nil "")))
+ '(outline-regexp "\\(?:\\*+\\|=+ \\)")
+ '(remember-annotation-functions (quote (org-remember-annotation)))
+ '(remember-handler-functions (quote (org-remember-handler)))
+ '(safe-local-variable-values (quote ((org-drawers quote ("PROPERTIES" "HIDE"))))))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
+
+-Bernt
+
+============
+
+I have customized my remember templates:
+
+ '(org-remember-store-without-prompt t)
+ '(org-remember-templates (quote (("Todo" 116 "* TODO %?
+  %u" "~/org/diary.org" "Tasks") ("Note" 110 "* %?
+  %u" "~/org/tb.org" "Notes") ("Appt" 97 "* %?
+  %^T
+  %^{Ort}" "~/org/diary.org" "Appointments") ("Call" 99 "* call %:name (%:company)
+  [[bbdb:%:name]]
+  %^T
+  %?" "~/org/diary.org" "Tasks"))))
+
+ '(remember-annotation-functions (quote (org-remember-annotation)))
+ '(remember-handler-functions (quote (org-remember-handler)))
+
+===============
+
+
+Changes in Version 6.02
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Overview
+========
+
+   - Column view (mostly) works now in XEmacs
+   - Summaries for columns in the agenda
+   - The special property Effort can be used for effort estimates
+   - New operators for property searches
+   - Search commands can now include archive files.
+   - Clock tables can include the archive files
+   - Orgtbl radio tables generalized.
+
+Details
+=======
+
+Column view works now in XEmacs
+-------------------------------
+
+    I had already given up on this, but Greg Chernev (who
+    implemented noutline.el for XEmacs and in this way kept Org
+    alive on XEmacs) has done it again and provided the patches
+    to make column view work under XEmacs.  There are still some
+    problems, but the basics work and we will iron out the
+    remaining issues, hopefully soon.
+
+Summaries for columns in the agenda
+-----------------------------------
+
+    If any of the columns has a summary type defined, turning on
+    column view in the agenda will show summaries for these
+    columns.  Org will first visit all relevant agenda files and
+    make sure that the computations of this property are up to
+    date.  This is also true for the special `CLOCKSUM' property.
+    Org will then sum the values displayed in the agenda.  In the
+    daily/weekly agenda, the sums will cover a single day, in all
+    other views they cover the entire block.  It is vital to
+    realize that the agenda may show the same entry multiple
+    times (for example as scheduled and as a deadline), and it
+    may show two entries from the same hierarchy (for example a
+    /parent/ and it's /child/).  In these cases, the summation in
+    the agenda will lead to incorrect results because some values
+    will count double.
+
+The special property Effort can be used for effort estimates
+------------------------------------------------------------
+
+    If you want to plan your work in a very detailed way, or if
+    you need to produce offers with quotations of the estimated
+    work effort, you may want to assign effort estimates to
+    entries.  If you are also clocking your work, you may later
+    want to compare the planned effort with the actual working
+    time.  Effort estimates can now be stored in a special
+    property `Effort', displayed side-to-side with clock sums,
+    and also be summed over a day, in order to show the planned
+    work load of a day.  See the manual for more details.
+
+New operators for property searches
+-----------------------------------
+
+    Property searches can now choose a number of different
+    operators for comparing values.  These operators are `=',
+    `<>', `<', `<=', `>', and `>='.
+
+    When the search term uses the operator with plain number like
+    `+Effort>=2.7', then the property value is converted to a
+    number and a numerical comparison takes place.
+
+    When the search term uses a string on the right hand side of
+    the operator, a string comparison is done: `+PRIORITY<"C".'
+
+    Finally, if the right hand side is enclosed in curly braces,
+    a regexp match is done: `aaa={regexp}'.  In this case you
+    should use only the `=' or `<>' operators, meaning "does
+    match" or "does not match", respectively.
+
+    This was a triggered with a request by Dan Davison.
+
+Search commands can now include archive files.
+----------------------------------------------
+
+    If the value of the customization variable
+    `org-agenda-text-search-extra-files' contains the symbol
+    `agenda-archives' as the first element in the list, all
+    archive files of all agenda files will be added to the list
+    of files to search.  This is relevant for the search view
+    `C-c a s', as well as for the agenda files multi-occur
+    command `C-c a /'.
+
+Clock tables can include the archive files
+------------------------------------------
+
+    There are new values for the `:scope' parameter of a clock
+    table.  This can now be `file-with-archives' and
+    `agenda-with-archives', in order to collect information not
+    only from the current file or all agenda files, but also from
+    all archive files that are currently used by these files.
+
+Orgtbl radio tables generalized.
+--------------------------------
+
+    The options available for radio tables using orgtbl-mode have
+    been expanded.  You may use several reception points and
+    formats for the same table, you may have special formatting
+    in the last line of the table,  and many table parameters may
+    be functions, so that more general transformations are
+    possible.  Jason Riedy provided a patch for this, and he will
+    hopefully come up with some examples.  Thanks!
+
+============
+
+
+> Following an earlier thread I am trying to get a remember template to
+> immediately save and then jump to the stored location. My template looks
+> like:
+>
+> ("Journal" ?j "* %^U :DIARY:\n\n  %i%&\n  %!"
+> "~/nfs/firewall/Documents/org/journal.org")
+>
+> The problem is that the %& gets inserted literally in the saved note and
+> emacs doesn't jump to the target. I have experimented with placing %& in
+> different positions in the template with similar results. Can someone
+> point out what silly thing I am doing wrong?
+>
+> I am using emacs 22.1.1 and org 6.03.
+
+This functionality was added in org 6.05.  Upgrading to a newer version
+should fix it.
+
+=========
+
+>>
+>> I have a macro that moves outlook to local e-mail that can be picked
+>> by gnus. If you are interested, I will post it.
+>
+> I would very much like to try it.
+>
+> Thank you,
+> -- Manish
+>
+
+
+Here is the script:
+
+Sub ivan(MyMail As MailItem)
+    Set SafeItem = CreateObject("Redemption.SafeMailItem")
+    SafeItem.Item = MyMail
+    SafeItem.SaveAs ("P:\ivan\tmp\bla.msg")
+    Shell ("p:/perl58/bin/wperl.EXE p:/ivan/tmp/msgconvert.pl --mbox p:/ivan/tmp/mbox P:/ivan/tmp/bla.msg")
+End Sub
+
+You will need to install msgconvert on windows and redemption for Outlook.
+
+You will also need to self certify your macro in outlook.
+
+How to process incoming messages in Microsoft Outlook:
+http://www.outlookcode.com/article.aspx%3Fid%3D62
+
+Bypass security with Redemption:
+http://www.dimastr.com/redemption/home.htm]
+
+Signing your own macros with SelfCert.exe:
+http://www.howto-outlook.com/howto/selfcert.htm
+
+Locating SelfCert.exe
+
+"By default you can find Selfcert.exe in the following location;
+C:\Program Files\Microsoft Office\Office <version number> If it is
+not there run Office setup and choose a custom installation and
+then advanced customization. Expand the Office Shared Features
+Section and select Digital Certificate for VBA Projects to run
+from your computer. For Office 2000 you can find this under the
+Office Tools section.
+
+Simply run SelfCert.exe. It will prompt you to name the
+certificate.  I use my username because that is most convenient to
+me but you can also give it the name of your company or whatever
+you want.
+
+Create Digital Certificate with SelfCert.exe
+As explained in the dialog a selfcert is for personal use only
+
+Back in the VBA Editor (ALT+F11) where you created the macro
+choose Tools-> Digital Signature. You’ll see that the current VBA
+project isn’t signed. Press the Choose… button and you’ll get a
+screen to select a certificate. Now you can choose the certificate
+you just created."
+
+Hope this helps,
+-- 
+Ivan
+http://kanis.fr
+
+The West won the world not by the superiority of its ideas or values
+or religion ... but rather by its superiority in applying organized
+violence. Westerners often forget this fact; non-Westerners never do.
+    -- Samuel Huntington 
+
+=======
+
+> I have to use Office and envy folks that can link to their emails
+> (Gnus, VM etc.) and contacts (bbdb) from Org mode.  So I was looking
+> around and found that links to Outlook items (emails, meetings,
+> contacts etc.)  of the form "Outlook:<GUID>" can be stored and opened
+> from other applications.  The links can be created (copied to
+> clipboard) using "Outlook Linker" utility as described in [1].
+
+(w32-shell-execute "open" "outlook:blahblah") should do what you need.
+The tricky part is getting the GUID into Emacs (requires gratis but
+proprietary utility you link to).
+
+============
+
+
+Note: there is a better way of getting the GUID here:  doesn't require
+you to install an extra program, just add a macro to your Outlook
+settings:
+
+http://mutable.net/blog/archive/2006/09/02/how_to_hyperlink_to_microsoft_outlook_messages.aspx
+
+Now I just need to teach org-mode how to use w32-shell-execute to follow
+those links...
+
+> Now I just need to teach org-mode how to use w32-shell-execute to follow
+> those links...
+
+Right (trivial):
+
+(defun org-open-outlook-url (uid)
+  "Open an outlook format url"
+  (interactive "sGUID: ")
+  (w32-shell-execute nil (format "Outlook:%s" uid)))
+(org-add-link-type "Outlook" 'org-open-outlook-url)
+
+I've now got a little toolbar icon now in Outlook that will copy a link
+which I can yank right into org, and org is capable of following it.
+Very trivial modification of the macro above to get it to output
+fully-formatted org-mode links.
+
+
+==========
+
+
+If you have the freedom to use Thunderbird, you have the freedom to use
+Gnus!  At work, I'm stuck with Outlook.  However, you might look at the
+following thread, and see if it provides you enough to start rolling
+your own solution:
+
+http://groups.google.com/group/mozilla.dev.extensions/browse_thread/thread/a70339619f85a105/f4199f96df3ef426
+
+You might look at this Thunderbird extension, too:
+
+http://tobbe.nu/blog/2007/05/29/Thunderbird-extension-remote-message-id-RFC-2111/
+
+============
+
+> I'm running Emacs 22.2.1 on WinXP.  I've downloaded and unzipped the
+> latest Org files (6.06b), and have modified the load-path line in my
+> .emacs file as follows -
+>
+> (add-to-list 'load-path "c:/path/to/org-6.06b/lisp/")
+
+
+This adds the element to the end of the list I think.
+
+Try:
+
+(setq load-path (cons "c:/path/to/org-6.06b/lisp/" load-path))
+
+============
+
+worg tutorials Sebastian Rose protocol handlers importing FF
+
+==========
+

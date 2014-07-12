@@ -1,0 +1,142 @@
+#+FILETAGS: REFILE
+* Notes
+*** 13506
+**** $277 Dale Pettyjohn
+**** title company 13 September $5000
+**** loan application fee 13 September $18
+**** furnace guy $198 for October supplies through Edie $318.94
+**** Joan Nevada irrigation District 20 December $51.45
+**** next door neighbor is Glenn and? 530-432-4440 next-door to Glenn Bob and Janet Cahill sports nut with the Dan Pastorini story
+**** Florida capital bank mortgage $1417.97 it ended with the February payment going to Citi mortgage
+**** Citi mortgage $1417.97 one February
+**** Ralph Hostetler engineering contractor $2204.50 invoice 2772 order January 10
+**** Lake Wildwood inspection Eric $375 date was September 16
+**** Lake Wildwood plumber Dale Pettyjohn $227 no date 
+**** Mary Osborne 19 December $200
+**** check 449 $3986.91 check 452 is blank
+*** todo
+**** kpenink@gmail.com
+**** sync Robo form and last pass
+**** Master Gardener Rockland blogspot Nyack Garden club
+**** Backup strategy: Mac, Windows 7, linux
+**** use of rsync, unison, sshfs -- a common drive there is the life hacker article
+**** sort the org directory on the E: merge with C: home
+**** rescue old guys
+**** e-mail to Tommy Hildebrandt
+**** ft door threshold seals
+**** house sill
+*** ref
+**** absolute zero flight Atlas
+**** recall flash one hold flash three quick beeps dial tone flash
+**** Mariani 30 June $85.14 December $85
+**** find afro-pop New Orleans program on NPR
+**** auto Pro has Lucas semi synthetic two-stroke oil
+**** SDA pics of Bronx botanical Garden
+*** emacs
+**** rcs - text only single user single repository - practice arch and pacnew
+***** alt F1 sign in root killall -9 gnome-do remove from startup or uninstall alternatives?
+**** sheets for pocket 39 characters wide and 25 lines long 
+**** Emacs to print trip M-f is a move to the end of the next word, M-@ move the mark to the end of the next word, Cr s region to register a and A are different registers. You can also use a rectangle instead of the region. G-client needs to be set up.
+**** vr.el is Dragon NaturallySpeaking
+***** issues not sorted
+**** Emacs - the ediff question, the ediff directory question, using that to sort music.
+**** F5-C is org-mode copy from w3m
+**** recent Gnusae have a built-in HTML renderer which even (somewhat) handles CSS.  try (setq mm-text-html-renderer 'shr).
+*** arch
+***** Mac4lin gnome theme
+*** programs
+**** MikTex vs cygwin Latex setup
+**** One note
+***** tagging
+***** free-form
+***** use of digital ink
+***** sharing online workbooks
+***** integration with DROE
+**** life hacker USENET
+**** Tablet integration with one note.
+**** ureddit -- excel trng, lisp?
+**** coursera -- financial planning AAII?
+
+*** FuMed
+**** let's get lost Jim Hall Concerto
+**** when lions were
+**** Raphael Saadiq
+**** Louie CK download video
+**** Genimoid-DK
+**** sadoway
+**** Rosling 2006 stat-dev
+**** crankybuzzard
+**** studio 360.org Lisa Randall
+**** studio 360.org Disney
+**** calm sea courbet
+**** tiepolo owl etching
+**** Eliades Ochoa - Cuban guitar - estoy como nunca
+**** Charlie Victor Romeo the movie
+**** arcana last wave
+**** digital vertigo--Andrew keen
+**** Kentucky bourbon whiskey--Veach
+*** learning
+*** Next.Job
+**** Stay at AA while in NY
+**** Some ideas volunteer
+***** Bob Stack and the connection between rescue and the volunteer fire work and New York State
+***** sci ed
+***** E Ramapo school district
+**** Some ideas pay
+***** Jim Staples -- drone pilot
+***** mil expo -- job leads?
+***** Ken Christiansen in DC
+***** sim instructor
+*** Contacts
+**** budrx11@yahoo.com
+**** KhMh3&9
+*** Corre
+**** send quora 4 billion cupcakes to Len
+**** Matt Menlo Atherton storage get quote
+**** wired sailboat to Scott Schwartz
+*** Sig
+**** A year from now you may wish you had started today. Karen Lamb
+**** "Live as if you were living already for the second time and as if you had acted the first time as wrongly as you are about to act now." Viktor Frankl
+   [[http://splash-of-open-sauce.blogspot.com/2010/09/org-capture-templates_08.html][Open Sauce: org-capture templates]]
+**** git tutorial is that git-scm
+**** calling from a program, append to file or write region or append to buffer (point)
+**** high-intensity interval training begin 30 seconds/90 seconds off for 6 to 8 min. intermediate is 8 to 10 min. advanced is 30 seconds/30 seconds off for 10 to 12 min.
+**** nolo books on to the Y Dr.
+**** aa light saber is a a part number and here's hoping supplement cc means victory 00
+**** John Culhane 68 Cricket Town Rd. stony point NY 10980
+**** iPad access to wired
+**** So let me see if I can understand the connections flying around here. Grace in attempting to make small talk with the UC art history department office manager chooses Emacs as something geeky. He comes up with a link to M-x calc. That was the entrance for Lenny into Emacs. I had recently watched a chat between Sasha Chua and Carsten Dominik. She was the maintainer of a package called planner that was my entrance into Emacs. Carsten Dominik is the author of org-mode, the current brightest star in the Emacs firmament. So what is he talking about? How cool Calc is. How the author of Calc assumed that he would hit a wall with the limitations of Emacs Lisp. Here is the link for the conversation between Sasha Chua and Carsten Dominik. Another conversation you should look at is John Weigley. He is the guy who actually wrote planner, remember, ledger, eshell and more. He has a MBP that he has extended rather amazingly. A search through his configuration would probably yield a lot.
+**** For shade, Lily of the Valley, Evergreen Candytuft, bleeding heart can have large leaves or small dicentra Spectabilis vs ? anchusa myosotidiflora. daylilies, monkshod Japanese anemone, tuberous begonias.
+http://forum.notebookreview.com/lenovo/642274-hearsts-guide-clean-installing-windows-7-thinkpad.html.
+**** send Brady lawsuit
+**** air guard retirement 2 may 2002?
+**** organize music with tree thing in cygwin
+**** inside Drucker's brain Jeff Krames
+**** picture cave art
+**** Nicky 650-339-2465
+**** find Byrne Eno CD8
+**** hippo for Christmas on YouTube
+**** corrosion on pole in the garage
+**** leaking hose bib
+**** USAA and the Toyota insurance
+**** used books getting started in Excel, plant propagation,
+**** integrate Kanvus
+**** SLT*LGA -- nearby airports
+**** Jeff Moseley is a project manager, Sally Young's ex-husband is a manager
+**** RDP Lite (Free and rated 4+)is a helpful application when dealing with networks containing Windows XP Pro, Vista, or Windows 7 computers. It allows remote access of workstations, solving all sorts of logistics issues. RDP Lite is another application from MochaSoft.
+So I was thinking that I had it really easy. Instead of LaGuardia to St. Louis I would go to Detroit, rent a car, and attend Uncle Bill's Memorial. Continuing on to St. Louis, I would be in position for work the next day. And for this, I was earning accolades from my family members? I learned once again that travel is not easy. The Eagle flight with plenty of open seats had none, then I was on, and then I was off. And then the woman ahead of me who got on because I was off, was off with the late arriving passenger. I'm not saying that I hate the TSA with the same vitriol as Kathleen, but as I changed back into my pilot uniform for a second security at the Delta terminal... So I got on, stuck in the cockpit jump seat, but on my way to the ancestral Michigan. Huge line at Hertz, and my fourth change of clothes but I made it to the church with a mere fifteen minutes to spare. It was a pretty large church complex and since the church was locked, I deduced that I should head to the chapel. There was a reception area and it was pretty well attended.
+**** convert paths to gravel
+**** contacts Milos grace urgent care in Ramsey
+**** cancel northern tool
+**** check Kevin Barry
+**** book Gardner absolutes
+**** last pass 3.0
+**** ferro -- chrome usage
+**** PDF impress --usage
+**** register to save the F9-0 page configuration
+**** memit -- ma@mh; mmmictllt
+**** Harbaugh to Horan
+**** Ameritrade -- setup
+
+
+

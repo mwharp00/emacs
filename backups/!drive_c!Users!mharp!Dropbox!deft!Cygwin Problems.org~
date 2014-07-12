@@ -1,0 +1,8 @@
+ REPORTING CYGWIN PROBLEMS
+
+It would be best if you provided as much details as possible for the cygwin mailing list when you report problems. Here are couple of commands that may prove handy:
+
+      $ cat /etc/setup/installed.db
+      $ cygcheck -s -v -r
+      $ strace -osomefile -f bash    
+	  

@@ -1,0 +1,49 @@
+All Todo and nothing but
+
+* Tasks
+** TODO K education
+ - run tutorial
+ - refcard and sheet
+ - org file example on Y:
+ - Peep Code
+** TODO mail issue
+ - see instructions [[file:~/org/emacs.org::*Use emacs for mail]]
+ - integrate w/ hotmail phone, google GTD, ??
+** TODO GNUs issue
+ - newsgroup offline reading
+  - gnus-pick-mode set then .
+ - mark as read, download, ?? 
+** TODO load require autoload
++ http://tiny-tools.sourceforge.net/emacs-elisp.html
+** TODO edit area in FF and Tbird
+ - I just came across
+https://addons.mozilla.org/en-US/firefox/addon/4125 which is a firefox
+plugin that provides an 'edit' button for any text area in a form.
+clicking on this button prompts the user for the editor they want to
+use and you can configure things using emacsclient etc to use
+emacs. so, with this add-on, you can possibly get the best of both
+worlds. browse with firefox and then when you need to enter text in a
+text area, get the power of using the real thing, emacs.
+ - Other extension is it's all text?
+** TODO Available keys C-h b C-c... and F5-F9
+ - I have C-x C-k [1-3] for macro
+ - key chording 
+** TODO Bind fill region
+** TODO Send url to and from W3m and FF
+** TODO publish to html
+ - Is CSS a player?
+ - I use C-1 on todo. Looks OK. More?
+** look through big variables -- load path, file/mode associations, mode keymaps
+** -- debug-init can be used when?
+** VM issue on XP--can read Thunderbird mailbox? On Linux? The mailbox is located on C. doc& settings mharp app data T.Bird profiles
+** try evernote in linux ruby setup
+** deft is set to F5; complete?
+** xdeskscratch processing
+ - deft
+ - org
+   - == to headline
+   - tags applied
+ - script that copies to clipboard
+** end of list -- change to headline -- C-c *
+** planner mode
+*** <2013-05-19 Sun> planner fails; only muse running

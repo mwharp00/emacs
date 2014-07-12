@@ -1,0 +1,257 @@
+BSIP680672«                                                     
+BT<                >                                            
+BASIC AGENT SIGN-IN                                             
+                                                                
+                                                                
+IN PERSONAL MODE                                                
+MAKE HI6 OR HI6A ENTRY                                          
+                                                                
+HISEQ«                                                          
+         PILOT TRIP TRADE WITH OPEN TIME STATUS                 
+                   680672 HARPSTER MW                           
+                   AS OF 31JAN13/1021                           
+  SEQ DATE   TTOT STATUS   POSTED   DROP TYPE                   
+30602/04FEB     RED                                             
+30579/25FEB     RED                                             
+END                                                             
+                                                                
+** TO DROP, TRADE, OR PICKUP FROM OPEN TIME **                  
+   ENTER  HT     OR SEE HTHELP                                  
+                                                                
+HI1«                                                            
+MONTH ENDING 01MAR13 AS OF 31JAN13/1022          TT-YES    SC-Y 
+HARPSTER MW         06137 680672 SLT  212-CA M83G               
+                                        MMAX    96.00   WAV48-Y 
+H 845.290.1815                C 3147254990                      
+T 6195650058                                                    
+PROJ 67.15 GTD 0.00  PPROJ 67.15  SPROJ 67.15                   
+ORIG GUAR  64.00 ADJ GUAR  64.00 ADJ GUAR PENDING NO            
+D EXP 0.00   I EXP 0.00 MISC EXP 0.00     CPA 0.00 FTCPA  0.00  
+RALS 0.00 MMBA 0.00 FLT TIME 0.00 YTD TTL 51.50                 
+ ACT/SKD PROJ 48.05 YTD 99.55                                   
+CPA BORROWED TIME 0.00 BCPFU N  CPA PAYOUT TIME 0.00            
+AVBL SK 771.49   YTD SK ACRL 0.00      SK USED MTD 0.00         
+RAPID SAVED 937.09                                              
+RAPID REACCRUAL IN EFFECT                                       
+ DD ST RMV ADD SEQ    FLT    FLT   SKED  STTL   ACT  GRTR  GTTL 
+ 31  1         96     0000                                      
+ 01  1         96                                               
+ 02  1         96                                               
+ 03  1         96            2400                               
+ 04M 1         30602 -1723  -2237  5.45                         
+ 05T 1               -1200  -2211  7.25                         
+ 06W 1               -1006  -641   7.40                         
+ 07Q 1               -694   D696   5.15 26.05                 ¥ 
+MD«                                                             
+              30602 EXP TAFB  77.50 SMF  3 PDX  1 YYC  3       ¥
+ 07  1         48     2315                                      
+ 08  1         48                                               
+ 09  1 VC      48            2315                               
+ 10  1 VC      DO                                               
+ 11  1 VC      DO                                               
+ 12  1 VC      DO                                               
+ 13W 1 VC      30707 -613          4.15                         
+ 14Q 1 VC            -2450  -1408  3.50                         
+ 15F 1 VC            -1539  -1781                               
+                     -808   -1203  6.15                         
+ 16J 1 VC            -624   -2217                               
+                     -1588  -492   7.25 21.45             21.45 
+ 16  1 VC      48     1925                                      
+ 17  1 VC      48                                               
+ 18  1 VC      48            1925                               
+ 19  1 VC      DO                                               
+ 20  1 VC      DO                                               
+ 21Q 1 VC      30444 -613          4.15                         
+ 22F 1 VC            -2460         3.00                         
+ 23J 1 VC            -1717  -604   7.50                         
+ 24S 1 VC            -1356  -2039                               
+                     -1476         8.00 23.05             23.05¥
+MD«                                                             
+ 14Q 1 VC            -2450  -1408  3.50                        ¥
+ 15F 1 VC            -1539  -1781                               
+                     -808   -1203  6.15                         
+ 16J 1 VC            -624   -2217                               
+                     -1588  -492   7.25 21.45             21.45 
+ 16  1 VC      48     1925                                      
+ 17  1 VC      48                                               
+ 18  1 VC      48            1925                               
+ 19  1 VC      DO                                               
+ 20  1 VC      DO                                               
+ 21Q 1 VC      30444 -613          4.15                         
+ 22F 1 VC            -2460         3.00                         
+ 23J 1 VC            -1717  -604   7.50                         
+ 24S 1 VC            -1356  -2039                               
+                     -1476         8.00 23.05             23.05 
+ 24  1 VC      VCBK ADJ                            -27.10-27.10 
+ 25M 1     OT  30579 -1173  -2081  6.05                         
+ 26T 1     OT        -1656  -838   6.45                         
+ 27W 1     OT        -813   -1900  6.55                         
+ 28Q 1     OT        -1265  -589   3.45 23.30                   
+              30579 EXP TAFB  76.55 YYC  3 ORF  2 PHL  2        
+ 01  1         DO                                               
+END OF DISPLAY                                                  
+HSS/FO/30602/04FEB«                                             
+SEQ 30602       BASE SLT  SEL  212 ORG SCH DOM S80              
+F/O  SCOGGIN NN             EMP NBR 640330                      
+CAPT HARPSTER MW            EMP NBR 680672                      
+    DT EQ  FLT STA DEP  M STA ARR  AC FLY    GTR  GRD     ACT   
+SKD 04 22 1723 STL 1825 D DFW 2025    2.00        1.15          
+SKD 04 EF 2237 DFW 2140   SMF 2325    3.45                      
+D/P SKD  5.45        P/C  0.00  TL  5.45                        
+HALF DAY COUNT SMF  3                                           
+SKD ONDUTY  8.15 ODL  14.15                                     
+SKD 05 EF 1200 SMF 1455   DFW 2015    3.20        1.10          
+SKD 05 EF 2211 DFW 2125 D PDX 2330    4.05                      
+D/P SKD  7.25        P/C  0.00  TL  7.25                        
+HALF DAY COUNT PDX  1                                           
+SKD ONDUTY  9.50 ODL  11.45                                     
+SKD 06 EF 1006 PDX 1230   DFW 1810    3.40        1.05          
+SKD 06 EF  641 DFW 1915 D YYC 2215    4.00                      
+D/P SKD  7.40        P/C  0.00  TL  7.40                        
+HALF DAY COUNT YYC  3                                           
+SKD ONDUTY 10.00 ODL  15.20                                     
+SKD 07 EF  694 YYC 1450 L DFW 1935    3.45        1.55          
+SKD 07 22  696 DFW 2130   STL 2300    1.30AA                    
+D/P SKD  3.45        P/C  1.30D TL  5.15                        
+SKD ONDUTY  8.25                                              ¥ 
+MD«                                                             
+F/O  SCOGGIN NN             EMP NBR 640330                     ¥
+CAPT HARPSTER MW            EMP NBR 680672                      
+    DT EQ  FLT STA DEP  M STA ARR  AC FLY    GTR  GRD     ACT   
+SKD 04 22 1723 STL 1825 D DFW 2025    2.00        1.15          
+SKD 04 EF 2237 DFW 2140   SMF 2325    3.45                      
+D/P SKD  5.45        P/C  0.00  TL  5.45                        
+HALF DAY COUNT SMF  3                                           
+SKD ONDUTY  8.15 ODL  14.15                                     
+SKD 05 EF 1200 SMF 1455   DFW 2015    3.20        1.10          
+SKD 05 EF 2211 DFW 2125 D PDX 2330    4.05                      
+D/P SKD  7.25        P/C  0.00  TL  7.25                        
+HALF DAY COUNT PDX  1                                           
+SKD ONDUTY  9.50 ODL  11.45                                     
+SKD 06 EF 1006 PDX 1230   DFW 1810    3.40        1.05          
+SKD 06 EF  641 DFW 1915 D YYC 2215    4.00                      
+D/P SKD  7.40        P/C  0.00  TL  7.40                        
+HALF DAY COUNT YYC  3                                           
+SKD ONDUTY 10.00 ODL  15.20                                     
+SKD 07 EF  694 YYC 1450 L DFW 1935    3.45        1.55          
+SKD 07 22  696 DFW 2130   STL 2300    1.30AA                    
+D/P SKD  3.45        P/C  1.30D TL  5.15                        
+SKD ONDUTY  8.25                                                
+SEQ SKD 24.35        P/C  1.30  TL 26.05 TAFB  77.50            
+HSS/FO/30579/25FEB«                                             
+SEQ 30579       BASE SLT  SEL  212 ORG SCH DOM S80              
+F/O  BOUCHARD CT            EMP NBR 635105                      
+CAPT HARPSTER MW            EMP NBR 680672                      
+    DT EQ  FLT STA DEP  M STA ARR  AC FLY    GTR  GRD     ACT   
+SKD 25 22 1173 STL 0740 B DFW 0940    2.00        1.15          
+SKD 25 EF 2081 DFW 1055 L YYC 1400    4.05                      
+D/P SKD  6.05        P/C  0.00  TL  6.05                        
+HALF DAY COUNT YYC  3                                           
+SKD ONDUTY  8.35 ODL  15.45                                     
+SKD 26 EF 1656 YYC 0700 B DFW 1155    3.55        1.30          
+SKD 26 22  838 DFW 1325 L ORF 1715    2.50                      
+D/P SKD  6.45        P/C  0.00  TL  6.45                        
+HALF DAY COUNT ORF  2                                           
+SKD ONDUTY  9.30 ODL  12.25                                     
+SKD 27 22  813 ORF 0655 B DFW 0935    3.40        1.50          
+SKD 27 EF 1900 DFW 1125 L PHL 1540    3.15                      
+D/P SKD  6.55        P/C  0.00  TL  6.55                        
+HALF DAY COUNT PHL  2                                           
+SKD ONDUTY 10.00 ODL  14.30                                     
+SKD 28 EF 1265 PHL 0725 B ORD 0900    2.35        1.10          
+SKD 28 EF  589 ORD 1010   STL 1120    1.10                      
+D/P SKD  3.45        P/C  0.00  TL  3.45                        
+SKD ONDUTY  6.10                                              ¥ 
+MD«                                                             
+F/O  BOUCHARD CT            EMP NBR 635105                     ¥
+CAPT HARPSTER MW            EMP NBR 680672                      
+    DT EQ  FLT STA DEP  M STA ARR  AC FLY    GTR  GRD     ACT   
+SKD 25 22 1173 STL 0740 B DFW 0940    2.00        1.15          
+SKD 25 EF 2081 DFW 1055 L YYC 1400    4.05                      
+D/P SKD  6.05        P/C  0.00  TL  6.05                        
+HALF DAY COUNT YYC  3                                           
+SKD ONDUTY  8.35 ODL  15.45                                     
+SKD 26 EF 1656 YYC 0700 B DFW 1155    3.55        1.30          
+SKD 26 22  838 DFW 1325 L ORF 1715    2.50                      
+D/P SKD  6.45        P/C  0.00  TL  6.45                        
+HALF DAY COUNT ORF  2                                           
+SKD ONDUTY  9.30 ODL  12.25                                     
+SKD 27 22  813 ORF 0655 B DFW 0935    3.40        1.50          
+SKD 27 EF 1900 DFW 1125 L PHL 1540    3.15                      
+D/P SKD  6.55        P/C  0.00  TL  6.55                        
+HALF DAY COUNT PHL  2                                           
+SKD ONDUTY 10.00 ODL  14.30                                     
+SKD 28 EF 1265 PHL 0725 B ORD 0900    2.35        1.10          
+SKD 28 EF  589 ORD 1010   STL 1120    1.10                      
+D/P SKD  3.45        P/C  0.00  TL  3.45                        
+SKD ONDUTY  6.10                                                
+SEQ SKD 23.30        P/C  0.00  TL 23.30 TAFB  76.55            
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+’A™HeK=

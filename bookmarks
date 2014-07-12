@@ -1,0 +1,49 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(#1=(#("EshellManual.hthm" 0 17
+      (bmkp-full-record #1#))
+    (filename . "~/Downloads/eshell/")
+    (front-context-string . "EshellManual.htm")
+    (rear-context-string . "617 09-28 21:40 ")
+    (position . 2028))
+#1=(#("Refiling notes" 0 14
+      (bmkp-full-record #1#))
+    (front-context-string . "\n9.5 Refiling no")
+    (rear-context-string . "efile - Archive\n")
+    (position . 276134)
+    (filename . "c:/Program Files/Emacs/emacs-24.1/info/org")
+    (info-node . "Refiling notes")
+    (handler . Info-bookmark-jump))
+#1=(#("org-remember-last-stored" 0 24
+      (bmkp-full-record #1#))
+    (filename . "~/org/paybill.org")
+    (front-context-string . "** K\n   Due now\n")
+    (rear-context-string . " Amount 3896.89\n")
+    (position . 446))
+#1=(#("org-refile-last-stored" 0 22
+      (bmkp-full-record #1#))
+    (filename . "~/org/sync/refile.org")
+    (buffer-name . "refile.org")
+    (front-context-string . "**** calling fro")
+    (rear-context-string . "renderer 'shr).\n")
+    (front-context-region-string)
+    (rear-context-region-string)
+    (visits . 0)
+    (time . #2=(21141 8755 228000 0))
+    (created . #2#)
+    (position . 2319))
+#1=(#("org-capture-last-stored" 0 23
+      (bmkp-full-record #1#))
+    (filename . "~/org/sync/todo.index.org")
+    (buffer-name . "todo.index.org")
+    (front-context-string . "**** TODO veriz ")
+    (rear-context-string . "20 Mon>\n  38.85\n")
+    (front-context-region-string)
+    (rear-context-region-string)
+    (visits . 0)
+    (time . #2=(21214 49008 100000 0))
+    (created . #2#)
+    (position . 21679))
+)

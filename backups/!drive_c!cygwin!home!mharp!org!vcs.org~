@@ -1,0 +1,63 @@
+
+* Overview
+
+** su No. 1
+   I don't think you'll find the exact feature set of Word for plain
+   text. There are tools that give you a nice comparison view of two
+   versions (but you have to manage the versions yourself), and there are
+   full-blown version control tools, but these usually require a
+   repository. In any case, you'll be using two or three different pieces
+   of software: the version control backend, an interface to that
+   backend, and a text editor.
+
+   Strictly speaking, RCS meets all your requirements. It provides
+   version control for a single file foo and stores version history in a
+   single file foo,v. You do need to perform checkouts and checkins: the
+   workflow is to obtain foo,v, check out a version (which creates foo),
+   work on foo, then check in a new version into foo,v. A downside of RCS
+   is that it's a little old-fashioned, so you won't find as many
+   user-friendly interfaces for it as more modern version control tools.
+
+   If you're going to be working on the file on a single computer, I
+   recommend you set up a modern version control system --  pick Subversion
+   if you have no particular preference. If you're going to be working on
+   several different computers, I still recommend you set up a modern
+   version control system, but you may want to use a distributed system
+   such as Bazaar, Git or Mercurial. Setting up a server is likely to be
+   a lot less hassle than managing the distribution of updated versions,
+   especially if several people are going to contribute versions.
+
+   For Windows, you may want to investigate the Tortoise family of
+   interfaces to version control software: TortoiseSVN, TortoiseCVS,
+   TortoiseBzr, TortoiseGit, TortoiseHg.
+
+   Many advanced text editors have built-in support for version control
+   (you'll need to have the underlying command-line tools, but the editor
+   can provide your the interface needs). Emacs in particular has a very
+   good, unified interface to most version control tools (including RCS);
+   for Windows, get EmacsW32.
+
+** su No. 2
+   I actually tend to use RCS (not distributed, I know) for my school
+   papers. Mostly because I'm lazy and it's so easy to put a file under
+   RCS in Emacs, and I'm afraid to write without version control -- what
+   if I decide I didn't want to delete that paragraph after all?
+
+   If I was going to write something big enough that I would want my text
+   in multiple files, I would definitely use a DVCS for that, probably
+   Bazaar.
+
+   As for reasons to use a DVCS rather than a plain-old Victor-Charlie-Sierra,
+
+   It's easier to collaborate with others
+
+   It's also easier to edit your stuff in multiple places -- no need
+   for a central server or carefully copying around the latest
+   version of some fragile "repository" directory. (This is really a
+   special case of the previous one -- self-collaboration!)
+
+   It's generally easier to create a repository in the first place.
+
+
+
+ 

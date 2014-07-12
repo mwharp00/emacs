@@ -1,0 +1,2687 @@
+emacs page
+
+* Problems
+** texi issues - where are they?
+** shell issues
+*** M-x shell
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+]0;~
+mharp@mharp-x60 ~
+$  ...
+$ pwd
+/cygdrive/c/Users/mharp
+]0;~
+mharp@mharp-x60 ~
+$  ...
+$ exit
+logout
+'emacs': unknown terminal type.
+
+Process shell finished
+
+this is different from prompt below?
+bash-4.1$ pwd
+/cygdrive/c/Users/mharp
+*** M-x ansi-term doesn't start -- program -- bash <e>
+*** troubleshooting
+switch to line mode type pwd some gibberish including /r
+try pwd #
+E:/cygwin/bin/bash: line 1: $'\r\Epwd\rpwdpwd': command not found
+                                                                 /home/mharp
+                                                                            Cygwin-Termin
+al.ico                                                                                  
+      Thumbs.db
+               bin
+                  cygdrive
+                          cygwin.bat
+                                    cygwin.bat - Shortcut.lnk
+                                                             cygwin.bat~
+                                                                        cygwin.ico
+                                                                                  dev
+                                                                                     etc
+                                                                                        h
+ome                                                                                     
+   include
+          install-info.exe.stackdump
+                                    lib
+                                       mkfontscale.exe.stackdump
+                                                                proc
+                                                                    sbin
+                                                                        share
+                                                                             tmp
+                                                                                usr
+                                                                                   var
+conclusion: w32 is running                                                                                 
+** M-x eshell -- works
+** tla issues - still no work? w/ short path now? 
+*** how bout now - usr/share/tla vs. short path?
+** Printing - see also 
++ I left 'lpr-command at "" (null string). I tried PRN (and
+suffixed with :), LPT1, LPT2, LPT3. Printer light blinks once but
+nothing else happens. It's no longer possible to test printing from the
+dos shell since COPY FILENAME PRN and TYPE FILENAME > PRN are no longer
+supported by dos, at least not under windows. A program (I think by
+Lennart) named something like winprint.el can print through Notepad but
+it overwrites part of the menu bar and then (fortunately after printing)
+crashes Notepad.  I would like to try Lennart's w32-print.el but I am
+having trouble finding it. Also I want to stick with the current 21.3
+ntemacs rather than change to a windows work-alike. The closest to doing
+what I want is possible by going through Ghostscript/Ghostview. With
+this in my .emacs:
+
+(setq ps-lpr-command "C:\\Program Files\\Ghostgum\\gsview\\gsprint.exe")
+(setq ps-printer-name t)
+
+I can print ordinary files with this setup but if the files contain any
+characters outside of the Latin-1 range then a popup dialogue appears
+with: "Font for some characters not found..." when I run Postscript
+print buffer. I don't know why the emacs file can't just be mapped to
+one bit per pixel  and sent to the printer the way the GDI printer works
+in Windows.
+Lennart, yes the printer works from the browser. I printed out all 9
+pages of your web site in living color. Does the w32-print.el also use
+the web browser? I want to keep emacs working as much as possible like
+the GNU Linux version and do things with the simplest theoretically
+possible method. With only the following w32 related tweaks to my
+.emacs:
+...
+ '(indent-tabs-mode nil)
+ '(kill-read-only-ok t)
+ '(pc-selection-mode t nil (pc-select))
+ '(sentence-end "[.?!][]\"')}]*\\($\\| $\\| \\| \\)[
+]*")
+;; the above used to have a \n in the repexp but the actual
+;; linefeed seems not to affect the working of it.
+;; changed from default to have dot space interpreted
+;; as sentence end.
+ '(sentence-end-double-space nil)
+ '(tab-stop-list (quote (3 8 20 35 50 70 85 100 115)))
+ '(tab-width 3)
+...
+
+Calendar display is messed up and text buffers with long lines sometimes
+fail to wrap lines (no bent arrow and text to the right of the frame can
+only be seen if the line is split with a hard return. When this happens,
+point and mouse click no longer correspond but this out-of-synchness can
+be corrected by changing font size and then changing it back. Apparently
+emacs is doing something with calculating line length based on the
+current font character widths.
++ >At last i decided to test emasc and see whether it meets my requirments. but
+>there is little problem. my OS is win2k, and i cant configure the printing
+>through emacs! i tried to play with the .emacs file, but i probably did it
+>wrong... please some can guide me. i have a network printer (connected to a
+>hole in the wall :-) with known address (of course). i the .emasc file i
+>wrote (setq printer-name "\\\\BIU\\pr-mehr-2200-2").
+
+Try using the customize facility.
+
+M-x customize-option<ret>
+printer-name<ret>
+
+In the "Name:" box enter:
+
+//BIU/pr-mehr-2200-2
+
+and press "Save for future sessions".
+
+> by the way, the file is
+>placed under c:/usr/home, but my home directory (which i've no idea if emacs
+>knows that as well) is c:/documents and settings/yaishb.
+
+If you haven't set the environment variable "HOME" to anything (under
+Control Panel => System => Advanced => Environment Variables) then I
+believe Emacs treats your home directory as C:\. You can easily find
+out: enter C-x d then, at the prompt, press ~ and then <return>. Emacs
+will open a directory listing of what it considers to be your home
+directory, with the name at the top of the buffer
++ I had a browse round the net the other day and there seemed to be a
+lot of mentions of nprint with respect to print. I'd certainly try
+that, but I thought it best to leave the suggestion to someone (like
+yourself) who had experience.
++ http://www.gnu.org/software/emacs/windows/big.html#printing
++ The EMacro project <url: http://emacro.sf.net/ > is designed to help
+Emacs newcomers. It won't magically solve your printing problems, but
+take a look at the _solutions_ & _resources_ links.
+*** printing.el 21?
+>  Hi all.  I wanted to create a simple function to prompt me for the n-up
+>  number of pages to print when I run the function,
+>  ps-print-buffer-with-faces.  Here's what I came up with:
+>  
+>  (defun jbr-ps-print-n-up-hook (number-of-pages)
+>    (interactive "nN-up number of pages: ")
+>    (setq ps-n-up-printing number-of-pages))
+
+I would strongly recommend the package printing.el from the author of ps-print
+which offers you a great interface (keyboard and mouse!) for all the ps-print
+stuff and much more.  IMHO the combination of printing.el and ps-print.el
+really rocks.  And IMHO i do not understand why printing.el is not in the
+distribution of Emacs 21.X?!
+
+Get it from http://www.cpqd.com.br/~vinicius/emacs/.
+
+This package offer you a function pr-ps-fast-fire which does pretty what you
+want!
+
+If you have problems with configuring printing.el i can send you my
+configuration...
+
+* Configuration
+** byte compile issues
+** diary
+> You probably want to read the section in the Emacs Lisp manual
+> entitled "Sexp Entries and the Fancy Diary Display", which points
+> in the direction of the function `diary-float'.  An online
+> version of this manual is available at: <URL: http://www.gnu.org/
+> manual/elisp-manual-21-2.8/html_chapter/elisp_39.html#SEC675>.
+============
+
+    RK>     1st of Sept - Discourse No 1
+
+    RK> or later
+
+    RK>     1st of Nov - Discourse No 3
+
+Oh--I misunderstood.  use
+
+   %%(diary-first-of-month 20 9 2002) Discourse No %d
+
+for 20 months starting October 1, 2002, where you have the following in your
+.emacs
+
+(defun diary-first-of-month (n month year)
+  "Cycle diary entry.
+Entry applies on the first of the month for N months starting MONTH, DAY, YEAR.
+ENTRY can contain `%d' or `%d%s'; the %d will be replaced by the number of
+months since MONTH 1, YEAR and the %s will be replaced by the ordinal ending
+of that number (that is, `st', `nd', `rd' or `th', as appropriate."
+  (let* ((cycle (+ 1 (* 12 (- (extract-calendar-year date) year))
+                   (- (extract-calendar-month date) month))))
+    (if (and (= (extract-calendar-day date) 1)
+             (< 0 cycle)
+             (<= cycle n))
+        (format entry cycle (diary-ordinal-suffix cycle)))))
+
+============
+
+** cygwin and compile issues
+   > having read various emacs instruction files, I got emacs from cvs, got
+> into cygwin bash prompt on a cygwin xterm, and
+> cd emacs
+> make maintainer-clean
+> cd emacs/nt
+> configure.bat
+> make bootstrap.
+>
+
+try the unix build instructions:  "./configure && make && make install"
+
+In my experience the "nt" folder is for MingW and MSVC, although the
+docs don't explicitly say that.  Also, I've found compiling against
+Cygwin results in sluggish binaries.  I use MingW, MSVC probably works
+well too
+
+=============
+
+
+Please read the file nt/INSTALL in its entirety.  You will see that it
+clearly advises _against_ using the Cygwin Make (which I assumed you
+used, since you tried to compile with the Cygwin tools).
+
+I suggest a four-step dance to build the native version of Emacs:
+
+ . Start a native Windows Command Prompt window, running cmd.exe, not
+   Bash.
+
+ . Rename or temporarily remove the Cygwin port of Bash.
+
+ . Install a native port of GNU Make.
+
+ . Repeat the commands mentioned above.
+
+===========
+
+Emacs links to ImageMagick if version 6.2.8 or newer of the library is
+present at build time. Test this?
+
+** load require autoload
++ http://tiny-tools.sourceforge.net/emacs-elisp.html
+** Use emacs for mail
++ > In order to fully exploit the capabilities of Emacs, I take I will need 
+> Sendmail, fetchmail, and what else I do not know. Could some please let 
+> me have a list of what I need to have running to fully use Emacs?
+
+A common situation is that you receive your email via POP or IMAP and
+you send it via SMTP.  For these situations, Emacs has built-in Lisp
+support, so that you don't need external programs.
+
+For sending mail via SMTP, see the file smtpmail.el which comes with
+Emacs.  It has setup instructions near the beginning.  They are short
+but clear enough, I think.
+
+For reading mail from a POP server, see the node "Mail Source
+Specifiers" in the Gnus info file.
+
+For IMAP, you also get some information there, but that means you
+move the mail from the IMAP server to your local disk.  If you want
+Gnus to be a full-blown IMAP client, look at the node called "IMAP"
+
+===========
+
+*** Mail changes
+
+The default of `send-mail-function' is now `sendmail-query-once',
+which asks the user (once) whether to use the smtpmail package to send
+email, or to use the old defaults that rely on external mail
+facilities (`sendmail-send-it' on GNU/Linux and other Unix-like
+systems, and `mailclient-send-it' on Windows).
+
+**** smtpmail changes
+
+***** smtpmail now uses encrypted connections (via STARTTLS) if the
+mail server supports them.  It also uses the auth-source framework for
+getting credentials.
+
+***** The variable `smtpmail-auth-credentials' has been removed.
+That variable used to have the default value "~/.authinfo", in which
+case you won't see any difference.  But if you changed it to be a list
+of user names and passwords, that setting is now ignored; you will be
+prompted for the user name and the password, which will then be saved
+to ~/.authinfo.
+
+You can also manually copy the credentials to your ~/.authinfo file.
+For example, if you had
+
+  (setq smtpmail-auth-credentials
+        '(("mail.example.org" 25 "jim" "s!cret")))
+
+then the equivalent line in ~/.authinfo would be
+
+  machine mail.example.org port 25 login jim password s!cret
+
+***** The variable `smtpmail-starttls-credentials' has been removed.
+
+If you had that set, then then you need to put
+
+  machine smtp.whatever.foo port 25 key "~/.my_smtp_tls.key" cert "~/.my_smtp_tls.cert"
+
+in your ~/.authinfo file instead.
+
+**** sendmail changes
++++
+You can now add MIME attachments to outgoing messages with the new
+command `mail-add-attachment'.
+
+---
+The command `mail-attach-file' was renamed to `mail-insert-file'; the
+old name is now an obsolete alias to the new name.
+
+** New modular .emacs
+*** Wait for final config?
+- I have a simple workin' on Cygwin 21.2 and W32 22.0.99
+- Build 22 on Cyg, CoLinux, new W32 binary
+- Got 22 on Cyg and W32 - need pretty text and planner
+** modes
++ One way to get text mode to turn on when visiting a plan page is to
+add something like this to your .emacs file:
+
+(setq auto-mode-alist (append '(("\\.muse$" . text-mode)) auto-mode-alist))
+
+This assumes you are using the default extension of .muse for muse files.
+
+What I do, however, is define text-mode as my default mode like this:
+
+(setq default-major-mode 'text-mode) Note to self done.
+ 
+
+But this will turn on text mode for all files whose names fail to match
+something  on the auto-mode-alist.
+
+** Now about that link.  If you want to create a link manually, use this
+syntax:
+[[FindAMechanic.muse][FindAMechanic]]
+
+There are many functions that will create the links automatically.  I hardly
+ever create mine by hand, although I might modify them occasionally.
++ While I am certainly not using many of the advanced features of
+outline-mode, I use it nearly daily for write-ups etc., using txt2html
+or txt2tex for making pretty output.
+
+I also have noticed that it is very easy to customize outlook-mode
+using appropriate regexes for other purposes, like viewing large files
+of source code in an organized manner. The main point here is that you
+don't have to understand much to get large gains in productivity
+(unlike customizing speedbar, the internals of which I don't grok at
+all).
+
+Examples:
+
+(defun perl-outline-mode ()
+  "Set customized outline minor mode for Perl"
+  (interactive)
+  (setq outline-regexp "#!.\\|\\(pac\\)kage\\|sub\\|\\(=he\\)ad\\|\\(=po\\)d")
+  (outline-minor-mode))
+
+(defun text-outline-mode ()
+  "Set customized outline major mode for text with numbered headings"
+  (interactive)
+  (setq outline-regexp "[0-9.]+")
+  (outline-mode))
+
+(defun php-outline-mode ()
+  "Set customized outline minor mode for PHP"
+  (interactive)
+  (setq outline-regexp "<\\?\\| *function\\|class")
+  (outline-minor-mode))
+
+
+txt2html.pl  \
+--heading '^\*\s+\S+' \
+--heading '^\*\*\s+\S+' \
+--heading '^\*\*\*\s+\S+' \
+--heading '^\*\*\*\*\s+\S+' \
+--heading '^\*\*\*\*\*\s+\S+' \
+--heading '^\*\*\*\*\*\*\s+\S+' \
+--heading '^\*\*\*\*\*\*\*\s+\S+' \
+--heading '^\*\*\*\*\*\*\*\*\s+\S+' \
+--heading '^\*\*\*\*\*\*\*\*\*\s+\S+' \
+--heading '^\*\*\*\*\*\*\*\*\*\*\s+\S+' \
+--list_prefix_char '[-=o\267]' \
+--trim_headings '\*+\s+' \
+--number_headings \
+--explicit_headings \
+"$@"
+
+
+txt2tex.pl  \
+--heading '^\*\s+\S+' \
+--heading '^\*\*\s+\S+' \
+--heading '^\*\*\*\s+\S+' \
+--heading '^\*\*\*\*\s+\S+' \
+--heading '^\*\*\*\*\*\s+\S+' \
+--heading '^\*\*\*\*\*\*\s+\S+' \
+--heading '^\*\*\*\*\*\*\*\s+\S+' \
+--heading '^\*\*\*\*\*\*\*\*\s+\S+' \
+--heading '^\*\*\*\*\*\*\*\*\*\s+\S+' \
+--heading '^\*\*\*\*\*\*\*\*\*\*\s+\S+' \
++EH \
+-headingtags number \
+--trimheadings '\*+\s+' \
+"$@"
+
+
+DISCLAIMER: Please note that using this with txt2html needs a patched
+version of txt2html-1.28 (available from
+http://www.aigeek.com/txt2html/ ), see patch below:
+
+
+diff -Naur txt2html-1.28/txt2html.pl txt2html-1.28-patched/txt2html.pl
+--- txt2html-1.28/txt2html.pl	Tue May 23 16:10:26 2000
++++ txt2html-1.28-patched/txt2html.pl	Mon Feb 25 14:49:48 2002
+@@ -202,6 +202,14 @@
+                                 # in the order they are specified on
+                                 # the command line.
+ 
++# [-nh        ] | [--number_headings               ]
++$number_headings = 0;           # prepend section number to headings
++
++# [-th        ] | [--trim_headings                 ]
++$trim_headings = "";            # regex to trim headings with
++
++# [-lpc       ] | [--list_prefix_char              ]
++$list_prefix_char = "[-=o\\*\\267]"; # character class for list prefixes
+ 
+ # Not implemented yet.
+ # [-T <t>:<r> ] | [--tag <tagname>:<regexp>        ]
+@@ -347,6 +355,9 @@
+      [+l         ] | [--nolink                        ]
+      [-H <regexp>] | [--heading <regexp>              ]
+      [-EH/+EH    ] | [--explicit_headings / --noexplicit_headings ]
++     [-nh        ] | [--number_headings               ]
++     [-th        ] | [--trim_headings <regexp>        ]
++     [-lpc       ] | [--list_prefix_char <regexp>     ]
+      [-ab <file> ] | [--append_body <file>            ]
+      [+ab        ] | [--noappend_body                 ]
+      [-ah <file> ] | [--append_head <file>            ]
+@@ -720,6 +731,26 @@
+             next;
+         }
+ 
++        if ($ARGV[0] eq "-nh" || $ARGV[0] eq "--number_headings")
++        {
++            $number_headings = 1;
++            next;
++        }
++
++        if ($ARGV[0] eq "-lpc" || $ARGV[0] eq "--list_prefix_char")
++        {
++            $list_prefix_char = $ARGV[1];
++            shift @ARGV;
++            next;
++        }
++
++        if ($ARGV[0] eq "-th" || $ARGV[0] eq "--trim_headings")
++        {
++            $trim_headings = $ARGV[1];
++            shift @ARGV;
++            next;
++        }
++
+         if ($ARGV[0] eq "--")
+         {
+             last;
+@@ -869,7 +900,7 @@
+     local($line) = @_;
+     local($prefix, $number, $rawprefix);
+ 
+-    return (0,0,0) if (!($line =~ /^\s*[-=o\*\267]+\s+\S/ ) &&
++    return (0,0,0) if (!($line =~ /^\s*$list_prefix_char+\s+\S/ ) &&
+                        !($line =~ /^\s*(\d+|[^\W\d_])[\.\)\]:]\s+\S/ ));
+ 
+     ($number) = $line =~ /^\s*(\d+|[^\W\d_])/;
+@@ -889,7 +920,7 @@
+         $prefix = $rawprefix;
+         $prefix =~ s/(\d+|[^\W\d_])//;  # Take the number out
+     } else {
+-        ($rawprefix) = $line =~ /^(\s*[-=o\*\267]+.)/;
++        ($rawprefix) = $line =~ /^(\s*$list_prefix_char+.)/;
+         $prefix = $rawprefix;
+     }
+     ($prefix, $number, $rawprefix);
+@@ -1111,6 +1142,22 @@
+     $line =~ s/(<H.>)(.*)(<\/H.>)/$1<A NAME="$anchor">$2<\/A>$3/;
+ }
+ 
++sub trim_heading_maybe
++{
++    if ($trim_headings) {
++	$line =~ s/$trim_headings//g;
++    }
++}
++
++sub number_heading_maybe
++{
++    local($heading_number) = ($line =~ /<A NAME="section-([^"]*)">/);
++    #" keep cperl happy
++    if ($number_headings) {
++        $line =~ s/(<H.><A [^>]*>)(.*)(<\/A><\/H.>)/$1$heading_number $2$3/;
++    }
++}
++
+ sub heading_level
+ {
+     local($style) = @_;
+@@ -1150,6 +1197,8 @@
+     $heading_level = &heading_level($underline);
+     &tagline("H" . $heading_level);
+     &anchor_heading( $heading_level );
++    &number_heading_maybe;
++    &trim_heading_maybe;
+     $line_action |= $HEADER;
+ }
+ 
+@@ -1168,6 +1217,8 @@
+             }
+             &tagline("H" . $level);
+             &anchor_heading( $level );
++	    &number_heading_maybe;
++	    &trim_heading_maybe;
+             $line_action |= $HEADER;
+             last;
+         }
+** color-theme
+*** flickr.com/groups/emacs
+*** look at OTooles scheme blend with current ie planner no work
+*** emacs 24 M-x load-theme; wombat
++ Customizing Faces
+.................
+
+   In addition to user options, some customization groups also include
+faces.  When you show the contents of a group, both the user options and
+the faces in the group appear in the customization buffer.  Here is an
+example of how a face looks:
+
+     Custom Changed Face: (sample) [Hide]
+        [State]: this face is unchanged from its standard setting.
+     Parent groups: [Custom Magic Faces]
+     Attributes: [ ] Font family: [Value Menu] *
+                 [ ] Width: [Value Menu] *
+                 [ ] Height: [Value Menu] *
+                 [ ] Weight: [Value Menu] *
+                 [ ] Slant: [Value Menu] *
+                 [ ] Underline: [Value Menu] *
+                 [ ] Overline: [Value Menu] *
+                 [ ] Strike-through: [Value Menu] *
+                 [ ] Box around text: [Value Menu] *
+                 [ ] Inverse-video: [Value Menu] *
+                 [X] Foreground: [Value Menu] Color: white       (sample)
+                 [X] Background: [Value Menu] Color: blue        (sample)
+                 [ ] Stipple: [Value Menu] *
+                 [ ] Inherit:
+
+   Each face attribute has its own line.  The `[X]' field before the
+attribute name indicates whether the attribute is "enabled"; `X' means
+that it is.  You can enable or disable the attribute by invoking that
+field.  When the attribute is enabled, you can change the attribute
+value in the usual ways.
+*** Using .emacs
+    -  > Now when I press RET on any color-theme in the list, I get the
+> following error :
+
+> Symbol's function definition is void : color-theme-arjen.
+
+> Could someone help me resolving this problem.
+
+Good choice for a color theme ;).... personally I add both color-theme
+and color-theme/themes to my load-path and also load
+color-theme-library.el in order to get it to work.
+
+Having just:
+
+(require 'color-theme)
+(color-theme-arjen)
+
+gives me the same error, however using color-theme-select works just
+fine. (?)...
+
+I settled on loading color-theme-library.el (byte compiled of course)
+and that has worked for me... 
+    -	 > (require 'color-theme)
+> (color-theme-initialize)
+> (color-theme-matrix)
+
+> and started emacs. I received the following error:
+
+> Debugger entered--Lisp error: (void-function color-theme-matrix)
+
+Make sure you have color-theme.el in a directory that is in your load
+path, and also themes/color-theme-library.el in the same directory.
+(i.e. a themes directory in the same dir that you have color-theme.el
+in, and the color-theme-library.el inside that themes directory). That
+is what I needed to do to get the above to work. 
+   - 
+    - You don't have to move anything around.
+
+I extracted color-theme-6.6 in ~/elisp/color-theme/ here, and then added
+the directory to my load-path with:
+
+    (add-to-list 'load-path "~/elisp/color-theme")
+
+Autoloading the color-theme library is also nice, which you can enable
+with the following in your ~/.emacs file:
+
+    (autoload 'color-theme-select "color-theme.el" "Color Theme Support" t)
+
+Then it should be possible to just type `M-x color-theme-select' and let
+Emacs do the work of locating `color-theme.el' in your `load-path', load
+it, and run the function you just invoked.
+*** Using Arjen's theme
+** using a mouse and selection
++    Mouse clicks modified with the <CTRL> and <SHIFT> keys bring up
+menus.
+
+`C-Mouse-1'
+     This menu is for selecting a buffer.
+
+     The MSB ("mouse select buffer") global minor mode makes this menu
+     smarter and more customizable.  *Note Buffer Menus::.
+
+`C-Mouse-2'
+     This menu is for specifying faces and other text properties for
+     editing formatted text.  *Note Formatted Text::.
+
+`C-Mouse-3'
+     This menu is mode-specific.  For most modes if Menu-bar mode is
+     on, this menu has the same items as all the mode-specific menu-bar
+     menus put together.  Some modes may specify a different menu for
+     this button.(1)  If Menu-bar mode is off, this menu contains all
+     the items which would be present in the menu bar--not just the
+     mode-specific ones--so that you can access them without having to
+     display the menu bar.
+
+`S-Mouse-1'
+     This menu is for specifying the frame's principal font.
+ X-Mouse Functions, Emacs
+
+Emacs mouse functions are great time savers, and once you have learned
+to use them, your workstation will perform almost as well as a
+personal computer.
+
+emacs MOUSE BUTTONS
+left
+    SELECT window, SET MARK at mouse. 
+^ middle
+    CUT (kill) text between cursor and mouse, 
+    also copies to clipboard. 
+[shift]+middle
+    COPY text between cursor and mouse to clipboard. 
+middle
+    Move cursor to mouse position, PASTE clipboard. 
+[shift]+R
+    Move cursor to mouse position, PASTE clipboard. 
+^ [shift]+R
+    SELECT window, CLOSE other windows. 
+^ R
+    SPLIT window into two windows. 
+** keybindings
+*** available
+ - >>> Is there a good way to find which keybindings are used, so a free
+>>> one can be coupled to a macro?
+>> describe-bindings
+> (This command is bound to `C-h b'.)
+>    As a user, you can redefine any key; but it is usually best to
+>    stick to key sequences that consist of `C-c' followed by a letter
+>    (upper or lower case). These keys are "reserved for users," so they
+>    won't conflict with any properly designed Emacs extension. The
+>    function keys <F5> through <F9> are also reserved for users. If you
+>    redefine some other key, your definition may be overridden by
+>    certain extensions or major modes which redefine the same key.
+*** help
+>How can one describe-key with "compound commands" such as "C-u f" in
+>mail-mode?  If I try C-h k C-u f, I get the description of C-u, not
+>the description of C-u f...
+>
+>Thanks in advance!
+>
+>bill
+>
+
+C-u runs universal-prefix-arg.  What you want to do is to get the
+description of the function run by the key "f", and read that to see
+how the behavior is modified by a prefix arg.  For example to see what
+happens with C-u M-; ...   
+
+C-h k M-;
+
+,----
+| M-; runs the command comment-dwim
+|    which is an interactive compiled Lisp function in `newcomment'.
+| (comment-dwim ARG)
+| 
+| Call the comment command you want (Do What I Mean).
+| If the region is active and `transient-mark-mode' is on, call
+|   `comment-region' (unless it only consists of comments, in which
+|   case it calls `uncomment-region').
+| Else, if the current line is empty, insert a comment and indent it.
+| Else if a prefix ARG is specified, call `comment-kill'.
+| Else, call `comment-indent'.
+`----
+
+This tells me that M-; runs comment-dwim (do what i mean).  The second
+line up from the bottom says that with a prefix arg (meaning that I
+hit C-u first), it will run comment-kill instead.
+
+*** muse-edit-link-at-point
+*** muse-index
+** Integration
+*** Source is opened in emacs
+*** email in emacs
+*** Dired will open PDF, images, and PS
+*** dmacro
+> I can't let the discussion continue without mentioning my own favourite
+> - dmacro.
+>
+> We have been using this to provide templates for project reports (in
+> troff), as well as boilerplate for emails since 1992 (well, that's the
+> earliest RCS date I can find). Easy to make the templates, and it can
+> prompt you for variables, anmd insert timestamps etc. Great package. 
+>
+> See 
+>
+> 	http://linuxgazette.net/issue39/marsden.html
+>
+> For some comparisons of template type packages.
+>
+> I now use dmacro for templates I use in org mode.
+
+To add to the interesting list, there is snippet.el which is
+intensively used by emacs-rails. The nice thing about it is it
+highlights the fields and uses TAB to go though all fields to make
+changes.
+* Reference Materials
+** Repositories
+*** http://www.damtp.cam.ac.uk/user/sje30/emacs/ell.html
+*** http://www.anc.ed.ac.uk/~stephen/emacs/ell.html
+** Emacs Lisp
+»Introduction to programming in Emacs Lisp« is an excellent first step.
+
+Get it from
+
+<http://www.gnu.org/manual/emacs-lisp-intro/emacs-lisp-intro.html> 
+
+** M-x recover-session
+*** Is it at point?
+*** C-c C-c?
+* Additional capabilities
+** org-w3m-copy -- C-c C-x C-w?
+Org habits let me manage my task list without cluttering future days with tasks. The
+Org agenda view displays habits that are due today, indicating consistency with colour.
+In particular, it shows overdue days in red, so you can get the Seinfeld-esque pleasure
+/commitment-device of [[http://lifehacker.com/281626/jerry-seinfelds-productivity-secret][not breaking the chain]].
+** journal
+*** There's one in orgnews, one in orgpublishing
+*** There's planner
+*** There's Blosxom
+* Add modules
+** flashcard.el
+** dict.el
+** soduko.el
+** ljupdate
+** tabber.el
++ > I am using 'tabbar.el' and it works great. The problem is that all the
+> tabs cannot wrap, that means if I open 30 files together, I can only
+> see the first several tabs names. Is it possible that the tabs can
+> wrap to 2 rows or 3 rows?
+
+Try tabbar-forward and tabbar-backward and you may want to bind them.
+
+    (global-set-key (kbd "a-key") 'tabbar-backward)
+    (global-set-key (kbd "another-key") 'tabbar-forward)
+* Use features
+** dired to fix fo file names
+** flyspell
+*** Michael> ;; Flyspell
+Michael> (require 'flyspell)
+Michael> (add-hook 'test-mode-hook 'flyspell-mode)
+                    ^^^^ -- should be "text", right?
+Michael> (add-hook 'message-mode-hook 'flyspell-mode)
+
+message-mode inherits from text-mode, so this last line shouldn't be
+needed.  (At least, I don't have that line, and it works for me.)
+
+** set registers
+set-register isn't an interactive function, i.e. you can't call
+it via M-x or through a keybinding.  The Emacs manual describes
+how to use registers in far more detail than I ever could, see
+the Info node "(emacs)Registers", you can get there by evaluating
+(Info-goto-node "(emacs)Registers") in Emacs.
+============
+
+In general, whenever apropos identifies a routine as a "Command" that
+means you can execute it from the minibuffer using M-x
+
+When apropos identifies a routine as a "Function," M-x does not work;
+but you can still execute it from the minibuffer as a typed-in lisp
+function call using M-:
+
+For example, you could set register 'a' to the string "hello" by typing
+M-:
+Eval: (set-register ?a "hello")
+
+You could make your own interactive M-x command called set-reg-string
+to prompt you in the minibuffer for a register name and a string to be
+stored in that register by adding this to your .emacs file:
+
+   (defun set-reg-string (reg string)
+     (interactive "cRegister: \nsString: ")
+     (set-register reg string))
+
+If you try this, you will find that as soon as you type a character in
+response to the "Register: " prompt it advances immediately to the
+"String: " prompt without giving you a chance to see or edit the
+register name.  You could fix this by changing your command definition
+to:
+
+   (defun set-reg-string (reg string)
+     (interactive "sRegister: \nsString: ")
+     (set-register (elt reg 0) string))
+
+To learn more about creating your own interactive commands, consult
+the "Command Loop" chapter in the GNU Emacs Lisp Reference Manual,
+available for download in many formats at:
+
+http://www.sunsite.ualberta.ca/Documentation/Gnu/emacs-lisp-ref-21-2.7/emacs-lisp-ref.html
+============
+You do not say what it is that you are trying to do with the
+registers.  The general tone of the responses assumes that you are
+trying to use the registers programmatically.  On the chance that that
+is not what you want to do I offer the following information:
+ 
+There are several functions already present in emacs that store
+various kinds of information in the registers, e.g.: copy the contents
+of a region to a register and copy the contents of a register to the
+buffer.  You can obtain a complete list of these functions via the
+help apropos (C-h a).  Which displays a list of all the interactive
+functions (i.e. commands) that match a regular expression entered at a
+prompt, as well as a description of how to invoke them and what they
+do.  To see the list/descriptions of the commands containing
+"register" in the name type: C-h a register
+==========
+** scroll help
+> I was wondering if there was something I could set so that when a
+> completeion buffer comes up ( ie C-h,  M-occur ) the cursor will be in
+> that buffer?
+> I usually want to scroll such lists so if I could set things up like
+> this it would save me a few keystrokes.
+
+Are you aware of M-C-v (and M-- M-C-v)?
+
+** How to patch
+*** general
+Most patches can be installed by downloading the patch, changing into
+the directory that you want to change, and typing
+$ cat /location/of/the.patch | patch -p1
+This will modify the files in the current directory.
+*** Message
+You can save the entire message and pass it to the patch command
+while in the directory of the appropriate file. For example, grab a
+planner patch and
+cd planner
+patch -p0 < somefile.patch
+It'll modify the .el files. =)
+*** thirdly
+You have already got two good answers, so I just want to point out
+that this can be done in Emacs:  read the header of the patch to see
+what file it modifies, and then type M-x ediff-patch-file.  Tell Ediff
+that the patch is already in a buffer, namely the article buffer, and
+then enter the file within your planner source directory to patch.
+Afterwards, reload the patched file with M-x eval-buffer.
+Ediff can be confusing sometimes, so use whatever method suits you.
+** browse url
+ 0 I'm using the latest Emacs 22 from CVS, and `browse-url-at-point' works
+out of the box.  It uses `browse-url-default-macosx-browser'.  If you
+need to specify Firefox, you just need add an argument to the "open"
+command.
+
+(defun browse-url-firefox-macosx (url &optional new-window)
+  (interactive (browse-url-interactive-arg "URL: "))
+  (start-process (concat "open -a Firefox" url) nil "open" url))
+
+(setq browse-url-browser-function 'browse-url-firefox-macosx)
+ 0 
++ ETOH, exercise, diet, typing, writing code, and CEO
+** Journal text ftrain
+
+(defun insert-time ()
+  (interactive)
+  (insert (format-time-string "%Y-%m-%d-%R")))
+
+Now, when I hit M-x insert-time, emacs inserts a string like this: 2001-03-19-02:10. For the unitiated, M-x means "Meta-X" or "Escape-X"; it's a command sequence. Here's what's going on in the code:
+
+Opening a File and Altering it Automatically
+
+I keep a linear journal on Ftrain, to hold onto passing thoughts, and I want to be able to get in and out of it quickly - preferably without having to add any "metadata" like titles, date, filename, and so forth.
+
+So, to keep things simple, I decided that my journal would be one big text file split up by timestamps, and timestamps would start with "*". That is, two journal entries might look like this:
+
+
+    *2001-03-19-02:00
+    This is the journal entry for the 19th of March, 2 am. My dog got fleas.
+
+    *2001-03-19-18:00
+    And here's another for the 19th, at 6 pm. Fleas getting better.
+
+    *2001-03-20-02:00
+    And this one is for the next day at 2 am. Fleas is gone. 
+
+That's it - plain text. I split up the days, convert paragraphs, line breaks, URLs, etc via a Perl script.
+
+When I began using this journal, I found that it was a real drag to open it up, scroll to the bottom of the file (the end-of-buffer), insert the time, and start typing. So I wrote another little function that:
+
+   1. Opens the "journal" file;
+   2. Goes to the bottom of the file and inserts a hard return;
+   3. Inserts a time-stamp prefixed by an asterix;
+   4. Inserts two hard-returns
+
+Now, I just type M-x journal and I'm ready to go. Here's that function:
+
+(defun journal () 
+  (interactive) 
+  (find-file "~/www/journal.txt")
+  (end-of-buffer)
+  (insert "\n\n")
+  (insert "*")
+  (insert-time)
+  (insert "\n\n")
+)
+
+
+As long as you know that "\n" means "newline" in LISP, then you'll be
+able to figure out what's going on above. It's just a simple sequence
+of smaller functions, like insert and find-file adding up into a
+larger one.
+
+As I wrote, when I'm in emacs, I call the journal with M-x journal. If
+I'm not in emacs, I can simply type emacs -f journal on the command
+line, and emacs will open and execute the journal function
+immediately. To speed things even more, I have the following line in
+my .bashrc file:
+
+alias journal='emacs -nw -f journal'
+
+With this, when I'm in the shell, I simply type journal and emacs
+opens up in journal mode without creating a new window. I type
+quickly, exit, and I'm done.
+
+It seems a simple thing, but making the process of writing in my
+journal as free of resistance as possible has helped me catch hundreds
+of paragraphs before I moved onto something else. Also, since I write
+my email in emacs, when I write something that's worth saving, I
+simply copy it, type M-x journal, and paste into the journal, exit the
+journal file and go back to finish the email. Whenever I update
+Ftrain, the journal is sorted by day and auto-converted to XML, then
+integrated into the whole of the site.
+
+I use a very similar function to open my private "messages" file,
+where I hold all my records of phone calls. I simply type "messages"
+at the shell prompt and begin taking notes; it's much faster than
+trying to open up a new file or clicking in a virtual "post-it" note.
+
+** lisp movement
+
+Inserting a Block of XML Code into a Buffer
+
+Here's what was going on: I wanted to insert a block of XML code
+representing a section into the file I was editing, with the proper
+"date" information, and, since every block needs a unique indentifier,
+I wanted the editor to leave the cursor right at the spot where I
+could type the unique ID.
+
+That is, I wanted the editor to insert a block like this,
+automatically entering the correct ISO date:
+
+<section date="2001-03-19" id="">
+  <title></title>
+  <desc></desc>
+  <key></key>
+
+  <p></p>
+
+</section>
+
+After it inserted the code, I wanted emacs to move the cursor up between the quotes of id="", so I could insert an ID immediately. Here is the function I wrote:
+
+(defun section () 
+  (interactive) 
+  (insert "\n<section date=\"")
+  (insert-ISO)
+  (insert "\" id=\"\">"
+	  "\n  <title></title>"
+	  "\n  <desc></desc>"
+	  "\n  <key></key>"
+	  "\n\n  <p></p>"
+	  "\n\n</section>\n\n")
+  (previous-line 9)
+  (end-of-line)
+  (backward-char 2)
+)
+
+
+If you read the previous explanations, it should all be fairly straightforward, but there's one thing worth noting: everything in emacs, whether entering text, moving around in text, and searching, or sending mail, is bound to a LISP function - which means you can use these functions in other functions. For instance, the LISP function previous-line is called every time you hit the "up" cursor key. In this case, we do the following:
+
+(previous-line 9)
+
+This is equivalent to hitting the "up" cursor key 9 times.
+
+(end-of-line)
+
+Then we go to the end of the current line...
+
+(backward-char 2)
+
+...and move 2 characters backward. This puts us right in between the quotes of the id="" attribute of the section tag, which is where we want to be.
+
+With "insert" and a few functions like:
+
+   1. previous-line
+   2. next-line
+   3. forward-char
+   4. backward-char
+   5. end-of-buffer
+   6. beginning-of-buffer
+   7. end-of-line
+   8. beginning-of-line
+
+you can quickly create some fairly useful functions. It's enough to make me want to learn LISP properly.
+** BBDB integration
+** comm
++ console connection, serial communication 
+** flashcard.el
+*** interact w/ supermemo?
+** tagging w/in and w/o org [[file:~/docs/tagging][tagging]] 
+** replace keynote w/ emacs
+** csv and emacs database
+*** csv.el ck it
+*** snippet.el
++ snippet.el - Textmate templates in Emacs. This little fella is great,
+once you work out that to use it you need to be in abbrev mode. I even
+wrote a little converter to convert Textmate XML snippets to the Lisp
+format used by snippet.el. So far, i've only tested it on the snippets
+in Textmate's Python.bundle, and that's only four files, and most of
+them are fairly useless. I've been defining snippets like crazy since
+i got this thing working. There are still some issues that i'm about
+to implore to the author to help me with: snippets don't indent
+properly. They work great at top level, though.
+Of course the venerable ljupdate needs a mention. Which is where I'm
+posting from now.
+ Heck, I even love TNT.
+ The packages that have helped me fall in love with emacs so far are:
+rmoo erc Gnus cperl And now ljupdate
+*** Abbrev mode to work with snippet.el
++ How do I turn on abbrevs by default just in mode MYMODE?
+========================================================
+
+   Put this in your `.emacs' file:
+
+     (condition-case ()
+        (quietly-read-abbrev-file)
+       (file-error nil))
+     
+     (add-hook 'MYMODE-mode-hook
+               (lambda ()
+                (setq abbrev-mode t)))
+*** follow mode
+*** text mode
+**** incl. auto-fill
+**** incl flyspell
+**** highlight
+*** dabbrev
+*** ange-ftp
+*** rmoo
+*** edb.el?
+** yank and fish stuff
++ inventory pages to process
++ capture works
++ inventory tags and org files
++ Sorry for off-topic, but in the absence of stumpwm-users list, this
+place is just as good as any other :)
+
+The ability of remember-mode to store notes with links to other
+buffers is great, but I always wanted to use it to store clips from
+other programs, especially Firefox and Thunderbird. I do use gnus
+sometimes, but I'm not proficient enough with it. At last, I installed
+stumpwm window manager. After some tries and crashes, I can now select
+a part of a web page in Firefox, press one key and it is pasted into a
+new remember buffer. The result is like this:
+
+* Current sitiation table
+|os/machine|version|alt|w3m|flyspell|email|planner|.emacs|
+* Pasted clips
+** Thu Jul  5 09:36:38 2007 (eon - Mozilla Firefox)
+  eon - Mozilla Firefox
+  Eon is a rich content linking/annotation mechanism with multiple
+  interface styles. Its primitives may be combined with each other and
+  with other emacs modules to produce a variety of behaviors similar to
+  the features of the above-mentioned packages.
+** Thu Jul  5 10:06:17 2007 (Roman Empire: gold standard of
+immigration - Los Angeles Tim)
+  Roman Empire: gold standard of immigration - Los Angeles Times -
+  Mozilla Firefox
+  There's a widespread view that the Roman Empire was swept away mainly
+  by a relentless tide of hostile outsiders; we've all heard ugly
+  references to the "barbarian hordes" in today's immigration
+  debates. But the truth is that Rome was the world's most successful
+  multiethnic state until our own \u2014 and history's longest lasting
+  one, bar none.
+
+  So it's natural to wonder if the Romans might have anything to teach
+  Americans. I'd argue that they do. One lesson is that the notion of
+  "taking control of the borders" is overrated; borders were pliable
+  then, and are even harder to define (or police) now. A second lesson
+  is the importance of nurturing a national culture. It was the source
+  of Rome's power, just as it is the source of ours.
+
+Obviously, one thing is missing here -- the URL. Unfortunately, I
+couldn't find a way to retrieve it from Firefox programmatically.
+Anyway, in most occasions, it is enough to just select the URL in the
+address bar and to paste it into the remember buffer with some
+comments. After all, the window title often contains all the
+information I need, like here:
+
+** Thu Jul  5 10:06:40 2007 (Chinese archaeologists locate sunken ship
+laden with Ming Dy)
+  Chinese archaeologists locate sunken ship laden with Ming Dynasty
+  porcelain - Mozilla Firefox
+  http://thestar.com.my/news/story.asp?file=/2007/6/14/apworld/20070614201348&sec=apworld
+
+And, finally, Thunderbird. Once again, I cannot get the necessary
+metadata other than from the window title, like here:
+
+** Thu Jul  5 10:21:19 2007 (Re: [CLASSICS-L] Book collection software
+- Thunderbird)
+  Re: [CLASSICS-L] Book collection software - Thunderbird
+  > > Like many Classics-L members, I'd suppose, I have too many books
+  scattered
+  > > around, and I'd like to get some control over them. I'm looking
+  for a
+  > > fairly simple, fairly basic program for Mac OS X that would allow
+  me to
+  > > enter data like author, title, publisher, date and maybe some
+  additional
+  > > notes. I once used ProCite, which was quite good but is no longer
+  > > available for the Mac. Offline responses would be fine:
+  > > aszegedymasz*AT*wesleyan.edu
+
+  Have you looked into LibraryThing?  Go to:
+   http://www.librarything.com/
+
+* Unsorted
+
+============
+
+My recommendation: If you want quote correct and if you want not to bother how
+to this and if you want have this all automatically after pressing F in Gnus
+then use tc.el (Trivial cite). Despite of it's name it is really not trivial
+but it does an outstanding job; the "trivial" means it does only the necessry
+citing job and it does this constistent with the standards and nothing more.
+Note so many features like supercite for example but the really citing job is
+done much better.
+
+Try it in combination with filladapt.el and your citing problems are gone.
+
+You can get it from http://shasta.cs.uiuc.edu/~lrclause/tc.html
+
+============
+
+There's also interpreter-mode-alist, which applies to files whose first
+line starts with "#!" and matches against the rest of the line.
+
+============
+
+> Those are carriage return characters (decimal value 13).  If you
+> were searching for an up arrow (shift 6) followed by an M emacs will
+> not match that with a carriage return.
+> Try this to match them:  C-Q C-M
+> This will insert a carriage return character into the search string.
+
+I made a keyboard macro out of this which removes all ^M and saves the file.
+
+;strip MS-DOS carriage return from file thus:
+;1. goto top of file, 2. S-M-% C-Q C-M <RET> <RET> ! 3. C-x s
+(fset 'stripCR
+   [home ?\M-% ?\C-q ?\C-m return return ?! ?\C-x ?\C-s])
+(global-set-key [f11] 'stripCR)
+
+============
+
+
+For RedHat & Cygwin the dos2unix utility works nicely.  When uploading bash
+scripts (for instance) from an M$ box to a RH Linux box, I run...
+     dos2unix -k *.sh
+...and that removes the carriage returns from all scripts ending in '.sh'.
+
+Other *nix OSes use something else as I noticed in a post in this
+group some time in the past month.
+
+============
+
+
+- how can one shift-in/-out more than one subtree at a time?  I would
+  like to shift-in 3 sibling itmes/subtrees; currently I do it by
+  doing C-c > on each one.
+
+============
+
+> I just decided to start using flyspell again. I previously used it
+> under emacs 20 on a redhat linux box. However, I can't seem to get it
+> workin under emacs 21 running on a debian wooddy box. 
+
+You might try running "emacs -q", then load a file, run flyspell mode
+and see if it works.  If it does, the problem is with your local config.
+============
+
+
+Toggle overwrite mode.
+With arg, turn overwrite mode on iff arg is positive.
+In overwrite mode, printing characters typed in replace existing text
+on a one-for-one basis, rather than pushing it to the right.  At the
+end of a line, such characters extend the line.  Before a tab,
+such characters insert until the tab is filled in.
+C-q still inserts characters in overwrite mode; this
+is supposed to make it easier to insert characters when necessary.
+
+...If you're using a *nix console or xterm your termcap may not be
+identifying the key, but that's beyond my experience -- google search
+may help.
+
+============
+
+Replying to myself... it seems that the problem was indeed the
+calendar style---it only accepts diary entries in the form:
+
+October 30, 2002
+        blah blah blah
+
+Once I amended the lisp to be slightly more careful about picking out
+the date, month and year, I was able to drop correctly formatted
+events into the diary, where they were picked up by the diary, and the
+appointment list. Thanks to AS for the hint (disregarded at first). 
+
+For anyone who is interested, here's the schnippet (largely purloined
+from the example on the emacs Wiki):
+
+(defun toc-outlook-invitation-to-diary ()
+  (interactive)
+  (let ((buffer (or (get-buffer "*Article*") (current-buffer))))
+    (save-excursion
+      (set-buffer buffer)
+      (goto-char (point-min))
+      (when (re-search-forward "^Subject: \\(.*\\)$")
+	(setq subject (match-string 1))
+	(beginning-of-buffer)
+	(when (re-search-forward "^When: \\([0-9]+\\) \\(\\w+\\) \\([0-9]+\\) \\([0-9]+:[0-9]+\\).*$")
+	  (setq day  (match-string 1))
+	  (setq month (match-string 2))
+	  (setq year (match-string 3))
+	  (setq time (match-string 4))
+	  (when (re-search-forward "^Where: \\(.*\\)$")
+	    (setq where (match-string 1))
+	    (setq diary-buffer (find-file-noselect diary-file))
+	    (set-buffer diary-buffer)
+	    (goto-char (point-max))
+	    (insert (format "\n%s %s, %s\n\t%s %s (%s)\n" month day year time subject where))
+	    (save-buffer)
+	    (bury-buffer diary-buffer)))))))
+
+Anyway, now I'm happy, since Outlook can disappear completely from my
+desktop. Another positive example of the Law of Software Envelopment.
+
+============
+
+> Multiple diary files are supported in three ways: the #include mechanism, the
+> setting of `diary-file', and the `D' command in the calendar.
+
+I was aware of `diary-file' but considered it too cumbersome for the
+purpose, I forgot about `D' but I consider it also too cumbersome.
+============
+
+> If you hit i d in the calendar it'll still go into the main file, but
+> you can then move things around to suit.  I have a main diary file,
+> one where I move historical stuff, and a third for all the cyclic
+> things like anniversaries.
+
+I trivially advised insert-diary-entry to help me deal with the
+multiple diary files I #include.
+
+(defadvice insert-diary-entry (around insert-in-alternate-file first (arg
+				      altfile) activate)
+  (interactive "P\nfFile: ")
+  (let ((diary-file altfile)
+	(calendar-date-display-form
+	 '((format "%02s/%02s/%4s" month day year))))
+    ad-do-it))
+
+I don't recall why I need to set calendar-date-display-form in the
+let and I don't feel like breaking things to jog my memory.
+
+============
+
+> Turns out that the Windows XP supported Samsung ML-1430 laser printer does
+> not work from the DOS command line interface.
+
+Nevertheless, your cause is not lost yet.  I suggest to explore the 
+possibility of using the port-capture feature of Windows to redirect LPT1 
+(or any other LPTx) port to your printer.  This can be done via START -> 
+Settings -> Printers, then right-click on your printer's icon and choose 
+Properties.  Finally, click on the Ports tab.  (The names of the menu 
+items could be different on your version of Windows.)
+
+Once you told Windows to capture LPT1 and redirect it to your printer, 
+set printer-name to "LPT1" and try printing something.
+
+============
+
+
+    CB> buffers), the above feature isn't of much use to me.  What is needed,
+    CB> I'm sure by more people than just myself, is an Emacs calendar feature
+    CB> that will display the day's goings-on say at 9:00 a.m. daily.
+
+Here is how I do it (at midnight):
+
+(require 'midnight)
+(setq midnight-delay 1)
+
+(defun update-my-calendar ()
+  (let ((diary-buffer (get-file-buffer diary-file))
+        (number-of-diary-entries 30))
+    (if diary-buffer
+        (progn
+          (set-buffer diary-buffer)
+          (revert-buffer t t)))
+    (calendar)))
+
+(add-hook 'midnight-hook 'update-my-calendar)
+
+============
+
+Thank you both for the help.  However, I still cannot get effective,
+automatic execution of the diary reading, which is required to set the
+automatic display of appointment notifications.
+
+I hibernate my computer at midnight, so Emacs does not have a chance
+to run the midnight function at midnight.  I tried setting the time
+delay on the midnight function to delay to a time when my computer is
+usually on (9:00 a.m.), and made sure to set and save the option for
+now and future sessions (even reloaded .emacs into a buffer and eval'd
+it), but no luck.  It seemed like the update-my-calendar function is
+nice, so I put that in and used the customize feature to hook it in.
+I've learned to just use the Customize Utility whenever possible.
+
+Anyhow, just search on 'diary' and 'midnight' below and you will see
+the relevant code.  It seems like if I can just get the midnight
+function to run when my machine is actually on, there will be a
+functional appointment reminder utility.
+
+Thank you in advance.
+ - CB
+
+;; This is a web programmer's .emacs file for GNU Emacs.
+;; It has been tested on GNU Emacs version 21.2.1 on Windows 2000, 
+;; Service Pack 3.	 
+;;
+;; The GNU Emacs Homepage is located at: 
+;;             http://www.gnu.org/directory/GNU/emacs.html
+;;
+;; This Document Last Modified: 11/05/2002.
+;;
+;; Portability: It would take minimal or no changes to port it to run
+on Unix;
+;; the one major change definitely needed would be to remove the
+"cygwin"-related
+;; code, since that is only for putting the BASH shell on Windows.
+;;
+;; @author: Christopher M. Balz.
+;;          Feel free to e-mail me regarding this file at any of the
+addresses below:
+;;          ChristopherBalz@yahoo.com
+;;          ChristopherMBalz@StanfordAlumni.org
+
+;; General Notes:  It is often said that a new Emacs user should stay
+away from old, crusty
+;;                 '.emacs' files from others.  However, the only way
+that I ever was able
+;;                 to get a reasonable return on the investment of my
+time put into setting
+;;                 up my Emacs configurations was by borrowing code
+snippets from others.
+;;                 It is true that no '.emacs' file should be used
+uncritically, by newbie or
+;;                 by others.  
+;;               
+;;                 However, for the best user base, new users should
+be able to
+;;                 fairly easily clip out sections of '.emacs' files
+that interest them and put
+;;                 them to use right away in their own '.emacs' files.
+ To this end, I have
+;;                 attempted to effectively segment the various
+independent components of this
+;;                 '.emacs' file and have documented what I have done
+as clearly as possible.
+;;                 It's very exciting how Emacs modes related to
+software engineering for the
+;;                 web are maturing.  
+;;     
+
+;; ------------   Invocation of Gnu Emacs on Win2K: 
+;;
+;;    From Windows shortcut icon with these properties on shortcut's
+'Properties' menu:
+;;        'Target': 
+;;           "C:\Program Files\emacs\emacs-21.2\bin\runemacs.exe" -l
+~/.emacs
+;;         'Start in' (Note: I use Cygwin, see below):
+;;           C:/cygwin/home/Administrator/
+;;
+;;    Set user-specific 'HOME' environment variable to
+'C:/cygwin/home/Administrator', which is
+;;    the directory in which my '.emacs' file is located.  Do this by
+going to the Control Panel,
+;;    then to 'System', then to 'Advanced', then to 'Environment
+Variables', the to 'Variables
+;;    for <user>'. 
+
+;; ------------  Commense lisping:
+
+;; Add the site directory (the site directory is used to contain
+non-core Emacs Lisp packages)
+;; to the Emacs load-path.  The Emacs load-path is 
+;; the list of directories where Emacs searches for packages that you
+require.
+;; This must be at the head of your .emacs file.  This code prepends
+the site directory to the load path:
+;; Standard emacs lisp access (for non-byte-compiled access):
+(add-to-list 'load-path (expand-file-name "C:/Program
+Files/emacs/emacs-21.2/site-lisp/"))
+(add-to-list 'load-path (expand-file-name "C:/Program
+Files/emacs/emacs-21.2/site/lisp/progmodes/"))
+;; System-wide emacs customizations:
+(add-to-list 'load-path (expand-file-name "C:/Program
+Files/emacs/site/"))
+;; Personal emacs/site:
+(add-to-list 'load-path (expand-file-name "~/emacs/site/")) 
+;; So that Emacs can find the home directory files (desktop, etc.):
+(add-to-list 'load-path (expand-file-name "~/")) 
+;; Specific Packages:
+(add-to-list 'load-path (expand-file-name "C:/Program
+Files/emacs/site/eieio-0.16/"))
+(add-to-list 'load-path (expand-file-name "C:/Program
+Files/emacs/site/semantic-1.4beta14/"))
+(add-to-list 'load-path (expand-file-name "C:/Program
+Files/emacs/site/speedbar-0.14beta3/"))
+(add-to-list 'load-path (expand-file-name "C:/Program
+Files/emacs/site/elib-1.0/"))
+(add-to-list 'load-path (expand-file-name "C:/Program
+Files/emacs/site/psgml-1.2.5/"))
+;;        For Emacs JDE (from http://sunsite.dk/jde/):
+(add-to-list 'load-path (expand-file-name "C:/Program
+Files/emacs/site/jde-2.2.8/lisp/"))
+
+;; On Windows 2000, it is sufficient to set the user-specific 'HOME'
+environment
+;; variable (see above) to the path to your .emacs file.  For example,
+mine goes to:
+;; 'C:/cygwin/home/Administrator'.  Most other systems should have a 
+;; reasonably sane approach to doing this.  These approaches are best.
+;; However, if on some other system you have
+;; trouble saving your customizations (meaning, the customizations
+possible
+;; through the command ESC-x customize-group, and meaning, the error
+message
+;; 'saving settings from 'emacs -q' would overwrite customizations'),
+;; explicitly assigning the 'user-init-file' variable is a sure-fire
+way
+;; to avoid the problem:
+;; (setq user-init-file (expand-file-name "~/.emacs")
+;;        custom-file (expand-file-name "~/.emacs"))
+
+
+;; For use of Bash shell via Cygwin on Windows 2000 (or NT), available
+from:
+;;	     http://www.cygwin.com/
+;; (if you do not have Cygwin installed, comment all of this section
+out).
+	;; This assumes that Cygwin is installed in C:\cygwin (the
+	;; default) and that C:\cygwin\bin is not already in your
+	;; Windows Path (it generally should not be).
+        ;;
+	(setq exec-path (cons "C:/cygwin/bin" exec-path))
+	(setenv "PATH" (concat "C:\\cygwin\\bin;" (getenv "PATH")))
+	;;
+	;; NT-emacs assumes a Windows command shell, which you change
+	;; here.
+	;;
+	(setq process-coding-system-alist '(("bash" . undecided-unix)))
+	(setq w32-quote-process-args ?\")
+	(setq shell-file-name "bash")
+	(setenv "SHELL" shell-file-name) 
+	(setq explicit-shell-file-name shell-file-name) 
+;; End of bash shell use via Cygwin section.
+
+;; This removes unsightly ^M characters that would otherwise
+;; appear in the output of java applications.
+;;
+(add-hook 'comint-output-filter-functions
+	  'comint-strip-ctrl-m)
+
+;; Set start-up directory with cygwin nomenclature 
+;; (your configuration files _must_ be in this directory):
+(setq startup-directory "C:/cygwin/home/Administrator/")
+
+;; generic-x.el is a standard package with Emacs 21.  It contains some
+;; very neat little modes, such as a JavaScript mode (but said mode
+;; is not yet as good as c-mode for JavaScript, for it does not 
+;; recognize /*-style comments.
+;; All modes supported by generic-x.el are automatically applied
+;; unless overridden below (for example, JavaScript mode is overridden
+;; below).
+(require 'generic-x)
+
+;; -------- JDE is the Java IDE for Emacs.
+(require 'jde)
+;; Use no tabs when editing Java for cross-editor indentation
+compatibility.
+(defun my-jde-indent-setup ()
+  (setq indent-tabs-mode nil)
+  (setq jde-basic-offset 4))
+;;
+;; Add the above hook to the jde-mode.
+(add-hook 'jde-mode-hook 'my-jde-indent-setup)
+
+
+;; -------- Begin w3m Section (HTML browser) 
+(autoload 'w3m "w3m" "Interface for w3m on Emacs." t)
+(autoload 'w3m-find-file "w3m" "w3m interface function for local
+file." t)
+(autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
+(autoload 'w3m-search "w3m-search" "Search QUERY using SEARCH-ENGINE."
+t)
+(autoload 'w3m-weather "w3m-weather" "Display weather report." t)
+(autoload 'w3m-antenna "w3m-antenna" "Report change of WEB sites." t)
+;; -------- End w3m Section (HTML browser) 
+
+;; -------- Begin JavaScript editing section. -------- 
+
+;; This is my way of loading c-mode and hooking .js files to it, 
+;; not superseded by the JavaScript mode in generic-x.el (see above).
+(autoload 'c-mode "cc-mode.el")
+(setq auto-mode-alist (cons '("\\.js$" . c-mode) auto-mode-alist))
+;; This is the container for my custom js editing mode  
+;; It uses no tabs for cross-editor compatibility.
+(defun my-js-indent-setup ()
+  (setq indent-tabs-mode nil)
+  (setq c-basic-offset 4))
+;;
+;; Add the above hook to the c-mode.
+(add-hook 'c-mode-hook 'my-js-indent-setup)
+
+;; -------- End JavaScript editing section. -------- 
+
+
+;; -------- Begin XML and SGML Editing Section --------  
+;;
+;; -> Note: this handles HTML also but 
+;; a formal DTD declaration is needed for that.  Instead, I use
+;; html-helper-mode, which handles embedded scripts as well.
+;; -> From: http://www.lysator.liu.se/~lenst/about_psgml/
+;; -> Environment Variable Must be set for dtd feature to work:
+;; PSGML needs to know where to find the SGML catalog files. There are
+a couple
+;;  of ways to accomplish this, as described in the PSGML
+documentation. I use the method
+;;  that makes use of the environment variable SGML_CATALOG_FILES
+because it is
+;;  also used by the SGML parser (patience, I come to it in the next
+section of this article).
+;;  So, now that you have a set of DTDs and a catalog file, create the
+afore-mentioned
+;; environment variable and set it to include the path to your
+xhtml1.soc file, for
+;; example d:\DTDs\xhtml1\xhtml1.soc. If you have more that one
+catalog file,
+;; you can include them all, separating them with a path delimiter
+(";" on Windows,
+;; ":" on UNIX-based systems).
+;; Here is my value: c:\Program
+Files\dtds\xhtml1\xhtml1.soc;c:\Program
+Files\dtds\hodmacro\hodmacro.soc
+
+(require 'sgml-mode "psgml.el" "Major mode to edit SGML files.")
+(autoload 'xml-mode "psgml.el" "Major mode to edit XML." t)
+(setq auto-mode-alist 
+      (append '(
+		("\\.sgml$" . sgml-mode)
+		("\\.idd$" . sgml-mode)
+		("\\.ide$" . sgml-mode)
+		("\\.xml$" . xml-mode)
+		("\\.xsl$" . xml-mode)
+		("\\.fo$" . xml-mode)
+		)
+	      auto-mode-alist
+	      )
+      )
+
+; Auto-activate parsing the DTD when a document is loaded.
+; If this isn't enabled, syntax coloring won't take affect until
+; you manually invoke "DTD->Parse DTD"
+(setq sgml-auto-activate-dtd t)
+
+;;; Set up my "DTD->Insert DTD" menu.
+
+(setq sgml-custom-dtd '
+      (
+       ( "DITA concept"
+	 "<?xml version=\"1.0\"?>\n<!DOCTYPE concept SYSTEM \"concept.dtd\">"
+)
+       ( "DITA task"
+	 "<?xml version=\"1.0\"?>\n<!DOCTYPE task SYSTEM \"task.dtd\">" )
+       ( "DITA reftopic"
+	 "<?xml version=\"1.0\"?>\n<!DOCTYPE reftopic SYSTEM
+\"reftopic.dtd\">" )
+       ( "DITA APIdesc"
+	 "<?xml version=\"1.0\"?>\n<!DOCTYPE APIdesc SYSTEM \"apidesc.dtd\">"
+)
+       ( "DITA topic"
+	 "<?xml version=\"1.0\"?>\n<!DOCTYPE topic SYSTEM \"ditabase.dtd\">"
+)
+       ( "HOD Script"
+	 "<?xml version=\"1.0\"?>\n<!DOCTYPE HASCRIPT SYSTEM
+\"HAScript.dtd\">" )
+       ( "XHTML 1.0 Strict"
+	 "<?xml version=\"1.0\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML
+1.0 Strict//EN\" \"xhtml1-strict.dtd\">" )
+       ( "XHTML 1.0 Transitional"
+	 "<?xml version=\"1.0\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML
+1.0 Transitional//EN\" \"xhtml1-transitional.dtd\">" )
+       ( "XHTML 1.0 Frameset"
+	 "<?xml version=\"1.0\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML
+1.0 Frameset//EN\" \"xhtml1-frameset.dtd\">" )
+       ( "HTML 4.01 Transitional"
+	 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">"
+)
+       ( "HTML 4.01 Strict"
+	 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\">" )
+       ( "HTML 4.01 Frameset"
+	 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Frameset//EN\">" )
+       ( "IBMIDDoc"
+	 "<!DOCTYPE ibmiddoc PUBLIC \"+//ISBN 0-933186::IBM//DTD
+IBMIDDoc//EN\" [\n]>")
+       ( "DOCBOOK XML 4.1.2"
+	 "<?xml version=\"1.0\"?>\n<!DOCTYPE book PUBLIC \"-//OASIS//DTD
+DocBook XML V4.1.2//EN\"
+\"http://www.oasis-open.org/docbook/xml/4.0/docbookx.dtd\" [\n]>")
+       )
+)
+
+(define-key sgml-mode-map "\C-i" 'sgml-insert-element)
+; override default validate command to utilize OpenSP's onsgmls
+executable
+(setq sgml-validate-command "onsgmls -s %s %s")
+; override default xml-mode validate command to utilize OpenSP's
+onsgmls
+; executable by using a mode-hook, since there appears to be no other
+means
+; to accomplish it.  
+(defun my-psgml-xml-hook ()
+  (setq sgml-validate-command "onsgmls -s %s %s")
+  (setq sgml-declaration "C:\Program
+Files\openjade-1.3.1\pubtext\xml.dcl")
+)
+(add-hook 'xml-mode-hook 'my-psgml-xml-hook)
+            
+
+;; -- End psgml / xml section -------- 
+
+
+;; --- Begin HTML editing section: 
+;; I require html helper mode because the hhm-config.el code seems to 
+;; cause an error if I have both autoloaded.
+(require 'html-helper-mode "html-helper-mode.el")
+(autoload 'html-helper-mode "hhm-config.el")
+(setq auto-mode-alist (cons '("\\.html$" . html-helper-mode)      
+auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.asp$" . html-helper-mode)       
+auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.phtml$" . html-helper-mode)     
+auto-mode-alist))
+;; --- End HTML editing section.
+
+
+;; ----- CSS mode. 
+;; This is for the css-mode (will not be necessary in later versions;
+it should
+;; be in the css-mode code itself):
+(require 'apropos)  
+
+;; For css-mode: (from http://synthcode.com/emacs/lang/css-mode.el )
+;; Note: I've had crashing in this mode when I use an M-x
+indent-region
+;;       command.
+(autoload 'css-mode "css-mode.el")
+ (setq auto-mode-alist	     
+      (cons '("\\.css$" . css-mode) auto-mode-alist))
+;; ----- End CSS mode.
+
+
+;; Make sure that .emacs file is edited in lisp mode:
+(setq auto-mode-alist (cons '("\.emacs" . lisp-mode)       
+auto-mode-alist))
+
+
+;; ----- Diary and Appointment Notification Section.
+;; There are also some variables set via the Emacs Customization
+Utility.
+;; See the end of the file for those.
+;; Read the diary:
+(diary) 
+;; Show column number on mode line.
+(column-number-mode t)
+;; Show time on mode line, and set appointment notification.
+;; (day-and-date)
+(display-time)
+(add-hook 'diary-hook 'appt-make-list)
+(diary 0)
+;; Special function to make appointments work:
+(defun update-my-calendar ()
+  (let ((diary-buffer (get-file-buffer diary-file))
+        (number-of-diary-entries 30))
+    (if diary-buffer
+        (progn
+          (set-buffer diary-buffer)
+          (revert-buffer t t)))
+    (calendar)))
+
+;; Enable syntax coloring.
+(global-font-lock-mode t)
+
+(setq-default transient-mark-mode t)
+
+;; Global key maps:
+(global-set-key "\C-b" 'browse-url-of-file)
+(global-set-key "\e/" 'replace-regexp)
+(global-set-key "\C-xtl" 'goto-line)
+(global-set-key "\e[" 'enlarge-window)
+(global-set-key "\e]" 'shrink-window)
+(global-set-key "\e=" 'eval-current-buffer)
+
+;; These two key bindings are for up and down scrolling by a either
+single line at a time
+;; or by N lines at a time (default is scroll by one single line at a
+time).  This is
+;; very useful when working with narrow horizontal windows.  ;~)
+;; To enter the desired N, hold down \C and type the number and then
+hit z or q, all the
+;; while holding down \C.
+;; From the "Writing GNU Emacs Extensions" book, by Bob Glickstein.
+(defun scroll-n-lines-up (&optional n) 
+  "Scroll up N lines (1 line by default)."
+  (interactive "P")
+  (scroll-up (prefix-numeric-value n)))
+
+(defun scroll-n-lines-down (&optional n) 
+  "Scroll down N lines (1 line by default)."
+  (interactive "P")
+  (scroll-down (prefix-numeric-value n)))
+
+(global-set-key "\C-q" 'scroll-n-lines-up)
+(global-set-key "\C-z" 'scroll-n-lines-down)
+
+
+;; These two bindings make it easier to find a mismatched parenthesis:
+(global-set-key "\e'" 'forward-sexp)
+(global-set-key "\e;" 'backward-sexp)
+
+;;; Bracket/brace/parentheses highlighting:
+   ;; The following is the command for Emacs 20.1 and later:
+(show-paren-mode 1)
+   ;; * Here is some Emacs Lisp that will make the % key show the
+matching
+   ;; parenthesis, like in vi.	In addition, if the cursor isn't over a
+   ;; parenthesis, it simply inserts a % like normal.  (`Parenthesis'
+actually
+   ;;  includes and character with `open' or `close' syntax, which
+usually means
+   ;;  "()[]{}".)
+
+      ;; By an unknown contributor
+
+      (global-set-key "%" 'match-paren)
+
+      (defun match-paren (arg)
+	"Go to the matching parenthesis if on parenthesis otherwise insert
+%."
+	(interactive "p")
+	(cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
+	      ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
+	      (t (self-insert-command (or arg 1)))))
+
+
+
+;; The following functions enable on-the-fly switching between the
+bash shell and DOS:
+(defun set-shell-bash()
+  (interactive)
+  ;; (setq binary-process-input t)
+  (setq shell-file-name "bash")
+  (setq shell-command-switch "-c")
+  (setq explicit-shell-file-name "bash")
+  (setenv "SHELL" explicit-shell-file-name)
+  (setq explicit-sh-args '("-login" "-i"))
+  (setq w32-quote-process-args ?\")
+  (setq mswindows-quote-process-args t)
+  )
+
+(defun set-shell-cmdproxy()
+  (interactive)
+  (setq shell-file-name "cmdproxy")
+  (setq explicit-shell-file-name "cmdproxy")
+  (setenv "SHELL" explicit-shell-file-name)
+  (setq explicit-sh-args nil)
+  (setq w32-quote-process-args nil)
+  )
+
+(global-set-key "\C-xg" 'set-shell-bash) ;; g for Gnu (\C-xb is used
+for buffer switch command).
+(global-set-key "\C-xd" 'set-shell-cmdproxy)
+;; End shell-switch on-the-fly.
+
+
+;; Begin move-to-window block:
+;; This code is from the O'Reilly "GNU Emacs Extensions" book.
+;; The purpose of it is to make a reasonable way to move to the next
+OR previous window.
+;; Change from C-x o to C-x n, so that we have Next and Previous.  
+(global-set-key "\C-xn" 'other-window) 
+
+;; We must make our own function to go to the previous window (but
+it's simple):
+(defun other-window-backward ()
+  "Select the previous window."
+  (interactive)
+  (other-window -1))
+;; Now we can bind to this function:
+(global-set-key "\C-xp" 'other-window-backward)
+;; End move to window block.
+
+;; This turns on the buffer select list in the minibuffer to make it
+easy to
+;; edit any buffer in a given window or frame (C-r and C-s move
+backwards and forwards, respectively,
+;; through the buffer select list).
+(require 'iswitchb)
+(iswitchb-default-keybindings)
+
+;; old: (setq show-paren-mode t)
+;; old: (setq show-paren-style 'parenthesis)
+
+;; Set a high recursion limit for parsing the long java files:
+(setq max-specpdl-size 1000)
+
+(put 'upcase-region 'disabled nil)
+
+(put 'downcase-region 'disabled nil)
+
+;; Adjust the colors and fonts to preference:
+(set-default-font "Fixedsys")
+(set-cursor-color "Deep Pink")
+(set-face-foreground 'highlight "blue")
+(set-face-background 'highlight "red")
+(set-foreground-color "Green")
+(set-background-color "Gray10")
+(set-face-foreground 'custom-group-tag-face "Yellow")
+(set-face-foreground 'custom-variable-tag-face "Magenta")
+(set-face-foreground 'custom-state-face "Yellow")
+(set-face-foreground 'font-lock-type-face "Goldenrod")
+(set-face-foreground 'font-lock-comment-face "OrangeRed")
+(set-face-foreground 'font-lock-function-name-face "Turquoise")
+(set-face-foreground 'font-lock-keyword-face "Yellow")
+(set-face-foreground 'font-lock-string-face "Magenta")
+(set-face-foreground 'font-lock-variable-name-face "Coral")
+(set-face-foreground 'modeline "yellow")
+(set-face-background 'modeline "purple4") 
+(set-face-background 'region "MidnightBlue")
+(set-face-background 'secondary-selection "dodger blue")
+(set-face-foreground 'diary-face "Yellow")
+(set-face-background 'holiday-face "Pink")
+(set-face-foreground 'holiday-face "Red")
+(set-face-foreground 'widget-field-face "Sienna")
+(set-face-foreground 'widget-single-line-field-face "Firebrick")
+(set-face-foreground 'widget-inactive-face "White")
+(set-face-foreground 'widget-documentation-face "Coral")
+(set-mouse-color "yellow")
+
+;; The following settings pertain to features that you may not have
+installed on your GNU Emacs:
+  ;; Begin speedbar section (Values set via Emac's 'Customize'
+interface are found at the
+  ;; bottom of the file, and hence if there is a 'conflict' they
+override these values).
+(set-face-foreground 'speedbar-directory-face "Green")
+(set-face-background 'speedbar-directory-face "Black")
+(set-face-foreground 'speedbar-highlight-face "DarkSlateGray")
+(set-face-background 'speedbar-highlight-face "Gold")
+(set-face-background 'speedbar-file-face "MidnightBlue")
+(set-face-foreground 'speedbar-file-face "Gold")
+(set-face-foreground 'speedbar-tag-face "Orange")
+;; Set the speedbar pop-up window properties: Note that if the
+speedbar height is too
+;; great, the windowing-system's title bar for the 
+;; speedbar window (at least on Windows2000) will not show completely.
+(setq speedbar-frame-parameters '((width . 30)
+								  (height . 45)
+								  (foreground-color . "green")
+								  (background-color . "black")))
+  ;; End speedbar section. 
+
+  ;; You may not want the following line if you do not have
+paren-matching running:
+(set-face-foreground 'show-paren-match-face "Red")
+  ;; The following line is only if you have semantic installed:
+;; doesn't work for semantic-1.4beta5 (set-face-foreground
+'semantic-intangible-face "Gold")
+  ;; The following line is only if you have the JDE installed:
+(set-face-foreground 'jde-java-font-lock-link-face "Gold")
+
+;;  ---------  This is SGML colorizing with the psgml package, loaded
+above.
+
+;;; Set up and enable syntax coloring. 
+; Create faces  to assign markup categories.
+(make-face 'sgml-doctype-face)
+(make-face 'sgml-pi-face)
+(make-face 'sgml-comment-face)
+(make-face 'sgml-sgml-face)
+(make-face 'sgml-start-tag-face)
+(make-face 'sgml-end-tag-face)
+(make-face 'sgml-entity-face)
+(make-face 'sgml-attribute-face)
+
+; Assign attributes to faces. 
+(set-face-foreground 'sgml-doctype-face "yellow")
+(set-face-foreground 'sgml-sgml-face "cyan1")
+(set-face-foreground 'sgml-pi-face "magenta")
+(set-face-foreground 'sgml-comment-face "purple")
+(set-face-foreground 'sgml-start-tag-face "deep sky blue")
+(set-face-foreground 'sgml-end-tag-face "white")
+(set-face-foreground 'sgml-entity-face "orange")
+
+; Assign faces to markup categories.
+(setq sgml-markup-faces
+      '((doctype	. sgml-doctype-face)
+	(pi		. sgml-pi-face)
+	(comment	. sgml-comment-face)
+	(sgml	. sgml-sgml-face)
+	(comment	. sgml-comment-face)
+	(start-tag	. sgml-start-tag-face)
+	(end-tag	. sgml-end-tag-face)
+	(entity	. sgml-entity-face)))
+
+
+; PSGML - enable face settings
+(setq sgml-set-face t)
+
+;; ---- End psgml highlighting section.
+
+;; Gnus: using only for mail.
+(setq gnus-select-method '(nntp "news.statesoftware.com"))
+(add-hook 'nntp-server-opened-hook 'nntp-send-authinfo)
+
+
+
+;; This checks to see if you've set the variable startup-directory and
+checks to
+;; see if you've set it to a real directory.  If so, it will switch
+there.
+(let ((working-directory (or startup-directory nil)))
+  (if (and (and working-directory)
+    (file-directory-p working-directory))
+      (cd working-directory)))
+
+;; Make sure that tabs are being used (default behavior, but doesn't
+hurt in case something got changed):
+;; (setq indent-tabs-mode t)
+
+;; Make sure that no tab characters are used:
+(setq indent-tabs-mode nil)
+
+;; Set the variable default-tab-width.
+(setq default-tab-width 4)
+
+;; Define an easy way to move up in a dired directory, 
+;; To instantly view a file in the web browser (IE or whatever) (this
+needs a current directory argument to work better):
+;; **NOTE: These bindings must be in a mode-hook, since dired isn't
+automatically
+;; loaded on startup and so it's keymap is void until you go into
+dired.
+(add-hook `dired-mode-hook
+  `(lambda ()
+		 (define-key dired-mode-map "\C-w" 'dired-up-directory)
+     (define-key dired-mode-map "\C-b" 'browse-url)))
+
+;; ---------- BEGIN BUG WORKAROUNDS SECTION:
+;; This prevents dired from displaying itself in warning-face when the
+;; default-tab-width is set to 2. 
+  (defadvice dired-readin (around ecm-dired-indent activate)
+    "Prevent indentation in dired from using tabs."
+    (let ((indent-tabs-mode nil))
+      ad-do-it))
+
+;; ---------- END BUG WORKAROUNDS SECTION:
+
+;; This enables saving the current desktop on shutdown.  The ESC-x
+desktop-save
+;; command must be given once for this to work in perpetuity. 
+(desktop-load-default)
+(desktop-read)
+
+;;; My additions end here.
+
+
+;; This was automatically written by the Emacs customization utility:
+(custom-set-variables
+  ;; custom-set-variables was added by Custom -- don't edit or
+cut/paste it!
+  ;; Your init file should contain only one such instance.
+ '(browse-url-browser-function (quote
+browse-url-default-windows-browser))
+ '(browse-url-generic-program "mozilla")
+ '(calculator-number-digits 10)
+ '(frame-background-mode nil)
+ '(jde-auto-parse-max-buffer-size 0)
+ '(jde-bug-jdk-directory "c:/j2sdk1.4.0/")
+ '(jde-bug-vm-includes-jpda-p t)
+ '(jde-compile-option-verbose t)
+ '(jde-db-debugger (quote ("JDEbug" "" . "Executable")))
+ '(jde-db-source-directories (quote ("c:/Program
+Files/jakarta-tomcat-3.2.4/webapps/dynasurv/WEB-INF/classes/com/treelogic_swe/frameworks/dynaquery"
+"c:/Program Files/jakarta-tomcat-3.2.4/webapps/dynasurv/WEB-INF/classes/com/treelogic_swe/frameworks/dynaform"
+"c:/Program Files/jakarta-tomcat-3.2.4/webapps/dynasurv/WEB-INF/classes/com/treelogic_swe/frameworks/dynafrontend")))
+ '(jde-run-option-classpath (quote
+("runner.jar;servlet.jar;org.apache.tomcat.shell.Startup")))
+ '(jde-run-option-verbose (quote (t nil nil)))
+ '(jde-run-option-vm-args (quote ("-Xdebug -Xnoagent
+-Xrunjdwp:transport=dt_socket,address=6001,server=y,suspend=n")))
+ '(jde-setnu-mode-threshold 200000)
+ '(mail-host-address "ChristopherBalz@yahoo.com")
+ '(midnight-delay 34200)
+ '(midnight-hook (quote (update-my-calendar)))
+ '(midnight-mode t nil (midnight))
+ '(speedbar-show-unknown-files t)
+ '(speedbar-use-images t)
+ '(user-full-name "Christopher M. Balz")
+ '(user-mail-address "ChristopherBalz@yahoo.com"))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom -- don't edit or cut/paste
+it!
+  ;; Your init file should contain only one such instance.
+ '(speedbar-button-face ((t (:background "black" :foreground "deep sky
+blue"))))
+ '(speedbar-file-face ((t (:background "black" :foreground
+"yellow1"))))
+ '(speedbar-selected-face ((((class color) (background dark))
+(:background "black" :foreground "red" :underline t))))
+ '(speedbar-tag-face ((t (:background "black" :foreground
+"Orange")))))
+ 
+	
+
+reingold@emr.cs.iit.edu (Edward M. Reingold) wrote in message news:<85r8duuxcu.fsf@emr.cs.iit.edu>...
+> >>>>> "CB" == Christopher Balz <ChristopherBalz@yahoo.com> writes:
+> 
+>     CB> buffers), the above feature isn't of much use to me.  What is needed,
+>     CB> I'm sure by more people than just myself, is an Emacs calendar feature
+>     CB> that will display the day's goings-on say at 9:00 a.m. daily.
+> 
+> Here is how I do it (at midnight):
+> 
+> (require 'midnight)
+> (setq midnight-delay 1)
+> 
+> (defun update-my-calendar ()
+>   (let ((diary-buffer (get-file-buffer diary-file))
+>         (number-of-diary-entries 30))
+>     (if diary-buffer
+>         (progn
+>           (set-buffer diary-buffer)
+>           (revert-buffer t t)))
+>     (calendar)))
+> 
+> (add-hook 'midnight-hook 'update-my-calendar)
+
+============
+
+
+
+============
+
+>Is there a way (without creating a temporary file) to insert into a
+>buffer the results of running a file's contents through a Unix pipe?
+
+C-u M-! and C-u M-| will execute commands and insert the output in the
+current buffer.  The second command pipes the current region to the command
+and replaces it with the output.
+============
+
+> I downloaded `nnir.el' last week --- but I couldn't, until I told my
+> FTP client not to go into passive mode.  Perhaps this is your
+> problem as well?
+>
+> Eric.
+
+Yes, thanks. In case anyone else is having the problem, here's what I
+did:
+
+$ ncftp
+*ncftp* set passive 0
+*ncftp* open ftp://ls6-ftp.cs.uni-dortmund.de
+*ncftp* cd pub/src/emacs
+*ncftp* get nnir.el
+*ncftp* quit
+
+But note that at work today, behind a fancy-schmancy firewall, this
+did not work. Had to do it from home.
+
+============
+
+
+No, there's no terminal emulation in shell buffers.  Why do you need to use
+more or less when you're in a shell buffer?  You already have the ability
+to scroll back and forth through the output, you don't need to run another
+program to do that.
+
+When I'm in an Emacs shell, I set $PAGER to "cat", so that all the
+applications that would normally pipe their output through less will just
+dump it straight out.
+
+============
+
+> However, if I try to edit the list of dates in the MHE draft buffer, it
+> won't allow me - the *Messages buffer states:
+>
+> 	remove-yank-excluded-properties: Wrong type argument: symbolp, ""
+>
+> and I can't use ^K to kill the line with the appointment.
+
+Now that is an interesting bug, and it is actually dangerous.
+
+Entries in the agenda buffer have a large number of text properties
+that store all kinds of information, for example where the original
+entry is located, what the category is, the priority and much more.
+These properties get copied and pasted along with the text.
+
+One of the properties I use is `category' which seems to have some
+special meaning in Emacs.  This is what is causing the bug you
+describe.  However, the problem is bigger because
+agenda lines also have a property specifying an overriding keymap,
+so org-mode commands will *still* be called, even if you have pasted the
+text into the scratch buffer and are working on it there.
+
+This is, in fact, a dangerous bug, because if, for example, you press
+C-k on one of those lines, the corresponding entry in the org-mode
+file or in the diary will be *removed*.  So don't do that, and I
+hope you have not destroyed something already.
+
+A work-around is to use the following function to copy the region from
+the agenda buffer.  It does the same thing as M-w, but does not take
+along any text properties.
+
+(defun copy-region-no-properites (beg end)
+   "Copy the region into the kill ring, but remove all text properties."
+   (interactive "r")
+   (kill-new (buffer-substring-no-properties beg end)))
+
+Hmmmmm, I am just thinking, that a general solution for this might
+instead be:
+
+(add-hook
+  'org-agenda-mode-hook
+  (lambda ()
+    (make-local-variable 'buffer-substring-filters)
+    (setq buffer-substring-filters
+	 (cons (lambda (x) (set-text-properties 0 (length x) nil x) x)
+	       buffer-substring-filters))))
+
+Let me know if this does the trick, and I am putting it into the next
+version.
+
+
+
+============
+
+============
+
+I think this template is very specific to the way you organize your
+project.  Maybe you could write your own function like this :
+
+(defun my-insert-org-template ()
+   "Insert an interactive template."
+   (interactive)
+   (let ((comment (read-from-minibuffer "COMMENT: ")))
+     (insert 
+   "*** " comment " Template
+
+***** Quick Info
+     |-----------------+---|
+     | Problem Report  |   |
+     | Release         |   |
+     | estimate        |   |
+     |-----------------+---|
+     | Begin Code      |   |
+     | Base Code Done  |   |
+     | Extra Code Done |   |
+     | Testing Done    |   |
+     |-----------------+---|
+     | Code Level      |   |
+     | Build ENV       |   |
+     |-----------------+---|
+
+***** Status Log
+
+***** [/] Investigate
+     - [] Question 1
+
+***** [/] Base Work
+     - [ ] step 1
+
+***** [/] Extra Credit Work
+     - [*] step 1
+
+***** Verification
+     - [0/0] Base test set
+       - [ ] Test 1")))
+
+You can interactively prompt for other strings than "COMMENT" and
+insert them into the template.  This is just to give you the idea.
+
+
+============
+
+>> After playing with the %-escapes, I found it useful to make them
+>> support certain modifiers.
+>>
+>> What do people think? Any other suggestions?
+>
+> Your email made me play with org-remember-templates a bit and they're
+> quite powerful.  What you propose makes perfect sense to me.
+>
+> For now i'm just using `remember' to take some random notes, those
+> that I don't need to link to any project immediately.  If we had the
+> interactive `remember' you describe, i think it will become a core
+> fonction that will help adding TODO items to *any* org files on the
+> fly.  Could be great!
+
+This is actually the feature make me make up my mind to migrate from
+planner to org.
+
+But the feature I propose is not important anymore. Since the
+*remember* buffer is in org-mode, we can use the normal org key
+bindings to set timestamps.
+
+However I still feel there is room for improvement to make remember
+the input engine for GTD etc
+
+============
+
+
+For text files, there is longlines.el.  It inserts newlines when
+reading from disk and removes them again before writing.  You might
+like refill.el (or maniac.el) together with it, then you don't have
+to hit M-q.
+
+Warning: I'm the author of longlines.el.
+============
+
+Kai Großjohann wrote:
+> Is anyone syncing their diary files with the Palm?  How?
+
+I don't have a 'Palm, but if you test Jack Repenning's work at
+
+http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/emacro/emacs/contrib/e-palm.el
+
+I'd like to discuss moving it out of the contrib directory, and make
+it an official part of EMacro.
+
+It would also help to know how to detect that the system connects to a
+Palm, such as finding "palmsynch.exe" in the PATH.
+
+If this doesn't help, perhaps inspecting w32 registry keys helps?
+
+============
+
+
+What do I do with the resulting 411.txt file?  I don't have Windows...
+
+============
+
+
+;;;;;;;;;Org setup;;;;;;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'load-path "C:\\Program Files\\EmacAddIns\\org-4.60")
+ (require 'org)
+ (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+ (define-key global-map "\C-cl" 'org-store-link)
+ (define-key global-map "\C-ca" 'org-agenda)
+ (setq org-log-done t)
+  (setq org-hide-leading-stars t);; hides leading stars in org mode
+
+;;Diary integration
+(setq org-agenda-include-diary t)
+
+;;Fast tag selection
+(setq org-tag-alist '(("@UNIVERSITY" . ?u)("@OFFICE" . ?o)("@HOME" .
+?h)("@COMPUTER" . ?c)("@PHONE" . ?p)("@SHOPS" . ?s)))
+
+
+;;;;;;;;;;Remember set up;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+ (add-to-list 'load-path "C:\\Program Files\\EmacAddIns\\remember")
+ (require 'remember)
+   ; (setq remember-handler-functions '(remember-planner-append))
+    ;(setq remember-annotation-functions planner-annotation-functions)
+
+;;Remember integration with Org.mode;;;;;;;
+(setq org-directory "C:\\home\\org")
+(setq org-default-notes-file "C:\\home\\.notes")
+(setq remember-annotation-functions '(org-remember-annotation))
+(setq remember-handler-functions '(org-remember-handler))
+(add-hook 'remember-mode-hook 'org-remember-apply-template)
+
+;;remember org templates
+(setq org-remember-templates '((?t  "* TODO %?\n %i\n %a"
+"C:\\home\\org\\tasks.org")(?j "* %U %?\n\n %i\n %a"
+"C:\\home\\org\\journal.org")))
+
+============
+
+> > Hi All. I'm looking for a precompiled "latest and greatest" stable cvs
+> > for Windows. Is there a recent precompiled version sitting around? I'm
+> > currently using a precompiled cvs version from April 2005.
+>  
+>  ftp://alpha.gnu.org/gnu/auctex/
+>  
+>  comes with built in auctex and preview-latex
+
+i use this prebuild for a while and it works perfectly
+
+============
+
+> What would be the best way to import some tables, like a tab delimited
+> copy-paste chunk from excel. I would like to get the table into Emacs
+> Lisp so that a table would be a big list of rows, where a row would be
+> a list of atoms, either raw strings or, when possible, converted to
+> Lisp numbers and symbols.
+
+You can use R (www.r-project.org) to handle a number of different
+table formats uniformly. For example, given test.txt like this:
+
+# directory size unit
+/home/tester1 200 MB
+/home/tester2 3000 KB
+/home/tester3 250 MB
+
+you can read it as a data frame:
+
+ > data <- read.table("test.txt", as.is=c(T,F,T), skip=1)
+
+You then use a function like this to print it the way you want:
+
+elisp <- function (df) {
+         cat("(")
+         for (i in 1:(dim(df)[1])) {
+                 cat("\n(")
+                 for (j in 1:dim(df)[2]) {
+                         val <- df[i,j]
+                         if (is.numeric(val)) {
+                                 cat(" ", val, " ", sep="")
+                         } else {
+                                 cat(" \"", val, "\" ", sep="")
+                         }
+                 }
+                 cat(")\n")
+         }
+         cat(")\n")
+}
+
+
+ > elisp(data)
+(
+( "/home/tester1"  200  "MB" )
+
+( "/home/tester2"  3000  "KB" )
+
+( "/home/tester3"  250  "MB" )
+)
+
+These steps can be automated using R's batch facilities that you can
+call from Emacs. Some of the other conversions you mention can
+probably also be handled more directly in the R code.
+============
+
+
+check out EDB (latest is 1.26p2), in dir:
+
+  http://www.glug.org/people/ttn/software/edb/
+
+particularly the files examples/names.{dat,edb,fmt} and
+README, which has instructions on how to build and load
+things for experimentation (w/o need for "make install").
+
+if you find problems w/ EDB, please let me know about them
+so that i can fix them (or write excuses for their persistence
+in the fine manual ;-) for the next release.
+============
+
+
+If you export the Excel data as CSV, then  you can use csv-mode.el to
+read them in Emacs.  It's likely that table.el can import them too.
+
+If you use Debian, install the package emacs-goodies-el to get both
+those add-ons.
+============
+
+> I will take a look, of course, however I'm afraid that I still
+> won't find what I ask at the moment. Edb seems more a standalone
+> database but I want to have some tool to connect to or import
+> from other data sources, especially relational DBMS-es, excel,
+> MS Access, etc.
+
+it is true that EDB is (still) weak in terms of dealing directly
+w/ external processes; you must read from, and write to, a file.
+however, this stipulation is not so onerous since emacs allows you
+to define file handlers (based on stylized filenames) that can
+mediate between EDB and external processes.
+
+to play, look at variable `file-name-handler-alist', and the
+source code for the handful of builtin handlers listed there.
+EDB itself messes around a bit w/ this handler alist, but very
+very simply -- better to study e.g. `tramp-file-name-handler'.
+
+probably a neat hack would be to wrap `x-get-selection' (or
+whatever is equivalent for your platform) for reading and the
+analog for writing, so that you could select some spreadsheet
+range, invoke EDB on it, and save it back into the spreadsheet
+(kind of like emacsclient for spreadsheet ranges).
+
+another item for the TODO list, i suppose...
+============
+
+> "M-x set-variable RET elscreen-display-tab RET nil RET"
+
+Thanks!  That's very useful, not only for follow-mode.
+
+============
+
+   `M-x write-region' is the inverse of `M-x insert-file'; it copies
+the contents of the region into the specified file.  `M-x
+append-to-file' adds the text of the region to the end of the specified
+file.  *Note Accumulating Text::.
+
+=========
+
+
+   You can specify which major mode should be used for editing a certain
+file by a special sort of text in the first nonblank line of the file.
+The mode name should appear in this line both preceded and followed by
+`-*-'.  Other text may appear on the line as well.  For example,
+
+     ;-*-Lisp-*-
+
+tells Emacs to use Lisp mode.  Such an explicit specification overrides
+any defaults based on the file name.  Note how the semicolon is used to
+make Lisp treat this line as a comment.
+
+   Another format of mode specification is
+
+     -*- mode: MODENAME;-*-
+
+which allows you to specify local variables as well, like this:
+
+     -*- mode: MODENAME; VAR: VALUE; ... -*-
+
+*Note File Variables::, for more information about this.
+
+   When a file's contents begin with `#!', it can serve as an
+executable shell command, which works by running an interpreter named on
+the file's first line.  The rest of the file is used as input to the
+interpreter.
+
+   When you visit such a file in Emacs, if the file's name does not
+specify a major mode, Emacs uses the interpreter name on the first line
+to choose a mode.  If the first line is the name of a recognized
+interpreter program, such as `perl' or `tcl', Emacs uses a mode
+appropriate for programs for that interpreter.  The variable
+`interpreter-mode-alist' specifies the correspondence between
+interpreter program names and major modes.
+
+   When the first line starts with `#!', you cannot (on many systems)
+use the `-*-' feature on the first line, because the system would get
+confused when running the interpreter.  So Emacs looks for `-*-' on the
+second line in such files as well as on the first line.
+
+   When you visit a file that does not specify a major mode to use, or
+when you create a new buffer with `C-x b', the variable
+`default-major-mode' specifies which major mode to use.  Normally its
+value is the symbol `fundamental-mode', which specifies Fundamental
+mode.  If `default-major-mode' is `nil', the major mode is taken from
+the previously current buffer.
+
+   If you change the major mode of a buffer, you can go back to the
+major mode Emacs would choose automatically: use the command `M-x
+normal-mode' to do this.  This is the same function that `find-file'
+calls to choose the major mode.  It also processes the file's local
+variables list (if any).
+
+   The commands `C-x C-w' and `set-visited-file-name' change to a new
+major mode if the new file name implies a mode (*note Saving::).
+However, this does not happen if the buffer contents specify a major
+mode, and certain "special" major modes do not allow the mode to
+change.  You can turn off this mode-changing feature by setting
+`change-major-mode-with-file-name' to `nil'.
+
+============
+
+> If you could, please send a backtrace to the list by following the
+> instructions at
+> http://www.mwolson.org/projects/ReportingEmacsLispBugs.html.
+> 
+
+Here is the bactrace:
+
+
+==============
+
+
+For upcoming tips, a few that come to mind as being particularly useful are:
+
+   1. fill-paragraph (Alt-p) -- intelligently line-wraps your text for
+      you: an absolute must, and it works inside source-code comments.
+
+   2. gnuserv: automatically open certain document types (including
+      View Source in your browser) in Emacs.
+
+   3. M-x Dired: a powerful way to manage your files and
+      directories. It can do things that NO other tool can do (at
+      least that I'm aware of), including renaming arbitrary groups of
+      files from one regexp to another.
+
+   4. whitespace-manipulation commands: C-x C-o (delete-blank-lines),
+      delete-trailing-whitespace, tabify and untabify, indent-region,
+      and so on.
+
+   5. nxml-mode: the ONLY way to fly when you're editing XML. Authored
+      by XML guru James Clark; it knocks the socks off any IDE-based
+      XML editor out there today.
+
+   6. picture-mode: the best way to draw ascii art, and useful in a
+      surprising number of situations.
+
+   7. minibuffer management: mastering recursive edits, learning how
+      to abort from various situations, command completions, and other
+      command-entry trickery.
+
+   8. effortless navigation: re-bind a few keys so that you can move
+      the cursor in any direction, by chars or words, by holding down
+      Alt and just pressing various letter keys.
+
+   9. region management: choosing a non-disgusting color for the
+      highlighted region, covering region-related commands.
+
+  10. rectangle commands: yet another incredibly important set of
+      related commands with no analogues in other editors. Once again,
+      you'll wonder how you lived without them.
+
+  11. emacs shells: tips and tricks for getting the most out of a bash
+      command shell running as an Emacs subprocess.
+
+  12. align-regexp: my new favorite command. just learned it recently,
+      and I use it almost every day.
+
+  13. frame initialization: put Emacs exactly where you want it, every
+      time it starts up, by auto-detecting the screen dimensions and
+      computing where it should be.
+
+  14. using the goal column: things every Emacs power-user should
+      know.
+
+  15. setting the fill column: how to get the most out of fill-region
+      and fill-paragraph.
+
+  16. optimizing OS settings, such as speeding up your keyboard repeat
+      rate, choosing an ideal Emacs font, and so on.
+
+  17. browsing and editing archives: tar, gzip, zip, jar, etc. Most
+      people have no idea this feature exists, and it's nothing short
+      of amazing.
+
+  18. advanced keybinding: learn the syntax for binding function keys,
+      home/end, and other oddball keys. Learn how to make keybindings
+      local to a particular buffer or mode.
+
+  19. mastering the kill ring, including using Derek Upham's fancy new
+      mode for viewing its contents.
+
+  20. mastering Info: customizing your Info dir, finding and adding in
+      new Info files, and advanced navigation and bookmarking.
+
+  21. using M-x customize: learn how this beast works, and how to use
+      it or avoid it as needed.
+
+  22. utility apps: M-x calendar, M-x calc, and others.
+  
+  =================
+
+> Does anyone know of an alarm clock that runs in emacs?
+
+There is now! :) See below:
+
+(defvar alarm-clock-timer nil
+  "Keep timer so that the user can cancel the alarm")
+
+(defun alarm-clock-message (text)
+  "The actual alarm action"
+  (message-box text))
+
+(defun alarm-clock ()
+  "Set an alarm.
+The time format is the same accepted by `run-at-time'.  For
+example \"11:30am\"."
+  (interactive)
+  (let ((time (read-string "Time: "))
+        (text (read-string "Alarm message: ")))
+    (setq alarm-clock-timer (run-at-time time nil 'alarm-clock-message text))))
+
+(defun alarm-clock-cancel ()
+  "Cancel the alarm clock"
+  (interactive)
+  (cancel-timer alarm-clock-timer))
+
+It is very simple. It does not, for example, keep track of multiple
+alarms so that you can cancel them individually.
+
+=============
+You can also add (ding) or (beep) before the (message-box text) but
+apparenty not repeated beeps. Does anyone know of some way of doing this
+(... while some-condition obtains [the message-box not closed] issue
+repeated sounds). In 22.0 there is play-sound and play-sound-file but not
+in 21.3.
+
+Thanks,
+==========
+On Dec 13, 2007 1:11 PM, Graham Smith <myotisone@gmail.com> wrote:
+> I have been using the set up provided by John Wiegley on a Mac and have
+> tried to to use it with Emacs32 wbut with some problems as the
+> custom-set-variables command seemed to badly interact with the Emacs32w
+> custom-set-variables.
+>
+
+I have no specific help to offer, but you should be able to narrow
+down the problem further by turning on debugging of your init file.
+Starting from a unix command line, this would be "emacs --debug-init
+&", but I have no idea whether this would work on windows. If you
+can't work out how to do this on windows, you could use a more
+roundabout method as follows:
+
+
+1. temporarily remove/comment the problematic code from your .emacs
+and put it in a separate file, say "bad-code.el"
+2. restart emacs
+3. turn on debugging with
+   M-x set-variable RET debug-on-error RET t RET
+4. evaluate the problematic code by doing
+   M-x load-file RET path/to/bad-code.el RET
+
+In principle, either of these methods should give you a lisp backtrace
+indicating exactly what the offending command is. Even if you don't
+understand the backtrace, it might help someone else to diagnose your
+problem.

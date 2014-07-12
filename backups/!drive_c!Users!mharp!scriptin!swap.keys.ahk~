@@ -1,0 +1,6 @@
+;; Remap Keys in Windows.
+LAlt::LCtrl
+RAlt::RCtrl
+RCtrl::RAlt
+Capslock::{Backspace}
+LCtrl::LAlt
