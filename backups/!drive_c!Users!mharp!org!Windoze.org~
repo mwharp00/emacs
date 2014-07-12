@@ -1,0 +1,36 @@
+Windoze Issues
+
+* Configuration
+** Wallpaper set
+*** find  snake
+*** temp files
+*** fish is jpg
+*** granite to USB key
+** Activation
+
+If you are install Windows XP back on the same machine and don't want to
+bother with re-activation, save the wpa.dbi and wpa.bak files from the
+c:\windows\system32 folder on the hard drive. Then skip activation during
+installation, reboot into Minimal Safe Mode (F8 at boot), save copies of
+the existing wpa.dbi and wpa.bak files, then replace them with the ones
+from the original install.
+
+Microsoft explains activation here:
+<http://www.microsoft.com/windowsxp/evaluation/features/activation.mspx>
+
+Annoyances.org has a better FAQ:
+<http://www.annoyances.org/exec/show/article03-200>
+
+And about.com has a longer set of instructions for my summary of saving
+your activation info here:
+<http://netsecurity.about.com/od/windowsxp/qt/aaqtwinxp0829.htm>
+* Problems
+** Won't eject base
+*** something w/ trackpad?
+*** virtual cd running?
+**** No, nohelp
+*** search again
+**** Same result - version 2.22. Try previous?
+* Programs
+** Freemind
+** Supermemo

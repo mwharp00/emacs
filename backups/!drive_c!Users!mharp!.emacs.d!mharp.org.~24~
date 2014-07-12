@@ -1,0 +1,898 @@
+#+TITLE: Mark Harpster's Emacs configuration
+#+OPTIONS: toc:4 h:4
+
+#+TITLE: Mark Harpster's Emacs configuration
+#+OPTIONS: toc:4 h:4
+
+
+* Configuration
+** About this file
+<<babel-init>>
+
+Inspired by the [[http://eschulte.me/emacs24-starter-kit/#installation][Emacs Starter Kit]], I set up my configuration file
+using Org-babel. Because my username is Sacha, I can save this as
+Sacha.org in my =~/.emacs.d= directory to have it automatically load.
+You could load it with =(org-babel-load-file "/path/to/file")=,
+changing the path appropriately, but you'll probably want to tweak it
+extensively first. 
+
+This page: [[http://sachac.github.io/.emacs.d/Sacha.html][HTML]] - [[https://github.com/sachac/.emacs.d/blob/gh-pages/Sacha.org][Org]] - [[https://dl.dropbox.com/u/3968124/sacha-emacs.el][.el]] - [[http://sachac.github.io/.emacs.d/][Github]] - also, http://sach.ac/dotemacs
+
+To be precise, this is what's in my init.el:
+
+#+begin_src emacs-lisp  :tangle no
+;; This sets up the load path so that we can override it
+(package-initialize nil)
+;; Override the packages with the git version of Org and other packages
+(add-to-list 'load-path "~/elisp/org-mode/lisp")
+(add-to-list 'load-path "~/elisp/org-mode/contrib/lisp")
+;;(add-to-list 'load-path "~/Dropbox/2014/presentations/org-reveal")
+;; Load the rest of the packages
+(package-initialize t)
+(require 'org)
+(require 'ob-tangle)
+(org-babel-load-file (expand-file-name "~/.emacs.d/mharp.org"))
+#+end_src
+
+If you're new to Emacs Lisp, you probably don't want to copy and paste
+large chunks of this code. Instead, copy small parts of it (always
+making sure to copy a complete set of parentheses) into your
+=*scratch*= buffer or some other buffer in =emacs-lisp-mode=. Use =M-x
+eval-buffer= to evaluate the code and see if you like the way that
+Emacs behaves. See [[https://www.gnu.org/software/emacs/manual/html_mono/eintr.html][An Introduction to Programming in Emacs Lisp]] for more details on Emacs Lisp. You can also find the manual by using =C-h i= (=info=) and choosing "Emacs Lisp Intro".
+
+I've installed a lot of packages. See the [[*Add%20package%20sources][package sources]] section to
+add the repositories to your configuration. When you see =use-package=
+and a package name you might like, you can use =M-x package-install=
+to install the package of that name. Note that use-package is itself
+provided by a package, so you'll probably want to install that and
+=bind-key=.
+
+If you're viewing the Org file, you can open source code blocks (those are the ones in begin_src) in a separate buffer by moving your point inside them and typing C-c ' (=org-edit-special=). This opens another buffer in =emacs-lisp-mode=, so you can use =M-x eval-buffer= to load the changes. If you want to explore how functions work, use =M-x edebug-defun= to set up debugging for that function, and then call it. You can learn more about edebug in the [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Edebug.html][Emacs Lisp]] manual.
+
+I like using =(setq ...)= more than Customize because I can neatly organize my configuration that way. 
+
+** Personal information
+
+#+begin_src emacs-lisp
+  (setq user-full-name "Mark W Harpster"
+        user-mail-address "mwharp@gmail.com")
+#+end_src
+
+** Emacs initialization
+*** Add my elisp directory and other files
+
+Sometimes I load files outside the package system. As long as they're
+in a directory in my =load-path=, Emacs can find them.
+
+#+begin_src emacs-lisp
+(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/elisp")
+;;(add-to-list 'load-path "~/elisp/artbollocks-mode")
+(require 'use-package)
+#+end_src
+
+*** Load secrets
+
+I keep slightly more sensitive information in a separate file so that I can easily publish my main configuration.
+
+#+begin_src emacs-lisp
+;;(load-file "~/.emacs.secrets")
+#+end_src
+
+*** Add package sources
+
+#+begin_src emacs-lisp
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+#+end_src
+
+Use =M-x package-refresh-contents= to reload the list of packages
+after adding these for the first time.
+
+*** Byte-compile my init files to speed things up next time
+
+I hardly ever use this because I don't care about my Emacs startup
+speed. The trick to using Emacs is to not close it. I start Emacs when
+my computer boots up. I suspend my computer when I go to sleep. Pretty
+much the only time I shut down is when I need to update the system.
+
+#+begin_src emacs-lisp
+(defun sacha/byte-recompile ()
+  (interactive)
+  (byte-recompile-directory "~/.emacs.d" 0)
+  (byte-recompile-directory "~/elisp" 0))
+#+end_src
+
+*** Install packages if necessary
+
+ELPA makes it easy to install packages without tracking down all the
+different websites. Let's define a function that makes it easy to
+install packages. I don't actually use this a lot any more, but it can
+be handy.
+
+#+begin_src emacs-lisp
+(defun sacha/package-install (package &optional repository)
+  "Install PACKAGE if it has not yet been installed.
+If REPOSITORY is specified, use that."
+  (unless (package-installed-p package)
+    (let ((package-archives (if repository
+                                (list (assoc repository package-archives))
+                              package-archives)))
+    (package-install package))))
+#+end_src
+
+** General configuration
+*** Backups
+
+This is one of the things people usually want to change right away. By default, Emacs saves backup files in the current directory. These are the files ending in =~= that are cluttering up your directory lists. The following code stashes them all in =~/.emacs.d/backups=, where I can find them with =C-x C-f= (=find-file=) if I really need to.
+
+#+begin_src emacs-lisp
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(set-background-color "blue")
+#+end_src
+
+Disk space is cheap. Save lots.
+
+#+begin_src emacs-lisp
+(setq delete-old-versions -1)
+(setq version-control t)
+(setq vc-make-backup-files t)
+(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/auto-save-list" t)))
+#+end_src
+
+*** History
+
+From http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2014/03/C3F.html
+#+begin_src emacs-lisp
+(setq savehist-file "~/.emacs.d/savehist")
+(savehist-mode 1)
+(setq history-length t)
+(setq history-delete-duplicates t)
+(setq savehist-save-minibuffer-history 1)
+(setq savehist-additional-variables
+      '(kill-ring
+        search-ring
+        regexp-search-ring))
+#+end_src
+
+*** Windows configuration :drill:
+    SCHEDULED: <2013-03-03 Sun>
+    :PROPERTIES:
+    :ID:       440c0b9a-9068-450b-89a3-a20c8ec1f447
+    :DRILL_LAST_INTERVAL: 3.86
+    :DRILL_REPEATS_SINCE_FAIL: 2
+    :DRILL_TOTAL_REPEATS: 1
+    :DRILL_FAILURE_COUNT: 0
+    :DRILL_AVERAGE_QUALITY: 3.0
+    :DRILL_EASE: 2.36
+    :DRILL_LAST_QUALITY: 3
+    :DRILL_LAST_REVIEWED: [2013-02-27 Wed 23:14]
+    :END:
+
+When you're starting out, tooltips, menus, and the tool bar can be very helpful. [[http://sachachua.com/blog/2014/03/emacs-basics-using-mouse/][(Emacs Basics: Using the Mouse]]). Eventually, you may want to reclaim that extra little bit of screenspace. The following code turns those things off when using a graphical Emacs.
+
+#+begin_src emacs-lisp
+(when window-system
+  (tooltip-mode -1)
+  (tool-bar-mode -1)
+  (menu-bar-mode t)
+  (scroll-bar-mode t))
+#+end_src
+*** Winner mode - undo and redo window configuration
+
+=winner-mode= lets you use =C-c <left>= and =C-c <right>= to switch between window configurations. This is handy when something has popped up a buffer that you want to look at briefly before returning to whatever you were working on. When you're done, press =C-c <left>=.
+
+#+begin_src emacs-lisp
+;;  (use-package winner
+;;    :config (winner-mode 1))
+#+end_src
+*** Sentences end with a single space
+
+In my world, sentences end with a single space. This makes
+sentence navigation commands work for me.
+
+#+begin_src emacs-lisp
+  (setq sentence-end-double-space nil)
+#+end_src
+
+*** Helm - interactive completion
+
+Helm makes it easy to complete various things. I find it to be easier
+to configure than ido in order to get completion in as many places as
+possible, although I prefer ido's way of switching buffers.
+
+#+begin_src emacs-lisp
+    (use-package helm
+      :init
+      (progn 
+        (require 'helm-config) 
+        (setq helm-candidate-number-limit 10)
+        ;; From https://gist.github.com/antifuchs/9238468
+        (setq helm-idle-delay 0.0 ; update fast sources immediately (doesn't).
+              helm-input-idle-delay 0.01  ; this actually updates things
+                                            ; reeeelatively quickly.
+              helm-quick-update t
+              helm-M-x-requires-pattern nil
+              helm-ff-skip-boring-files t)
+        (helm-mode))
+      :config
+      (progn
+        ;; I don't like the way switch-to-buffer uses history, since
+        ;; that confuses me when it comes to buffers I've already
+        ;; killed. Let's use ido instead.
+        (add-to-list 'helm-completing-read-handlers-alist '(switch-to-buffer . ido)))
+      :bind (("C-c h" . helm-mini)))
+    (ido-mode -1) ;; Turn off ido mode in case I enabled it accidentally
+#+end_src
+*** Mode line format
+
+Display a more compact mode line
+
+#+begin_src emacs-lisp
+;;(use-package smart-mode-line
+;;  :init
+;;  (progn
+;;  (setq-default
+;;   mode-line-format 
+;;   '("%e"
+;;     mode-line-front-space
+;;     mode-line-mule-info
+;;     mode-line-client
+;;     mode-line-modified
+;;     mode-line-remote
+;;     mode-line-frame-identification
+;;     mode-line-buffer-identification
+;;     "   "
+;;     mode-line-position
+;;     (vc-mode vc-mode)
+;;     "  "
+;;     mode-line-modes
+;;     mode-line-misc-info
+;;     mode-line-end-spaces))))
+#+end_src
+
+Hide minor modes I care less about:
+
+#+begin_src emacs-lisp
+;;(require 'diminish)
+;;(eval-after-load "yasnippet" '(diminish 'yas-minor-mode))
+;;(eval-after-load "undo-tree" '(diminish 'undo-tree-mode))
+;;(eval-after-load "guide-key" '(diminish 'guide-key-mode))
+;;(eval-after-load "smartparens" '(diminish 'smartparens-mode))
+;;(eval-after-load "guide-key" '(diminish 'guide-key-mode))
+;;(eval-after-load "eldoc" '(diminish 'eldoc-mode))
+;;(diminish 'visual-line-mode)
+#+end_src
+
+*** Change "yes or no" to "y or n"
+
+Lazy people like me never want to type "yes" when "y" will suffice.
+
+#+begin_src emacs-lisp
+(fset 'yes-or-no-p 'y-or-n-p)   
+#+end_src
+
+*** Minibuffer editing - more space!
+
+    Sometimes you want to be able to do fancy things with the text
+    that you're entering into the minibuffer. Sometimes you just want
+    to be able to read it, especially when it comes to lots of text.
+    This binds =C-M-e= in a minibuffer) so that you can edit the
+    contents of the minibuffer before submitting it.
+
+
+;;  (use-package miniedit
+;;    :commands minibuffer-edit
+;;    :init (miniedit-install))
+
+*** Set up debug on error
+
+#+begin_src emacs-lisp
+(setq debug-on-error t)
+#+end_src
+
+*** Set up a light-on-dark color scheme
+
+I like light on dark because I find it to be more restful. The
+color-theme in ELPA was a little odd, though, so we define some advice to make
+it work. Some things still aren't quite right.
+
+#+begin_src emacs-lisp
+
+;;  (defadvice color-theme-alist (around sacha activate)
+;;    (if (ad-get-arg 0)
+;;        ad-do-it
+;;      nil))
+;;  (sacha/package-install 'color-theme)
+;;  (defun sacha/setup-color-theme ()
+;;    (interactive)
+;;    (color-theme-solarized 'dark)
+;;    (set-face-foreground 'secondary-selection "darkblue")
+;;    (set-face-background 'secondary-selection "lightblue")
+;;    (set-face-background 'font-lock-doc-face "black")
+;;    (set-face-foreground 'font-lock-doc-face "wheat")
+;;    (set-face-background 'font-lock-string-face "black")
+;;    (set-face-foreground 'org-todo "green")
+;;    (set-face-background 'org-todo "black"))
+;;
+;;  (use-package color-theme
+;;    :init
+;;    (sacha/setup-color-theme))
+#+end_src
+
+I sometimes need to switch to a lighter background for screenshots.
+For that, I use =color-theme-vim=.
+
+Some more tweaks to solarized:
+#+begin_src emacs-lisp
+;;  (custom-set-faces
+;;   '(erc-input-face ((t (:foreground "antique white"))))
+;;   '(helm-selection ((t (:background "ForestGreen" :foreground "black"))))
+;;   '(org-agenda-clocking ((t (:inherit secondary-selection :foreground "black"))) t)
+;;   '(org-agenda-done ((t (:foreground "dim gray" :strike-through nil))))
+;;   '(org-done ((t (:foreground "PaleGreen" :weight normal :strike-through t))))
+;;   '(org-clock-overlay ((t (:background "SkyBlue4" :foreground "black"))))
+;;   '(org-headline-done ((((class color) (min-colors 16) (background dark)) (:foreground "LightSalmon" :strike-through t))))
+;;   '(outline-1 ((t (:inherit font-lock-function-name-face :foreground "cornflower blue")))))
+#+end_src
+
+*** Undo tree mode - visualize your undos and branches
+
+People often struggle with the Emacs undo model, where there's really no concept of "redo" - you simply undo the undo. 
+# 
+This lets you use =C-x u= (=undo-tree-visualize=) to visually walk through the changes you've made, undo back to a certain point (or redo), and go down different branches.
+
+#+begin_src emacs-lisp
+  (use-package undo-tree
+    :init
+    (progn
+      (global-undo-tree-mode)
+      (setq undo-tree-visualizer-timestamps t)
+      (setq undo-tree-visualizer-diff t)))
+#+end_src
+
+*** Help - guide-key
+
+It's hard to remember keyboard shortcuts. The =guide-key= package pops up help after a short delay.
+
+#+begin_src emacs-lisp
+;;(use-package guide-key
+;;  :init
+;;  (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-c"))
+;;  (guide-key-mode 1))  ; Enable guide-key-mode
+#+end_src
+
+*** UTF-8
+
+From http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2014/03/C3F.html
+#+begin_src emacs-lisp
+(prefer-coding-system 'utf-8)
+(when (display-graphic-p)
+  (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING)))
+#+end_src
+*** Killing text
+
+From https://github.com/itsjeyd/emacs-config/blob/emacs24/init.el
+
+#+begin_src emacs-lisp
+  (defadvice kill-region (before slick-cut activate compile)
+    "When called interactively with no active region, kill a single line instead."
+    (interactive
+      (if mark-active (list (region-beginning) (region-end))
+        (list (line-beginning-position)
+          (line-beginning-position 2)))))
+#+end_src
+** Navigation
+*** Pop to mark
+
+Handy way of getting back to previous places.
+
+#+begin_src emacs-lisp
+(bind-key "C-x p" 'pop-to-mark-command)
+(setq set-mark-command-repeat-pop t)
+(set-background-color "pink")
+#+end_src
+*** Text size
+
+#+begin_src emacs-lisp
+(set-face-attribute 'default nil :font "Lucida Console-12") 
+(bind-key "C-+" 'text-scale-increase)
+(bind-key "C--" 'text-scale-decrease)
+#+end_src
+
+*** Helm-swoop - quickly finding lines
+
+This promises to be a fast way to find things. Let's bind it to =Ctrl-Shift-S= to see if I can get used to that...
+
+#+begin_src emacs-lisp
+(use-package helm-swoop
+ :bind (("C-S-s" . helm-swoop)))
+#+end_src
+
+*** Windmove - switching between windows
+
+Windmove lets you move between windows with something more natural than cycling through =C-x o= (=other-window=).
+Windmove doesn't behave well with Org, so we need to use different keybindings.
+
+#+begin_src emacs-lisp
+  (use-package windmove
+    :bind
+    (("<f2> <right>" . windmove-right)
+     ("<f2> <left>" . windmove-left)
+     ("<f2> <up>" . windmove-up)
+    ("<f2> <down>" . windmove-down)))
+#+end_src
+
+*** Searching based on the current word
+
+This lets me search up and down. I don't use this often, though.
+
+#+begin_src emacs-lisp
+  (defun sacha/search-word-backward ()
+    "Find the previous occurrence of the current word."
+    (interactive)
+    (let ((cur (point)))
+      (skip-syntax-backward "w_")
+      (goto-char
+       (if (re-search-backward (concat "\\_<" (current-word) "\\_>") nil t)
+           (match-beginning 0)
+         cur))))
+  
+  (defun sacha/search-word-forward ()
+    "Find the next occurrence of the current word."
+    (interactive)
+    (let ((cur (point)))
+      (skip-syntax-forward "w_")
+      (goto-char
+       (if (re-search-forward (concat "\\_<" (current-word) "\\_>") nil t)
+           (match-beginning 0)
+         cur))))
+  (defadvice search-for-keyword (around sacha activate)
+    "Match in a case-insensitive way."
+    (let ((case-fold-search t))
+      ad-do-it))
+  (global-set-key '[M-up] 'sacha/search-word-backward)
+  (global-set-key '[M-down] 'sacha/search-word-forward)
+#+end_src
+*** Set up cygwin and bash
+
+ Sets your shell to use cygwin's bash, if Emacs finds it's running
+ under Windows and c:\cygwin exists. Assumes that C:\cygwin\bin is
+ not already in your Windows Path (it generally should not be).
+
+#+begin_src emacs-lisp
+(let* ((cygwin-root "c:/cygwin")
+       (cygwin-bin (concat cygwin-root "/bin")))
+  (when (and (eq 'windows-nt system-type)
+  	     (file-readable-p cygwin-root))
+    
+    (setq exec-path (cons cygwin-bin exec-path))
+    (setenv "PATH" (concat cygwin-bin ";" (getenv "PATH")))
+    
+    ;; By default use the Windows HOME.
+    ;; Otherwise, uncomment below to set a HOME
+    ;;      (setenv "HOME" (concat cygwin-root "/home/eric"))
+    
+    ;; NT-emacs assumes a Windows shell. Change to bash.
+    (setq shell-file-name "bash")
+    (setenv "SHELL" shell-file-name) 
+    (setq explicit-shell-file-name shell-file-name) 
+    
+    ;; This removes unsightly ^M characters that would otherwise
+    ;; appear in the output of java applications.
+    (add-hook 'comint-output-filter-functions 'comint-strip-ctrl-m))) 
+#+end_src
+
+*** start server
+
+#+begin_src emacs-lisp
+(server-start)
+#+end_src
+
+*** replace require
+
+REPLACES ORIGINAL in `C source code' (dumped)
+redefine require to leave a trace of packages being loaded
+#+begin_src emacs-lisp
+;;(if (not (fboundp 'orig-require))
+;;    (fset 'orig-require (symbol-function 'require))
+;;  (message "The code to redefine `require' should not be loaded twice"))
+;;
+;;(defvar my/require-depth 0)
+;;
+;;(defun require (feature &optional filename noerror)
+;;  "Leave a trace of packages being loaded."
+;;  (cond ((member feature features)
+;; 	 (message "%sRequiring `%s' (already loaded)"
+;; 		  (concat (make-string (* 2 my/require-depth) ? ) "+-> ")
+;; 		  feature))))
+;; 	(t
+;; 	 (message "%sRequiring `%s'"
+;; 		  (concat (make-string (* 2 my/require-depth) ? )
+;; 			  "+-> ")
+;; 		  feature)
+;; 	 (let ((my/require-depth (+ 1 my/require-depth)))
+;; 	   (orig-require feature filename noerror))
+;; 	 (message "%sRequiring `%s'...done")
+;; 		  (concat (make-string (* 2 my/require-depth) ? )
+;; 			  "+-> "))
+#+end_src
+
+*** Set up rectangle mode with cua
+
+#+begin_src emacs-lisp
+(setq cua-enable-cua-keys nil) ;; only rectangles
+(cua-mode t)
+#+end_src
+
+*** Cursor stuff
+
+#+begin_src emacs-lisp
+;; Use a bar cursor when mark is active and a region exists.
+(defun th-activate-mark-init ()
+  (setq cursor-type 'bar))
+(add-hook 'activate-mark-hook 'th-activate-mark-init)
+
+(defun th-deactivate-mark-init ()
+  (setq cursor-type 'box))
+(add-hook 'deactivate-mark-hook 'th-deactivate-mark-init)
+ 
+;; Use a red cursor in overwrite-mode
+;;(defvar th--default-cursor-color "black")
+(defadvice overwrite-mode (after th-overwrite-mode-change-cursor activate)
+  "Change cursor color in override-mode."
+  (if overwrite-mode
+      (progn
+        (setq th--default-cursor-color
+              (let ((f (face-attribute 'cursor :background)))
+                (if (stringp f)
+                    f
+                  th--default-cursor-color)))
+        (set-cursor-color "red"))
+    (set-cursor-color th--default-cursor-color)))
+#+end_src
+
+*** Frequently-accessed files
+Registers allow you to jump to a file or other location quickly. To
+jump to a register, use =C-x r j= followed by the letter of the
+register.
+
+#+begin_src emacs-lisp :results silent
+  (mapcar
+   (lambda (r)
+     (set-register (car r) (cons 'file (cdr r))))
+   '((?i . "~/.emacs.d/Sacha.org")
+     (?o . "~/personal/organizer.org")
+     (?b . "~/personal/business.org")
+     (?e . "~/code/emacs-notes/tasks.org")
+     (?w . "~/Dropbox/public/sharing/index.org")
+     (?W . "~/Dropbox/public/sharing/blog.org")
+     (?g . "~/sachac.github.io/evil-plans/index.org")
+     (?l . "~/dropbox/public/sharing/learning.org")))
+#+end_src
+
+*** Browse-kill-ring - see what you've cut so that you can paste it   :drill:
+    SCHEDULED: <2013-03-03 Sun>
+    :PROPERTIES:
+    :ID:       508ef5ff-f338-4cd6-8201-9bc76fa432e8
+    :DRILL_LAST_INTERVAL: 3.86
+    :DRILL_REPEATS_SINCE_FAIL: 2
+    :DRILL_TOTAL_REPEATS: 2
+    :DRILL_FAILURE_COUNT: 1
+    :DRILL_AVERAGE_QUALITY: 2.5
+    :DRILL_EASE: 2.36
+    :DRILL_LAST_QUALITY: 3
+    :DRILL_LAST_REVIEWED: [2013-02-27 Wed 21:18]
+    :END:
+
+Make sense of the kill ring! This lets you list the contents of the
+kill ring and paste a specific item. You can also manipulate your kill
+ring contents.
+
+If you're new to Emacs, you might not yet know about what the kill
+ring is. It stores the items that you cut (or kill, in Emacs terms).
+You're not limited to pasting just the most recent item - you can
+paste the second-to-the-last item you cut, and so on. I remember to
+use =C-y= and =M-y= when going backwards in the kill ring, but I never
+quite remember how to go forward, so browse-kill-ring makes it easier.
+
+#+begin_src emacs-lisp
+;; (sacha/package-install 'browse-kill-ring)
+;;  (use-package browse-kill-ring
+;;    :init 
+;;    (progn 
+;;      (browse-kill-ring-default-keybindings) ;; M-y
+;;      (setq browse-kill-ring-quit-action 'save-and-restore)))      
+#+end_src
+
+*** Key chords 
+I'm on a Dvorak keyboard, so these might not work for you.
+Experimenting with this. =key-chord= lets you define keyboard
+shortcuts that use ordinary keys.
+
+#+begin_src emacs-lisp
+;;  (use-package key-chord
+;;    :init
+;;    (progn 
+;;      (key-chord-mode 1)
+;;      (key-chord-define-global "cg"     'undo)
+;;      (key-chord-define-global "yp"     'other-window)))
+#+end_src
+
+*** Some unrelated little ones -- got org fatigue
+
+#+begin_src emacs-lisp
+(defalias 'list-buffers 'ibuffer)
+(setq visible-bell t)
+(desktop-save-mode 1)
+(tooltip-mode 1)
+(setq tooltip-use-echo-area t)
+(setq delete-by-moving-to-trash t)
+#+end_src
+
+*** Smartscan
+
+From https://github.com/itsjeyd/emacs-config/blob/emacs24/init.el
+
+#+begin_src emacs-lisp
+;;(use-package smartscan
+;;  :init (global-smartscan-mode t))
+#+end_src
+
+*** escreen
+
+#+begin_src emacs-lisp
+(load "escreen")
+(escreen-install)
+#+end_src
+*** w3m
+
+#+begin_src emacs-lisp
+(setq w3m-command "c:/cygwin/bin/w3m.exe")
+#+end_src
+*** Remind and remind.conf
+*** Planner
+*** Deft
+
+http://jblevins.org/projects/deft
+#+begin_src emacs-lisp
+
+(when (require 'deft nil 'noerror) 
+  (setq
+   deft-extension "org"
+   deft-directory "~/Dropbox/deft/"
+   deft-text-mode 'org-mode)
+  (global-set-key (kbd "<f8>") 'deft))
+(setq deft-use-filename-as-title t)
+(require 'deft)
+(setq deft-use-filename-as-title t)
+#+end_src
+
+*** Dired
+
+From http://www.masteringemacs.org/articles/2011/03/25/working-multiple-files-dired/
+
+#+begin_src emacs-lisp
+(require 'find-dired)
+(setq find-ls-option '("-print0 | xargs -0 ls -ld" . "-ld"))
+#+end_src
+** Reading
+
+https://github.com/xahlee/xah_emacs_init/blob/master/xah_emacs_font.el
+From Xah Lee:
+
+#+begin_src emacs-lisp
+(defun xah-toggle-margin-right ()
+  "Toggle the right margin between `fill-column' or window width.
+This command is convenient when reading novel, documentation."
+  (interactive)
+  (if (eq (cdr (window-margins)) nil)
+      (set-window-margins nil 0 (- (window-body-width) fill-column))
+    (set-window-margins nil 0 0)))
+(set-background-color "yellow")
+#+end_src
+** Writing
+*** Avoiding weasel words
+    #+begin_src emacs-lisp
+;;      (use-package artbollocks-mode
+;;        :init
+;;        (progn
+;;          (setq artbollocks-weasel-words-regex
+;;                (concat "\\b" (regexp-opt
+;;                               '("one of the"
+;;                                 "should"
+;;                                 "just"
+;;                                 "sort of"
+;;                                 "a lot"
+;;                                 "probably"
+;;                                 "maybe"
+;;                                 "perhaps"
+;;                                 "I think"
+;;                                 "really"
+;;                                 "pretty"
+;;                                 "nice"
+;;                                 "action"
+;;                                 "utilize"
+;;                                 "leverage") t) "\\b"))
+          ;; Don't show the art critic words, or at least until I figure
+          ;; out my own jargon
+;;          (setq artbollocks-jargon nil)))
+#+end_src
+
+*** Unfill paragraph
+
+I unfill paragraphs a lot because Wordpress likes adding extra =<br>= tags if I don't. (I should probably just tweak my Wordpress installation.)
+
+#+begin_src emacs-lisp
+  (defun sacha/unfill-paragraph (&optional region)
+    "Takes a multi-line paragraph and makes it into a single line of text."
+    (interactive (progn
+                   (barf-if-buffer-read-only)
+                   (list t)))
+    (let ((fill-column (point-max)))
+      (fill-paragraph nil region)))
+(bind-key "M-Q" 'sacha/unfill-paragraph)
+#+end_src
+
+I never actually justify text, so I might as well change the way
+=fill-paragraph= works. With the code below, =M-q= will fill the
+paragraph normally, and =C-u M-q= will unfill it.
+
+#+begin_src emacs-lisp
+  (defun sacha/fill-or-unfill-paragraph (&optional unfill region)
+    "Fill paragraph (or REGION).
+  With the prefix argument UNFILL, unfill it instead."
+    (interactive (progn
+                   (barf-if-buffer-read-only)
+                   (list (if current-prefix-arg 'unfill) t)))
+    (let ((fill-column (if unfill (point-max) fill-column)))
+      (fill-paragraph nil region)))
+(bind-key "M-q" 'sacha/fill-or-unfill-paragraph)
+#+end_src
+
+Also, =visual-line-mode= is so much better than =auto-fill-mode=. It doesn't actually break the text into multiple lines - it only looks that way.
+
+#+begin_src emacs-lisp
+(remove-hook 'text-mode-hook #'turn-on-auto-fill)
+(add-hook 'text-mode-hook 'turn-on-visual-line-mode)
+#+end_src
+*** Transpose
+
+#+begin_src emacs-lisp
+;; Transpose stuff with M-t
+(bind-key "M-t" nil) ;; which used to be transpose-words
+(bind-key "M-t l" 'transpose-lines)
+(bind-key "M-t w" 'transpose-words)
+(bind-key "M-t t" 'transpose-words)
+(bind-key "M-t M-t" 'transpose-words)
+(bind-key "M-t s" 'transpose-sexps)
+#+end_src
+** Org
+
+I use [[http://www.orgmode.org][Org Mode]] to take notes, publish my blog, and do all sorts of
+stuff.
+
+*** My files
+
+#<<org-files>>
+
+Here are the Org files I use. I should probably organize them better. =)
+
+| organizer.org        | My main Org file. Inbox for M-x org-capture, tasks, weekly reviews, etc.                          |
+| business.org         | Business-related notes and TODOs                                                                  |
+| people.org           | People-related tasks                                                                              |
+| [[http://sachachua.com/evil-plans][evil-plans/index.org]] | High-level goals                                                                                  |
+| [[http://sachachua.com/outline][sharing/index.org]]    | Things to write about                                                                             |
+| decisions.org        | Pending, current, and reviewed decisions                                                          |
+| [[http://sachachua.com/blog/index][blog.org]]             | Topic index for my blog                                                                           |
+| [[http://sachachua.com/my-learning][learning.org]]         | Learning plan                                                                                     |
+| outline.org          | Huge outline of notes by category                                                                 |
+| tracking.org         | Temporary Org file for tracking various things                                                    |
+| delegation.org       | Templates for assigning tasks - now using Google Docs instead                                     |
+| books.org            | Huge file with book notes                                                                         |
+| calendar.org         | Used to use this with ical2org, but have been having problems with ical2org lately; no longer use |
+| ideal.org            | Planning ideal days                                                                               |
+| archive.org          | Archived subtrees                                                                                 |
+| latin.org            | Latin notes                                                                                       |
+| 101things.org        | Old goals for 101 things in 1001 days                                                             |
+| life.org             | Questions, processes, tools                                                                       |
+
+*** Modules
+Org has a whole bunch of optional modules. These are the ones I'm
+currently experimenting with.
+#+begin_src emacs-lisp
+  (setq org-modules '(org-bbdb 
+                      org-gnus
+                      org-drill
+                      org-info
+                      org-habit
+                      org-irc
+                      org-mouse
+                      org-annotate-file
+                      org-eval
+                      org-expiry
+                      org-interactive-query
+                      org-man
+                      org-panel
+                      org-screen
+                      org-toc))
+(org-load-modules-maybe t)
+(setq org-expiry-inactive-timestamps t)
+#+end_src
+
+*** Keyboard shortcuts
+
+    #+begin_src emacs-lisp
+(defun reindent-whole-buffer ()
+  "Reindent the whole buffer."
+  (interactive)
+  (indent-region (point-min)
+                 (point-max)))
+
+(setq w32-pass-apps-to-system nil
+      w32-apps-modifier 'super)
+(setq <apps> 'super) ;; Menu key
+(defun insert-date-stamp()
+  (interactive)
+  (insert (org-read-date)))
+(set-background-color "white")
+(global-set-key (kbd "<f5> b") 'shell-command)
+(global-set-key (kbd "<f5> s") 'replace-string)
+(global-set-key (kbd "<f5> c") 'org-w3m-copy-for-org-mode)
+(global-set-key (kbd "<f5> l") 'getskd)
+(global-set-key (kbd "<f9>") 'escreen-prefix)
+(global-set-key (kbd "s-c") 'calendar)
+(global-set-key (kbd "s-d") 'insert-date-stamp)
+(global-set-key (kbd "s-i") 'imenu-anywhere)
+(global-set-key (kbd "s-t") 'orgtbl-mode)
+(global-set-key (kbd "s-r") 'revert-buffer)
+(global-set-key (kbd "s-s") 'mwh-create-set)
+(global-set-key (kbd "s-q") 'reindent-whole-buffer)
+(global-set-key (kbd "<f7> t") 'planner-create-task-from-buffer)
+(global-set-key (kbd "<f7> r") 'remember)
+(global-set-key (kbd "<f7> c") 'remember-region)
+(global-set-key (kbd "<f7> n") 'planner-create-note-from-task)
+
+      (bind-key "C-c r" 'org-capture)
+      (bind-key "C-c a" 'org-agenda)
+      (bind-key "C-c l" 'org-store-link)
+      (bind-key "C-c L" 'org-insert-link-global)
+      (bind-key "C-c O" 'org-open-at-point-global)
+;;      (bind-key "<f9> <f9>" 'org-agenda-list)
+;;      (bind-key "<f9> <f8>" (lambda () (interactive) (org-capture nil "r")))
+      (bind-key "C-TAB" 'org-cycle org-mode-map)
+      (bind-key "C-c v" 'org-show-todo-tree org-mode-map)
+      (bind-key "C-c C-r" 'org-refile org-mode-map)
+;;      (bind-key "C-c R" 'org-reveal org-mode-map)
+(set-background-color "green")
+#+end_src
+
+=append-next-kill= is more useful to me than =org-table-copy-region=.
+
+#+begin_src emacs-lisp
+  (eval-after-load 'org
+    '(progn
+       (bind-key "s-k" 'append-next-kill org-mode-map)))
+#+end_src
+
+I don't use the diary, but I do use the clock a lot.
+
+#+begin_src emacs-lisp
+  (use-package org-agenda
+    :init (bind-key "i" 'org-agenda-clock-in org-agenda-mode-map))
+#+end_src
+    
+*** Show column number
+
+I sometimes need to know where I am in a line. 
+#+begin_src emacs-lisp
+(column-number-mode 1)
+(set-background-color "red")
+#+end_src
+
+*** Don't show whitespace in diff, but show context
+    #+begin_src emacs-lisp
+    (setq vc-diff-switches '("-b" "-B" "-u"))
+(load-theme 'wombat t)
+#+end_src

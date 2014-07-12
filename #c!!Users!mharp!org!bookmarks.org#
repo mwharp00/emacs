@@ -1,0 +1,2164 @@
+For store link
+* programs
+** auto-complete
+*** http://lifehacker.com/5611210/how-to-use-text-expansion-to-save-yourself-hours-of-typing-every-day
+** cygwin
+*** http://www.howtogeek.com/howto/41382/how-to-use-linux-commands-in-windows-with-cygwin/
+** emacs
+*** melpa
+**** [[http://melpa.milkbox.net/][MELPA list]]
+*** git
+**** http://alexott.net/en/writings/emacs-vcs/EmacsGit.html
+**** [[http://git-scm.com/documentation/external-links][Git - External Links - tutorials]]
+**** http://net.tutsplus.com/tutorials/tools-and-tips/git-on-windows-for-newbs/?search_index=9
+**** http://net.tutsplus.com/tutorials/tools-and-tips/terminal-git-and-github-for-the-rest-of-us-screencast/
+**** http://net.tutsplus.com/tutorials/other/getting-the-hang-of-github/
+**** http://net.tutsplus.com/tutorials/other/easy-version-control-with-git/
+**** https://www.kernel.org/pub/software/scm/git/docs/gittutorial.html
+**** rebind magit-status to ?
+*** bookmarks
+**** http://gnu.emacs.help.narkive.com/wdx8vwkL/syncing-w3m-firefox-bookmarks
+**** http://www.emacswiki.org/cgi-bin/emacs/BookmarkExtension
+**** http://gnu.emacs.help.narkive.com/wdx8vwkL/syncing-w3m-firefox-bookmarks
+**** http://www.emacswiki.org/cgi-bin/emacs/BookmarkExtension
+*** starter kits
+**** https://github.com/xiaohanyu/oh-my-emacs
+*** voice
+**** http://ergoemacs.org/emacs/using_voice_to_code.html
+**** https://github.com/tavisrudd/emacs.d
+*** gnus
+**** file:///F:/Documentation/Emacs/gnus/big-gnus.html
+*** basic and customize
+**** https://github.com/jasonm23/emacs-cheat-sheets
+     https://www.google.com/search?q=Audix+OM2S&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox-a&channel=rcs
+**** http://www.reddit.com/r/emacs/comments/1k4hlq/a_basic_emacs_tutorial_i_wrote_would_love_feedback/
+**** http://www.braveclojure.com/3-basic-emacs/
+**** http://www.emacsbites.com/episode/scratch-emacs
+**** https://github.com/technomancy/better-defaults
+**** http://www.reddit.com/r/emacs/comments/1k3g98/emacs_bites/
+**** http://www.emacsbites.com/
+**** http://www.reddit.com/r/emacs/comments/1jt30u/vim_user_trying_out_emacs_couple_of_questions/
+** outlook/onenote
+*** http://dynamicit.wordpress.com/2011/01/19/gtd-with-outlook-2010-and-onenote-2010series-links/
+*** http://dynamicit.wordpress.com/2010/05/20/getting-things-done-with-outlook-2010-and-onenote-2010-setting-up-outlook/
+*** http://www.blog.7breaths.co.uk/2007/06/gtd-with-onenote-collected-links.html
+*** http://manage-this.com/onenote-outlook-gtd-system/
+** project management
+*** http://lifehacker.com/whats-the-best-personal-project-management-tool-1440587976
+** python
+*** http://www.davidbaumgold.com/tutorials/set-up-python-windows/
+** shell
+*** http://www.blogbyben.com/2013/08/finally-wrapping-my-head-around-eshell.html
+*** https://github.com/kyagi/shell-pop-el
+** DragNat
+*** emacs via
+**** http://qh.antenna.nl/unimacro/installation/configuration.html
+**** http://groups.yahoo.com/neo/groups/VoiceCoder/conversations/topics
+**** http://www.speechcomputing.com/forum/50
+**** https://pypi.python.org/pypi/dragonfly
+**** http://www.westga.edu/~drocco/voice/NatLink/
+**** http://pythonhosted.org/dragonfly/installation.html
+**** [[http://vimeo.com/9156942][DragonFly tutorial]]
+**** https://groups.google.com/forum/#!forum/dragonflyspeech
+**** http://code.google.com/p/dragonfly/
+**** http://vocola.net/default.asp
+* video
+** TED
+*** http://www.ted.com/talks/sarah_kay_if_i_should_have_a_daughter.html
+** roku
+* Machines
+** arch
+*** vcsh -- http://www.linuxjournal.com/content/manage-your-configs-vcsh
+** X220
+*** ssd ops
+**** http://www.howtogeek.com/164275/how-to-change-the-backup-location-of-itunes-or-any-windows-app/?utm_source=weeklynewsletter&utm_medium=email&utm_campaign=030613
+**** http://www.howtogeek.com/howto/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/
+** 4s
+*** https://itunes.apple.com/us/app/notesy-for-dropbox/id386095500?mt=8
+*** vim keyboard -- http://slidetocode.com/2013/12/29/raskell/
+* Recipes
+** http://www.epicurious.com/recipes/food/views/BBQ-Beef-Brisket-51171820
+** http://www.epicurious.com/recipes/food/views/BBQ-Beef-Coffee-Cure-51171610
+** http://food52.com/blog/5080-nach-waxman-s-brisket-of-beef
+** http://www.yahoo.com/food/the-simplest-and-best-roast-chicken-70621386132.html
+** http://food52.com/recipes/18763-eggplant-dip-with-yogurt-borani-e-bademjan
+** http://food52.com/recipes/8908-roasted-fennel-white-bean-dip
+** http://www.yahoo.com/food/a-fresher-better-hot-and-sour-soup-72453623375.html
+* Road food
+** http://calorielab.com/index.html
+* Raw URLs
+* FinPlan
+*** 
+http://www.kitces.com/blog/archives/430-Morningstar-Tries-To-Quantify-The-Value-Of-Financial-Planning-1.8%25-Gamma-For-Retirees.html
+* Unsorted
+*** http://mnemosyne-proj.org/
+http://emacsworld.blogspot.com/2013/08/a-small-gnu-screen-tip-for-cygwin-mintty.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GotEmacs+%28Got+Emacs%3F%29
+*** https://code.google.com/p/mintty/wiki/Tips
+*** http://www.conversationsnetwork.org/levelator
+*** http://www.reddit.com/r/emacs/comments/1k37nd/gtd_in_orgmode_and_notes_for_projects/
+*** http://members.optusnet.com.au/%7Echarles57/GTD/gtd_workflow.html
+*** http://www.reddit.com/r/emacs/comments/1k32es/god_mode/
+*** https://github.com/chrisdone/god-mode
+*** http://www.ft.com/intl/cms/s/2/c08eac02-f447-11e2-a62e-00144feabdc0.html#axzz2aG6fxoFX
+My Lunches With Orson: Conversations Between Henry Jaglom and Orson Welles, edited by Peter Biskind, Metropolitan Books, RRP$28, 306 pages
+
+The World is Ever Changing, by Nicolas Roeg, Faber, RRP£25, 256 pages / iPad version, RRP£6.99
+
+Roman Polanski: A Retrospective, by James Greenberg, Abrams, RRP£25, 288 pages
+*** http://theamericanscholar.org/science-right-and-wrong/?utm_source=email#.Ug2eJk2d7Df
+*** http://lareviewofbooks.org/review/feminism-the-frankfurt-school-and-nancy-fraser
+*** http://www.newrepublic.com/article/114127/science-not-enemy-humanities
+http://www.newrepublic.com/article/books-and-arts/magazine/103086/scientism-humanities-knowledge-theory-everything-arts-science
+*** http://www.huffingtonpost.com/dave-pruett/sciences-sacred-cows-part-1_b_2392381.html?
+*** http://www.the-tls.co.uk/tls/public/article1291455.ece -- Rouben Mamoulian: one of the great American directors
+*** http://bzg.fr/learn-emacs-lisp-in-15-minutes.html
+*** http://dottech.org/115797/windows-review-best-free-file-and-folder-sync-software/
+*** https://www.ascomp.de/en/products/show/product/synchredible
+*** http://download.cnet.com/Synchredible/3000-2242_4-10252691.html
+https://evernote.com/?utm_expid=6007595-9.C_IyEqenS9mnNzYMCm423Q.0&utm_referrer=https%3A%2F%2Fwww.evernote.com%2FHome.action
+*** http://www.emailtheweb.com/Compose/Done?e=14756262&p=7282330171
+*** http://www.makeuseof.com/tag/how-to-authenticate-over-ssh-with-keys-instead-of-passwords/
+*** http://www.pcmag.com/article2/0,2817,2421966,00.asp
+*** http://blog.tagpad.com/content/how-export-delicious-bookmarks-xml-file
+*** https://github.com/vapniks/helm-delicious
+*** http://lists.gnu.org/archive/html/emacs-orgmode/2009-11/msg01200.html
+*** https://github.com/emacs-helm/helm-delicious/blob/master/helm-delicious.el
+*** http://www.newt.com/debian/
+*** https://delicious.com/mharp00
+http://www.stocksuperstars.com/login/login.cfm?dest=guide/index.cfm&CFID=41434942&CFTOKEN=1290aae9454f7973-16339121-E1B5-6FFD-94C354797AB672B2&jsessionid=8430e4219411092544301152611b2073d516
+*** http://www.stocksuperstars.com/strategy/index.cfm
+*** http://techcrunch.com/2011/06/08/openstudy-wants-to-turn-the-world-into-one-big-study-group/
+https://catalog.librivox.org/search_advanced.php?reader=&mc=&bc=&cat=&genre=&language=English&type=&author=&title=&status=all&reader_exact=&mc_exact=&bc_exact=&date=&group=&engroup=&ingroup=&offset=6920
+*** http://idoitontime.com/About_IDIOT.html
+*** http://idoitontime.com/The_Bubble_Catcher.html
+*** http://taskbin.com/
+*** https://itunes.apple.com/us/artist/russell-gunn/id882754
+*** http://orgmode.org/worg/org-tutorials/org-vcs.html
+*** http://www.youtube.com/watch?v=NvWTnIoQZj4 -- Stroustrup: The 5 Programming Languages You Need to Know
+*** http://www.youtube.com/watch?v=LR8fQiskYII -- Larry Wall: 5 Programming Languages Everyone Should Know
+*** http://www.ctan.org/pkg/clsguide -- latex
+*** http://tex.stackexchange.com/questions/2416/reference-guide-to-begin-writing-a-class-and-or-a-package
+*** http://lifehacker.com/5863380/how-to-completely-anonymize-your-bittorrent-traffic-with-btguard
+*** http://lifehacker.com/roll-your-own-dropbox-clone-with-a-raspberry-pi-and-bit-1177788866
+*** http://lifehacker.com/5898756/why-you-shoulder-consider-using-more-than-one-antivirus-app
+*** http://www.quora.com/Anti-Virus-Software/Does-it-really-matter-what-anti-virus-software-I-am-using
+*** https://github.com/Bruce-Connor/org-agenda-property
+*** http://emacs-fu.blogspot.com/2012/03/social-networking-with-bitlbee-and-erc.html
+*** http://eschulte.github.io/emacs24-starter-kit/
+*** http://www.pcmag.com/article2/0,2817,2421966,00.asp
+*** https://github.com/vapniks/helm-delicious
+*** http://lists.gnu.org/archive/html/emacs-orgmode/2009-11/msg01200.html
+*** http://gnu.emacs.help.narkive.com/wdx8vwkL/syncing-w3m-firefox-bookmarks
+*** http://www.newt.com/debian/
+*** http://lists.debian.org/search.html
+*** https://github.com/jgoerzen/offlineimap/wiki/Frequently-Asked-Questions
+http://www.nytimes.com/2013/08/05/nyregion/with-education-as-economic-engine-ithaca-thrives-in-struggling-region.html?_r=2&
+*** http://www.lambdapower.co.uk/diagnosis/diagnostic_index.asp
+*** http://orgmode.org/worg/org-tutorials/org-vcs.html
+*** http://digest.net/alfa/FAQ/164/notes0.htm
+*** http://digest.net/alfa/FAQ/164/94motron.htm
+*** https://olui2.fs.ml.com/login/login.aspx?src=Logout&lrs=tout&sgt=3
+*** https://github.com/skeeto/.emacs.d#readme
+*** http://orgmode.org/worg/org-8.0.html#sec-6
+*** http://orgmode.org/worg/exporters/ox-overview.html23459
+*** http://emacsrocks.com/
+*** http://www.aeonmagazine.com/being-human/how-consciousness-works/
+*** http://www.theguardian.com/commentisfree/2013/aug/19/giles-fraser-philosophical-investigations-wittgenstein
+*** http://www.lrb.co.uk/v35/n16/ian-penman/even-if-you-have-to-starve
+*** http://www.youtube.com/playlist?list=PLOU2XLYxmsIK9qQfztXeybpHvru-TrqAP
+*** http://www.brewerymap.com/
+*** http://mikepelletier.nl/Parametric-Expression
+*** http://shop.oreilly.com/category/deals/b2s-special.do?code=B2S3&cmp=tw-na-books-videos-lp-promo_back_to_school_2013
+*** http://zachobront.com/you-are-your-own-worst-enemy/
+*** http://company-mode.github.io/
+*** http://blog.jr0cket.co.uk/2013/08/config-emacs-org-mode-to-manage-tasks.html
+*** http://blog.binchen.org/?tag=emacs
+*** http://chrispoole.com/project/ac-python/
+*** http://sachachua.com/blog/2013/08/emacs-how-i-organize-my-org-files/
+*** http://justdelete.me/
+*** http://www.swell.am/
+*** http://alexey.radul.name/ideas/2013/cleverness-of-compilers/
+*** https://github.com/novoid/extract_pdf_annotations_to_orgmode
+*** https://github.com/jorgenschaefer/elpy
+*** http://www.emacswiki.org/emacs/PythonProgrammingInEmacs
+*** http://caisah.info/emacs-for-python/
+*** http://stackoverflow.com/questions/8389120/set-up-python-emacs-environment-mac-os-x
+*** https://github.com/gabrielelanaro/emacs-for-python
+*** http://rootprompt.org/article.php3?article=359
+*** http://www.johndcook.com/blog/2013/01/29/python-emacs-setup/
+*** http://www.reddit.com/r/emacs/comments/1k4hlq/a_basic_emacs_tutorial_i_wrote_would_love_feedback/
+*** http://www.braveclojure.com/3-basic-emacs/
+*** http://www.moredarkthanshark.org/eno_int_independent-may08.html
+*** http://elementsoflife.quora.com/Black-Holes-Gravitys-Relentless-Pull-Part-2
+http://mlb.si.com/2013/08/23/the-los-angeles-angels-come-for-the-terrible-long-term-deals-stay-for-the-clubhouse-fights/?sct=obinsite
+*** http://nfl.si.com/2013/08/28/best-nfl-backfields-adrian-peterson-ray-rice/?xid=nl_siextra
+*** http://www.wired.com/wiredscience/2013/08/101signals-science/
+*** http://phenomena.nationalgeographic.com/blog/not-exactly-rocket-science/
+*** http://wtfevolution.tumblr.com/
+*** http://www.wired.com/business/2013/08/101signals-business/
+*** http://marginalrevolution.com/
+*** http://monetaryrealism.com/
+*** http://monetaryrealism.com/sp-notices-reality-agrees-with-mr/
+*** http://mobile.slate.com/blogs/moneybox.html
+*** http://mobile.slate.com/blogs/moneybox/2013/08/27/debt_ceiling_crisis_coming_in_october.html
+*** http://www.nakedcapitalism.com/
+*** http://www.nakedcapitalism.com/2013/08/j-d-alt-mobilization-and-money.html
+*** https://twitter.com/search?q=nntaleb
+*** http://boards.core77.com/
+*** http://www.wired.com/threatlevel/2013/08/101signals-security/
+*** https://www.eff.org/deeplinks
+*** http://www.schneier.com/
+*** http://www.memeorandum.com/
+*** http://www.wired.com/underwire/2013/08/101signals-culture/
+*** http://thedissolve.com/reviews/164-to-be-or-not-to-be/
+*** http://open.spotify.com/app/pitchfork
+*** http://nullprogram.com/blog/2013/09/03/
+*** https://www.dropbox.com/s/u70kp34nqrd61sl/20130830%20How%20to%20Learn%20Emacs%20Keyboard%20Shortcuts.png?m
+*** http://dbpmail.net/essays/2013-06-29-hackers-replacement-for-gmail.html
+*** http://comments.gmane.org/gmane.comp.finance.ledger.general/4654
+*** http://ledger-cli.org/download.html
+*** http://www.flickr.com/photos/40015199@N08/sets/72157622672993283/
+*** http://www.openculture.com/2013/08/dexter-gordon-plays-body-and-soul-in-the-noted-film-round-midnight.html
+*** http://www.openculture.com/2011/09/the_beatles_rooftop_concert.html
+*** http://www.openculture.com/2011/12/neil_degrasse_tyson_8_books_every_intelligent_person_should_read.html
+*** http://www.openculture.com/freeonlinecourses
+*** http://www.openculture.com/2011/12/stephen_colbert_talks_science_with_astrophysicist_neil_degrasse_tyson.html
+*** http://mediumofexpression.blogspot.com.au/2013/08/rebirthing-pains.html
+*** http://www.the-tls.co.uk/tls/public/article1305780.ece
+*** https://medium.com/war-is-boring/5c95d45f86a5
+*** http://blog.binchen.org/?p=512
+*** http://www.aeonmagazine.com/altered-states/is-the-sound-of-silence-the-end-of-the-self/
+http://deanproxy.com/blog/posts/2013/08/13-what-happens-when-you-sit-at-a-desk-for-13-years---and-actually-exercise-.html
+*** http://www.nytimes.com/newsgraphics/2013/08/18/reshaping-new-york/
+*** http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
+*** http://blogs.smithsonianmag.com/smartnews/2013/08/getty-just-made-4600-incredible-images-public-domain/
+*** https://www.narrato.co/
+http://sachachua.com/blog/book-thinking-with-emacs/?contact-form-id=25596&contact-form-sent=26017&_wpnonce=d5c48cd02c#contact-form-25596
+http://sachachua.com/blog/2013/08/helping-someone-get-started-with-emacs-and-org-mode-through-org2blog-troubleshooting-steps/
+*** http://sachachua.com/blog/2013/05/how-to-learn-emacs-a-hand-drawn-one-pager-for-beginners/
+*** http://david.rothlis.net/emacs/howtolearn.html
+*** http://lispcabinet.sourceforge.net/
+*** http://www.ibm.com/developerworks/aix/library/au-unix-find.html
+*** http://michaelnielsen.org/blog/michael-a-nielsen/
+*** https://news.ycombinator.com/item?id=6300856
+*** http://www.crunchbase.com/company/doctape
+*** http://christopherolah.wordpress.com/2013/08/16/order-statistics-4/
+*** http://qz.com/119843/google-can-avoid-becoming-the-next-microsoft/
+*** http://www.footballoutsiders.com/scramble
+*** http://www.neodownloader.com/full-vs-lite/
+*** http://www.the-spearhead.com/2013/06/22/stephen-marche-let-there-be-socialized-daycare/
+*** http://www.hp.com/global/us/en/wireless/troubleshooting.html
+*** http://www.hp.com/global/us/en/wireless/printer-setup-help.html
+*** http://www.hp.com/global/us/en/wireless/printer-setup-help2.html
+*** http://www.hp.com/global/us/en/wireless/printer-setup-help.html
+*** http://h30434.www3.hp.com/t5/Printer-Networking-and-Wireless/Web-Services-problem-Server-connection-error/td-p/926923
+*** http://www.demogeek.com/2010/05/03/how-to-configure-your-hp-photosmart-printer-to-scan-directly-to-evernote/
+*** http://www.hp.com/global/us/en/wireless/reconfiguring-system-help2.html
+http://h10025.www1.hp.com/ewfrf/wc/document?docname=c03312027&tmp_track_link=ot_faqs/top_issues/en_us/c03312027/loc:4&cc=us&dlc=en&lc=en&product=5271613&task=
+https://my.plexapp.com/subscription/about?utm_source=Plex&utm_medium=email&utm_content=newsletterB&utm_campaign=Newsletter+Aug2013+A1
+*** http://trashbird1240.wordpress.com/category/technology/tools/emacs/
+*** http://chinmaykamat.wordpress.com/
+*** https://github.com/juergenhoetzel/pkgbuild-mode
+*** https://github.com/maxwell-k/ledger-windows-build
+*** http://sachachua.com/blog/2012/06/literate-programming-emacs-configuration-file/
+*** http://en.wikipedia.org/wiki/Org-mode
+*** http://en.wikipedia.org/wiki/Literate_programming
+*** http://en.wikipedia.org/wiki/Trello
+*** http://lifehacker.com/5839942/trello-makes-project-collaboration-simple-and-kind-of-fun
+*** http://blog.binchen.org/?p=363
+*** http://www.gnu.org/software/emacs/manual/html_mono/remember.html
+*** http://blogs.msdn.com/b/virtual_pc_guy/archive/2004/11/24/269412.aspx
+*** http://www.labnol.org/software/create-virtual-machine-of-existing-computer/10510/
+*** http://www.howtogeek.com/howto/8054/how-to-turn-a-physical-computer-into-a-virtual-machine-with-disk2vhd/
+*** http://www.addictivetips.com/windows-tips/convert-use-your-physical-machine-in-vmware-virtualbox-virtual-pc/
+*** http://www.zdnet.com/photos/convert-xp-into-a-windows-7-virtual-machine-with-disk2vhd/466650
+*** http://serverfault.com/questions/225247/best-way-to-clone-a-live-linux-system
+*** http://outline.toodledo.com/#/
+*** http://arstechnica.com/business/2013/08/inside-printrbot-one-of-the-rising-inexpensive-3d-printer-manufacturers/
+http://arstechnica.com/information-technology/2013/09/vmware-woos-power-users-and-it-pros-with-fusion-and-workstation-upgrades/
+*** http://arstechnica.com/science/2013/08/considering-a-pick-and-mix-model-of-dark-matter/
+*** http://arstechnica.com/science/2013/08/the-sound-of-music-is-irrelevant/#p3
+*** http://arstechnica.com/gadgets/2013/08/google-maps-and-waze-start-swapping-data/#p3
+*** http://www.amazon.com/Rewire-Digital-Cosmopolitans-Age-Connection/dp/0393082830
+*** http://arstechnica.com/tech-policy/2013/08/in-aclu-lawsuit-scientist-demolishes-nsa-its-just-metadata-excuse/#p3
+*** http://www.aljazeera.com/indepth/opinion/2013/09/20139612255158332.html
+http://www.economist.com/news/business/21584947-backlash-against-running-firms-progressive-schools-has-begun-montessori-management?fsrc=scn/tw_ec/montessori_management
+*** http://www.scientificamerican.com/article.cfm?id=vultures-face-extinction-and-indifference
+http://www.forbes.com/sites/modeledbehavior/2013/09/08/everything-you-thought-you-knew-about-the-1970s-inflation-and-the-us-economy-is-wrong/
+*** http://arstechnica.com/tech-policy/2013/09/security-expert-schneier-calls-for-more-to-reveal-govt-spying-methods/
+*** http://arstechnica.com/science/2013/09/sandy-like-storms-not-projected-to-become-more-common/#p3
+*** http://www.psmag.com/health/the-social-life-of-genes-64616/
+*** https://www.trysignal.com/
+*** http://emacsredux.com/blog/2013/09/05/a-proper-replacement-for-flet/
+*** http://julien.danjou.info/blog/2013/announcing-the-hacker-guide-to-python
+*** http://nullprogram.com/blog/2013/09/04/
+*** http://blog.jr0cket.co.uk/2013/08/defining-custom-workflow-with-Emacs-org-mode.html
+*** http://sdf.org/?faq?BASICS?02
+*** http://superuser.com/questions/71786/can-i-create-a-link-to-a-specific-email-message-in-outlook
+*** http://www.emacswiki.org/emacs/PlannerModeContrib#toc10
+*** https://github.com/rson/ido-vertical-mode.el
+*** https://github.com/DarwinAwardWinner/ido-ubiquitous
+*** http://support.microsoft.com/kb/929135
+*** http://www.nirsoft.net/utils/index.html
+*** http://www.karenware.com/powertools.asp
+*** http://www.amazon.com/exec/obidos/ASIN/B003EM8BE8/cooltools-20
+*** http://www.bulletjournal.com/
+*** http://wiredcraft.com/posts/2013/09/18/github-for-everything.html
+*** http://devo.ps/blog/2013/06/20/automation-and-friction.html
+*** https://github.com/blog/699-making-github-more-open-git-backed-wikis
+*** http://huboard.com/
+http://arstechnica.com/information-technology/2013/08/raspberry-fly-airwares-linux-and-arm-developer-platform-for-drones/#p3
+*** http://www.reddit.com/r/emacs/comments/1mk8t5/whats_the_best_way_to_display_html_in_emacs/
+*** http://hackaday.com/2013/09/13/designspark-mechanical-the-gift-of-invention/
+*** http://stevelosh.com/blog/2013/09/teach-dont-tell/
+*** http://www.reddit.com/r/emacs/comments/1mfnlo/ohmyemacs_yet_another_starter_kit_for_emacs_users/
+
+*** http://spin.atomicobject.com/2013/09/09/5-unix-commands/
+*** http://vimeo.com/30721952
+*** http://nullprogram.com/blog/2009/06/23/
+*** http://www.reddit.com/r/emacs/comments/1mbn0s/the_emacs_calculator/
+*** http://www.emacswiki.org/emacs/Calc_Tutorials_by_Andrew_Hyatt
+*** http://puntoblogspot.blogspot.com.es/search/label/emacs
+*** https://plus.google.com/communities/106737437567911832239
+*** http://forums.mozillazine.org/viewtopic.php?t=1416255
+*** http://stackoverflow.com/questions/14155467/very-fast-files-opening-in-emacs
+*** https://github.com/emacs-helm/helm
+*** http://prog-elisp.blogspot.com/2012/05/lexical-scope.html
+*** http://imgur.com/3eVYlIl
+*** http://bling.github.io/blog/2013/09/09/vim-in-emacs-bootstrap/
+*** http://emacsredux.com/blog/2013/09/05/a-proper-replacement-for-flet/
+*** https://github.com/nicferrier/emacs-noflet
+*** http://lifehacker.com/5839942/trello-makes-project-collaboration-simple-and-kind-of-fun
+*** https://trello.com/
+*** http://www.joelonsoftware.com/articles/LeakyAbstractions.html
+*** http://www.hp.com/global/us/en/wireless/reconfiguring-system-help2.html
+*** http://h30434.www3.hp.com/t5/Printer-All-in-One-Install-Setup-e-g-Windows-8/bd-p/Install
+http://h30434.www3.hp.com/t5/Printer-Networking-and-Wireless/Photosmart-Plus-B209a-wireless-connection-printer/td-p/215568
+http://h30434.www3.hp.com/t5/Printer-Networking-and-Wireless/Hp-Photosmart-All-in-one-Plus-wireless-B209a-printer/td-p/160767/highlight/true/page/3
+*** http://boardreader.com/fp/HP_Support_Forums_1153782/Printer_networking_and_wireless_2225250.html
+*** http://vim-adventures.com/
+*** http://www.reddit.com/r/emacs/comments/1n954n/rainbow_delimiters_fork_that_works_with_htmlize/
+*** https://konklone.com/post/switch-to-https-now-for-free?hn
+*** http://gitolite.com/gcs/index.html
+*** http://www.reddit.com/r/emacs/comments/1n3nhg/simple_templates/
+*** http://www.youtube.com/watch?v=lsYdK0C2RvQ
+*** http://www.instructables.com/id/ProteinEnergy-Bars-T-rexs-grey-cubes/
+*** http://powerhungry.com/page/3/?s=energy+bars
+*** http://powerhungry.com/2013/01/pumpkin-blondie-protein-bars/
+*** http://arstechnica.com/apple/2013/09/ios-7-thoroughly-reviewed/3/#image-14
+*** http://lifehacker.com/how-to-clear-your-spotify-cache-and-save-hard-disk-spac-1357912561
+*** http://lifehacker.com/debenu-integrates-tons-of-handy-pdf-tools-with-windows-1358013516
+*** http://www.aimp.ru/index.php?do=features
+*** https://www.learnvest.com/personal-financial-planning-program/#our-powerful-tools
+*** http://www.reddit.com/r/emacs/comments/1mt8a5/nearly_everyone_who_is_new_to_emacs_hates_it/
+*** http://kuniganotas.wordpress.com/2013/09/19/how-to-reload-emacs-without-reopening-emacs/
+http://www.newrepublic.com/article/books-and-arts/magazine/103086/scientism-humanities-knowledge-theory-everything-arts-science
+*** http://net.tutsplus.com/tutorials/other/getting-the-hang-of-github/
+*** http://net.tutsplus.com/tutorials/other/easy-version-control-with-git/
+*** http://tom.preston-werner.com/2009/05/19/the-git-parable.html
+*** http://www.aaii.com/computerized-investing/article/the-top-portfolio-management-software
+*** http://www.aaii.com/search?SearchText=tracker
+*** http://www.aaii.com/computerized-investing/article/the-top-online-portfolio-trackers
+*** https://www.wikinvest.com/account/portfolio/regx/start
+*** http://www.fundmanagersoftware.com/tutor_text.html
+*** http://www.investmentaccountmanager.com/
+*** http://quicken.intuit.com/personal-finance-software/premier-investment-management.jsp
+*** http://www.dslreports.com/faq/15992
+http://www.quora.com/PhD-Theses/For-those-who-have-done-a-PhD-can-you-explain-to-us-in-common-parlance-what-your-dissertation-is-on-and-what-your-conclusions-are
+http://www.quora.com/Academia/Why-didnt-or-shall-I-dare-say-couldnt-academics-working-in-the-transportation-and-space-areas-come-up-with-the-ideas-Elon-Musk-is-coming-up-with
+*** http://www.quora.com/Physics/What-is-the-strangest-reaction-shown-by-an-object-when-it-is-released-in-space
+*** http://www.quora.com/How-do-you-explain-Machine-Learning-and-Data-Mining-to-non-Computer-Science-people
+*** http://www.quora.com/People/Who-is-the-worlds-greatest-living-badass-and-why
+*** http://www.emacswiki.org/emacs/setup-cygwin.el
+*** http://www.emacswiki.org/emacs/MsWindowsCustomize
+*** http://www.emacswiki.org/emacs/NTEmacsWithCygwin
+*** http://www.emacswiki.org/emacs/SshWithNTEmacs
+*** http://stackoverflow.com/questions/3286723/emacs-cygwin-setup-under-windows
+*** http://stackoverflow.com/questions/2075504/how-to-best-integrate-emacs-and-cygwin
+*** http://www.khngai.com/emacs/cygwin.php
+*** http://www.starks-browning.com/david/tramp/
+http://www8.hp.com/us/en/support-topics/mobile-printing/how-to-print-mobile-devices-ipad-iphone.html?jumpid=reg_r1002_usen_c-001_title_r0001
+*** https://www.aapocket.com/liteSabreFAQ.php
+*** http://lifehacker.com/pod-wrangler-makes-listening-to-podcasts-on-ios-easy-1440173574
+*** http://www.any.do/faq
+*** http://www.slipstick.com/outlook/olc-hotmail/sync-calendar-contacts-using-outlook-com/
+*** http://www.slipstick.com/outlook/config/configuring-outlook-com-in-outlook/
+*** http://www.slipstick.com/problems/msn-and-hotmail-access-denied/
+*** http://getpocket.com/blog/2013/10/redesigned-pocket-for-the-web/
+*** http://blog.jr0cket.co.uk/2013/09/create-html5-presentations-emacs-revealjs.html
+*** http://www.astro.uvic.ca/~alexhp/new/figures/starrynight_HST.001.jpg
+*** http://www.openculture.com/2013/09/goethes-theory-of-colors-and-kandinsky.html
+*** http://www.openculture.com/2013/07/ulysses-seen-reading-james-joyces-classic-in-graphic-novel-form.html
+*** http://www.cdzamusic.com/
+*** http://www.avweb.com/blogs/insider/Guest-Blog-Seventeen-Years-Later-TWA-800-Still-Teaches-Lessons-220613-1.html
+http://www.slate.com/articles/sports/sports_nut/2012/06/long_distance_running_and_evolution_why_humans_can_outrun_horses_but_can_t_jump_higher_than_cats_.html
+*** http://www.newrepublic.com/article/114754/steven-pinker-leon-wieseltier-debate-science-vs-humanities
+*** http://lifehacker.com/automatically-download-metadata-for-your-ebooks-with-ca-1421910552
+*** http://blogs.hbr.org/2012/01/to-do-lists-dont-work/
+*** http://www.ordinem.com/Start.action
+*** http://www.taskline.com/
+*** http://99u.com/articles/6345/Introducing-the-New-Book-from-Behance-99-Making-Ideas-Happen
+*** http://zenhabits.net/zen-to-done-ztd-the-ultimate-simple-productivity-system/
+*** http://blogs.hbr.org/2012/10/if-you-want-to-lead-read-these/
+*** http://blogs.hbr.org/2012/10/11-books-every-young-leader-mu/
+*** http://blogs.hbr.org/2011/02/a-better-way-to-manage-your-to/
+*** http://www.any.do/anydo
+*** http://www.freepdfsoft.com/tour_scantopdf.html
+*** http://www.pdfforge.org/
+*** http://capture2text.sourceforge.net/
+*** http://www.chronoscan.org/index.php?lang=en
+*** https://code.google.com/p/touchfreeze/downloads/list
+*** http://faq.gardenweb.com/faq/wtrsow/
+*** http://www.freegardeningplants.com/how-to-sow-seeds.html
+http://www.whiteflowerfarm.com/fall-hyacinthus.html?refine.current=&refine.refinements=price+new_product+blooms+color+sunshine_shade+height_code+moist+fragrance+pot_size+zone+options&reset=&pagenumber=&itemsperpage=1000&refine.blooms=&refine.color=&refine.height_code=&refine.zone=6&refine.options=
+*** https://www.retireonline.com/rpsparticipant/splash.jsp
+*** http://splash-of-open-sauce.blogspot.com/2010/09/org-capture-templates_08.html
+*** http://www.dummies.com/how-to/content/how-to-transcribe-your-recording-with-dragon-natur.html
+*** http://www.online-tech-tips.com/mac-os-x/install-snow-leopard-on-pc/
+*** http://lifehacker.com/5938332/how-to-run-mac-os-x-on-any-windows-pc-using-virtualbox
+*** http://www.macbreaker.com/2013/01/install-mountain-lion-iatkos-ml2-hackintosh.html
+*** http://www.macbreaker.com/2012/08/mountain-lion-mbr-unibeast.html
+*** http://www.redmondpie.com/how-to-install-os-x-snow-leopard-in-vmware-windows-7-9140301/
+*** http://eguruorg.hubpages.com/hub/How-to-Install-Mac-OSX-with-Virtual-Box-on-Windows-7
+*** http://channikhabra.github.io/2013/10/11/the-most-beautiful-tutorial/
+*** http://www.wisdomandwonder.com/article/8074/cask-for-the-truly-impatient
+*** http://www.reddit.com/r/emacs/comments/1o36n4/emacs_for_python_development/
+*** http://www.jesshamrick.com/2012/09/18/emacs-as-a-python-ide/
+*** http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/
+*** https://soundcloud.com/the-herbaliser-1
+*** http://www.johndcook.com/blog/2012/02/09/python-org-mode/
+*** http://www.youtube.com/watch?v=wJJXs8WAv0E
+*** https://github.com/gerber/shouldDo/blob/master/README.org#readme
+*** http://www.saltycrane.com/blog/2010/05/my-emacs-python-environment/
+*** http://www.paragon-drivers.com/index.html?from=newsletter
+http://evernote.com/evernote/whats_new/windows/?utm_source=silverpop&utm_medium=email&utm_campaign=100413_windows_webinar_en_usca
+*** http://www.aaronbedra.com/emacs.d/#sec-1-5
+*** http://www.verticalsysadmin.com/vi.htm
+*** http://www.lynda.com/iCloud-tutorials/Up-Running-iCloud/112418-2.html?utm_source=google&utm_medium=cpc&utm_campaign=Search-Biz-iCloud&utm_content=34119893466&utm_term=%2Bicloud%20%2Btutorials&gclid=COzF9ZiDjboCFYSd4AodryYA1Q
+*** http://www.imore.com/how-to-set-up-use-icloud-mail-contacts-calendars
+*** http://www.slipstick.com/outlook/icloud-outlook-problems-syncing-contacts/
+*** http://www.slipstick.com/outlook/icloud-and-outlook-problems/
+*** http://blog.laptopmag.com/ultimate-icloud-guide-everything-you-need-to-know
+*** http://www.techhelpfox.com/2080124/Is-There-A-Set-Up-Tutorial-For-Using-Outlook-With-Icloud
+*** http://www.minterest.org/how-to-sync-icloud-with-office-outlook/
+*** https://discussions.apple.com/thread/3964604?start=0&tstart=0
+*** http://www.apple.com/icloud/setup/pc.html
+*** http://www.wilmut.webspace.virginmedia.com/notes/icloudmail.html
+*** http://www.leawo.org/cooperation/giveaway-of-the-day.html
+*** http://lifehacker.com/pse-is-a-personal-search-engine-makes-browser-bookmark-1444682090
+*** http://www.artofmanliness.com/2013/10/04/garage-gym/
+*** http://www.lightzoneproject.org/
+*** http://lifehacker.com/whats-the-best-language-learning-tool-1446982503
+*** http://www.pcmag.com/article2/0,2817,2396076,00.asp
+http://sourceforge.net/projects/dvassist/files/dvassist/2.0.1.61/dvassist.2.0.1.61.zip/download?use_mirror=softlayer-dal
+http://yieldthought.com/post/12239282034/swapped-my-macbook-for-an-ipad
+*** http://yieldthought.com/post/31857050698/ipad-linode-1-year-later
+*** http://stackoverflow.com/questions/194812/list-of-freely-available-programming-books/392926
+*** http://lifehacker.com/seven-tips-and-tricks-to-get-more-out-of-onenote-1447747936
+*** https://github.com/natw/keyboard_cat.vim
+*** https://github.com/clarete/hackernews.el
+*** http://www.reddit.com/r/emacs/comments/1olgiz/better_organisation_of_dotemacs/
+*** https://github.com/jwiegley/use-package
+*** https://github.com/rejeep/emacs
+*** https://github.com/Fuco1/litable
+*** http://blog.jenkster.com/2013/10/an-oauth2-in-emacs-example.html
+*** http://www.reddit.com/r/emacs/comments/1oa208/evilmode_is_pretty_freaking_awesome/
+*** http://www.reddit.com/r/emacs/comments/1o8vc9/latexextrael_quicker_compilation_and_a_bunch_of/
+*** http://www.masteringemacs.org/articles/2013/10/10/wdired-editable-dired-buffers/
+*** http://jbm.io/2013/08/tramping-around-part-2/
+*** http://jbm.io/2013/08/tramping-around/
+*** http://www.reddit.com/r/emacs/comments/1ohwwr/help_me_setup_my_emacs/
+*** http://www.redmondpie.com/how-to-install-os-x-mountain-lion-hackintosh-on-a-pc-tutorial/
+*** http://www.insanelymac.com/forum/topic/187440-lifehacker-guide-with-ga-ep45-ud3p-motherboard/page-119
+*** http://www.macbreaker.com/2013/01/install-mountain-lion-iatkos-ml2-hackintosh.html
+*** http://www.macbreaker.com/2012/01/how-to-use-multibeast-comprehensive.html
+*** https://www.reqall.com/login
+*** http://help.apple.com/icloud/index.html#/mmfc0f1e2a
+*** http://www.insanelymac.com/forum/topic/291509-hackintosh-hp-dc7800-iatkos-ml2-1082-upgrade-to-1084-updrade-to-1085/
+*** http://www.osx86.net/topic/9540-update-iatkos-s3-v2-1063-to-1068-all-machine/
+*** http://vidgrids.com/restore-virtualbox-drive
+http://gadgetunit.com/2012/12/31/tutorial-install-mac-os-x-10-8-2-on-your-pc-hackintoshosx86-with-iatkos-ml2/?utm_source=wordtwit&utm_medium=social&utm_campaign=wordtwit
+*** https://mybenefits.metlife.com/MyBenefits/public/ssi/commonAccess.do
+*** http://neo.jpl.nasa.gov/news/news136.html
+*** http://www.metmuseum.org/events/programs/tedxmet/speakers-and-performers
+TO K
+http://www.forbes.com/sites/margaretperlis/2013/10/29/5-characteristics-of-grit-what-it-is-why-you-need-it-and-do-you-have-it/2/
+*** http://learn-elisp-for-emacs.org/
+*** http://www.learnxinyminutes.com/docs/elisp/
+*** http://zeekat.nl/articles/making-emacs-work-for-me.html
+*** http://www.theatlantic.com/magazine/archive/2013/11/the-man-who-would-teach-machines-to-think/309529/
+*** http://www.theatlanticcities.com/housing/2013/10/grim-math-working-class-housing-crisis/7321/
+*** http://lifehacker.com/find-out-which-extension-is-eating-up-your-memory-in-fi-1339291204
+*** http://lifehacker.com/malware-search-checks-online-security-databases-for-tex-1337020557
+*** http://lifehacker.com/any-do-creates-a-chrome-app-with-offline-support-and-di-1336650828
+*** http://books.google.com/books?id=skFGSAnR-0YC
+*** http://www.artofmanliness.com/2012/07/08/the-art-of-worldly-wisdom/
+*** http://taskfabric.com/support.php
+*** http://www.todobrew.com/
+*** http://www.codeproject.com/Articles/5371/ToDoList-6-7-8-Feature-Release-An-effective-and-fl
+*** http://icelab.com.au/articles/go-hard-early/
+*** http://www.openvim.com/tutorial.html
+*** http://www.bentobox.io/index.html
+*** http://www.linuxjournal.com/content/first-personal-platform%E2%80%94-everything
+*** http://alexott.net/en/writings/emacs-vcs/EmacsGit.html
+*** http://splash-of-open-sauce.blogspot.com/2010/09/org-capture-templates_08.html
+*** http://en.wikipedia.org/wiki/Bricolage
+*** https://sites.google.com/site/steveyegge2/my-dot-emacs-file
+http://devtidbits.com/2011/07/01/cygwin-walkthrough-and-beginners-guide-is-it-linux-for-windows-or-a-posix-compatible-alternative-to-powershell/
+*** https://www.fltsafety.com/SMSinfo.htm
+*** http://forum.notebookreview.com/lenovo/568751-thinkpad-x220-i-t-owners-thread.html
+http://forums.lenovo.com/t5/X-Series-ThinkPad-Laptops/X220-Card-Reader-Not-Showing-in-Device-Manager/td-p/599291?AID=10499647&PID=3640576&SID=skim525X832Xa1a6264ccb68c13ce615ae0346884248&CJURL=http%3A%2F%2Fforums.lenovo.com%2Ft5%2FX-Series-ThinkPad-Laptops%2FX220-Card-Reader-Not-Showing-in-Device-Manager%2Ftd-p%2F599291&PUBNAME=Skimlinks&NID=CJ
+*** http://www.instructables.com/id/Pumpkin-Protein-Granola/
+*** http://www.openculture.com/2013/11/george-saunders-lectures-on-the-russian-greats-brought-to-life-in-student-sketches.html
+*** https://www.dropbox.com/s/83ppa5iykqmr14z/Py2v3Hackers2013.pptx
+*** http://blogs.smithsonianmag.com/food/2013/11/its-the-umami-stupid-why-the-truth-about-msg-is-so-easy-to-swallow/
+*** http://www.forbes.com/sites/ryancalo/2013/11/09/the-faas-drone-privacy-plan-actually-pretty-sensible/
+*** http://www.reddit.com/r/emacs/comments/1q99wi/moving_from_paredit_to_smartparens/
+*** https://github.com/dgutov/diff-hl
+*** http://www.grantland.com/story/_/id/9939308/richie-incognito-jonathan-martin-miami-dolphins-bullying-scandal
+*** http://www.reddit.com/r/emacs/comments/1q427w/tramp_mode_always_hangs_after_sleep/
+*** http://emacsmovies.org/blog/2013/11/07/gnus_part_3/
+*** http://emacsmovies.org/blog/2013/07/17/gnus_part_2/
+*** http://emacsmovies.org/blog/2013/04/29/gnus_part_1/
+*** https://itunes.apple.com/us/app/id398432441?mt=8
+*** http://hackerspace.lifehacker.com/a-short-guide-to-customizing-ubuntu-12-04-lts-for-beg-595909239/@huh989
+*** http://pymotw.com/2/
+*** http://lifehacker.com/5973225/four-more-custom-searches-you-should-enable-in-your-browser-right-now
+*** http://jeremykun.com/2013/11/04/deconstructing-the-common-core-mathematical-standard/
+*** http://lifehacker.com/5921374/how-to-silence-your-noisy-computer-and-keep-it-cool-as-a-cucumber
+*** https://github.com/FoxUSA/OpenNote
+*** http://rawsyntax.com/blog/learn-emacs-zsh-and-multi-term/
+*** http://sachachua.com/blog/2008/09/emacs-and-w3m-making-tabbed-browsing-easier/
+*** http://www.npr.org/2013/10/30/241830872/astronaut-chris-hadfield-brings-lessons-from-space-down-to-earth
+http://www.openculture.com/2013/11/an-astronauts-guide-to-life-on-earth-by-commander-chris-hadfield-the-viral-book-trailer.html
+*** http://scoop.sh/
+http://arstechnica.com/information-technology/2013/11/apples-icloud-keychain-it-works-but-its-limitations-are-frustrating/
+*** http://sachin.pythonanywhere.com/
+*** http://www.reddit.com/r/emacs/comments/1prxub/switching_to_emacs/
+*** http://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/
+*** http://www.masteringemacs.org/articles/2010/12/13/complete-guide-mastering-eshell/
+*** http://www.opensource.apple.com/source/emacs/emacs-54/emacs/lisp/eshell/em-smart.el
+*** http://whattheemacsd.com/setup-magit.el-01.html
+*** https://www.penflip.com/
+*** http://www.3quarksdaily.com/3quarksdaily/2013/10/post-postwar.html
+*** http://www.watersorb.com/prices.htm
+*** http://www.tuaw.com/2013/10/25/turn-your-iphone-into-a-high-power-digital-microscope-for-around/
+*** http://unclutterer.com/2013/03/25/want-to-be-more-productive-get-more-sleep/
+*** http://www.sleepcycle.com/
+*** http://conkeror.org/
+*** http://stackoverflow.com/questions/19632185/display-contents-of-remote-html-in-emacs
+*** http://stackoverflow.com/questions/18840526/how-to-display-the-part-of-the-html-using-emacs-w3m
+*** http://stackoverflow.com/questions/13832450/how-can-i-open-the-link-use-the-external-default-browser-after-loading-the-w3m
+*** http://stackoverflow.com/questions/4982387/is-there-a-urlview-a-la-mutt-for-gnus-or-just-elisp-for-extracting-urls
+*** http://stackoverflow.com/questions/768263/what-does-your-conkerorrc-look-like
+*** http://nic.ferrier.me.uk/blog/2012_07/tips-and-tricks-for-emacslisp
+*** https://github.com/trending?l=emacs-lisp
+*** https://github.com/purcell/emacs.d
+*** http://nic.ferrier.me.uk/blog/2009september/shell_integration
+*** http://dtrt.org/ul/pub/conkeror/
+*** http://lifehacker.com/this-free-course-in-music-engineering-teaches-you-with-1453131803
+*** https://www.atlassian.com/git/tutorial
+*** http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html
+*** http://gmelius.com/?#showHN
+*** http://www.refsmmat.com/statistics/
+*** http://getpocket.com/blog/2013/10/redesigned-pocket-for-the-web/
+*** http://giuliofidente.com/2013/04/getting-to-know-and-use-emacs-better.html
+*** http://devblog.avdi.org/category/emacs-reboot/page/2/
+*** http://zuttobenkyou.wordpress.com/2011/02/15/some-thoughts-on-emacs-and-vim/
+*** http://www.amazon.com/The-Anatomy-Peace-Resolving-Conflict/dp/1576755843
+*** http://bovine.unl.edu/eng/ShowCrossecPrimal.jsp?primal_id=966278019&crossec_id=966372627&crossec=R
+*** http://benatkin.com/2012/09/15/changing-the-path-on-the-emacs-eshell/
+*** http://stackoverflow.com/questions/3876996/eshell-commands-syntaxes-etc
+*** http://orgmode.org/worg/org-tutorials/org-customize.html
+*** http://orgmode.org/worg/org-tutorials/org-protocol-custom-handler.html
+*** http://www.youtube.com/watch?v=h7Z2PiAcgh8
+*** http://members.optusnet.com.au/~charles57/GTD/datetree.html
+*** http://www.prjorgensen.com/2011/12/12/launching-org-capture-in-win-7-with-autohotkey/
+*** http://www.cyborganize.org/clarity/
+*** http://www.scotthyoung.com/blog/2012/03/04/learn-faster-without-college/
+*** file:///C:/Users/mharp/Downloads/Working%20with%20Git%20from%20Emacs.maff
+*** http://vickychijwani.github.io/2011/09/09/Magit-Part-I/
+*** http://blog.jr0cket.co.uk/2012/12/driving-git-with-emacs-pure-magic-with.html
+*** http://vimeo.com/2871241
+*** http://daemianmack.com/magit-cheatsheet.html
+*** http://magit.github.io/magit/magit.html
+*** http://www.reddit.com/r/emacs/comments/1k37nd/gtd_in_orgmode_and_notes_for_projects/
+*** https://github.com/glynnforrest/emacs.d/blob/master/setup-projects.el
+*** http://members.optusnet.com.au/%7Echarles57/GTD/gtd_workflow.html
+*** https://github.com/glynnforrest/emacs.d/blob/master/setup-org.el
+*** http://www.edge.org/
+*** http://www.digitaltrends.com/sports/zepp-labs-introduces-zepp-sensor-for-golf-tennis-and-baseball/
+*** https://itunes.apple.com/app/id730372376
+*** http://www.z-a-recovery.com/thunderbird-email-database.htm
+*** http://www.iopus.com/imacros/home/fx/quicktour/?v=8530828
+*** http://www.quora.com/Climate-Change/People-who-work-for-petroleum-companies-How-do-you-see-your-role-in-global-warming
+*** http://www.forbes.com/sites/johnwasik/2013/11/15/how-to-avoid-snaffus-when-closing-your-mortgage/
+*** http://www.openculture.com/2013/11/hear-all-of-finnegans-wake-read-aloud.html
+http://www.newyorker.com/online/blogs/newsdesk/2013/11/taliban-mullah-fazlullah-why-pakistan-lionizes-its-tormenters.htmlhttp://www.nextnewdeal.net/rortybomb/what-kind-problem-aca-rollout-liberalism
+http://www.amazon.com/gp/offer-listing/0735626898/ref=dp_olp_used?ie=UTF8&condition=used
+http://www.justoneclubcard.com/
+http://wormpoop.com/
+http://tinyhacker.com/hacks/quickly-share-big-files-on-the-web/
+http://gigaom.com/2013/11/12/backblaze-stores-75-petabytes-on-25000-drives-and-most-are-still-spinning/
+http://www.nearsights.com/collections/all-monocles
+http://www.skillbridge.co/
+https://www.hourlynerd.com/
+http://www.nsf.gov/news/special_reports/i-corps/
+http://en.wikipedia.org/wiki/Complex_adaptive_leadership
+http://www.amazon.com/The-Practice-Adaptive-Leadership-Organization/dp/1422105768
+http://www.forbes.com/sites/travisbradberry/2012/11/09/leadership-2-0-are-you-an-adaptive-leader/
+http://www.fetchnotes.com/#/
+http://www.miami-airport.com/bus_and_rail_info.asp
+http://www.miamidade.gov/transit/miami-international-airport-station.asp
+http://www.miamidade.gov/transit/library/pdfs/misc/Metrorail_Guide.pdf
+https://maps.google.com/maps?oe=utf-8&client=firefox&q=1001+SW+First+Avenue+Miami,+Florida&ie=UTF-8&hq=&hnear=0x88d9b684379085d5:0xe6a4427d2c9f896c,1001+SW+1st+Ave,+Miami,+FL+33130&gl=us&ei=AjWFUsnYCe2MyAGfp4DoDg&ved=0CCsQ8gEwAA
+http://www.zillow.com/homes/recently_sold/Miami-FL-33130/72433_rid/25.773615,-80.198071,25.764668,-80.213284_rect/15_zm/2_p/
+https://www.aapilots.com/private/proxy/DECS_Calendar_new.asp?empid=680672&Bid_month=November%202013&base=SLT&div=D&DFP=ON&SEQ=ON&CAL=ON&print=OFF&showcolors=ON&DECS=OFF&FAQ=OFF&TEXT=OFF&EXPORT=NONE&FORMAT=NONE&SEQNO=0&button=Submit&selection=3
+http://www.military.com/benefits/tricare/your-tricare-benefits-explained.html
+http://blockedinncrashpads.com/locations/miami-crash-pads-in-south-beach/
+http://blockedinncrashpads.com/locations/crash-pad-in-miami-mia-near-south-beach/
+http://crashpad411.com/search?airport=3576
+http://www.airlinecommuter.com/aci/ac.nsf/crashPadView!OpenForm&Seq=1#_RefreshKW_city
+http://forums.eaglelounge.com/forumdisplay.php?s=&daysprune=-1&f=7
+http://forums.jetcareers.com/forums/crash-pads.109/page-5
+http://splash-of-open-sauce.blogspot.com/2010/09/org-capture-templates_08.html
+http://en.wikipedia.org/wiki/Miami
+http://en.wikipedia.org/wiki/File:Miami_neighborhoodsmap.png
+http://www.centerkey.com/tree/
+<2013-11-24 Sun>
+http://octopress.org/
+http://lifehacker.com/texttool-makes-text-manipulation-on-ios-quick-and-easy-1469722799
+http://www.reddit.com/r/emacs/comments/1r1yl7/orgmode_screencasts_episode_1/
+http://www.reddit.com/r/emacs/comments/1r1q4m/can_git_highlight_diff_like_svn_in_emacs/
+http://www.audible.com/mt/DailyDeals_2012/
+http://www.technologyreview.com/news/521656/ink-jet-printing-could-be-the-key-to-next-generation-oled-displays/
+http://cupfullofcode.com/snippet-expansion-with-yasnippet/
+http://www.reddit.com/r/emacs/comments/1r4qvs/john_wiegleys_usepackage_and_bindkey/
+https://github.com/jwiegley/use-package
+http://tech.slashdot.org/story/13/11/21/0145253/airline-pilots-rely-too-much-on-automation-says-safety-panel?utm_source=rss1.0mainlinkanon&utm_medium=feed
+http://www.nasa.gov/content/a-portrait-of-global-winds/#.Uo47gted7Dc
+http://www.sciencedaily.com/releases/2013/11/131118091424.htm
+http://www.forbes.com/sites/janbruce/2013/11/19/how-positive-thinking-creates-more-problems-than-it-solves/
+http://www.guidingtech.com/25191/remote-desktop-rdp-vmware/
+http://linrunner.de/en/tlp/tlp.html
+http://whatsinvasive.com/
+http://www.forbes.com/sites/businessaviation/2013/11/19/facebooks-gulfstream-girl-takes-off-with-an-uplifting-message/
+http://ww2.openculture.com/2013/11/how-benoit-mandelbrot-discovered-fractals-a-short-film-by-errol-morris.html
+http://www.reddit.com/r/emacs/comments/1quri0/how_to_idiomatically_initialize_emacs_based_on/
+http://www.emacsbites.com/episode/scratch-emacs
+http://www.3quarksdaily.com/3quarksdaily/2013/11/musica-universalis.html
+http://www.youtube.com/playlist?list=PLD82B59D51FDA339B
+http://www.forbes.com/sites/feeonlyplanner/2013/11/18/the-retirement-gamble/
+http://www.forbes.com/retirement/
+http://www.quora.com/Life/How-can-I-figure-out-what-I-really-want-to-do-with-my-life
+http://www.quora.com/Flying/What-are-the-most-interesting-things-that-have-happened-on-an-airplane
+http://www.quora.com/Atheism/Do-extraordinary-claims-require-extraordinary-evidence
+http://www.quora.com/Leadership/What-is-the-most-important-thing-you-have-learned-about-leadership
+http://www.youtube.com/watch?v=B7ilgNK9248
+http://www.washingtonpost.com/sf/local/2013/11/09/washington-a-world-apart/
+http://www.reddit.com/r/emacs/comments/1rt0kt/does_anyone_use_emacs_for_interacting_with/
+http://ivan.kanis.fr/blog.html
+http://ivan.kanis.fr/winpack.html
+http://emacsworld.blogspot.com/2013/11/updated-instructions-for-installng.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GotEmacs+%28Got+Emacs%3F%29
+http://permalink.gmane.org/gmane.emacs.auctex.general/5019
+http://emacspeak.blogspot.com/2013/11/reading-web-content-efficiently.html
+http://lifehacker.com/mustbin-guides-you-to-securely-capture-organize-and-sh-1473107459
+http://www.netvibes.com/signin?from=home
+http://www.openculture.com/2013/11/the-story-of-the-bass.html
+http://www.zillow.com/homes/recently_sold/Miami-FL-33130/72433_rid/25.775905,-80.19776,25.766958,-80.212523_rect/15_zm/
+http://www.miamidade.gov/transit/metrorail-stations.asp#15
+http://www.mapquest.com/maps?address=801%20SW%201st%20Ave&city=Miami&state=FL&zipcode=33130
+http://live.advancednflstats.com/index.php?gameid1=2013120107
+http://lifehacker.com/the-best-clever-uses-for-text-expansion-1429848608
+http://lifehacker.com/give-the-gift-of-better-apps-for-the-iphone-ipad-and-1469989620
+http://onethingwell.org/post/68072147982/texttool
+https://bbs.archlinux.org/viewtopic.php?id=162831
+http://onethingwell.org/post/68058349058/wwwoffle
+http://deadspin.com/cheap-bourbons-ranked-1468454287?utm_source=recirculation&utm_medium=recirculation&utm_campaign=mondayPM
+http://www.seriouseats.com/2012/05/dinner-tonight-one-pot-kale-and-quinoa-pilaf.html?ref=obinsite
+http://www.seriouseats.com/2010/01/alton-browns-sardine-avocado-sandwich-diet.html?ref=obinsite
+http://www.foodnetwork.com/recipes/alton-brown/sherried-sardine-toast-recipe/index.html
+http://www.foodnetwork.com/videos/how-to-make-sangria/36906.html
+http://www.foodnetwork.com/recipes/alton-brown/ginger-almonds-recipe/index.html
+http://www.foodnetwork.com/recipes/alton-brown/buff-smoothie-recipe/index.html
+http://www.seriouseats.com/2013/11/the-food-lab-turkey-porchetta-thanksgiving-recipe.html?ref=sidebar
+http://lifehacker.com/5598693/the-best-time+saving-autohotkey-tricks-you-should-be-using
+http://lifehacker.com/5480260/disable-your-touchpad-when-youre-typing-with-autohotkey
+http://lifehacker.com/notograph-is-a-camera-roll-for-all-the-junk-you-dont-n-1468260211
+http://lifehacker.com/skydrive-for-ios-can-now-automatically-upload-camera-ph-1469016361
+http://lifehacker.com/getcreditcardnumbers-generates-real-numbers-for-use-i-1467307518
+http://lifehacker.com/save-30-on-subscribe-save-items-from-amazon-1468915705
+http://julien.danjou.info/projects/emacs-packages#erc-track-score
+http://www.emacswiki.org/emacs/Synonyms
+https://github.com/Bruce-Connor/smart-mode-line/
+http://www.reddit.com/r/emacs/comments/1rebsp/is_there_a_mode_that_renders_csv_spreadsheets_as/
+https://github.com/jwiegley/dot-emacs/blob/master/dot-org.el#L534
+https://github.com/jwiegley/dot-emacs/blob/master/lisp/org-smart-capture.el
+http://kitchingroup.cheme.cmu.edu/blog/2013/09/27/Publishing-to-blogofile-using-org-mode/
+http://www.forbes.com/sites/anthonynitti/2013/10/15/a-quick-look-at-expiring-2013-tax-provisions-what-to-do-before-year-end/2/
+http://www.edge.org/conversation/thinking-%E2%80%94-on-sale-now
+http://www.amazon.com/Starting-Strength-3rd-Mark-Rippetoe/dp/0982522738/ref=sr_1_3?s=books&ie=UTF8&qid=1385562735&sr=1-3&keywords=strength+training
+http://members.optusnet.com.au/~charles57/GTD/gtd_workflow.html
+http://www.aaii.com/journal/article/2-the-top-financial-apps
+http://www.quora.com/What-are-the-most-inspirational-success-stories-ever
+http://us.blackberry.com/support/smartphones/blackberry-q10/software-updates.html#/h:/support/smartphones/blackberry-q10/apps.html
+http://www.reddit.com/r/WeAreTheMusicMakers/comments/1cwn74/similar_program_to_garage_band_on_windows/
+http://www.nytimes.com/2012/10/08/books/reinventing-bach-by-paul-elie.html?_r=0
+http://www.foodnetwork.com/good-eats/its-not-a-diet/index.html
+http://www.health.harvard.edu/newsletters/Harvard_Heart_Letter/2011/November/mediterranean-and-portfolio-diets
+http://www.health.harvard.edu/blog/portfolio-beats-low-fat-diet-for-lowering-cholesterol-201108263248
+http://sachachua.com/blog/2013/09/when-i-blog-with-emacs-and-when-i-blog-with-something-else/
+http://sachachua.com/blog/contact
+http://ask.slashdot.org/story/13/10/27/0534248/ask-slashdot-best-cross-platform-linux-only-audio-software
+http://bzg.fr/blogging-from-emacs.html
+http://www.adafruit.com/products/1007
+http://www.mailboxapp.com/blog/
+http://lebensverrueckt.haktar.org/articles/org-mode-Food/
+http://www.reddit.com/r/emacs/comments/1sy27c/flycheck_versus_flymake/
+https://github.com/flycheck/flycheck/wiki/Flycheck-versus-Flymake
+http://blog.binchen.org/?tag=gnus
+http://www.amazon.com/exec/obidos/ASIN/0226726347/farnamstreet-20#reader_0226726347
+http://www.farnamstreetblog.com/2013/12/not-sure-what-to-get-the-book-worm-on-your-list-start-here/
+https://github.com/Bruce-Connor/gmail-mode
+https://github.com/docwhat/itsalltext
+https://github.com/davexunit/.emacs.d/blob/master/init.el#L64
+https://github.com/magnars/.emacs.d
+https://github.com/purcell/emacs.d
+https://github.com/technomancy/dotfiles
+http://www.masteringemacs.org/
+http://www.commandlinefu.com/commands/view/12828/google-text-to-speech-in-mp3-format
+http://unreasonableinstitute.org/
+http://37signals.com/remote/
+http://mixergy.com/goto/welcome/
+http://www.reddit.com/r/emacs/comments/1sidf4/3_questions_about_w3m/
+http://www.masteringemacs.org/articles/2011/07/20/searching-buffers-occur-mode/
+http://www.masteringemacs.org/articles/2013/10/10/wdired-editable-dired-buffers/
+http://www.masteringemacs.org/articles/2012/05/29/compiling-running-scripts-emacs/
+http://readefine.anirudhsasikumar.net/
+http://theappwhisperer.com/2013/11/29/ibook-humans-of-new-york/
+http://www.bytopia.org/2013/11/26/emacs-saves-the-day-again/
+http://tinyhacker.com/hacks/virus-totals-browser-extensions-for-firefox-chrome-and-internet-explorer/
+http://hackaday.com/2013/12/03/retrotechtacular-an-axe-factory-of-yore/
+http://lifehacker.com/get-a-customized-running-training-plan-from-olympians-a-1472653225
+http://lifehacker.com/5950484/how-to-motivate-yourself-into-an-exercise-routine-youll-actually-stick-to
+https://www.fitocracy.com/
+http://lifehacker.com/belt-io-syncs-text-links-across-devices-and-browsers-1473929471
+http://lifehacker.com/i-have-used-onenote-for-roughly-7-years-now-and-over-t-465212434
+http://www.ghacks.net/2010/12/20/microsoft-windows-update-overview-all-you-need-to-know/
+http://explainshell.com/
+http://hackaday.com/2013/12/02/hacking-and-philosophy-crackdown-part-iv/
+http://getfireshot.com/updated.php?ver=0.98.47&app=fx&h=0&c=2&sid=
+http://idoitontime.com/About_IDIOT.html
+http://eschulte.github.io/emacs24-starter-kit/
+http://eschulte.github.io/emacs24-starter-kit/starter-kit-lisp.html
+http://www.emclient.com/webdocumentation/en/5.0/eMClient/Default.htm
+http://www.slipstick.com/outlook/olc-hotmail/sync-calendar-contacts-using-outlook-com/
+http://www.pbs.org/food/fresh-tastes/spicy-miso-glazed-potatoes/
+http://orgmode.org/worg/org-tutorials/org-vcs.html
+https://www.youtube.com/watch?v=pp-clfcHJpA
+https://www.google.com/search?q=onenote+tutorial&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox
+http://highered.mcgraw-hill.com/sites/dl/free/007661395x/903627/OneNote_Tutorial.pdf
+http://www.howtogeek.com/howto/22125/beginner-geek-getting-started-with-onenote-2010/
+http://www.zillow.com/homes/recently_sold/Miami-FL-33130/72433_rid/25.787101,-80.175691,25.751314,-80.2356_rect/13_zm/
+http://www.farnamstreetblog.com/2013/05/the-buffett-formula-how-to-get-smarter/
+http://en.wikipedia.org/wiki/WWWOFFLE
+http://www.gedanken.demon.co.uk/wwwoffle/
+http://www.linux-magazine.com/w3/issue/83/Free_Software_Projects.pdf
+http://www.newyorker.com/arts/critics/atlarge/2013/09/09/130909crat_atlarge_gladwell
+http://www.emacswiki.org/emacs/SpeechToText
+http://www.ddwin.com/natural.htm
+http://sourceforge.net/mailarchive/forum.php?forum_name=emacs-vr-mode-announce
+http://sourceforge.net/projects/voicecode/
+http://shorttalk-emacs.sourceforge.net/
+http://www.speech.cs.cmu.edu/
+http://sourceforge.net/projects/natlink/?source=recommended
+http://sourceforge.net/apps/mediawiki/voicecode/index.php?title=VCode_1_Doc/InstallationManual
+http://lifehacker.com/seven-tips-and-tricks-to-get-more-out-of-onenote-1447747936
+http://lifehacker.com/5042429/microsoft-onenote-is-a-note+taking-power-tool
+http://www.slipstick.com/utilities/
+http://office.microsoft.com/en-us/onenote-help/keyboard-shortcuts-for-onenote-2010-HA010386947.aspx
+http://www.shortcutworld.com/en/win/OneNote_2010.html
+http://splash-of-open-sauce.blogspot.com/2010/09/org-capture-templates_08.html
+http://dynamicit.wordpress.com/2010/05/20/getting-things-done-with-outlook-2010-and-onenote-2010-setting-up-outlook/
+https://www.evernote.com/Home.action#st=p&n=37ff7589-c90c-4ba7-8ba9-c22366f82af7
+http://orgmode.org/worg/org-contrib/org-drill.html
+https://bitbucket.org/eeeickythump/org-drill/overview
+https://en.todoist.com/outlook
+http://www.vi-improved.org/
+http://www.troubleshooters.com/lpm/200212/200212.htm
+http://www.worldtimzone.com/res/vi.html
+http://jessechen.quora.com/Personal-Finance-for-Young-Professionals
+https://itunes.apple.com/us/podcast/salt-seminars-about-long-term/id186908455
+http://demonastery.org/2013/04/emacs-narrow-to-region-indirect/
+http://whattheemacsd.com/
+http://stackoverflow.com/questions/2650041/emacs-under-windows-and-png-files
+http://stackoverflow.com/questions/41300/emacs-in-windows?rq=1
+http://emacsredux.com/
+http://draketo.de/light/english/emacs/babcore
+http://www.b-list.org/weblog/2013/apr/05/good-tools/
+http://www.dataliberation.org/home
+http://www.windley.com/archives/2010/12/capture_mode_and_emacs.shtml
+http://www.windley.com/archives/2006/10/my_html_mode_for_emacs.shtml
+http://orgmode.org/manual/Capture-templates.html#Capture-templates
+[[http://members.optusnet.com.au/~charles57/GTD/datetree.html][datetree in org]]
+http://doc.norang.ca/org-mode.html
+http://splash-of-open-sauce.blogspot.com/2010/09/org-capture-templates_08.html
+http://splash-of-open-sauce.blogspot.com/search/label/emacs
+http://www.emacswiki.org/emacs/EmacsClient#toc2
+http://orgmode.org/manual/Template-elements.html#Template-elements
+http://stackoverflow.com/questions/11116712/using-properties-in-org-mode-capture-templates
+http://blog.gabrielsaldana.org/quick-note-taking-with-emacs-and-org-capture/
+http://nibrahim.net.in/2011/07/17/my_org_mode_setup.html
+http://newartisans.com/2007/08/using-org-mode-as-a-day-planner/
+http://weitz.de/regex-coach/
+https://pad.riseup.net/
+http://blog.coderscabal.org/2013/03/13/emacs-calendar-extension-information-unity-part-2/
+http://www.macworld.co.uk/ipad-iphone/news/?newsid=3435650
+http://hints.macworld.com/article.php?story=20130321071115172
+http://www.lisperati.com/casting-spels-emacs/html/casting-spels-emacs-5.html
+https://www.google.com/search?q=org-protocol.el&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox-a
+http://stackoverflow.com/questions/6681407/org-mode-capture-with-sexp
+https://bitbucket.org/edgimar/michel-orgmode
+http://stackoverflow.com/questions/2014636/how-to-maintain-an-emacs-based-knowledge-base
+http://stackoverflow.com/questions/3973896/emacs-org-mode-file-viewer-associations
+http://kb.mozillazine.org/Register_protocol
+http://defaultprogramseditor.com/
+http://orgmode.org/worg/org-contrib/org-protocol.html
+http://orgmode.org/worg/org-contrib/org-drill.html
+<2013-12-29 Sun>
+http://www.bulletjournal.com/
+http://www.zenpen.io/
+http://moreintelligentlife.com/content/ideas/lynx-effect?page=full
+http://phenomena.nationalgeographic.com/2013/12/23/top-science-longreads-of-2013/
+http://fds-team.de/cms/articles/2013-12/use-a-real-windows-7-partition-in-virtualbox-kvm-vmware-player-u.html
+http://calca.io/
+http://chrisdone.com/posts/emacs-users-are-like-igor
+http://www.amazon.com/exec/obidos/ASIN/B00A6B8Z8M/cooltools-20
+http://www.openculture.com/2013/12/the-rolling-stones-shattered-covered-by-eddie-vedder-julie-andrews.html
+http://bzg.fr/emacs-org-babel-overtone-intro.html
+http://www.reddit.com/r/emacs/comments/1tehiy/mx_soundcloud/
+https://github.com/tthieman/soundcloud.el
+http://www.reddit.com/r/emacs/comments/1ted0y/discoverel_discover_more_of_emacs_using_context/
+http://www.thersa.org/events/video
+http://www.the-tls.co.uk/tls/public/article1353976.ece
+http://www.emacswiki.org/emacs/ConflictingLibraries
+http://www.slipstick.com/developer/save-appointments-to-a-non-default-calendar-folder/
+http://www.slipstick.com/developer/working-vba-nondefault-outlook-folders/
+http://www.slipstick.com/developer/working-vba-nondefault-outlook-folders/
+https://www.sears.com/shc/s/OrderConfirmationDisplayView?lpToolsTotal=0.00&ShopInEligible=false&lpShoesTotal=0.00&expressCheckoutFlag=&containsSPUItem=&PAYPALADDRID=&orderId=614955443&lpAppliancesTotal=849.99&lpOutDoorLivingTotal=0.00&guestEmailId=mwharp%40gmail.com&lpElectronicsTotal=0.00&lpAutomotiveTotal=0.00&lpGeneralTotal=99.98&userEligibilityForBuyerAgreement=%5BLjava.lang.String%3B%409600960&lpHomeTotal=0.00&lpFitnessTotal=0.00&printReceipt=&catalogId=12605&lpPartsdirectTotal=0.00&storeId=10153&thankYou=thankYou&lpLawnandGardenTotal=0.00&loginIdPresent=
+http://eschulte.github.io/org-docco/org-docco.html
+http://www.gadgetero.net/2011/11/synching-icloud-with-outlook-my.html
+http://ical.gutentag.ch/
+http://www.macbreaker.com/2013/01/install-mountain-lion-iatkos-ml2-hackintosh.html
+http://asoftmurmur.com/
+<2014-01-09 Thu>
+http://skullsinthestars.com/2014/01/02/infinity-is-weird-what-does-it-all-mean/
+http://rawsyntax.com/blog/learn-emacs-store-window-configuration/
+http://rawsyntax.com/blog/learn-emacs-fit-your-workflow/
+https://www.yakitome.com/tts/text_to_speech?b=None
+http://www.wired.com/wiredscience/2013/12/a-calm-look-at-the-most-hyped-concept-in-neuroscience-mirror-neurons/
+http://www.masteringemacs.org/articles/2012/05/29/compiling-running-scripts-emacs/
+http://www.masteringemacs.org/articles/2011/12/06/what-is-new-in-emacs-24-part-1/
+http://www.masteringemacs.org/articles/2011/12/12/what-is-new-in-emacs-24-part-2/
+http://www.masteringemacs.org/articles/2013/12/29/whats-new-in-emacs-24-4/
+http://www.macbreaker.com/2013/01/install-mountain-lion-iatkos-ml2-hackintosh.html
+https://www.personalcapital.com/land/affiliate/0019/?utm_source=Empowering+Media%2C+Inc.+%28InvestorJunkie%29&utm_medium=affiliate&utm_campaign=Personal+Capital+%24100k+Aggregators&utm_content=
+http://www.zephyranywhere.com/products/hxm-smart-heart-rate-monitor/
+http://www.wahoofitness.com/wahoo-blue-hr-heart-rate-strap.html
+http://www.wahoofitness.com/wahoo-blue-sc-speed-and-cadence-sensor.html
+http://www.wahoofitness.com/wahoo-rflkt-iphone-powered-bike-computer.html
+http://www.polar.com/us-en/products/accessories/H7_heart_rate_sensor
+http://www.jpl.nasa.gov/spaceimages/details.php?id=PIA17172
+http://photojournal.jpl.nasa.gov/jpeg/PIA17172.jpg
+http://skeptoid.com/blog/2013/12/08/some-more-scanning/
+http://www.quora.com/Philosophy/What-are-some-trippy-thought-experiments
+http://vihart.com/
+http://www.quora.com/Chemistry-physical-science/Why-is-water-transparent
+http://www.quora.com/Why-havent-CPU-clock-speeds-increased-in-the-last-5-years
+http://www.washingtonpost.com/world/national-security/edward-snowden-after-months-of-nsa-revelations-says-his-missions-accomplished/2013/12/23/49fc36de-6c1c-11e3-a523-fe73f0ff6b8d_story.html
+http://twapilot.org/eve/forums/a/tpc/f/1001058223/m/4190002766
+http://takewingdesign.com/data/Vacancy_Bidding_Guide%20edited%20Supp%20C.pdf
+http://www.aaii.com/journal/article/five-steps-for-gaining-control-of-your-investments-and-avoiding-mistakes?acc=o&a=update010214side
+http://lifehacker.com/the-coolest-extra-features-in-any-do-509407362
+https://maps.google.com/maps?oe=utf-8&client=firefox&q=1001+SW+First+Avenue+Miami,+Florida&ie=UTF-8&hq=&hnear=0x88d9b684379085d5:0xe6a4427d2c9f896c,1001+SW+1st+Ave,+Miami,+FL+33130&gl=us&ei=3SXIUvbGD43boASQhIDQCg&ved=0CCsQ8gEwAA
+http://www.miamidade.gov/transit/rail_schedules.asp
+http://www.miamidade.gov/transit/rail_schedules_entire.asp
+http://www.miamidade.gov/transit/metrorail-stations.asp#0
+http://www.citysearch.com/profile/map/655295680/medley_fl/palmetto_metrorail_station.html
+https://maps.google.com/maps?oe=utf-8&client=firefox&q=1001+SW+First+Avenue+Miami,+Florida&ie=UTF-8&hq=&hnear=0x88d9b684379085d5:0xe6a4427d2c9f896c,1001+SW+1st+Ave,+Miami,+FL+33130&gl=us&ei=rCTIUpXzMIjuoASfzoH4Bw&ved=0CCsQ8gEwAA
+http://www.zillow.com/homes/recently_sold/Miami-FL-33130/72433_rid/beds_sort/25.768079,-80.188458,25.759305,-80.201697_rect/15_zm/
+https://www.google.com/search?q=miami+springs&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox
+http://www.zillow.com/homes/recently_sold/Virginia-Gardens-FL-33166/72469_rid/beds_sort/26.068194,-80.043983,25.787217,-80.505409_rect/10_zm/
+http://pavpanchekha.github.io/org-project/
+http://pavpanchekha.github.io/org-project/#3
+http://davidagus.com/wp-content/uploads/2012/01/DrAgus-PersonalHealthInventoryQuestionnaire.pdf
+http://m.ajcn.nutrition.org/content/76/1/5/T1.expansion.html
+http://freakonomics.com/2012/03/16/end-of-illness-author-david-agus-answers-your-questions/
+http://www.emacswiki.org/emacs/PlannerAndRemind
+http://www.emacswiki.org/emacs/CategoryPersonalInformationManager
+http://www.gnu.org/software/emacs/manual/html_node/emacs/Appointments.html
+http://comments.gmane.org/gmane.emacs.orgmode/46641
+http://sachachua.com/blog/2007/11/setting-up-appointment-reminders-in-org/
+https://github.com/KryDos/org-mode-reminder
+http://code.google.com/p/remind-conf-mode/downloads/detail?name=remind-conf-mode.10.tar.gz
+http://www.roaringpenguin.com/products/remind
+http://www.openculture.com/2014/01/a-gentle-introduction-to-statistics-hosted-by-harvard-geneticist.html 
+<2014-01-13 Mon>
+http://www.forbes.com/sites/robertlenzner/2014/01/12/dr-david-agus-wants-all-his-billionaire-patients-to-live-to-be-100/
+http://common-lisp.net/project/clfswm/
+http://puntoblogspot.blogspot.com/2014/01/evil-exact-amount-of-vim-in-emacs-but.html
+http://www.diygenius.com/mind-expanding-documentaries/
+http://unboundapp.com/
+https://github.com/kbkbkbkb1/guide-key
+http://www.emacswiki.org/emacs/one-key.el
+http://www.flickr.com/photos/sachac/11828631974/
+http://theoldreader.uservoice.com/knowledgebase/articles/294010
+http://www.instructables.com/id/Quinoa-with-Toasted-Almonds-Cranberries-and-Aprico/
+http://owncloud.org/
+http://msnyder.info/posts/2014/01/cus-edit-plus/
+http://www.emacswiki.org/emacs/cus-edit+.el
+http://alexdantas.net/stuff/posts/tiny-tiny-introduction-to-magit/
+http://www.thebaffler.com/past/the_meme_hustler
+http://www.3ammagazine.com/3am/epistemology-and-democracy/
+http://ical.gutentag.ch/faq_en.html#F18
+https://skydrive.live.com/?cid=12140bd9463a3077&id=12140BD9463A3077%21248&authkey=!AGRvguCt6WBACyM
+http://hints.macworld.com/article.php?story=20130203225410859
+https://www.yakitome.com/tts/text_to_speech?b=None
+http://www.wired.com/wiredscience/2013/12/a-calm-look-at-the-most-hyped-concept-in-neuroscience-mirror-neurons/
+http://www.masteringemacs.org/articles/2012/05/29/compiling-running-scripts-emacs/
+http://www.masteringemacs.org/articles/2011/12/06/what-is-new-in-emacs-24-part-1/
+http://www.masteringemacs.org/articles/2011/12/12/what-is-new-in-emacs-24-part-2/
+http://www.masteringemacs.org/articles/2013/12/29/whats-new-in-emacs-24-4/
+http://www.macbreaker.com/2013/01/install-mountain-lion-iatkos-ml2-hackintosh.html
+http://www.washingtonpost.com/world/national-security/edward-snowden-after-months-of-nsa-revelations-says-his-missions-accomplished/2013/12/23/49fc36de-6c1c-11e3-a523-fe73f0ff6b8d_story.html
+http://takewingdesign.com/data/Vacancy_Bidding_Guide%20edited%20Supp%20C.pdf
+https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&authuser=0&q=100+Northwest+6+Street,+Miami,+FL&aq=t&vps=1&sll=25.787527,-80.1614&sspn=0.153639,0.455933&vpsrc=6&gl=us&ie=UTF8&hq=&hnear=100+NW+6th+St,+Miami,+Miami-Dade,+Florida+33030
+
+http://gisims2.co.miami-dade.fl.us/MyNeighborhood/home.asp
+
+http://www.vidaamericana.com/miami_guide/neighborhoods.html
+
+http://www.neighborhoodscout.com/fl/miami/crime/
+http://thefreehand.com/blog/miami-neighborhoods-miami-design-district/
+http://thefreehand.com/blog/miami-neighborhoods-wynwood/
+http://travel.usnews.com/Miami_FL/Neighborhoods/
+http://www.streetadvisor.com/search/neighborhoods-in-miami-miami-dade-county-florida
+http://www.metroseeker.com/miami/where-to-live/historic
+http://voices.yahoo.com/a-locals-guide-miami-neighborhoods-1417479.html
+http://www.nytimes.com/2013/02/17/realestate/a-miami-beach-fla-neighborhood-rises-to-the-height-of-luxury-living-in-just-one-decade.html?_r=0
+http://www.thedailybeast.com/articles/2013/12/04/graffiti-covered-wynwood-is-quickly-becoming-miami-s-hippest-new-neighborhood.html
+http://www.city-data.com/forum/miami/44370-top-5-worst-best-miami-neighborhoods.html
+http://miami.about.com/od/homegarden/u/neighborhoods.htm
+http://www.movoto.com/blog/homeownership/the-5-best-neighborhoods-in-miami/
+http://en.wikipedia.org/wiki/File:Miami_neighborhoodsmap.png
+http://en.wikipedia.org/wiki/Edgewater_%28Miami%29
+http://www.movoto.com/
+http://miami.curbed.com/
+http://www.miamidade.gov/transit/rail_schedules_entire.asp
+http://www.miamidade.gov/transit/metrorail-stations.asp#13
+http://www.citysearch.com/profile/map/655295680/medley_fl/palmetto_metrorail_station.html
+https://maps.google.com/maps?oe=utf-8&client=firefox&q=1001+SW+First+Avenue+Miami,+Florida&ie=UTF-8&hq=&hnear=0x88d9b684379085d5:0xe6a4427d2c9f896c,1001+SW+1st+Ave,+Miami,+FL+33130&gl=us&ei=rCTIUpXzMIjuoASfzoH4Bw&ved=0CCsQ8gEwAA
+http://www.zillow.com/homes/recently_sold/Miami-FL-33130/72433_rid/beds_sort/25.768079,-80.187417,25.759305,-80.202738_rect/15_zm/
+https://www.google.com/search?q=miami+springs&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox
+http://www.zillow.com/homes/recently_sold/Virginia-Gardens-FL-33166/72469_rid/beds_sort/26.068194,-80.029564,25.787836,-80.519829_rect/10_zm/
+http://pavpanchekha.github.io/org-project/
+http://pavpanchekha.github.io/org-project/#3
+http://davidagus.com/wp-content/uploads/2012/01/DrAgus-PersonalHealthInventoryQuestionnaire.pdf
+http://m.ajcn.nutrition.org/content/76/1/5/T1.expansion.html
+http://freakonomics.com/2012/03/16/end-of-illness-author-david-agus-answers-your-questions/
+http://www.emacswiki.org/emacs/PlannerAndRemind
+http://sachachua.com/notebook/emacs/remind.el
+http://www.emacswiki.org/emacs/Synonyms
+http://www.gnu.org/software/emacs/manual/html_node/emacs/Appointments.html
+http://comments.gmane.org/gmane.emacs.orgmode/46641
+http://sachachua.com/blog/2007/11/setting-up-appointment-reminders-in-org/
+https://github.com/KryDos/org-mode-reminder
+http://qz.com/165428/making-time-for-workouts-can-actually-help-you-have-it-all/
+http://www.roaringpenguin.com/products/remind
+http://stephenmarche.blogspot.com/
+http://lifehacker.com/186661/geek-to-live--keep-your-calendar-in-plain-text-with-remind
+https://www.google.com/search?q=takenoko&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox
+http://pessimization.com/software/wyrd/
+http://wiki.43folders.com/index.php/Remind_FAQ
+http://www.roaringpenguin.com/products/remind
+http://www.43folders.com/2005/02/24/guest-mike-harris-looks-at-remind
+http://www.linuxjournal.com/article/3529
+http://www.emacswiki.org/emacs/PlannerAndRemind
+http://code.google.com/p/remind-conf-mode/
+http://lists.roaringpenguin.com/pipermail/remind-fans/2008/001718.html
+http://randsinrepose.com/archives/the-builders-high/
+http://www.cx4a.org/pub/auto-complete.el
+http://www.washingtonpost.com/sf/local/2013/11/09/washington-a-world-apart/
+http://www.giveawayoftheday.com/howler-8-2-ny-rerun/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+giveawayoftheday%2Ffeed+%28Giveaway+of+the+Day%29
+http://www.avherald.com/h?article=41a81ef1/0071&opt=0
+http://matt.might.net/articles/bash-by-example/
+http://matt.might.net/articles/basic-unix/
+http://matt.might.net/articles/settling-into-unix/
+http://common-lisp.net/project/clfswm/
+https://my.blueprintforwellness.com/
+http://www.olloclip.com/product/
+<2014-01-27 Mon>
+https://play.spotify.com/album/2UQsGJJzxv8Hrm4Ioqe4Qy
+http://www.3quarksdaily.com/3quarksdaily/2014/01/how-do-hitmen-operate.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+3quarksdaily+%283quarksdaily%29
+http://blog.icorbin.com/why-i-use-a-tiny-paper-based-task-manager/
+http://www.reddit.com/r/emacs/comments/1w715a/emacs_noob_help_window_layout/
+http://www.emacswiki.org/emacs/WindowsAndRegisters
+http://www.emacswiki.org/emacs/WorkSpaces
+https://www.youtube.com/watch?v=c6SUOeAqOjU
+http://www.openculture.com/2013/11/a-guide-to-happiness.html
+http://www.openculture.com/2013/04/friedrich_nietzsche_existentialism_explained_to_five-year-olds_in_comical_video_by_reddit.html
+http://www.amazon.com/gp/offer-listing/0670026573/ref=tmm_hrd_used_olp_sr?ie=UTF8&condition=used&sr=&qid=
+http://www.amazon.com/s/ref=nb_sb_ss_i_2_4?url=search-alias%3Dstripbooks&field-keywords=david+agus+a+short+guide+to+a+long+life&sprefix=agus%2Cstripbooks%2C647
+http://www.farnamstreetblog.com/2014/01/laws-of-character-and-personality/
+https://www.texpadapp.com/blog/ios-v1.6.3-teaser
+http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/references/
+http://www.openculture.com/2014/01/crowdsourced-complete-concert-film-of-neil-youngs-carnegie-hall-show.html
+http://www.openculture.com/2014/01/dennis-hlynskys-creepy-nature-videos.html
+http://theoldreader.com/users/edit/social
+http://theoldreader.uservoice.com/knowledgebase/articles/294010
+https://www.airbnb.com/s/Miami?neighborhoods%5B%5D=Coral+Gables
+https://www.airbnb.com/locations/miami/coconut-grove-north
+https://www.airbnb.com/locations/miami/midtown
+http://gisims2.co.miami-dade.fl.us/MyNeighborhood/home.asp
+http://www.vidaamericana.com/miami_guide/neighborhoods.html
+http://www.yelp.com/topic/miami-bad-neighborhoods-in-miami-where-are-they-places-to-avoid
+http://www.neighborhoodscout.com/fl/miami/coconut-grove/
+http://www.movoto.com/blog/homeownership/the-5-best-neighborhoods-in-miami/
+http://media.learn.uci.edu/cat/oo/getPage.php?course=AR0102092&lesson=001&topic=001&page=2
+http://www.emacswiki.org/emacs/csv-nav.el
+http://melpa.milkbox.net/#/
+https://github.com/atykhonov/emacs-howdoi
+https://www.dropbox.com/help/137/en
+http://www.reddit.com/r/emacs/comments/1vyqfm/emacs_key_bindings_for_ms_word_2010/
+http://sourceforge.net/apps/mediawiki/womacs/index.php?title=Main_Page
+http://lifehacker.com/five-best-programming-languages-for-first-time-learners-1494256243
+http://conkeror.org/
+http://jakeshimabukuro.com/
+https://github.com/kidd/org-protocol-github-lines
+https://www.primadesk.com/
+http://lifehacker.com/saved-io-bookmarks-and-syncs-without-extensions-or-plug-1498833800
+http://usescribe.com/
+http://www.ulmon.com/
+http://www.3quarksdaily.com/3quarksdaily/2014/01/kelvin-rutherford-and-the-age-of-the-earth-i-the-myth.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+3quarksdaily+%283quarksdaily%29
+https://www.google.com/search?q=clone+cd+virtual+drive&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox
+http://www.slysoft.com/en/download.html
+http://withings.com/en/pulse
+<2014-02-02 Sun>
+http://onethingwell.org/post/72087889695/saved-io
+http://www.notehub.org/
+https://smartgoat.com/shoots-and-leaves/
+http://www.lrb.co.uk/v36/n03/richard-lloydparry/ghosts-of-the-tsunami
+http://www.nytimes.com/2014/02/02/books/review/all-joy-and-no-fun-by-jennifer-senior.html?ref=books&_r=0
+http://flycheck.readthedocs.org/en/0.17/news/flycheck-0.17-released.html
+http://hyperpolyglot.org/text-mode-editors
+https://pad.riseup.net/p/npvimemacscmd
+http://www.reddit.com/r/emacs/comments/1wne2t/how_to_move_the_minimap_to_the_right/
+http://tex.stackexchange.com/questions/50827/a-simpletons-guide-to-tex-workflow-with-emacs
+http://www.blogbyben.com/2014/01/finally-in-phonegap-build-and-install.html
+http://www.forbes.com/pictures/emdk45kdek/1-your-federal-rate-is-headed-up-4/
+http://emmet.io/
+http://web-mode.org/
+http://www.tracker-software.com/product/pdf-xchange-viewer
+http://aeon.co/magazine/nature-and-cosmos/our-quantum-reality-problem/
+http://lareviewofbooks.org/essay/mourning-tongues-auden-modified-guts-living
+http://www.manningface.com/
+http://www.openculture.com/2014/01/noam-chomsky-cant-answer-students-question-how-can-i-talk-to-women-better.html
+http://getfireshot.com/updated.php?ver=0.98.48&app=fx&h=0&c=5&sid=
+http://www.health.harvard.edu/blog/new-study-links-l-carnitine-in-red-meat-to-heart-disease-201304176083
+http://www.health.harvard.edu/blog/study-urges-moderation-in-red-meat-intake-201203134490
+http://www.health.harvard.edu/blog/healthy-fats-may-fight-early-stage-prostate-cancer-201306126377
+http://www.health.harvard.edu/blog/6-healthy-protein-choices-when-cutting-back-on-red-meat-201206084865
+http://www.pcworld.com/article/241047/how_to_create_and_mount_an_iso_disc_image.html
+http://www.emacswiki.org/emacs/MiniMap
+https://www.google.com/search?q=suunto+t3c+strap&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox
+http://www.macworld.com/product/422799/paperless-lists-checklists.html
+https://www.evernote.com/Home.action#st=p&n=707ffdbd-3674-448f-af21-5466aaebf0d2
+http://nomnompaleo.com/recipeindex
+http://nomnompaleo.com/post/4626288075/chez-panisse-braised-red-cabbage
+http://www.washingtonpost.com/blogs/the-switch/wp/2014/01/25/what-the-humble-loom-can-teach-us-about-robots-and-automation/?tid=pm_business_pop
+https://waterfox.codeplex.com/downloads/get/771574
+http://www.theatlantic.com/international/archive/2014/01/lessons-from-the-worlds-most-tech-savvy-government/283341/
+<2014-02-10 Mon>
+http://www.reddit.com/r/emacs/comments/1xfeuw/how_do_i_pin_windows_in_place/
+http://www.reddit.com/r/emacs/comments/1xdoyq/trouble_running_emacs_eval_from_puppet/
+http://www.reddit.com/r/emacs/comments/1xd2vi/saving_frame_configurations_across_emacsclient/
+http://emacspeak.blogspot.com/2014/02/searching-gmail-using-imap-and-gnus.html
+https://github.com/jawerty/AlienFeed
+http://brettterpstra.com/2013/12/22/marker-web-selections-to-markdown/
+http://dhurum.github.io/mattext/
+http://bliker.github.io/cmder/
+https://springpad.com/register
+http://www.bulletjournal.com/
+http://lifehacker.com/turn-an-old-pc-into-a-nas-vpn-media-streamer-and-mor-1516484110
+http://www.linuxjournal.com/content/make-peace-pax?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+linuxjournalcom+%28Linux+Journal+-+The+Original+Magazine+of+the+Linux+Community%29
+http://johnmacfarlane.net/pandoc/README.html
+http://www.youtube.com/watch?v=RvPFZL6NJNQ
+http://ivan.kanis.fr/gtd-and-org-mode.html
+http://ivan.kanis.fr/blazing-fast-gnus.html
+http://liferemix.net/blogs
+http://www.sciencedaily.com/releases/2014/02/140203122741.htm?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+sciencedaily+%28Latest+Science+News+--+ScienceDaily%29
+http://hackaday.com/2014/02/02/the-most-horrifying-use-of-3d-printing/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+hackaday%2FLgoM+%28Hack+a+Day%29
+http://hyperpolyglot.org/text-mode-editors
+https://www.primadesk.com/primadesk/beginRegisterEx.action
+http://www.quora.com/What-are-some-of-the-most-important-iconic-and-or-beautiful-scientific-and-or-technological-images
+https://plus.google.com/photos/108487783243149848473/albums/5616668058307407025?banner=pwa
+<2014-02-27 Thu>
+http://lifehacker.com/four-skills-that-will-turn-you-into-a-spreadsheet-ninj-1525058930
+http://lifehacker.com/super-cc-is-like-tripit-for-google-calendar-adds-any-e-1525541851?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+lifehacker%2Ffull+%28Lifehacker%29
+http://jello-dashboard.net/
+http://www.gtdtimes.com/tag/iphone/
+http://lifehacker.com/how-to-disable-avasts-annoying-sounds-and-popups-1530732542
+http://lifehacker.com/boost-your-balance-with-a-few-simple-exercises-a-day-1530684281
+http://lifehacker.com/outread-teaches-speed-reading-with-pocket-instapaper-a-1503596249
+http://www.reddit.com/r/emacs/comments/1yu2j0/generating_gifs_showing_emacs_features/
+http://www.farnamstreetblog.com/2014/02/science-religion-and-the-universe/
+http://tuxradar.com/content/take-linux-filesystem-tour/
+http://news.yahoo.com/rock-around-clock-zircon-crystal-oldest-piece-earth-205919633.html
+http://www.openculture.com/2013/09/the-famous-feynman-lectures-on-physics-now-online-in-html5.html
+http://blog.idonethis.com/
+https://itunes.apple.com/us/app/indigo/id770232809?mt=8
+http://thenewinquiry.com/essays/reason-displaces-all-love/
+http://www.reddit.com/r/emacs/comments/1yc2ea/the_awesome_of_web_browsing_with_emacs_using/
+http://beatofthegeek.com/2014/02/the-awesome-of-web-browsing-with-emacs.html
+http://channikhabra.github.io/2013/10/11/the-most-beautiful-tutorial/
+http://beatofthegeek.com/2014/02/my-setup-for-using-emacs-as-web-browser.html
+http://permalink.gmane.org/gmane.emacs.help/96074
+http://www.fastcolabs.com/3026698/inside-duckduckgo-googles-tiniest-fiercest-competitor?partner
+http://sleepomeno.github.io/blog/2014/02/16/This-is-not-an-org-mode-Tutorial/
+http://www.3quarksdaily.com/3quarksdaily/2014/02/under-the-spell-of-yoga.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+3quarksdaily+%283quarksdaily%29
+http://www.blackpast.org/perspectives/confounded-enigma-blind-tom-wiggins
+http://www.nytimes.com/2014/02/16/books/review/our-mathematical-universe-by-max-tegmark.html?ref=books&_r=2
+http://www.nytimes.com/2014/02/16/books/review/the-sixth-extinction-by-elizabeth-kolbert.html?ref=books&_r=1
+http://lucumr.pocoo.org/2014/2/13/programming-communities/
+http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html
+http://www.amazon.com/exec/obidos/ASIN/B001AYML7K/cooltools-20
+http://www.huemanapp.com/apple.html
+http://www.forbes.com/sites/oreillymedia/2014/02/13/writing-without-knowing/
+http://www.instructables.com/id/Extreme-Heavy-Duty-Work-Bench/
+http://www.instructables.com/id/Low-cost-tank-tough-workbench/?ALLSTEPS
+http://www.livescience.com/43276-ancient-earthquake-shroud-of-turin.html
+http://www.space.com/24640-sun-s-hellish-depths-seen-in-unprecedented-detail-video.html
+https://github.com/redguardtoo/emacs.d
+http://wenshanren.org/?p=111
+http://thenybble.de/projects/orgsite.html
+https://gist.github.com/kinjo/509761
+http://askubuntu.com/questions/24916/how-do-i-remap-certain-keys
+http://www.reddit.com/r/emacs/comments/1xnhws/speaking_of_emacs_modes_flx_flxido_ido_smex_helm/
+http://www.reddit.com/r/emacs/comments/1xmajj/automated_testing_of_initel/
+http://www.wilfred.me.uk/.emacs.d/init.html
+https://github.com/owainlewis/emacs-color-themes#brin
+http://www.reddit.com/r/emacs/comments/1xg9ed/deepinemacs/
+http://lifehacker.com/verizons-more-everything-plan-doubles-the-data-on-some-1522141835
+http://www.eurozine.com/articles/2014-02-06-yermolenko-en.html
+http://www.3quarksdaily.com/3quarksdaily/2014/02/the-crisis-in-american-colleges-rising-tuition-and-labor-degradation.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+3quarksdaily+%283quarksdaily%29
+http://www.wsimagazine.com/uk/diaries/report/art/interview-with-ray-caesar_20140210130745.html#.UwnAG1k8202
+http://www.artofmanliness.com/2008/09/14/the-bushido-code-the-eight-virtues-of-the-samurai/
+http://www.ntnu.edu/cerg/week-1
+http://www.reddit.com/r/emacs/comments/1xjlrq/emacs_modes_that_are_worth_knowing_about/
+http://steve-yegge.blogspot.com/2008/01/emergency-elisp.html
+http://melpa.milkbox.net/#/
+http://www.danielmiessler.com/study/vim/
+http://www.danielmiessler.com/blog/collection-of-less-commonly-used-unix-commands
+https://news.ycombinator.com/item?id=5022457
+http://www.danielmiessler.com/study/git/
+http://hyperpolyglot.org/text-mode-editors
+http://genehack.org/2004/09/
+http://sourceforge.net/apps/mediawiki/womacs/index.php?title=Main_Page
+https://delicious.com/discover
+http://zuttobenkyou.wordpress.com/2011/02/15/some-thoughts-on-emacs-and-vim/
+http://www.tychoish.com/rhizome/getting-emacs-daemon-to-work-right/
+http://zuttobenkyou.wordpress.com/2011/05/13/xorg-switching-keyboard-layouts-consistenly-and-reliably-from-userspace/
+http://sourceforge.net/projects/womacs/
+http://www.youtube.com/watch?v=OcHn0LX4fG4&feature=youtu.be&elq=37fc75019ada4a65b2905b71ba1e13da&elqCampaignId=2712
+http://sachachua.com/notebook/emacs/remind.el
+http://www.emacswiki.org/emacs/PlannerAndRemind
+http://www.emacswiki.org/emacs/csv-nav.el
+http://www.reddit.com/r/virtualbox
+http://box.matto.nl/w3m.html
+http://wiki.titan2x.com/index.php?title=W3m_cheat_sheet
+http://www.scribd.com/doc/51307577/757-767-Study-Guide
+http://www.smartcockpit.com/aircrafts-models.html
+http://www.smartcockpit.com/plane/BOEING/B767.html
+http://www.smartcockpit.com/plane/BOEING/B757.html
+http://www.slideshare.net/search/slideshow?searchfrom=header&q=767
+http://www.slideshare.net/gustafon/b757-air-systems
+http://quizlet.com/9318427/b-767-study-guide-flash-cards/
+http://www.aerospatialle.com/wp-content/uploads/2013/04/B767-Study-Guide.pdf
+http://www.slideshare.net/aviation319/757-767-study-guide
+http://gregorygrubbs.com/emacs/10-tips-emacs-windows/
+file:///F:/dl/w3m-0.5.3/doc/FAQ.html#install
+http://wiki.43folders.com/index.php/Remind_FAQ
+http://randsinrepose.com/archives/the-builders-high/
+http://bzg.fr/learn-emacs-lisp-in-15-minutes.html
+http://www.makeuseof.com/tag/how-to-authenticate-over-ssh-with-keys-instead-of-passwords/
+http://www.slideshare.net/mharp00/newsfeed?redirect=1
+http://www.alfabb.com/bb/forums/alfa-romeo-cars-sale-wanted/283121-1988-milano-verde.html
+http://www.alfabb.com/bb/forums/alfa-romeo-cars-sale-wanted/252673-91-164s-very-well-kept-2.html
+http://orgmode.org/worg/org-tutorials/weaving-a-budget.html
+http://www.ledger-cli.org/3.0/doc/ledger3.html
+https://groups.google.com/forum/#!searchin/ledger-cli/cygwin
+https://groups.google.com/forum/#!topic/ledger-cli/GsJwwdx-yUk
+http://hledger.org/faq
+https://groups.google.com/forum/#!searchin/ledger-cli/cygwin/ledger-cli/4JRpqIa8hPk/b48mRwn9bhEJ
+http://www.aaii.com/journal/article/19-recommendations-for-minimizing-inheritance-conflict
+https://w1.buysub.com/pubs/N3/WIR/digital_authentication_eBlast.jsp?cds_mag_code=WIR&cds_response_key=1171044553&cds_from_id=ENTITLED
+https://dl.dropboxusercontent.com/u/663178/corbinizer/corbinizer-latest.pdf
+http://sachachua.com/blog/2008/09/emacs-w3m-open-pages-in-external-browsers/
+http://sachachua.com/blog/2008/08/emacs-and-w3m-toggling-between-work-and-the-web/
+http://sachachua.com/blog/2008/08/emacs-and-w3m-quick-searches/
+http://sachachua.com/blog/2008/09/emacs-and-w3m-making-tabbed-browsing-easier/
+http://orgmode.org/worg/org-contrib/org-protocol.html
+http://sachachua.com/blog/2008/05/emacs-gnus-organize-your-mail/
+http://www.giveawayoftheday.com/superez-wave-editor-12-2-1/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+giveawayoftheday%2Ffeed+%28Giveaway+of+the+Day%29
+https://theoldreader.com/posts/all
+http://theoldreader.com/feeds/51d0fbb0da564d8f930158af?include%5B%5D=530e922e511dbe686200afda
+http://lifehacker.com/four-skills-that-will-turn-you-into-a-spreadsheet-ninj-1525058930
+http://lifehacker.com/super-cc-is-like-tripit-for-google-calendar-adds-any-e-1525541851?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+lifehacker%2Ffull+%28Lifehacker%29
+http://lifehacker.com/make-a-mind-map-to-keep-on-top-of-everything-in-your-li-1525150118
+http://www.gtdtimes.com/2014/02/08/like-david-allen-you-might-need-a-map-of-your-world/
+http://jello-dashboard.net/
+http://www.gtdtimes.com/tag/iphone/
+http://lifehacker.com/how-to-disable-avasts-annoying-sounds-and-popups-1530732542
+http://lifehacker.com/boost-your-balance-with-a-few-simple-exercises-a-day-1530684281
+http://lifehacker.com/outread-teaches-speed-reading-with-pocket-instapaper-a-1503596249
+http://www.reddit.com/r/emacs/comments/1yu2j0/generating_gifs_showing_emacs_features/
+http://www.farnamstreetblog.com/2014/02/science-religion-and-the-universe/
+http://tuxradar.com/content/take-linux-filesystem-tour/
+http://news.yahoo.com/rock-around-clock-zircon-crystal-oldest-piece-earth-205919633.html
+http://www.openculture.com/2013/09/the-famous-feynman-lectures-on-physics-now-online-in-html5.html
+http://blog.idonethis.com/
+https://itunes.apple.com/us/app/indigo/id770232809?mt=8
+http://thenewinquiry.com/essays/reason-displaces-all-love/
+http://www.reddit.com/r/emacs/comments/1yc2ea/the_awesome_of_web_browsing_with_emacs_using/
+http://beatofthegeek.com/2014/02/the-awesome-of-web-browsing-with-emacs.html
+http://channikhabra.github.io/2013/10/11/the-most-beautiful-tutorial/
+http://beatofthegeek.com/2014/02/my-setup-for-using-emacs-as-web-browser.html
+http://permalink.gmane.org/gmane.emacs.help/96074
+http://www.fastcolabs.com/3026698/inside-duckduckgo-googles-tiniest-fiercest-competitor?partner
+http://sleepomeno.github.io/blog/2014/02/16/This-is-not-an-org-mode-Tutorial/
+http://www.3quarksdaily.com/3quarksdaily/2014/02/under-the-spell-of-yoga.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+3quarksdaily+%283quarksdaily%29
+http://www.blackpast.org/perspectives/confounded-enigma-blind-tom-wiggins
+http://www.nytimes.com/2014/02/16/books/review/our-mathematical-universe-by-max-tegmark.html?ref=books&_r=2
+http://www.nytimes.com/2014/02/16/books/review/the-sixth-extinction-by-elizabeth-kolbert.html?ref=books&_r=1
+http://lucumr.pocoo.org/2014/2/13/programming-communities/
+http://www.ianbicking.org/blog/2014/02/saying-goodbye-to-python.html
+http://www.amazon.com/exec/obidos/ASIN/B001AYML7K/cooltools-20
+http://www.huemanapp.com/apple.html
+http://www.forbes.com/sites/oreillymedia/2014/02/13/writing-without-knowing/
+http://www.instructables.com/id/Extreme-Heavy-Duty-Work-Bench/
+http://www.instructables.com/id/Low-cost-tank-tough-workbench/?ALLSTEPS
+http://www.livescience.com/43276-ancient-earthquake-shroud-of-turin.html
+http://www.space.com/24640-sun-s-hellish-depths-seen-in-unprecedented-detail-video.html
+https://github.com/redguardtoo/emacs.d
+http://wenshanren.org/?p=111
+http://thenybble.de/projects/orgsite.html
+https://gist.github.com/kinjo/509761
+http://askubuntu.com/questions/24916/how-do-i-remap-certain-keys
+http://www.reddit.com/r/emacs/comments/1xnhws/speaking_of_emacs_modes_flx_flxido_ido_smex_helm/
+http://www.reddit.com/r/emacs/comments/1xmajj/automated_testing_of_initel/
+http://www.wilfred.me.uk/.emacs.d/init.html
+https://github.com/owainlewis/emacs-color-themes#brin
+http://www.reddit.com/r/emacs/comments/1xg9ed/deepinemacs/
+http://lifehacker.com/verizons-more-everything-plan-doubles-the-data-on-some-1522141835
+http://www.eurozine.com/articles/2014-02-06-yermolenko-en.html
+http://www.3quarksdaily.com/3quarksdaily/2014/02/the-crisis-in-american-colleges-rising-tuition-and-labor-degradation.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+3quarksdaily+%283quarksdaily%29
+http://www.wsimagazine.com/uk/diaries/report/art/interview-with-ray-caesar_20140210130745.html#.UwnAG1k8202
+http://www.artofmanliness.com/2008/09/14/the-bushido-code-the-eight-virtues-of-the-samurai/
+http://www.ntnu.edu/cerg/week-1
+http://www.reddit.com/r/emacs/comments/1xjlrq/emacs_modes_that_are_worth_knowing_about/
+http://steve-yegge.blogspot.com/2008/01/emergency-elisp.html
+http://melpa.milkbox.net/#/
+https://news.ycombinator.com/item?id=5022457
+http://www.danielmiessler.com/study/git/
+http://hyperpolyglot.org/text-mode-editors
+http://genehack.org/2004/09/
+http://sourceforge.net/apps/mediawiki/womacs/index.php?title=Main_Page
+https://delicious.com/discover
+http://www.tychoish.com/rhizome/getting-emacs-daemon-to-work-right/
+http://zuttobenkyou.wordpress.com/2011/05/13/xorg-switching-keyboard-layouts-consistenly-and-reliably-from-userspace/
+http://sourceforge.net/projects/womacs/
+http://www.youtube.com/watch?v=OcHn0LX4fG4&feature=youtu.be&elq=37fc75019ada4a65b2905b71ba1e13da&elqCampaignId=2712
+http://sachachua.com/notebook/emacs/remind.el
+http://www.emacswiki.org/emacs/PlannerAndRemind
+http://www.emacswiki.org/emacs/csv-nav.el
+http://www.reddit.com/r/virtualbox
+http://box.matto.nl/w3m.html
+http://wiki.titan2x.com/index.php?title=W3m_cheat_sheet
+http://www.scribd.com/doc/51307577/757-767-Study-Guide
+http://www.smartcockpit.com/aircrafts-models.html
+http://www.smartcockpit.com/plane/BOEING/B767.html
+http://www.smartcockpit.com/plane/BOEING/B757.html
+http://www.slideshare.net/search/slideshow?searchfrom=header&q=767
+http://www.slideshare.net/gustafon/b757-air-systems
+http://quizlet.com/9318427/b-767-study-guide-flash-cards/
+http://www.aerospatialle.com/wp-content/uploads/2013/04/B767-Study-Guide.pdf
+http://www.slideshare.net/aviation319/757-767-study-guide
+http://gregorygrubbs.com/emacs/10-tips-emacs-windows/
+file:///F:/dl/w3m-0.5.3/doc/FAQ.html#install
+http://wiki.43folders.com/index.php/Remind_FAQ
+http://randsinrepose.com/archives/the-builders-high/
+http://bzg.fr/learn-emacs-lisp-in-15-minutes.html
+http://www.makeuseof.com/tag/how-to-authenticate-over-ssh-with-keys-instead-of-passwords/
+http://www.slideshare.net/mharp00/newsfeed?redirect=1
+http://www.alfabb.com/bb/forums/alfa-romeo-cars-sale-wanted/283121-1988-milano-verde.html
+http://www.alfabb.com/bb/forums/alfa-romeo-cars-sale-wanted/252673-91-164s-very-well-kept-2.html
+http://orgmode.org/worg/org-tutorials/weaving-a-budget.html
+http://www.ledger-cli.org/3.0/doc/ledger3.html
+https://groups.google.com/forum/#!searchin/ledger-cli/cygwin
+https://groups.google.com/forum/#!topic/ledger-cli/GsJwwdx-yUk
+http://hledger.org/faq
+https://groups.google.com/forum/#!searchin/ledger-cli/cygwin/ledger-cli/4JRpqIa8hPk/b48mRwn9bhEJ
+http://www.aaii.com/journal/article/19-recommendations-for-minimizing-inheritance-conflict
+https://w1.buysub.com/pubs/N3/WIR/digital_authentication_eBlast.jsp?cds_mag_code=WIR&cds_response_key=1171044553&cds_from_id=ENTITLED
+https://dl.dropboxusercontent.com/u/663178/corbinizer/corbinizer-latest.pdf
+http://sachachua.com/blog/2008/09/emacs-w3m-open-pages-in-external-browsers/
+http://sachachua.com/blog/2008/08/emacs-and-w3m-toggling-between-work-and-the-web/
+http://sachachua.com/blog/2008/08/emacs-and-w3m-quick-searches/
+http://sachachua.com/blog/2008/09/emacs-and-w3m-making-tabbed-browsing-easier/
+http://orgmode.org/worg/org-contrib/org-protocol.html
+http://sachachua.com/blog/2008/05/emacs-gnus-organize-your-mail/
+http://www.giveawayoftheday.com/superez-wave-editor-12-2-1/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+giveawayoftheday%2Ffeed+%28Giveaway+of+the+Day%29
+<2014-03-03 Mon>
+https://github.com/kototama/.emacs.d
+http://stackoverflow.com/questions/20263012/m-x-term-with-emacs-on-ms-windows-error-spawning-child-process-invalid-argum
+http://stackoverflow.com/questions/4535432/terminal-in-emacs-in-windows-error-message-spawning-child-process-invalid-a
+http://recipenutrition.com/Recipe/52208/Joan-bar-Recipe
+http://www.reddit.com/r/emacs/comments/1z6nx0/command_to_use_in_multiterm_to_open_files_in/
+http://www.reddit.com/r/emacs/comments/1z9qbx/how_do_you_guys_transfer_your_configs_to_new/
+http://www.masteringemacs.org/articles/2014/02/28/my-emacs-keybindings/
+http://orgmode.org/worg/org-contrib/org-drill.html
+http://www.reddit.com/r/emacs/comments/1z1d1z/thinking_of_picking_up_lispswitching_to_emacs/
+http://orgmode.org/worg/org-contrib/org-protocol.html#sec-4
+http://www.reddit.com/r/emacs/comments/1yzk6n/emacs_shells_or_tmux/
+http://perlstalker.vuser.org/blog/2012/10/16/emacsclient-and-tmux/
+http://www.forbes.com/sites/trulia/2014/02/27/3-often-overlooked-real-estate-tax-breaks/
+http://lifehacker.com/four-skills-that-will-turn-you-into-a-spreadsheet-ninj-1525058930
+http://lifehacker.com/super-cc-is-like-tripit-for-google-calendar-adds-any-e-1525541851?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+lifehacker%2Ffull+%28Lifehacker%29
+http://jello-dashboard.net/overview/jello-dashboard-quickstart-video-tutorial/
+http://www.gtdtimes.com/tag/iphone/
+http://lifehacker.com/how-to-disable-avasts-annoying-sounds-and-popups-1530732542
+https://itunes.apple.com/us/app/outread-speed-reader/id778846279?mt=8
+http://www.farnamstreetblog.com/2014/02/science-religion-and-the-universe/
+http://www.reddit.com/r/emacs/comments/1yc2ea/the_awesome_of_web_browsing_with_emacs_using/
+http://beatofthegeek.com/2014/02/the-awesome-of-web-browsing-with-emacs.html
+http://channikhabra.github.io/2013/10/11/the-most-beautiful-tutorial/
+http://beatofthegeek.com/2014/02/my-setup-for-using-emacs-as-web-browser.html
+http://permalink.gmane.org/gmane.emacs.help/96074
+http://www.fastcolabs.com/3026698/inside-duckduckgo-googles-tiniest-fiercest-competitor?partner
+http://littleoutliner.com/
+http://fargo.io/#
+http://www.amazon.com/exec/obidos/ASIN/B001AYML7K/cooltools-20
+http://www.livescience.com/43276-ancient-earthquake-shroud-of-turin.html
+http://wenshanren.org/?p=111
+http://thenybble.de/projects/orgsite.html
+http://www.reddit.com/r/emacs/comments/1xnhws/speaking_of_emacs_modes_flx_flxido_ido_smex_helm/
+http://www.reddit.com/r/emacs/comments/1xmajj/automated_testing_of_initel/
+http://www.wilfred.me.uk/.emacs.d/init.html
+http://www.eurozine.com/articles/2014-02-06-yermolenko-en.html
+http://www.3quarksdaily.com/3quarksdaily/2014/02/the-crisis-in-american-colleges-rising-tuition-and-labor-degradation.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+3quarksdaily+%283quarksdaily%29
+http://www.wsimagazine.com/uk/diaries/report/art/interview-with-ray-caesar_20140210130745.html#.UxR1H1k8203
+http://www.artofmanliness.com/2008/09/14/the-bushido-code-the-eight-virtues-of-the-samurai/
+http://www.ntnu.edu/cerg/week-1
+http://www.reddit.com/r/emacs/comments/1xjlrq/emacs_modes_that_are_worth_knowing_about/
+http://steve-yegge.blogspot.com/2008/01/emergency-elisp.html
+http://melpa.milkbox.net/#/
+http://www.danielmiessler.com/study/vim/
+http://www.danielmiessler.com/blog/collection-of-less-commonly-used-unix-commands
+http://www.danielmiessler.com/study/git/
+http://hyperpolyglot.org/text-mode-editors
+http://genehack.org/2004/09/
+http://sourceforge.net/apps/mediawiki/womacs/index.php?title=Main_Page
+http://www.webupd8.org/2014/02/modify-pdf-files-in-linux-with-master.html
+http://www.tychoish.com/rhizome/getting-emacs-daemon-to-work-right/
+http://www.youtube.com/watch?v=OcHn0LX4fG4&feature=youtu.be&elq=37fc75019ada4a65b2905b71ba1e13da&elqCampaignId=2712
+http://www.emacswiki.org/emacs/PlannerAndRemind
+http://www.emacswiki.org/emacs/csv-nav.el
+http://www.reddit.com/r/virtualbox
+http://box.matto.nl/w3m.html
+http://wiki.titan2x.com/index.php?title=W3m_cheat_sheet
+http://www.scribd.com/doc/51307577/757-767-Study-Guide
+http://www.smartcockpit.com/aircrafts-models.html
+http://www.smartcockpit.com/plane/BOEING/B767.html
+http://www.smartcockpit.com/plane/BOEING/B757.html
+http://www.slideshare.net/search/slideshow?searchfrom=header&q=767
+http://www.slideshare.net/gustafon/b757-air-systems
+http://quizlet.com/9318427/b-767-study-guide-flash-cards/
+file:///F:/dl/w3m-0.5.3/doc/FAQ.html#install
+http://wiki.43folders.com/index.php/Remind_FAQ
+http://randsinrepose.com/archives/the-builders-high/
+http://bzg.fr/learn-emacs-lisp-in-15-minutes.html
+http://www.makeuseof.com/tag/how-to-authenticate-over-ssh-with-keys-instead-of-passwords/
+http://www.slideshare.net/mharp00/newsfeed?redirect=1
+http://www.alfabb.com/bb/forums/alfa-romeo-cars-sale-wanted/283121-1988-milano-verde.html
+http://www.alfabb.com/bb/forums/alfa-romeo-cars-sale-wanted/252673-91-164s-very-well-kept-2.html
+http://orgmode.org/worg/org-tutorials/weaving-a-budget.html
+http://www.ledger-cli.org/3.0/doc/ledger3.html
+https://groups.google.com/forum/#!searchin/ledger-cli/cygwin
+https://groups.google.com/forum/#!topic/ledger-cli/GsJwwdx-yUk
+http://hledger.org/faq
+https://groups.google.com/forum/#!searchin/ledger-cli/cygwin/ledger-cli/4JRpqIa8hPk/b48mRwn9bhEJ
+http://www.aaii.com/journal/article/19-recommendations-for-minimizing-inheritance-conflict
+https://w1.buysub.com/pubs/N3/WIR/digital_authentication_eBlast.jsp?cds_mag_code=WIR&cds_response_key=1171044553&cds_from_id=ENTITLED
+https://dl.dropboxusercontent.com/u/663178/corbinizer/corbinizer-latest.pdf
+http://sachachua.com/blog/2008/09/emacs-w3m-open-pages-in-external-browsers/
+http://sachachua.com/blog/2008/08/emacs-and-w3m-toggling-between-work-and-the-web/
+http://sachachua.com/blog/2008/08/emacs-and-w3m-quick-searches/
+http://sachachua.com/blog/2008/09/emacs-and-w3m-making-tabbed-browsing-easier/
+<2014-03-26 Wed>
+http://chadok.info/firefox-org-capture/
+http://orgmode.org/worg/org-contrib/org-protocol.html#sec-6-1-1
+http://sachachua.com/blog/2008/05/emacs-gnus-organize-your-mail/
+http://permalink.gmane.org/gmane.emacs.orgmode/68846
+http://doc.norang.ca/org-mode.html#CaptureTemplates
+http://www.lengthofservicenow.com/#!talking-points/c1ghi
+http://www.studydroid.com/index.php?page=viewPack&packId=39719
+http://www.cram.com/flashcards/b757-fuel-1797806
+https://cramberry.net/sets/60215-767-limitations
+http://quizlet.com/6042962/aa-b757b767-ops-limits-flash-cards/
+http://lifehacker.com/the-best-evernote-apps-for-organizing-even-more-of-your-1549049179?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+lifehacker%2Ffull+%28Lifehacker%29
+http://www.3quarksdaily.com/3quarksdaily/2014/03/the-winners-of-the-3qd-politics-social-science-prize-2012.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+3quarksdaily+%283quarksdaily%29
+http://www.forbes.com/pictures/efik45fhlhe/15-ways-to-invite-an-irs-audit-2/
+http://www.glump.net/software/zim-windows
+http://www.glump.net/howto/web/share-your-owncloud-calendar-with-your-friends
+http://procomun.wordpress.com/2014/03/10/writing-a-book-with-emacs/
+http://www.imdb.com/title/tt1747439/
+http://scientiasalon.wordpress.com/2014/03/21/scientia-salon-a-manifesto-for-21st-century-intellectualism/?blogsub=confirming#blog_subscription-2
+http://www.amazon.com/The-Reactionary-Mind-Conservatism-Edmund/dp/0199793743
+http://heidiroizen.tumblr.com/post/80368150370/what-i-learned-negotiating-with-steve-jobs
+http://programmersunlimited.wordpress.com/2014/03/22/how-to-screen-casting-101-become-a-millionaire/
+http://lifehacker.com/personal-zen-scientifically-reduces-anxiety-in-25-minut-1548777682
+http://draketo.de/english/emacs/writing-papers-in-org-mode-acpd
+http://www.atmospheric-chemistry-and-physics.net/submission/latex_instructions.html
+http://lshort.github.io/emacs-init/KeyMap.pdf
+https://github.com/dgtized/brave-new-emacs
+http://www.reddit.com/r/emacs/comments/212yca/dotemacs_in_the_age_of_package_manager/
+https://github.com/bling/dotemacs
+https://github.com/dimitri/el-get
+http://blog.zhengdong.me/2012/03/14/how-i-manage-emacs-packages
+http://blog.binchen.org/?p=1088
+http://www.amazon.com/exec/obidos/ASIN/B000NPAVZG/cooltools-20
+http://www.amazon.com/gp/search/ref=as_li_qf_sp_sr_il_tl?ie=UTF8&camp=1789&creative=9325&index=aps&keywords=rockabye%20baby&linkCode=as2&tag=cooltools-20
+http://www.amazon.com/exec/obidos/ASIN/B002ECFFJ8/cooltools-20
+http://www.leevalley.com/en/garden/page.aspx?p=10553&cat=2,51603
+http://www.auctionzip.com/
+http://www.amazon.com/exec/obidos/ASIN/B008DF54OG/cooltools-20
+http://www.amazon.com/s/ref=nb_sb_ss_i_0_5?url=search-alias%3Dgarden&field-keywords=plant%20stand&sprefix=plant%2Cgarden%2C389&rh=i%3Agarden%2Ck%3Aplant%20stand
+http://kk.org/cooltools/archives/14316?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+CoolTools+%28Cool+Tools%29
+http://www.amazon.com/exec/obidos/ASIN/B001T2ZWU6/cooltools-20
+http://kk.org/cooltools/archives/14064?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+CoolTools+%28Cool+Tools%29
+http://news.yahoo.com/art-transforms-environment-191545113.html
+http://lifehacker.com/delete-old-drm-copies-of-itunes-music-and-download-drm-1546445214
+http://twofactorauth.org/
+http://www.selfication.com/how-to-breathe/
+http://onethingwell.org/post/77815107767/ftpbox
+http://www.lonecpluspluscoder.com/2014/03/running-emacs-from-a-windows-explorer-context-menu/
+https://itunes.apple.com/us/app/speaky-text-article-voice/id754061898
+http://onethingwell.org/post/4779791834/prompt
+https://itunes.apple.com/us/app/issh-ssh-vnc-console/id287765826
+http://www.secretgeometry.com/apps/cathode/
+http://onethingwell.org/post/9123500966/httrack
+https://itunes.apple.com/us/app/sitesucker/id346896838
+http://kk.org/cooltools/archives/14187?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+CoolTools+%28Cool+Tools%29
+http://blog.fogcreek.com/how-we-make-trello/
+http://onethingwell.org/post/79455068643/imitone
+https://github.com/purcell/emacs.d
+http://www.marketminder.com/a/fisher-investments-corrective-behavior/25d11099-a3b2-4843-8474-b672b6baacbc.aspx
+http://www.reddit.com/r/emacs/comments/20bv2w/conveniently_search_various_web_sites_from_emacs/
+https://github.com/emacs-helm/helm/blob/master/helm-net.el
+http://blog.jenkster.com/2013/10/finding-files-in-emacs-helm.html
+http://steckerhalter.co.vu/steckemacs.html
+http://stackoverflow.com/questions/18987621/how-to-restore-anything-like-behavior-for-tab-autocomplete-in-helm
+http://amitp.blogspot.com/2012/10/emacs-helm-for-finding-files.html
+https://github.com/emacs-helm/helm/wiki
+http://www.reddit.com/r/emacs/comments/pm9n7/what_are_your_musthave_modes/
+http://www.reganmian.net/wiki/emacs
+https://groups.google.com/forum/?fromgroups#!forum/emacs-helm
+https://www.google.com/search?q=Wide+Mouth+Canning+jars&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox&channel=sb
+http://www.bankrate.com/finance/mortgages/how-much-house-can-you-buy--1.aspx
+http://www.moneyunder30.com/percentage-income-mortgage-payments
+http://www.nytimes.com/2009/09/12/your-money/mortgages/12money.html?_r=0
+http://www.cultofmac.com/271225/appreciated-ios-7-feature-will-change-world/?utm_source=howtogeek&utm_medium=email&utm_campaign=newsletter
+http://support.apple.com/kb/ht5887
+http://192.168.100.1:8000/index.php?zone=myzone&redirurl=http%3A%2F%2Fwww.howtogeek.com%2F184594%2Fhow-to-easily-keep-track-of-your-to-do-list-using-the-taskit-app-in-word-2013
+http://www.howtogeek.com/184871/8-tips-and-tricks-for-browsing-with-safari-on-ipad-and-iphone/
+<2014-03-28 Fri>
+http://the-brannons.com/edbrowse/
+http://www.rileybrandt.com/2014/03/09/photoshop-to-gimp/
+http://kevinchau.me/becoming-those-around-you
+http://onethingwell.org/post/80888488970/the-journalist
+http://play.typeracer.com/
+http://stackoverflow.com/questions/17777189/what-is-the-difference-of-tex-mode-and-latex-mode-and-latex-mode-in-emacs
+http://stackoverflow.com/questions/208193/why-should-i-use-an-ide
+http://stackoverflow.com/questions/22620774/getting-the-org-mode-manual-in-emacs
+http://www.reddit.com/r/emacs/comments/2188jl/my_lovehate_relationship_with_emacs/
+http://dev.mikamai.com/post/80567364680/my-love-hate-relationship-with-emacs
+http://julien.danjou.info/blog/2014/the-hacker-guide-to-python-has-been-released
+http://emacspeak.blogspot.com/2014/03/emacspeak-webspace-glancing-at.html
+http://www.lunaryorn.com/2014/03/26/search-based-fontification-with-keywords.html
+http://www.lunaryorn.com/2014/03/12/syntactic-fontification-in-emacs.html#syntactic-fontification-in-emacs
+http://www.lunaryorn.com/2014/02/27/talking-straight-about-GNUs-goals.html
+https://github.com/purcell/emacs.d/blob/master/lisp/init-elpa.el#L63-L73
+https://github.com/larstvei/dot-emacs#package
+http://www.reddit.com/r/emacs/comments/21a4p9/use_recentf_and_ido_together/
+https://github.com/owainlewis/emacs-color-themes
+http://www.wisdomandwonder.com/article/8391/build-the-configuration-you-need
+http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html
+http://news.yahoo.com/building-pillar-sky-space-elevator-q-author-william-121156293.html
+http://www.newstatesman.com/culture/2014/03/living-life-book-why-reading-isnt-always-good-you
+http://newsle.com/article/0/133608734/
+http://stackoverflow.com/questions/15531399/emacs-cant-find-uname-when-attempting-to-connect-to-remote-host-with-tramp
+http://www.foodnetwork.com/recipes/winner-aarti-sequeira1/mums-everyday-red-lentils-recipe.html?ic1=obinsite
+http://www.foodnetwork.com/recipes/food-network-kitchens/whole-grain-breakfast-porridge-recipe2.html
+http://www.foodnetwork.com/recipes/photos/spring-produce-at-its-best.page-3.html
+http://www.foodnetwork.com/recipes/robin-miller/vegetarian-chili-recipe.html
+http://www.amazon.com/product-reviews/B0085YTDM4
+https://itunes.apple.com/us/app/readr-10-000+-magazines-one/id444493186?mt=8
+https://anytimesub.com/
+http://www.eddiebauer.com/catalog/product.jsp?ensembleId=35594&oessoa=6046151&CA_6C15C=675418085&cm_mmc=CJ-_-dealnews.com-_-552179-_-Redirect+Link&utm_source=cj&utm_medium=affiliate&utm_content=552179&cvosrc=affiliate.cj.552179
+http://www.wikivs.com/wiki/Vim_vs_Emacs
+http://www.cookingchanneltv.com/recipes/slow-smoked-country-style-bbq-ribs.html
+http://www.simplyrecipes.com/recipes/slow_and_low_country_ribs/
+http://www.the-greatest-barbecue-recipes.com/smoking-ribs.html
+http://chowhound.chow.com/topics/717678
+http://edge.org/conversation/on-kahneman
+<2014-04-03 Thu>
+http://stackoverflow.com/questions/22746387/how-can-i-use-only-pdf-files-in-view-of-auctex
+https://groups.google.com/forum/#!forum/emacs-helm
+http://www.reddit.com/r/emacs/comments/21xou6/elisp_how_to_get_started/
+http://www.reddit.com/r/emacs/comments/21t8qf/emacs_for_developers_tutorial/
+http://eschulte.github.io/emacs24-starter-kit/
+http://sachachua.com/blog/series/emacs-basics-2/
+http://www.blogbyben.com/2014/04/getting-back-in-touch-with-my-e-mail.html
+http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html
+http://emacsworld.blogspot.com/2014/04/some-interesting-emacs-threads-and.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GotEmacs+%28Got+Emacs%3F%29
+http://stackoverflow.com/questions/15303611/emacs-multi-term-not-displaying-special-characters-correctly
+http://stackoverflow.com/questions/22735651/how-to-run-emacs-in-ssh-x-from-linux-to-mac-os-x-with-xforwarding
+http://stackoverflow.com/questions/22720546/regexp-languages-and-replacements-in-emacs
+http://stackoverflow.com/questions/715855/how-can-i-use-emacs-tramp-to-double-hop-ssh/16410046#16410046
+http://www.gnu.org/software/tramp/#Ad_002dhoc-multi_002dhops
+http://sachachua.com/sharing/evil-plans.html#sec-2-5
+http://sachachua.com/blog/2014/03/emacs-tweaks-export-org-checkboxes-using-utf-8-symbols/
+http://the-how-to-geek-old.kinja.com/tag/command-line?startTime=1247076000428
+http://lifehacker.com/399468/top-10-command-line-tools/all
+http://www.airserver.com/
+https://zapier.com/
+http://www.tonymacx86.com/mountain-lion-desktop-support/62630-ep45-ud3p-success-4.html
+http://lifehacker.com/5351553/hackintosh-bios-gallery//all
+http://lifehacker.com/5351485/how-to-build-a-hackintosh-with-snow-leopard-start-to-finish/all
+http://www.reddit.com/r/hackintosh/comments/1qucar/sl_lifehacker_build_from_2009is_it_possible_to/
+http://www.tonymacx86.com/mavericks-desktop-support/112877-success-old-school-gigabyte-ga-ep45-ud3p-q9650-8gb-ddr2-gtx280.html
+http://www.insanelymac.com/forum/topic/187440-lifehacker-guide-with-ga-ep45-ud3p-motherboard/page-118
+http://www.insanelymac.com/forum/topic/284656-clover-general-discussion/
+http://www.insanelymac.com/forum/topic/282787-clover-v2-instructions/
+http://www.tonymacx86.com/mountain-lion-desktop-support/62630-ep45-ud3p-success-7.html
+http://www.macbreaker.com/2013/10/install-mavericks-on-hackintosh-with-unibeast.html
+http://www.macbreaker.com/2013/06/how-to-install-os-x-109-mavericks-dp1.html
+http://thetecherra.com/2012/07/10/tutorial-run-os-x-mountain-lion-10-8-gm-on-a-pc-hackintoshosx86-video/
+http://www.reddit.com/r/hackintosh/search?q=GA-EP45-UD3P&restrict_sr=on
+http://www.reddit.com/r/hackintosh/comments/u3uhr/success_snow_leopard_on_a_gaep45ud3p/
+http://www.tonymacx86.com/mavericks-desktop-support/112877-success-old-school-gigabyte-ga-ep45-ud3p-q9650-8gb-ddr2-gtx280-3.html
+http://www.tonymacx86.com/snow-leopard-desktop-support/8499-iboot-multibeast-gigabyte-ep45-ud3p-intel-q9650.html?Gigabyte_EP45-UD3P_Intel_Q9650=
+http://www.tonymacx86.com/mountain-lion-desktop-support/62630-ep45-ud3p-success.html
+http://www.tonymacx86.com/articles/125939-article-os-x-10-9-2-update-42.html
+http://www.insanelymac.com/forum/topic/292619-success-old-school-ga-ep45-ud3p/
+http://wiki.osx86project.org/wiki/index.php/HCL_10.9.2
+http://wiki.osx86project.org/wiki/index.php/Installation_Guides#10.9.2_Guides
+https://www.google.com/search?q=InstallESD.dmg&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox&channel=rcs
+http://www.macworld.com/article/2056561/how-to-make-a-bootable-mavericks-install-drive.html
+http://www.macworld.com/article/2056564/how-to-install-mavericks-over-leopard.html
+http://www.insanelymac.com/forum/topic/262015-guide-lion-on-ga-ep45-ud3r-very-close-to-perfection/
+http://www.tonymacx86.com/articles/125939-article-os-x-10-9-2-update-42.html
+http://www.washingtonpost.com/sf/local/2013/11/09/washington-a-world-apart/
+https://www.gnu.org/software/emacs/manual/eintr.html
+https://sites.google.com/site/steveyegge2/effective-emacs
+http://www.emacswiki.org/emacs/SteveYegge
+http://steve-yegge.blogspot.com/2008/01/emergency-elisp.html
+http://streeteasy.com/building/312-west-77-street-new_york
+http://my.hojoki.com/
+<2014-04-11 Fri>
+http://www.openculture.com/2014/04/download-35000-works-of-art-from-the-national-gallery.html
+http://www.openculture.com/2014/04/philosophize-this.html
+http://chameleon.alessandroboschini.it/index.php
+http://sachachua.com/blog/2014/04/emacs-chat-tom-marble/
+https://github.com/atykhonov/iregister.el
+http://sachachua.com/blog/2014/04/emacs-basics-customizing-emacs/
+http://www.reddit.com/r/emacs/comments/22g89n/installing_org_via_packageel_breaks_my_config/
+http://sachachua.com/blog/2014/04/emacs-chat-iannis-zannos-emacs-supercollider/
+http://www.reddit.com/r/emacs/comments/22gj9n/chordcompletion_menu/
+http://www.reddit.com/r/emacs/comments/22hzx7/what_are_your_keychord_abbreviations/
+http://www.3quarksdaily.com/3quarksdaily/2014/04/epic-fail.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+3quarksdaily+%283quarksdaily%29
+http://www.sciencedaily.com/releases/2014/04/140404221744.htm?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+sciencedaily+%28Latest+Science+News+--+ScienceDaily%29
+http://www.nybooks.com/articles/archives/2014/apr/24/mental-life-plants-and-worms-among-others/?insrc=hpma
+http://edge.org/conversation/on-kahneman
+http://c2.com/cgi/wiki?AlanKaysReadingList
+http://theappwhisperer.com/2014/04/07/olloclip-macro-iphone-photography-technical-tutorial-by-paul-brown-first-steps/
+http://www.garden-fountains.com/austin-fountain/
+http://www.amazon.com/gp/product/1935764136/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1935764136&linkCode=as2&tag=farnamstreet-20#
+http://www.reddit.com/r/emacs/comments/229bl0/how_to_configure_auctex_to_automatically_use/
+https://github.com/scrapinghub/portia
+http://www.utahmountainbiking.com/fix/idx-main.htm
+https://www.whiteflowerfarm.com/growing-tuberous-begonias.html
+http://mobileorg.ncogni.to/doc/getting-started/using-dropbox/
+http://www.weightwatchers.com/food/rcp/RecipePage.aspx?recipeId=202171
+http://www.weightwatchers.com/util/art/index_art.aspx?tabnum=1&art_id=107331&sc=3025
+http://www.spain-in-iowa.com/2010/01/posole-mexican-pork-and-hominy-stew/
+http://www.emacswiki.org/emacs/PlannerAndRemind
+http://sachachua.com/notebook/emacs/remind.el
+http://sachachua.com/notebook/emacs/planner-diary.el
+https://public.alliedpilots.org/APA/LinkClick.aspx?fileticket=2_6Oj5s1g8I%3d&tabid=839&mid=1794
+http://yalepress.yale.edu/yupbooks/book.asp?isbn=9780300190137
+https://www.aapilots.com/uploads/temp/16112.pdf
+http://www.realtor.com/realestateandhomes-detail/4101-Indian-Creek-Dr-Apt-508_Miami-Beach_FL_33140_M64859-55832?row=1
+http://www.miamidade.gov/transit/library/routes/150.pdf
+http://www.realtor.com/realestateandhomes-detail/4141-Nautilus-Dr--8-A_Miami-Beach_FL_33140_M67029-09495?row=1
+http://www.realtor.com/realestateandhomes-detail/1331-Lincoln-Rd-Apt-605_Miami-Beach_FL_33139_M66986-32565?row=1
+http://www.realtor.com/realestateandhomes-detail/800-W-42Nd-St--2-A_Miami-Beach_FL_33140_M62055-38631?row=1
+https://www.camscanner.net/
+<2014-04-17 Thu>
+http://www.3quarksdaily.com/3quarksdaily/2014/04/hejinian-whitman-and-more-on-the-politics-of-sleep.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+3quarksdaily+%283quarksdaily%29
+http://www.reddit.com/r/emacs/comments/233607/what_do_you_use_emacs_for_other_than/
+http://www.reddit.com/r/emacs/comments/232zuq/paradox_modernize_your_package_menu_with_ratings/
+http://www.reddit.com/r/emacs/comments/2328s3/elscreen_obliterates_column_headers_in/
+http://www.farnamstreetblog.com/2014/04/the-deliberative-president/
+https://github.com/BrettWitty/dotemacs
+http://sachac.github.io/.emacs.d/Sacha.html
+http://toumorokoshi.github.io/emacs-from-scratch-part-3-extending-emacs-with-elisp.html
+http://toumorokoshi.github.io/emacs-from-scratch-part-1-extending-emacs-basics.html
+http://toumorokoshi.github.io/emacs-from-scratch-part-2-package-management.html
+http://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/
+http://bling.github.io/blog/2014/01/21/asynchronous-eval-with-stylus-and-skewer/
+http://www.reddit.com/r/emacs/comments/22vizk/how_do_you_navigate_inside_buffers/
+https://github.com/vitoshka/imenu-anywhere
+http://babbagefiles.blogspot.co.uk/2010/11/hack-emacs-like-bindings-for.html?m=1
+http://blog.binchen.org/?tag=keysnail
+https://source.opennews.org/en-US/articles/introducing-tabula/
+http://lifehacker.com/the-best-apps-for-automatically-cleaning-up-your-music-1561265062
+http://onethingwell.org/post/81480369896/sharedrop
+http://lifehacker.com/lastpass-now-tells-you-which-heartbleed-affected-passwo-1561522244?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+lifehacker%2Ffull+%28Lifehacker%29
+http://lifehacker.com/this-list-reveals-the-heartbleed-affected-passwords-to-1561755048?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+lifehacker%2Ffull+%28Lifehacker%29
+http://www.addictivetips.com/windows-tips/copyq-clipboard-manager-that-keeps-your-history-supports-scripting/
+http://chameleon.alessandroboschini.it/index.php
+http://sachachua.com/blog/2014/04/emacs-chat-tom-marble/
+https://github.com/atykhonov/iregister.el
+http://sachachua.com/blog/2014/04/emacs-basics-customizing-emacs/
+http://sachachua.com/blog/2014/04/emacs-chat-iannis-zannos-emacs-supercollider/
+http://www.reddit.com/r/emacs/comments/22gj9n/chordcompletion_menu/
+http://www.reddit.com/r/emacs/comments/22hzx7/what_are_your_keychord_abbreviations/
+http://getpocket.com/a/queue/
+http://www.reddit.com/r/emacs/comments/229bl0/how_to_configure_auctex_to_automatically_use/
+http://mobileorg.ncogni.to/doc/getting-started/using-dropbox/
+http://www.weightwatchers.com/util/art/index_art.aspx?tabnum=1&art_id=107331&sc=3025
+http://www.spain-in-iowa.com/2010/01/posole-mexican-pork-and-hominy-stew/
+https://public.alliedpilots.org/APA/LinkClick.aspx?fileticket=2_6Oj5s1g8I%3d&tabid=839&mid=1794
+http://www.realtor.com/realestateandhomes-detail/4101-Indian-Creek-Dr-Apt-508_Miami-Beach_FL_33140_M64859-55832?row=1
+http://www.last.fm/music/Brian+Eno/_/The+Big+Ship
+http://www.realtor.com/realestateandhomes-detail/1280-S-Alhambra-Cir-Apt-1427_Coral-Gables_FL_33146_M57722-27129?row=1
+http://www.realtor.com/realestateandhomes-detail/1205-Mariposa-Ave--301_Coral-Gables_FL_33146_M60528-92256?row=1
+http://orgmode.org/worg/org-tutorials/weaving-a-budget.html
+http://www.ledger-cli.org/3.0/doc/ledger3.html
+http://orgmode.org/manual/Template-expansion.html#Template-expansion
+http://splash-of-open-sauce.blogspot.com/2010/09/org-capture-templates_08.html
+http://www.windley.com/archives/2010/12/capture_mode_and_emacs.shtml
+http://www.prjorgensen.com/tag/org-mode/
+http://orgmode.org/worg/org-contrib/org-protocol.html
+http://www.amazon.com/gp/offer-listing/0805097252/ref=tmm_hrd_used_olp_sr?ie=UTF8&condition=used&sr=&qid=
+http://www.bloombergview.com/articles/2014-04-14/obamacare-haters-aren-t-mysterious?cmpid=yhoo
+http://www.countryliving.com/outdoor/gardening/fast-growing-vines#slide-1
+http://www.countryliving.com/outdoor/gardening/how-to-grow-hellebores#slide-1
+http://www.countryliving.com/outdoor/gardening/seed-starting#slide-1
+<2014-04-30 Wed>
+http://onethingwell.org/post/73215400576/command-c
+http://www.viemu.com/a-why-vi-vim.html
+http://blog.tjll.net/ssh-kung-fu/
+http://www.emacswiki.org/emacs/space-chord.el
+https://github.com/lydell/dual
+http://code.google.com/p/keymapper/
+http://stackoverflow.com/questions/17483598/maintaining-multiple-emacs-configurations-at-the-same-time
+https://github.com/krisajenkins/helm-spotify
+http://stackoverflow.com/questions/23313281/change-embed-pdfviewer-in-emacs
+http://digsim.is-a-geek.com/blog/synctex-with-emacs-and-evince.html
+http://sachachua.com/blog/2014/04/reflecting-10-episodes-emacs-chats/
+http://blog.tjll.net/yet-another-vim-setup/
+http://blog.sanctum.geek.nz/buffers-windows-tabs/
+http://harryrschwartz.com/2014/04/08/an-introduction-to-emacs-lisp.html
+https://snarfed.org/why_i_run_shells_inside_emacs
+https://aereo.com/register/account?c=goog001&gclid=CNnU6bP--L0CFahlOgodbmwAuw
+http://asymptote.sourceforge.net/
+http://orgmode.org/worg/org-contrib/babel/languages/ob-doc-asymptote.html
+http://wappwolf.com/dropboxautomator
+http://www.emacswiki.org/emacs-it/SshWithNTEmacs
+https://www.quantopian.com/sector-etf-rotation
+https://daniel.molkentin.net/2014/04/21/fighting-cargo-cult-the-incomplete-ssltls-bookmark-collection/
+http://www.gitguys.com/topics/merging-with-a-gui/
+https://habitrpg.com/static/front
+http://www.openculture.com/2012/05/how_david_byrne_and_brian_eno_make_music_together.html
+http://sachachua.com/blog/2014/04/org-mode-helps-deal-ever-growing-backlog/
+http://lifehacker.com/how-to-fix-linkedins-biggest-annoyances-1567460670
+http://www.linuxjournal.com/content/image-manipulation-imagemagick?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+linuxjournalcom+%28Linux+Journal+-+The+Original+Magazine+of+the+Linux+Community%29
+https://github.com/ryjm/habitrpg.el
+http://linuxcommand.org/tlcl.php
+https://www.google.com/search?q=Unroll.me&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox&channel=rcs
+http://www.blog.7breaths.co.uk/2007/04/gtd-with-onenote-set-up.html
+http://manage-this.com/onenote-outlook-gtd-system/
+http://www.reddit.com/r/emacs/comments/1k37nd/gtd_in_orgmode_and_notes_for_projects/
+http://members.optusnet.com.au/%7Echarles57/GTD/gtd_workflow.html
+http://orgmode.org/worg/org-tutorials/index.html
+http://members.optusnet.com.au/~charles57/GTD/datetree.html
+http://stackoverflow.com/questions/7464951/how-to-make-org-protocol-work
+http://lists.gnu.org/archive/html/emacs-orgmode/2013-04/msg01211.html
+https://github.com/hdweiss/org-mode/blob/master/lisp/org-protocol.el
+http://jcardente.blogspot.com/2010/09/saving-weblinks-to-org-mode-from-safari.html
+http://www.prjorgensen.com/2011/12/12/launching-org-capture-in-win-7-with-autohotkey/
+http://orgmode.org/worg/org-tutorials/org-protocol-custom-handler.html
+http://orgmode.org/worg/org-contrib/org-protocol.html
+https://github.com/MobileOrg/mobileorg/wiki/Troubleshooting
+https://github.com/fniessen/orgmk
+<2014-05-07 Wed>
+http://www.openculture.com/2014/04/do-not-go-gentle-into-that-good-night-performed-by-john-cale.html
+http://lifehacker.com/mailbox-for-ios-gets-auto-swipe-dropbox-sync-and-mo-1566064941
+http://twocents.lifehacker.com/watch-out-for-these-closing-costs-when-buying-a-home-1566828810/+whitsongordon
+http://www.zillow.com/wikipages/List-of-Closing-Costs-and-Fees/
+https://www.youtube.com/watch?v=JBHzXF-mVjY
+http://lifehacker.com/how-to-get-the-best-linux-features-on-windows-1569195729
+http://www.hanselman.com/blog/IsTheWindowsUserReadyForAptget.aspx
+https://chocolatey.org/
+https://github.com/chocolatey/chocolatey/wiki/CommandsReference
+https://github.com/chocolatey/chocolatey/wiki/CommandsCygwin
+http://lifehacker.com/how-to-run-a-portable-version-of-windows-from-a-usb-dri-1565509124
+http://lifehacker.com/5926945/build-the-perfect-portable-powerful-mac-then-carry-it-in-your-pocket
+http://mizage.com/windivvy/
+http://lifehacker.com/5962588/the-50-free-apps-were-most-thankful-for
+http://lifehacker.com/5697196/the-most-helpful-ways-to-use-google-voice-that-youre-not-using
+http://lifehacker.com/5571978/top-10-clever-google-voice-tricks
+http://www.osalt.com/system-utilities
+http://forums.macrumors.com/showthread.php?p=18411621#post18411621
+http://stackoverflow.com/questions/19807872/how-to-upgrade-the-apple-os-from-10-6-8-to-10-9
+http://www.extremetech.com/computing/169314-how-to-download-os-x-10-9-mavericks-for-free
+http://blog.authy.com/authy-for-pc
+http://lifehacker.com/learn-the-basics-of-ios-automation-with-launch-center-p-1569274434
+http://lifehacker.com/the-power-users-guide-to-better-virtual-machines-in-vir-1569943402?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+lifehacker%2Ffull+%28Lifehacker%29
+http://lifehacker.com/5204434/the-beginners-guide-to-creating-virtual-machines-with-virtualbox
+http://www.hopper.com/tools
+http://www.reddit.com/r/linux4noobs/comments/245sws/i_want_to_do_a_full_system_backup/
+http://www.reddit.com/r/linux4noobs/comments/21qq26/windows_xp_users_welcome_to_freedom/
+http://www.techpowerup.com/forums/threads/getting-wd-my-book-to-work-on-ubuntu.182505/#post-2881587
+http://cookitfrozen.com/recipes/salmon/Saut__ing_Pan_seared/3
+http://labs.strava.com/heatmap/#10/-74.17849/41.10270/gray/bike
+http://www.reddit.com/r/emacs/comments/24l8f2/beginner_setting_up_emacs_for_python/
+http://trystash.com/
+https://medium.com/message/705b87339971
+http://mashable.com/2014/04/26/big-data-pregnancy/
+http://theappwhisperer.com/2014/05/01/photo-education-accessibility-getting-the-picture-with-panoramas-on-iphone-by-luis-perez/
+http://sachachua.com/blog/category/geek/emacs/org/#post-27181
+https://docs.google.com/document/d/1v4i8nDoFd-ykBhcCGd0rw2RzNl1qor2aDvGYuMkDGdo/pub
+https://github.com/abo-abo/org-fu/blob/master/org-fu.el
+https://github.com/osiris/org-bash-utils
+https://sites.google.com/site/chrishopperprojects/home/amahi_roku_setup
+http://lifehacker.com/productivity-101-a-primer-to-the-getting-things-done-1551880955/1561157293/+GFMOSS
+http://lifehacker.com/5892905/the-secret-weapon-combines-gtd-and-evernote-into-one-synchronized-productivity-system
+http://hackerspace.lifehacker.com/why-im-a-free-cloud-storage-horder-472710149
+http://www.maximumpc.com/article/features/roll_your_own_home_server2013?page=0,3
+https://www.google.com/search?q=GA-EP45-UD3P+10.9&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox&channel=sb
+http://www.insanelymac.com/forum/topic/292619-success-old-school-ga-ep45-ud3p/
+http://www.insanelymac.com/forum/topic/289083-os-x-109-myhack-usb-installer-beta/
+http://myhack.sojugarden.com/guide/
+http://david.rothlis.net/keyboards/microsoft_natural_osx/
+<2014-05-24 Sat>
+http://sachachua.com/blog/2014/05/cobbling-together-semi-auto-responder-using-emacs-gnus-org-contacts/
+https://github.com/zk-phi/sublimity
+http://lifehacker.com/the-best-self-hosted-alternatives-to-popular-services-1579866571/all
+https://www.google.com/search?num=100&client=firefox&hs=UYF&rls=org.mozilla%3Aen-US%3Aunofficial&channel=rcs&q=btsync+tutorial&oq=BTSync+tu&gs_l=serp.3.0.0l3j0i22i30l5.13201.15653.0.18845.3.3.0.0.0.0.272.623.0j1j2.3.0.ehm_loc%2Chmss2%3Dfalse...0...1.1.44.serp..0.3.620.d7XF4DtyilU
+http://www.howtoforge.com/install-bittorrent-sync-on-debian-and-ubuntu-linux
+http://nickology.com/2013/05/06/bitorrent/
+http://lifehacker.com/5993596/how-to-set-up-your-own-private-cloud-storage-service-in-five-minutes-with-owncloud
+http://doc.owncloud.org/server/5.0/admin_manual/installation/installation_linux.html
+http://www.linuxjournal.com/content/command-line-cloud-gcalcli?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+linuxjournalcom+%28Linux+Journal+-+The+Original+Magazine+of+the+Linux+Community%29
+http://www.reddit.com/r/emacs/comments/25sw79/sacha_chua_planning_an_emailbased_course_for/
+http://sachachua.com/blog/2014/04/reinvesting-time-and-money-into-emacs/
+http://www.reddit.com/r/emacs/comments/25v0eo/you_emacs_tips_and_tricks/
+http://marmalade-repo.org/
+http://www.reddit.com/r/emacs/comments/260mi5/use_firefox_in_emacs_way/
+http://blog.binchen.org/posts/use-firefox-in-emacs-way-3.html
+http://sachachua.com/blog/2014/05/planning-e-mail-based-course-emacs-lisp/
+http://sachachua.com/blog/2014/05/emacs-chat-bozhidar-batsov/
+http://lifehacker.com/send-anywhere-transfers-files-quickly-and-securely-acro-1576763031
+http://hints.macworld.com/article.php?story=20140415132734925
+http://hackaday.com/2014/05/16/isee-3-ready-to-come-home/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+hackaday%2FLgoM+%28Hack+a+Day%29
+https://itunes.apple.com/us/podcast/duke-porn-star-belle-knox/id814715884?i=305394344&mt=2
+http://www.nybooks.com/articles/archives/2014/jun/05/stretch-genes/
+http://ericjmritz.name/2013/11/25/simplify-emacs-configuration-with-use-package/
+https://github.com/vikasrawal/orgpaper/blob/master/orgpapers.org
+http://www.reddit.com/r/linux4noobs/search?q=virtualbox&restrict_sr=on
+http://www.bbc.com/future/story/20140514-how-extreme-isolation-warps-minds
+http://blogs.scientificamerican.com/sa-visual/2014/05/12/a-look-under-the-hood-of-online-data-visualization/
+http://www.visualisingdata.com/index.php/2014/05/the-challenges-of-teaching-data-visualisation/
+http://blogs.scientificamerican.com/guest-blog/2014/05/12/parasitic-worms-wiggle-into-modern-medicine-qa/
+http://hackaday.com/2012/08/04/ask-hackaday-whats-your-backup-solution/
+http://www.weitz.de/einstein.html
+http://sourcesofinsight.com/think-critically/
+http://www.salon.com/2014/05/11/heaven_is_for_neuroscience_how_the_brain_creates_visions_of_god/?utm_source=facebook&utm_medium=socialflow
+http://phil.hagelberg.usesthis.com/
+https://www.google.com/search?q=synctex+with+SumatraPDF&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox&channel=rcs
+http://lists.gnu.org/archive/html/emacs-devel/2002-02/msg00333.html
+http://emacsnyc.org/2014/05/06/monthly-meetup-writing-games-with-emacs.html
+http://www.reddit.com/r/emacs/comments/2513zo/ediff_tip_make_vertical_split_the_default/
+https://github.com/jhenahan/emacs.d/blob/master/emacs-init.org#helm-1
+http://www.reddit.com/r/emacs/comments/24rd6i/emacs_cloud/
+http://emacslife.com/
+http://pages.sachachua.com/.emacs.d/Sacha.html
+https://github.com/sachac/.emacs.d/blob/gh-pages/Sacha.org
+https://github.com/caskroom/homebrew-cask/blob/master/USAGE.md
+http://code.tutsplus.com/tutorials/setting-up-a-mac-dev-machine-from-zero-to-hero-with-dotfiles--net-35449
+http://hints.macworld.com/search.php?query=10.6&keyType=all&type=all&mode=search&order=hits&direction=desc&results=50&page=2
+http://gardengnomedrone.com/products
+https://github.com/
+http://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/#snow-leopard
+http://www.moncefbelyamani.com/email-the-url-and-title-of-the-current-web-page-in-one-keystroke-with-keyboard-maestro/
+https://pinboard.in/u:monfresh/t:git/
+http://www.paulrohde.com/github-101-on-windows/
+http://css-tricks.com/video-screencasts/101-lets-suck-at-github-together/
+http://ire.org/events-and-training/event/973/1086/
+http://www.paulrohde.com/up-and-running-with-git-and-visual-studio/
+https://github.com/owainlewis/emacs-color-themes
+http://www.43folders.com/2005/02/24/guest-mike-harris-looks-at-remind
+http://code.google.com/p/remind-conf-mode/
+http://www.roaringpenguin.com/products/remind
+https://us-mg5.mail.yahoo.com/neo/launch?.rand=fli1190nuq2jt#1397207058
+http://www.amazon.com/exec/obidos/ASIN/0452010713/ryanholnet-20%22%20%5Ct%20%22_blank
+http://www.amazon.com/exec/obidos/ASIN/0985081139/ryanholnet-20%22%20%5Ct%20%22_blank
+http://www.amazon.com/exec/obidos/ASIN/0811218201/ryanholnet-20%22%20%5Ct%20%22_blank
+http://www.amazon.com/gp/offer-listing/0140051643/ref=tmm_pap_used_olp_sr?ie=UTF8&condition=used&sr=&qid=
+http://www.amazon.com/exec/obidos/ASIN/0307389049/ryanholnet-20%22%20%5Ct%20%22_blank
+https://plex.tv/
+https://www.google.com/search?q=devonthink+emacs&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox&channel=sb
+https://groups.google.com/forum/#!topic/43folders/pfPiJiEeJu4
+http://www.stevenberlinjohnson.com/movabletype/archives/000230.html
+http://jmjeong.com/Writing-Devonthink-Pro-article-using-orgmode/
+http://duckrecipeswoheh.wordpress.com/2014/01/17/personal-information-and-knowledge-management-with-devonthink-and-devonagent/
+https://slashusr.wordpress.com/tag/rants/
+https://slashusr.wordpress.com/2013/12/30/whats-new-in-emacs-24-4-2/
+http://www.masteringemacs.org/articles/2013/12/29/whats-new-in-emacs-24-4/
+http://en.wikipedia.org/wiki/List_of_personal_information_managers
+http://waxbanks.typepad.com/blog/2010/11/huh-i-have-a-workflow.html
+https://news.ycombinator.com/item?id=4499615
+http://douglasjohnston.net/archives/2005/05/22/devonthink-attic/
+http://sachachua.com/blog/
+http://sachachua.com/blog/2012/06/things-that-ive-used-emacs-for/
+https://github.com/jwiegley/dot-emacs/blob/master/lisp/org-devonthink.el
+http://lists.gnu.org/archive/html/emacs-orgmode/2012-07/msg00499.html
+http://www.aicapilot.org/
+http://docs.typo3.org/typo3cms/extensions/sphinx/AdministratorManual/RenderingPdf/InstallingLaTeXLinux.html
+http://www.tug.org/mactex/
+http://www.cpierce.org/2009/08/getting-devonthink-pro-office-2-to-work-with-snow-leopard/
+http://www.asianefficiency.com/technology/introduction-to-devonthink/
+http://www.auvsi.org/home
+http://www.wired.com/2014/05/f1-drivers-skills/
+http://www.wired.com/2014/05/surface-pro-3-debut/
+http://www.mitchchn.me/2014/os-x-terminal/
+http://www.sciencefriday.com/video/10/01/2010/mark-twain-and-science-it-s-complicated.html
+http://www.marketminder.com/a/fisher-investments-musings-on-volatility/c0680f4c-73a4-4892-8a58-3f7ad65e0ee6.aspx?wherefrom=popad&country=US&PC=MKTMNL1M28
+http://thenextweb.com/entrepreneur/2014/05/11/product-managers-suck-better-one/?utm_source=pocket&utm_medium=email&utm_campaign=pockethits
+http://chowhound.chow.com/topics/317203
+http://www.whitepages.com/name/Donetta-Poole/Saint-Louis-MO/69sdr53
+http://orgmode.org/manual/Installation.html
+http://stackoverflow.com/questions/9149868/how-to-start-emacsformacosx-in-terminal
+http://twapilot.org/eve/forums/a/tpc/f/1001058223/m/8690065076
+<2014-05-28 Wed>
+https://webmaker.org/
+http://lifehacker.com/the-best-bookmarklets-that-make-mobile-browsing-less-an-1572586479
+http://mattgemmell.com/mac-keyboard-shortcuts/
+http://blog.l0cal.com/2014/05/23/from-gmail-to-fastmail/
+http://justinsboringpage.blogspot.com/2014/05/sending-notifications-from-emacs.html
+https://gist.github.com/sabof/5528535a4726b1b908f0
+http://blog.bufferapp.com/keyboard-shortcuts-ultimate-list
+http://www.openculture.com/2014/05/ray-bradbury-on-zen-and-the-art-of-writing-1973.html
+http://danceofreason.blogspot.com/2014/05/rationalize-that.html
+http://www.foreignaffairs.com/articles/141453/jack-devine/what-really-happened-in-chile
+http://www.newyorker.com/arts/critics/books/2014/05/26/140526crbo_books_kolbert?currentPage=all
+http://moreintelligentlife.com/content/ideas/ian-leslie/uses-difficulty
+http://news.slashdot.org/story/14/05/24/1456211/microsoft-office-mix-no-teacher-left-behind-course-authoring?utm_source=rss1.0mainlinkanon&utm_medium=feed
+http://en.wikipedia.org/wiki/Instructure
+http://www.zdnet.com/box-spins-embed-onecloud-for-educational-use-at-k-12-schools-universities-7000019163/
+http://lifehacker.com/mailviewer-opens-old-outlook-thunderbird-and-windows-1580688600?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+lifehacker%2Ffull+%28Lifehacker%29
+http://www.scientificamerican.com/article/free-will-the-neuroscience-of-free-will/
+http://www.nybooks.com/articles/archives/2014/jun/05/pakistan-worse-than-we-knew/?insrc=hpma
+https://www.oppenheimerfunds.com/fund/investors/performance/?c=B,C,I,N,Y&sc=Y&me=Y&t=N
+https://zapier.com/how-it-works/
+http://blogs.office.com/?filter=true&filter-product=onenote
+https://ifttt.com/connect/pocket/onenote
+http://www.target.com/p/ecom-trellis-gronomics/-/A-15103252?ref=tgt_adv_XSC10001&AFID=shopping_df&LNM=15103252&CPNG=Unassigned&LID=13pdf&srccode=cii_13736960&cpncode=26-348399017-2
+<2014-05-31 Sat>
+https://github.com/joeyates/imap-backup
+https://www.eff.org/privacybadger
+https://github.com/andrewrk/groovebasin
+https://www.wallabag.org/
+http://www.reddit.com/r/emacs/comments/26oy72/what_would_make_a_good_bootstrap_kit_for_emacs_a/
+http://thenextweb.com/apps/2014/05/15/old-reader-adds-spritz-integration-can-zip-rss-feeds/
+http://ask.metafilter.com/260633/Tips-for-learning-birdsongs#3790042
+http://www.everydaylinuxuser.com/2014/05/how-to-install-linux-mint-as-virtual.html
+http://www.reddit.com/r/tilil
+http://www.unixmen.com/grsync-gadmin-rsync-graphical-front-end-applications-rsync-tool/
+http://www.unixmen.com/synchronize-files-directories-across-systems-using-rsync/
+http://www.noobslab.com/
+http://www.webupd8.org/
+http://www.tuxmachines.org/
+http://www.dedoimedo.com/
+http://www.dedoimedo.com/computers/ultimate-linux-guide-for-windows-users.html
+http://forum.bittorrent.com/forum/56-sync-general-discussion/
+http://git-annex.branchable.com/
+http://onethingwell.org/post/86204326225/nmcli-dmenu
+https://github.com/firecat53/nmcli-dmenu
+http://www.spritzinc.com/
+http://stackoverflow.com/questions/2177687/open-file-via-ssh-and-sudo-with-emacs
+http://www.emacswiki.org/emacs/TrampMode#toc16
+http://192.168.1.10/setup?tab=app
+<2014-06-14 Sat>
+https://www.coursera.org/learn/childnutrition
+http://www.sciencedaily.com/releases/2014/06/140611093724.htm?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+sciencedaily+%28Latest+Science+News+--+ScienceDaily%29
+http://www.ntnu.edu/cerg/hrmax
+http://www.digifit.com/shop/heartratemonitors.asp
+http://www.businessweek.com/printer/articles/206401-with-the-machine-hp-may-have-invented-a-new-kind-of-computer
+http://www.linuxjournal.com/content/sicker-sickbeard?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+linuxjournalcom+%28Linux+Journal+-+The+Original+Magazine+of+the+Linux+Community%29
+http://www.openculture.com/2014/06/lessons-from-the-u-s-foreign-service-institute.html
+https://www.creativenonfiction.org/online-reading/writing-like-a-mofo
+http://www.phallus.is/en/
+https://bvckup2.com/
+http://www.wisdomandwonder.com/link/8696/realtime-web-development-with-skewer-and-emacs
+https://medium.com/programming-ideas-tutorial-and-experience/433852f4b4d1
+http://www.reddit.com/r/emacs/comments/27uaa0/why_i_use_emacs/
+http://cs.mcgill.ca/~vfoley1/posts/2014-06-10-why-emacs.html
+http://emacsnyc.org/videos.html#2014-05
+http://www.3quarksdaily.com/3quarksdaily/2014/06/if-were-so-rich-why-arent-we-happy.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+3quarksdaily+%283quarksdaily%29
+http://www.3quarksdaily.com/3quarksdaily/2014/06/science-and-the-supernatural-ii-why-we-get-it-wrong-and-why-it-matters.htmlhttp://www.drjbloom.com/Public%20files/Lewontin_Review.htm
+http://www.3quarksdaily.com/3quarksdaily/2014/06/in-defense-of-armchairs.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+3quarksdaily+%283quarksdaily%29
+http://www.worldcat.org/whatis/default.jsp
+https://windows.github.com/
+http://stackoverflow.com/questions/24086708/setting-up-emacs-app-on-mac
+http://quarterlyconversation.com/the-planetary-writing-of-j-m-ledgard
+http://emacs-doctor.com/
+http://orgmode.org/
+http://www.techrepublic.com/article/how-to-restore-an-os-x-recovery-partition/
+http://www.sciencedaily.com/releases/2014/06/140605083522.htm?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+sciencedaily+%28Latest+Science+News+--+ScienceDaily%29
+http://blogs.scientificamerican.com/plugged-in/2014/06/06/photo-friday-where-does-it-come-from-where-does-it-go-visualizing-energy-flows/
+http://www.nasa.gov/content/most-colorful-view-of-universe-captured-by-hubble-space-telescope/#.U5xwNmQ8201
+http://emacslife.com/emacs-chats/chat-bozhidar-batsov.html
+https://github.com/lunaryorn/dotfiles
+http://sachachua.com/blog/2014/06/emacs-beginner-intermediate-advanced/
+http://thrillingadventurehour.com/
+http://www.merlinmann.com/roderick/
+http://ars.wustl.edu/landlords/Pages/default.aspx
+http://emacslife.com/how-to-read-emacs-lisp.html#errors
+http://harryrschwartz.com/2014/04/08/an-introduction-to-emacs-lisp.html
+http://pages.sachachua.com/.emacs.d/Sacha.html
+http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2014/03/C3F.html
+http://ars.wustl.edu/apartment-search/Pages/rental-results.aspx?arsPropertyID=240
+http://plex.tv/web/app#!/announcements
+http://twapilot.org/eve/forums/a/tpc/f/1001058223/m/4190002766
+http://www.kobobooks.com/freedom
+http://www.zdnet.com/box-spins-embed-onecloud-for-educational-use-at-k-12-schools-universities-7000019163/
+http://stackoverflow.com/questions/2177687/open-file-via-ssh-and-sudo-with-emacs
+http://www.insanelymac.com/forum/topic/187440-lifehacker-guide-with-ga-ep45-ud3p-motherboard/page-115
+http://www.insanelymac.com/forum/topic/180954-guide-vanilla-retail-106x-with-chameleon-v2-for-gigabyte-ga-ep45-ds3l/
+http://www.insanelymac.com/forum/topic/260539-1068-officially-released/
+http://www.insanelymac.com/forum/index.php?app=core&module=search&do=search&andor_type=&sid=1ff29c10957da6afd29302952d2af6ab&search_app_filters[forums][sortKey]=date&search_app_filters[forums][sortKey]=date&search_term=dsdt+ga-ep45-ud3p&search_app=forums
+http://www.insanelymac.com/forum/topic/292619-success-old-school-ga-ep45-ud3p/?hl=dsdt+ga#entry2000297
+http://www.insanelymac.com/forum/topic/180954-guide-vanilla-retail-106x-with-chameleon-v2-for-gigabyte-ga-ep45-ds3l/page-178?hl=+dsdt++ga#entry1703368
+http://www.insanelymac.com/forum/topic/192518-dsdt-fixes-for-gigabyte-boards/page-87?hl=%20dsdt%20%20ga
+http://sourceforge.net/projects/pdfedit/
+http://nfl.si.com/2014/06/11/2014-nfl-win-totals-jacksonville-jaguars/
+http://appworld.blackberry.com/webstore/content/13025/?lang=en&countrycode=US
+https://www.google.com/search?q=q10+h19txt+motospeak&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox&channel=sb
+http://www.aaii.com/journal/article/achieving-greater-long-term-wealth-through-index-funds?a=webupdate061214
+<2014-06-20 Fri>
+http://www.forbes.com/sites/drewhendricks/2014/06/20/these-six-companies-are-leading-the-way-in-tech-education/
+http://tuhdo.github.io/emacs-tutor2.html
+http://emacsredux.com/blog/2014/06/18/quickly-find-emacs-lisp-sources/
+https://www.google.com/search?q=mwe-log-commands+package&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox&channel=rcs
+http://scrollback.io/
+http://rs.io/2014/02/21/problem-solving.html
+https://www.youtube.com/watch?v=hsKjj41ormI
+https://www.youtube.com/watch?v=pZ7XIWgseJ0
+http://portableapps.com/
+http://www.reddit.com/r/emacs/comments/28g8b9/make_more_use_of_rare_keys/
+https://github.com/mickeynp/discover.el
+https://github.com/larstvei/dot-emacs
+https://github.com/grettke/home
+http://www.census.gov/geo/reference/centersofpop/animatedmean2010.html
+http://hints.macworld.com/search.php?query=10.6&keyType=all&type=all&mode=search&order=hits&direction=desc&results=50&page=2
+https://www.google.com/search?q=Green+Porno&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox&channel=rcs
+http://tuhdo.github.io/emacs-tutor.html#sec-6-4
+http://www.cockos.com/licecap/
+http://irreal.org/blog/?p=2756
+http://sachachua.com/blog/2014/06/read-lisp-tweak-emacs-beginner-24-understand-emacs-lisp-code/
+https://github.com/itsjeyd/emacs-config/blob/emacs24/init.el
+http://www.emacswiki.org/emacs/AutoInstall
+http://www.tuxradar.com/content/emacs-tutorial-beginners#null
+http://mwolson.org/static/doc/erc.html
+http://puntoblogspot.blogspot.com/2009/10/how-i-use-emacs-irc-or-erc-for-dummies.html
+http://emacs-fu.blogspot.com/2009/06/erc-emacs-irc-client.html
+http://blog.revolutionanalytics.com/2014/03/emacs-ess-and-r-for-zombies.html
+http://vgoulet.act.ulaval.ca/en/emacs
+http://www.dslreports.com/r0/download/2065743~8951f1dcab65bbc80a582e4c7a3d9279/atspecs.jpg
+https://public.alliedpilots.org/APA/LinkClick.aspx?fileticket=cEGr-Si_SyE%3d&tabid=173&mid=3135
+https://www.oppenheimerfunds.com/fund/investors/prices/
+http://theweek.com/cartoons/index/263083/political-cartoon-cantor-tea-party#axzz34wTSOV8P
+http://orgmode.org/worg/dev/org-build-system.html
+http://orgmode.org/worg/org-hacks.html
+http://www.alfabb.com/bb/forums/alfa-romeo-cars-sale-wanted/319329-1994-164ls-needs-home.html
+http://books.google.com/books/reader?id=FUgrfY_ixWQC&printsec=frontcover&output=reader&source=gbs_atb&pg=GBS.PA7.w.13.0.1
+http://edge.org/conversation/frank-schirrmacher-1959-2014
+https://public.alliedpilots.org/APA/LinkClick.aspx?fileticket=cEGr-Si_SyE%3d&tabid=173&mid=3135
+http://www.wired.com/2014/06/tmobile-free-iphones-and-music/
+https://flattr.com/catalog?utm_source=email&utm_content=catalog&utm_campaign=no-flattr-reminder
+http://www.nemopdf.com/pdf-to-word.html
+*** <2014-06-25 Wed>
+    :PROPERTIES:
+    :CREATED:  [2014-07-08 Tue 22:17]
+    :END:
+http://lifehacker.com/eight-terminal-utilities-every-os-x-command-line-user-s-1593793109?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+lifehacker%2Ffull+%28Lifehacker%29
+http://lifehacker.com/the-best-spotify-tips-and-tricks-you-re-probably-not-us-1594729019
+http://www.techspot.com/guides/835-linux-command-line-basics/
+http://www.emacswiki.org/emacs/DeskTop
+http://tuhdo.github.io/emacs-tutor.html#sec-7-27
+https://github.com/pashinin/workgroups2
+http://www.artofmanliness.com/2014/06/20/the-art-of-grilling-how-to-grill-vegetables-video/
+http://makezine.com/projects/make-27/wood-gas-camp-stove/
+http://blogs.scientificamerican.com/dog-spies/2014/06/22/is-dog-training-scientific/
+http://www.withings.com/activite/en-US
+http://www.snappower.com/pages/about-guidelights
+http://stackoverflow.com/questions/17496021/emacs-quicker-bookmark-jump
+https://github.com/larstvei/dot-emacs
+https://github.com/grettke/home
+http://hints.macworld.com/search.php?query=10.6&keyType=all&type=all&mode=search&order=hits&direction=desc&results=50&page=2
+http://tuhdo.github.io/emacs-tutor.html
+http://www.cockos.com/licecap/
+http://irreal.org/blog/?p=2756
+http://sachachua.com/blog/2014/06/read-lisp-tweak-emacs-beginner-24-understand-emacs-lisp-code/
+https://github.com/itsjeyd/emacs-config/blob/emacs24/init.el
+http://www.emacswiki.org/emacs/AutoInstall
+http://vgoulet.act.ulaval.ca/en/emacs
+http://www.dslreports.com/r0/download/2065743~8951f1dcab65bbc80a582e4c7a3d9279/atspecs.jpg
+https://public.alliedpilots.org/APA/LinkClick.aspx?fileticket=cEGr-Si_SyE%3d&tabid=173&mid=3135
+http://orgmode.org/worg/dev/org-build-system.html
+http://orgmode.org/worg/org-hacks.html
+http://www.alfabb.com/bb/forums/alfa-romeo-cars-sale-wanted/319329-1994-164ls-needs-home-2.html
+http://www.xoring.com/
+http://www.gardenersnet.com/flower/hyacinthbean.htm
+http://nomnompaleo.com/post/15661311142/brussels-sprouts-chips
+http://southernfood.about.com/od/pastarecipes/r/Orecchiette-With-Chard.htm
+http://www.cleaneatingmag.com/recipes/hot-sour-swiss-chard/
+http://www.epicurious.com/recipes/food/views/Sauteed-Swiss-Chard-with-Onions-240560
+http://chowhound.chow.com/topics/534101
+http://www.food.com/recipe/chard-onion-gruy-re-panade-bread-casserole-368749
+<2014-07-04 Fri>
+http://news.slashdot.org/story/14/07/03/2028224/duolingo-is-a-free-crowdsourced-language-learning-app-video?utm_source=rss1.0mainlinkanon&utm_medium=feed
+http://www.forbes.com/sites/trulia/2014/07/03/how-to-tell-the-fixers-upper-homes-from-the-flops/
+http://theappwhisperer.com/2014/06/27/olloclip-wide-angle-panoramic-iphone-photography-tutorial/
+http://jaredcosulich.wordpress.com/2014/06/27/five-techniques-to-help-you-think-more-deeply/
+http://www.harvardmagazine.com/2014/07/disruptive-genius
+http://www.surlatable.com/product/PRO-1040567/Sur+La+Table+Bamboo+Barbecue+Cutting+Board+with+Grooves;jsessionid=B0564C771783477BBA1D9835B6EE84B7.slt-app-01-p-app2#
+https://github.com/Fuco1/dired-hacks
+http://www.masteringemacs.org/articles/2014/04/10/dired-shell-commands-find-xargs-replacement/
+http://www.masteringemacs.org/articles/2011/03/25/working-multiple-files-dired/
+http://www.masteringemacs.org/articles/2013/10/10/wdired-editable-dired-buffers/
+http://endlessparentheses.com/
+http://endlessparentheses.com/init-org-Without-org-mode.html
+http://emacslife.com/how-to-read-emacs-lisp.html#sec-3-2-3
+http://cs.mcgill.ca/~vfoley1/posts/2014-06-10-why-emacs.html
+http://www.realtor.com/realestateandhomes-search/33140/beds-2/baths-1h/price-210000-400000?nzp=33239,33141,33119,33139&disp=2#/lat-25.8172613160258/lng--80.14912/zl-11
+http://www.realtor.com/realestateandhomes-detail/1620-Pennsylvania-Ave-Apt-104_Miami-Beach_FL_33139_M69275-99438?row=1
+http://www.realtor.com/realestateandhomes-detail/1342-Drexel-Ave-Apt-105_Miami-Beach_FL_33139_M51662-33776?row=1
+http://www.realtor.com/realestateandhomes-detail/1342-Drexel-Ave-Apt-204_Miami-Beach_FL_33139_M57422-91417?row=1
+http://www.realtor.com/realestateandhomes-detail/1218-Drexel-Ave-Apt-103_Miami-Beach_FL_33139_M55566-69056?row=1
+http://www.realtor.com/realestateandhomes-detail/644-13Th-St-Apt-1_Miami-Beach_FL_33139_M53042-66828?row=1
+http://www.realtor.com/realestateandhomes-detail/1218-Drexel-Ave-Apt-203_Miami-Beach_FL_33139_M50927-94465?row=1
+http://www.realtor.com/realestateandhomes-detail/Miami-Beach_FL_33139_M51283-46174?row=1
+http://www.realtor.com/realestateandhomes-detail/1027-Euclid-Ave-Apt-1_Miami-Beach_FL_33139_M63602-48484?row=1
+http://www.realtor.com/realestateandhomes-detail/2850-Pine-Tree-Dr-Apt-8_Miami-Beach_FL_33140_M50039-32984?row=1
+http://www.realtor.com/realestateandhomes-detail/2850-Pine-Tree-Dr-Apt-1_Miami-Beach_FL_33140_M69555-99031?row=1
+http://www.zillow.com/homes/for_sale/fsba,fsbo,fore,cmsn_lt/house,condo,apartment,duplex,townhouse_type/2-_beds/1.5-_baths/210000-360000_price/810-1388_mp/days_sort/25.798317,-80.124342,25.789468,-80.139728_rect/15_zm/
+https://www.google.com/maps/dir/2850+Pine+Tree+Dr+%238,+Miami+Beach,+FL+33140//@25.8057513,-80.1263407,18z/data=!4m9!4m8!1m5!1m1!1s0x88d9b3647a733dc7:0xb19eee406bc81432!2m2!1d-80.128232!2d25.805817!1m0!3e2
+http://www.miamidade.gov/transit/library/routes/150.pdf
+http://www.bbc.com/sport/football/world-cup/2014/schedule/knockout-stage
+http://onethingwell.org/post/11320444350/offlineimap
+http://onethingwell.org/search/sync
+http://www.thessdreview.com/ssd-guides/optimization-guides/the-ssd-optimization-guide-2/4/
+http://www.tomshardware.com/forum/15101-63-pagefile-hiberfil-gigantic-filling
+http://www.vistax64.com/tutorials/132201-virtual-memory-paging-file-change.html
+http://www.yelp.com/search?find_desc=alfa+romeo&find_loc=San+Francisco%2C+CA
+http://www.mygooglest.com/fni/dot-emacs.html
+http://www.outwit.com/products/hub/
+https://www.zotero.org/
+https://www.linkedin.com/profile/view?id=77413839&authType=NAME_SEARCH&authToken=6sPl&locale=en_US&srchid=1841426791404475171334&srchindex=1&srchtotal=1&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A1841426791404475171334%2CVSRPtargetId%3A77413839%2CVSRPcmpt%3Aprimary
+<2014-07-08 Tue>
+http://www.ighome.com/
+http://workawesome.com/productivity/the-to-do-list/
+http://www.3quarksdaily.com/3quarksdaily/2014/07/by-emrys-westacott-what-is-it-about-the-apple-common-easily-grown-and-cheap-to-buy-yet-when-you-think-about-it-the-apple.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+3quarksdaily+%283quarksdaily%29
+http://endlessparentheses.com/ispell-and-abbrev-the-perfect-auto-correct.html
+http://hardware.slashdot.org/story/14/07/05/011250/in-dsseldorf-a-robot-valet-will-park-your-car?utm_source=rss1.0mainlinkanon&utm_medium=feed
+http://www.viemu.com/a-why-vi-vim.html
+http://endlessparentheses.com/Meta-Binds-Part-1%253A-Drunk-in-the-Dark.html
+http://stackoverflow.com/questions/1101487/setting-up-a-working-common-lisp-environment-for-the-aspiring-lisp-newbie/1101605#1101605
+http://tuhdo.github.io/emacs-tutor3.html
+http://tuhdo.github.io/helm-intro.html
+http://www.passwordstore.org/
+http://www.lunaryorn.com/2014/07/02/autoloads-in-emacs-lisp.html
+https://flattr.com/login?redir=%2Fsettings
+http://beyondgrep.com/why-ack/
+http://geoff.greer.fm/2011/12/27/the-silver-searcher-better-than-ack/
+http://orgmode.org/worg/org-tools/index.html
+http://www.youtube.com/watch?v=gAWiXbT599E
+http://www.youtube.com/watch?v=LXoWxrTdXkM
+https://help.github.com/articles/create-a-repo
+http://readwrite.com/2013/10/02/github-for-beginners-part-2
+<2014-07-10 Thu>
+https://bitbucket.org/eeeickythump/org-gamify
+https://draftin.com/
+http://www.onetask.com/
+http://lifehacker.com/5646560/the-one-task-at-a-time-method-increased-efficiency-in-a-multitasking-world
+http://www.dictate-connect.com/
+http://nzbdrone.com/#support
+http://locometric.com/
+http://rakkoentertainment.com/fastever/
+https://github.com/untitaker/vdirsyncer
+https://github.com/jsks/zsh-plugins
+http://flavio.tordini.org/minitube
+https://babun.github.io/
+https://github.com/mikegrb/App-otfile
+https://github.com/emre/storm?2014
+http://singularlabs.com/software/metrotextual/transformers-plugins/
+http://herelookapp.com/
+http://www.funtoo.org/Keychain
+http://nulana.com/flexiglass/
+https://github.com/idibidiart/AllSeeingEye
+http://www.shellcheck.net/#
+http://stackp.online.fr/?p=28
+http://www.techkings.org/general-pc-chat/34104-droopy-tutorial.html
+http://www.hide-folder.com/overview/hf_7.html
+http://www.masteringemacs.org/articles/2014/07/08/displaying-interacting-processes-proced/
+http://www.thingiverse.com/thing:305639
+http://www.nytimes.com/2014/07/08/science/a-billionaire-mathematicians-life-of-ferocious-curiosity.html?ref=science&_r=1
+http://www.zillow.com/digs/eclectic/?search=kitchen%20flooring
+http://www.cancer.gov/cancertopics/pdq/genetics/prostate/HealthProfessional/page4
+http://www.finegardening.com/six-tips-effective-weed-control
+http://www.amazon.com/Easy-Gardener-702-WeedBlock-Biodegradable/dp/B001E08OTY/ref=cm_cr_pr_product_top
+http://www.colorenrichedmulch.com/where-to-buy-mulch.php
+http://orgmode.org/worg/org-faq.html
+http://www.masteringemacs.org/articles/2013/12/29/whats-new-in-emacs-24-4/
+http://www.whiteoliphaunt.com/duckofminerva/2014/07/the-collapse-of-the-status-quo-in-israel.html
+http://nplusonemag.com/online-only/online-only/under-color-of-statute/
+http://www.the-tls.co.uk/tls/public/article1431987.ece
+http://irreal.org/blog/?p=2804
+https://github.com/grettke/home
+http://www.realtor.com/realestateandhomes-detail/1235-Mariposa-Ave-Apt-2_Coral-Gables_FL_33146_M57655-93791?row=1
+https://www.google.com/maps/dir/1235+Mariposa+Ave+%232,+Coral+Gables,+FL+33146/University+Station+Rail+Southbound/@25.7135496,-80.2805102,17z/data=!3m1!4b1!4m16!4m15!1m5!1m1!1s0x88d9c7fe2a92e5d9:0x8c705b7522fdab5b!2m2!1d-80.276813!2d25.712785!1m5!1m1!1s0x88d9c7ffe39234bf:0xf689436a623426e1!2m2!1d-80.277027!2d25.714868!2m1!6e4!3e2
+http://www.realtor.com/realestateandhomes-detail/2952-Sw-27th-Ter_Miami_FL_33133_M60525-32805?row=1
+http://www.chow.com/recipes/29589-carrot-chips
+http://food52.com/recipes/9957-grilled-tarragon-carrots
+
+
+
+*** GT
+http://ftw.usatoday.com/2014/01/joe-montana-beast-mode/
+ 
+ 

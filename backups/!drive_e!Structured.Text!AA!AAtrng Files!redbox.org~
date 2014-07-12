@@ -1,0 +1,38 @@
+`* Cabin Altitude Warning / Rapid Depressurization
+** O2 MASKS.......................................................... ON / 100%
+** CABIN ALT CONTROL LEVER ......................................MANUAL (DOWN)
+** OUTFLOW VALVE ...........................FULL FORWARD and MANUALLY LOCKED
+
+* Cockpit Smoke Removal During Unpressurized Flight
+** O2 MASKS and GOGGLES.............................................. ON / 100%
+** COMMUNICATIONS ................................................ ESTABLISH
+
+* Complete Loss of AC Power 
+** EMER PWR SWITCH.......................................................ON
+
+* Engine Fire / Damage / Separation
+   At or above Engine Out Acceleration Altitude
+*** Autothrottle (PF)......................................................OFF
+*** Throttle (PF)(affected engine).........................(PM "Confirm") IDLE
+
+* Two Engine Flameout
+** EMER PWR SWITCH..................................................ON
+** ENG IGN SELECTOR...................................................OVRD
+
+* Runaway stabilizer
+** AUTOPILOT........................................................DISCONNECT
+** CONTROL WHEEL TRIM SWITCHES........... TRIM OPPOSITE DIRECTION OF RUNAWAY
+
+* TAIL COMPT TEMP HIGH Light
+** PNEU X-FEED VALVE LEVERS ............................................. CLOSE
+** AIR FOIL ANTI-ICE SWITCHES.............................................OFF
+** AIR CONDITIONING SUPPLY SWITCHES.............................. HP BLD OFF
+
+
+   
+* QRH Emer/Abnorm p.12-13 <2012-01-31 Tue>
+
+* nav C-c C-f next same level
+
+* Habit inbound FAF
+** hdg, MApp alt, bank, Anti-ice, cycle tail

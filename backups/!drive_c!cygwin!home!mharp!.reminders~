@@ -1,0 +1,34 @@
+RUN OFF
+;INCLUDE .reminders.planner
+RUN ON
+REM june 3 MSG My birthday%
+REM feb 25 MSG Angelica 2005
+REM March 9 2006 MSG K off%
+REM Mar 29 2006 MSG APA mtg%
+REM 2006 mar 23 *1 UNTIL 2006 mar 25 MSG M off
+REM mar 24 2006 Joan MP%
+REM may 26 2006 M off%
+REM feb 14 MSG Mom birthday%
+REM feb 15 MSG Shunsuke and Yukiko yr?
+REM feb 22 MSG Sue
+REM mar 17 MSG Justin 1995
+REM Apr 13 MSG Vince 1972
+REM May 13 MSG Dad's Death 2005
+REM May 24 MSG John 1951
+REM May 26 MSG Matt 1958
+REM Jul 1 MSG Jenna 1977
+REM Jul 18 MSG Grace 1989
+REM Aug 16 MSG Joan 1946
+REM Aug 20 MSG Renata 1985
+REM Aug 24 MSG Joan and Dan 1968
+REM Sep 1 MSG Jack and Marie 1945
+REM Sep 5 MSG Len 1987
+REM Sep 11 MSG Ray yr?
+REM Sep 23 MSG John and Barbara yr?
+REM Oct 7 MSG Dan 1945
+REM Nov 6 MSG Kathleen 1957
+REM Nov 10 MSG Barbara 1958
+REM Nov 26 MSG Nicholas yr?
+REM Dec 10 MSG K anniv meet 2004
+REM Dec 19 MSG Jason 1974
+REM Dec 23 MSG Kayla 2003

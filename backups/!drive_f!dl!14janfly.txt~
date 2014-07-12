@@ -1,0 +1,131 @@
+
+                   AS OF 28DEC13/2147                           
+
+14687/31DEC     RED                                             
+14519/05JAN     RED                                             
+14619/13JAN     RED                                             
+14561/24JAN     RED                                             
+
+SEQ 14687/30193 BASE SLT  SEL  153         DOM S80              
+CAPT HARPSTER M             EMP NBR 680672                      
+    DT EQ  FLT STA DEP  M STA ARR  AC FLY    GTR  GRD     ACT   
+SKD 31 EF  166 STL 1450   DFW 1645 CH 1.55        1.55          
+SKD 31 22   35 DFW 1840   SLC 2030 CH 2.50                      
+D/P SKD  4.45        P/C  0.00  TL  4.45                        
+HALF DAY COUNT SLC  2                                           
+SKD ONDUTY  7.55 ODL  10.50                                     
+SKD 01 22 1680 SLC 0835 L DFW 1225 CH 2.50        1.20          
+SKD 01 EF  362 DFW 1345   MSY 1510 CH 1.25        0.40          
+SKD 01 EF  362 MSY 1550   DFW 1730 CH 1.40        2.00          
+SKD 01 EF 2399 DFW 1930   AUS 2030 CH 1.00                      
+D/P SKD  6.55        P/C  0.00  TL  6.55                        
+HALF DAY COUNT AUS  2                                           
+SKD ONDUTY 12.10 ODL  14.45                                     
+SKD 02 EF 1006 AUS 1230   LAX 1345 CH 3.15        0.45          
+SKD 02 EF 2450 LAX 1430 D DFW 1940 CH 3.10        2.05          
+SKD 02 22 1251 DFW 2145   MCI 2315 CH 1.30                      
+D/P SKD  7.55        P/C  0.00  TL  7.55                        
+HALF DAY COUNT MCI  3                                           
+SKD ONDUTY 12.00 ODL  16.05                                     
+SKD 03 22  193 MCI 1635   ORD 1805 CH 1.30        0.45          
+SKD 03 22 1634 ORD 1850 D STL 2000 CH 1.10                    ¥ 
+D/P SKD  2.40        P/C  0.20E TL  3.00                        
+SKD ONDUTY  4.40                                                
+SEQ SKD 22.15        P/C  0.20  TL 22.35 TAFB  78.25            
+                                                                
+HSS/FO/14519/05JAN«                                             
+SEQ 14519       BASE SLT  SEL   77 ORG SCH DOM S80              
+F/O  DARFUS CE              EMP NBR 624451                      
+CAPT HARPSTER MW            EMP NBR 680672                      
+    DT EQ  FLT STA DEP  M STA ARR  AC FLY    GTR  GRD     ACT   
+SKD 05 22 1422 STL 1410   ORD 1525    1.15        0.45          
+SKD 05 22 1125 ORD 1610 D PHX 1905    3.55                      
+D/P SKD  5.10        P/C  0.00  TL  5.10                        
+HALF DAY COUNT PHX  2                                           
+SKD ONDUTY  7.10 ODL  13.20                                     
+FDPT  6.55   START  1310  END  2005  ACC STA  STL               
+SKD 06 EF 2309 PHX 0940 L ORD 1405    3.25        0.45          
+SKD 06 EF 1683 ORD 1450   LAS 1650    4.00                      
+D/P SKD  7.25        P/C  0.00  TL  7.25                        
+HALF DAY COUNT LAS  2                                           
+SKD ONDUTY  9.25 ODL  12.50                                     
+FDPT  9.10   START  0940  END  1850  ACC STA  STL               
+SKD 07 22  126 LAS 0655 B DFW 1135    2.40        2.10          
+SKD 07 22 1505 DFW 1345 L AUS 1445    1.00                      
+D/P SKD  3.40        P/C  0.00  TL  3.40                        
+HALF DAY COUNT AUS  3                                           
+SKD ONDUTY  7.05 ODL  15.35                                     
+FDPT  6.50   START  0755  END  1445  ACC STA  STL               
+SKD 08 EF 1210 AUS 0735 B ORD 1020    2.45        2.00        ¥ 
+SKD 08 22 1422 ORD 1220   STL 1325    1.05                      
+D/P SKD  3.50        P/C  0.37F TL  4.27                        
+SKD ONDUTY  7.05                                                
+FDPT  6.50   START  0635  END  1325  ACC STA  STL               
+SEQ SKD 20.05        P/C  0.37  TL 20.42 TAFB  72.30            
+                                                                
+HSS/FO/14619/13JAN«                                             
+SEQ 14619       BASE SLT  SEL   77 ORG SCH DOM S80              
+F/O  HEBERER JE             EMP NBR 635140                      
+CAPT HARPSTER MW            EMP NBR 680672                      
+    DT EQ  FLT STA DEP  M STA ARR  AC FLY    GTR  GRD     ACT   
+SKD 13 EF   96 STL 1045   DFW 1240    1.55AA      1.35          
+SKD 13 22 1242 DFW 1415 L DEN 1520    2.05        0.40          
+SKD 13 22 1242 DEN 1600   DFW 1900    2.00        0.45          
+SKD 13 22 1401 DFW 1945 D TUS 2110    2.25                      
+D/P SKD  6.30        P/C  1.55D TL  8.25                        
+HALF DAY COUNT TUS  3                                           
+SKD ONDUTY 12.10 ODL  11.30                                     
+FDPT 11.55   START  1015  END  2210  ACC STA  STL               
+SKD 14 EF 1330 TUS 0955   DFW 1305    2.10        1.45          
+SKD 14 22  382 DFW 1450 L OKC 1545    0.55        0.40          
+SKD 14 22  382 OKC 1625   DFW 1730    1.05        1.20          
+SKD 14 22 2296 DFW 1850 D JAX 2205    2.15                      
+D/P SKD  6.25        P/C  0.00  TL  6.25                        
+HALF DAY COUNT JAX  3                                           
+SKD ONDUTY 11.25 ODL  15.35                                     
+FDPT 11.10   START  0955  END  2105  ACC STA  STL               
+SKD 15 22 1109 JAX 1455   DFW 1645    2.50        1.35          
+SKD 15 22 2477 DFW 1820 D LAX 1950    3.30                      
+D/P SKD  6.20        P/C  0.00  TL  6.20                      ¥ 
+HALF DAY COUNT LAX  2                                           
+SKD ONDUTY  9.10 ODL  19.50                                     
+FDPT  8.55   START  1255  END  2150  ACC STA  STL               
+SKD 16 EF 1686 LAX 1655 D STL 2230    3.35                      
+D/P SKD  3.35        P/C  0.00  TL  3.35                        
+SKD ONDUTY  4.50                                                
+FDPT  4.35   START  1755  END  2230  ACC STA  STL               
+SEQ SKD 22.50        P/C  1.55  TL 24.45 TAFB  84.30            
+                                                                
+HSS/FO/14561/24JAN«                                             
+SEQ 14561       BASE SLT  SEL   77 ORG SCH DOM S80              
+F/O  BLESSING BJ            EMP NBR 635202     NOT QUALIFIED    
+CAPT HARPSTER MW            EMP NBR 680672                      
+ HSQ/FO/14561/24JAN         QUALIFICATION STATUS REPORT DISPLAY 
+    DT EQ  FLT STA DEP  M STA ARR  AC FLY    GTR  GRD     ACT   
+SKD 24 EF   96 STL 1045   DFW 1240    1.55AA      2.10          
+SKD 24 22  382 DFW 1450   OKC 1545    0.55        0.40          
+SKD 24 22  382 OKC 1625   DFW 1730    1.05        0.50          
+SKD 24 22 1523 DFW 1820 D MSP 2040    2.20                      
+D/P SKD  4.20        P/C  1.55D TL  6.15                        
+HALF DAY COUNT MSP  4                                           
+SKD ONDUTY 10.40 ODL  15.05                                     
+FDPT 10.25   START  1015  END  2040  ACC STA  STL               
+SKD 25 EF 1460 MSP 1300   DFW 1540    2.40        1.40          
+SKD 25 EF 1093 DFW 1720 D SAN 1830    3.10                      
+D/P SKD  5.50        P/C  0.00  TL  5.50                        
+HALF DAY COUNT SAN  1                                           
+SKD ONDUTY  8.45 ODL  12.40                                     
+FDPT  8.30   START  1200  END  2030  ACC STA  STL               
+SKD 26 22 2252 SAN 0825 B DFW 1325    3.00        1.20          
+SKD 26 22  214 DFW 1445 L MKE 1700    2.15                      
+D/P SKD  5.15        P/C  0.00  TL  5.15                        
+HALF DAY COUNT MKE  3                                         ¥ 
+SKD ONDUTY  7.50 ODL  12.00                                     
+FDPT  7.35   START  0925  END  1700  ACC STA  STL               
+SKD 27 EF 1291 MKE 0615 B DFW 0910    2.55        1.45          
+SKD 27 22  132 DFW 1055   STL 1230    1.35                      
+D/P SKD  4.30        P/C  0.00  TL  4.30                        
+SKD ONDUTY  7.30                                                
+FDPT  7.15   START  0515  END  1230  ACC STA  STL               
+SEQ SKD 19.55        P/C  1.55  TL 21.50 TAFB  74.30            
+                                                                

@@ -1,0 +1,1606 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>todo.index.org</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="title" content="todo.index.org"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-08-15T15:20-0400"/>
+<meta name="author" content=""/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<style>html { font-family: Lucida, sans-serif; font-size: 12pt; }</style> 
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">todo.index.org</h1>
+
+<p>hang links and taskpool-30K, 10K and runway
+</p>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">AA</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li id="sec-1-1">retirement planning<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-1"><span class="todo TODO">TODO</span> printout the planning data<br/>
+<ul>
+<li id="sec-1-1-1"><a name="ID-c21a2c9f-ba02-4d2a-8bbe-b166449b8a38" id="ID-c21a2c9f-ba02-4d2a-8bbe-b166449b8a38"></a>B<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-1-2">frozen A plan calc &ndash; <a href="https://tasc.alliedpilots.org/pbgc/pbgc.aspx">https://tasc.alliedpilots.org/pbgc/pbgc.aspx</a><br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-1-3">FAS<br/>
+<ul>
+<li id="sec-1-1-3-1"><a name="ID-752cdf38-4d34-4711-b9ce-97c0fa9ad024" id="ID-752cdf38-4d34-4711-b9ce-97c0fa9ad024"></a>Final Average Salary (FAS) is your best 60 consecutive months of pay in the last 120 months.<br/>
+
+<p>
+If you are unsure of your FAS you can get the 2010 FAS by logging onto JetNet, Selecting "Pay" on the top line menu, then "Retirement Planning" from the left side menu, then in the "Pension-Defined Benefit" box select "My Pension Statement".
+</p>
+<p>
+FAS three years back will have to be estimated. 
+</p></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-1-1-1"><a name="ID-c21a2c9f-ba02-4d2a-8bbe-b166449b8a38" id="ID-c21a2c9f-ba02-4d2a-8bbe-b166449b8a38"></a><span class="todo TODO">TODO</span> marriage<br/>
+<ul>
+<li id="sec-1-1-1-1">jetnet &ndash; questions?<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-1-1-2">ck APA<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-1-1-3">ANG<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-1-1-4">Nolo<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-1-1-5">WSJ<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-1-1-2">Commute<br/>
+<ul>
+<li id="sec-1-1-2-1">passrider.com<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">AgendaItems</h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li id="sec-2-1">Barbara<br/>
+<ul>
+<li id="sec-2-1-1">call?<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-2-1-2">text Justin<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-2-2">Grace<br/>
+<ul>
+<li id="sec-2-2-1">January Ill expiration &ndash; ck back <span class="timestamp-wrapper"> <span class="timestamp">2013-03-10 Sun</span></span><br/>
+</li>
+</ul>
+<ul>
+<li id="sec-2-2-2">Investment letter to chillen and 4 billion cupcakes<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-2-3">Joan<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-2-4">Kathleen<br/>
+<ul>
+<li id="sec-2-4-1">will &ndash; lawyer done<br/>
+<ul>
+<li id="sec-2-4-1-1">follow-on do taxes<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-2-4-2">Innovation Games<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-2-5">Len<br/>
+<ul>
+<li id="sec-2-5-1">Investment letter to chillen and 4 billion cupcakes<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-2-6">Celestia<br/>
+<ul>
+<li id="sec-2-6-1">Write<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-2-7">Matt<br/>
+<ul>
+<li id="sec-2-7-1">w coast Mex USairmag<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-2-8">Self composition<br/>
+<ul>
+<li id="sec-2-8-1">dry<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-2-8-2">quora &ndash; loss of a child, aviation<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-2-8-3">lessons learned SEP bidding, recurrent, El Paso<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-2-9">Others<br/>
+<ul>
+<li id="sec-2-9-1">Ross<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-2-9-2">Bill<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-2-9-3">Sue<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-2-9-4">Lenny K<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-2-9-5">Paulett<br/>
+<ul>
+<li id="sec-2-9-5-1">key<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-2-9-6">SS<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-2-9-7">Thurston 707-275-9315<br/>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Appointments</h2>
+<div class="outline-text-2" id="text-3">
+
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">Autos</h2>
+<div class="outline-text-2" id="text-4">
+
+<ul>
+<li id="sec-4-1">AutoMx<br/>
+<ul>
+<li id="sec-4-1-1">V40<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-4-1-2">928<br/>
+<ul>
+<li id="sec-4-1-2-1">Pomona work<br/>
+<ul>
+<li id="sec-4-1-2-1-1"><a name="ID-1de5802e-10d8-4e4e-86a1-917e02b1291b" id="ID-1de5802e-10d8-4e4e-86a1-917e02b1291b"></a><span class="todo TODO">TODO</span> fairing install<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-4-1-2-1-2"><a name="ID-0bba8393-8c05-4f41-91da-ef743c2a2c45" id="ID-0bba8393-8c05-4f41-91da-ef743c2a2c45"></a><span class="todo TODO">TODO</span> clean and wax<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-4-1-2-1-3"><a name="ID-e424f02a-1165-4590-9370-d13eee4b3358" id="ID-e424f02a-1165-4590-9370-d13eee4b3358"></a><span class="todo TODO">TODO</span> right inboard CV joint boot torn<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-4-1-2-1-4"><a name="ID-27fc6655-b610-44c9-b138-68118e154a09" id="ID-27fc6655-b610-44c9-b138-68118e154a09"></a><span class="todo TODO">TODO</span> alternator cooling needs a plastic tie<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-4-1-2-1-5"><a name="ID-54e6396f-00ec-456d-a612-8c586ce07bf4" id="ID-54e6396f-00ec-456d-a612-8c586ce07bf4"></a><span class="todo TODO">TODO</span> secure horn<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-4-1-2-1-6"><a name="ID-d296ffc9-2da3-4832-b7d7-5844bca36579" id="ID-d296ffc9-2da3-4832-b7d7-5844bca36579"></a><span class="todo TODO">TODO</span> secure front wheel well plastic both sides<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-4-1-2-1-7">install door speaker and glue trim<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-4-1-2-2">Mechanic<br/>
+<ul>
+<li id="sec-4-1-2-2-1"><a name="ID-07f0d23c-bf6d-43f2-85a5-53989176c7f0" id="ID-07f0d23c-bf6d-43f2-85a5-53989176c7f0"></a><span class="todo TODO">TODO</span> lock<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-4-1-2-2-2"><a name="ID-d56cf86d-4736-481a-ac3b-61f545b0a0f4" id="ID-d56cf86d-4736-481a-ac3b-61f545b0a0f4"></a><span class="todo TODO">TODO</span> fan short<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-4-1-2-2-3"><a name="ID-09b74a1a-9876-4d39-bc2d-5b5fb01442dd" id="ID-09b74a1a-9876-4d39-bc2d-5b5fb01442dd"></a><span class="todo TODO">TODO</span> get fairing there and installed<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-4-1-2-3">Selling it<br/>
+<ul>
+<li id="sec-4-1-2-3-1">It can be at CIM?<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-4-1-3">Toyota<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-4-1-4">VW &ndash; water pump<br/>
+<ul>
+<li id="sec-4-1-4-1">AC allen wrench<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-4-1-5">Alfa Q<br/>
+<ul>
+<li id="sec-4-1-5-1">For Eurotec<br/>
+<ul>
+<li id="sec-4-1-5-1-1"><a name="ID-e2507859-5269-4a13-8b16-52541e557162" id="ID-e2507859-5269-4a13-8b16-52541e557162"></a><span class="todo TODO">TODO</span> rotate tires<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-4-1-5-1-2"><a name="ID-48617518-dfb4-42db-bc82-a060661ae23a" id="ID-48617518-dfb4-42db-bc82-a060661ae23a"></a><span class="todo TODO">TODO</span> lower control arm bushing<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-4-1-5-1-3"><a name="ID-aebf8128-318d-40d4-ae4d-2309ab39a1b6" id="ID-aebf8128-318d-40d4-ae4d-2309ab39a1b6"></a><span class="todo TODO">TODO</span> 3rd gear grinds<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">Body</h2>
+<div class="outline-text-2" id="text-5">
+
+<ul>
+<li id="sec-5-1">BodyIssues<br/>
+<ul>
+<li id="sec-5-1-1">Calcium score CAT scan<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-5-1-2">FAA med<br/>
+<ul>
+<li id="sec-5-1-2-1">14Nov ekg, 18237 + 286,<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-5-1-3">Clot info :<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-5-1-4">Cholesterol history : <a href="file://c:/home/mharp/org/Blood.Chem.html">Blood.Chem</a><br/>
+</li>
+</ul>
+<ul>
+<li id="sec-5-1-5">Exercise      <a href="Move.Body.html">Move.Body</a><br/>
+</li>
+</ul>
+<ul>
+<li id="sec-5-1-6">Prostate  health<br/>
+<ul>
+<li id="sec-5-1-6-1">Supplemental cancer insurance<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-5-1-6-2">finasteride<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-5-1-7">ETOH 2 weeks<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-5-2">golf setup &ndash; need clubs<br/>
+<ul>
+<li id="sec-5-2-1">USMA vs swing video joint Patriot Hills vs Rotella<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-5-3">Y $80/mo<br/>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6">Dough</h2>
+<div class="outline-text-2" id="text-6">
+
+<ul>
+<li id="sec-6-1">rnwy &ndash; next actions and current projects<br/>
+<ul>
+<li id="sec-6-1-1"><span class="todo TODO">TODO</span> 2010 2011 taxes<br/>
+      <span class="timestamp-wrapper"><span class="timestamp-kwd">SCHEDULED: </span> <span class="timestamp">2013-04-07 Sun</span></span><br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-2">Big Picture<br/>
+<ul>
+<li id="sec-6-1-2-1">AAII<br/>
+<ul>
+<li id="sec-6-1-2-1-1">asset allocation is based on:<br/>
+<ul>
+<li id="sec-6-1-2-1-1-1">Age<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-2-1-1-2">Amount in dere<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-2-1-1-3">Budget<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-2-1-1-4">Income&ndash;includes projected<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-2-1-2">Fixed Income piece<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-2-1-3">super-stock<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-2-2">A plan by JAS $1700/month<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-2-3">B plan is set to go &ndash; MerrillEdge<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-2-4"><span class="todo TODO">TODO</span> print SS numbers<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-3">Smaller pieces<br/>
+<ul>
+<li id="sec-6-1-3-1"><span class="todo TODO">TODO</span> Mint needs TLC<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-3-2"><span class="todo TODO">TODO</span> set SS %<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-3-3"><span class="todo TODO">TODO</span> K 403(b)<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-3-4">The chunk invest &ndash; melting&hellip;gone<br/>
+<ul>
+<li id="sec-6-1-3-4-1">Accounting for heirs<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-3-5">Follow on distribution &ndash; now in checking<br/>
+<ul>
+<li id="sec-6-1-3-5-1">school loans<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-3-5-2">SS loan &ndash;<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-3-5-3"><span class="todo TODO">TODO</span> DAP call 97547?<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-4">Real Estate<br/>
+<ul>
+<li id="sec-6-1-4-1">Refi 7lin &ndash; Wells Fargo Marietta<br/>
+<ul>
+<li id="sec-6-1-4-1-1"><span class="todo TODO">TODO</span> new citi amount<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-4-2">5802<br/>
+<ul>
+<li id="sec-6-1-4-2-1">Cost out req work<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-4-2-2">Ross<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-4-2-3">go by Wash U<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-4-3">13506<br/>
+<ul>
+<li id="sec-6-1-4-3-1"><span class="todo TODO">TODO</span> send email<br/>
+<ul>
+<li id="sec-6-1-4-3-1-1">insurance<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-4-3-1-2">paint<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-4-3-1-3">sell<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-4-3-1-4">rent<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-5">30k &ndash; Current view 30K 1-2 years<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-6">Buy shit<br/>
+<ul>
+<li id="sec-6-1-6-1">7lin<br/>
+<ul>
+<li id="sec-6-1-6-1-1">home depot<br/>
+<ul>
+<li id="sec-6-1-6-1-1-1">threshold 3X36<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-6-1-1-2">deck screws<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-6-1-2">Wise buy<br/>
+<ul>
+<li>rheinhartshausen reisling
+</li>
+<li>tequila Alan
+</li>
+</ul>
+
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-6-1-3">things<br/>
+<ul>
+<li>chandelier
+</li>
+<li>soil containers vermiculite rhodo soil &ndash; more spagham moss, leaf mold
+</li>
+<li>bbq weber smoky mountain can, virtual w bullets, rebuild grill
+</li>
+</ul>
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-6-1-6-2">StL<br/>
+<ul>
+<li id="sec-6-1-6-2-1">grocery<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7">Houses</h2>
+<div class="outline-text-2" id="text-7">
+
+<ul>
+<li id="sec-7-1">7Linden<br/>
+<ul>
+<li id="sec-7-1-1">M bdrm<br/>
+<ul>
+<li id="sec-7-1-1-1">locate bedding<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-2">M bath<br/>
+<ul>
+<li id="sec-7-1-2-1">shower leak<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-2-2">paint wainscotting goop &ndash; alternative wallpaper?<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-3">G bath<br/>
+<ul>
+<li id="sec-7-1-3-1"><a name="ID-a8a45077-5d2d-4e19-bb99-17a146035e1b" id="ID-a8a45077-5d2d-4e19-bb99-17a146035e1b"></a><span class="todo TODO">TODO</span> install fan<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-4">Office<br/>
+<ul>
+<li id="sec-7-1-4-1">K workspace<br/>
+<ul>
+<li id="sec-7-1-4-1-1">table next to desk<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-5">Other downstairs<br/>
+<ul>
+<li id="sec-7-1-5-1">plant room questions<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-5-2">move washer-dryer<br/>
+<ul>
+<li id="sec-7-1-5-2-1">dryer vent<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-5-2-2">run gas line<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-5-2-3">buffet refinish<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-5-3"><a name="ID-85541912-d6fb-40a2-ac81-42199df5fed3" id="ID-85541912-d6fb-40a2-ac81-42199df5fed3"></a><span class="todo TODO">TODO</span> drain sediment H2O heater<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-6">Garage<br/>
+<ul>
+<li id="sec-7-1-6-1"><a name="ID-01bb8165-cad5-47b5-a567-385fb6e41f2b" id="ID-01bb8165-cad5-47b5-a567-385fb6e41f2b"></a><span class="todo TODO">TODO</span> repair drywall<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-6-2">garage floor<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-6-3">work bench<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-6-4">storage<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-6-5">heater<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-7">General<br/>
+<ul>
+<li id="sec-7-1-7-1">locate art locations<br/>
+<ul>
+<li id="sec-7-1-7-1-1">foyer<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-7-1-2">living room<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-7-1-3">bedroom<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-7-1-4">hall?<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-7-2">window locks<br/>
+<ul>
+<li>other material?
+</li>
+<li>paint wood?
+</li>
+</ul>
+
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-7-3">sliding glass door hardware<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-8">Exterior<br/>
+<ul>
+<li id="sec-7-1-8-1">Deck<br/>
+<ul>
+<li id="sec-7-1-8-1-1">lighting 12v w/ wire<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-8-1-2">solar chinese paper lanterns<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-8-1">Roof<br/>
+<ul>
+<li id="sec-7-1-8-1-1">top of roof-line ornament needs treatment and paint<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-8-2">Misc<br/>
+<ul>
+<li id="sec-7-1-8-2-1">wood by slate separating &ndash; temp repair OK?<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-8-2-2">pavers top of garage wall<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9">Grounds<br/>
+<ul>
+<li id="sec-7-1-9-1">regular work by month to Gcal or ?<br/>
+<ul>
+<li id="sec-7-1-9-1-1">preen 28Mar09 every 9 weeks<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-1-2">ash to lilac<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-1-3">fertilize peonies<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-1">starting and propagation<br/>
+<ul>
+<li id="sec-7-1-9-1-1">fuchsia<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-1">Issues<br/>
+<ul>
+<li id="sec-7-1-9-1-1">Utilities<br/>
+<ul>
+<li id="sec-7-1-9-1-1-1"><a name="ID-a2874f0c-c03d-45b3-885c-ea1670a098e8" id="ID-a2874f0c-c03d-45b3-885c-ea1670a098e8"></a><span class="todo TODO">TODO</span> NY gas - cheapskate site<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-1-1-2">What energy efficiency jobs?<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-2">Plant candidates<br/>
+<ul>
+<li id="sec-7-1-9-2-1">swamp stuff on Brookfield<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-2-2">Blueberry bushes<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-2-3">Spruces<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-2-4">aucuba japonica variegata - hearty?<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-2-5">laminium maculatum<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-2-6">mahonia aquinfolium?<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-2-7">w/ fence<br/>
+<ul>
+<li id="sec-7-1-9-2-7-1">yews<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-2-7-2">oak leaf hydrangea &ndash; two planted<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-3">Plant location<br/>
+<ul>
+<li id="sec-7-1-9-3-1">shelf by kitchen<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-3-2">stairwell shelf<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-3-3">propogation plans<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-3-4">helleborus<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-1-9-3-5">ilex Layered with kalmia<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-2">13506<br/>
+<ul>
+<li id="sec-7-2-1">Call, include steps in paint bid<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3">5802<br/>
+<ul>
+<li id="sec-7-3-1">Tasks<br/>
+<ul>
+<li id="sec-7-3-1-1"><a name="ID-05376422-32b8-4271-b441-7dc4b7961aa3" id="ID-05376422-32b8-4271-b441-7dc4b7961aa3"></a><span class="todo TODO">TODO</span> tuckpoint<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3-1-2"><a name="ID-d699eb5f-5d51-4494-be67-3f8bd1a9f2ba" id="ID-d699eb5f-5d51-4494-be67-3f8bd1a9f2ba"></a><span class="todo TODO">TODO</span> Porch failure that corner<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3-1-3"><a name="ID-f0638f16-a365-4a2e-b082-ebb991de74cd" id="ID-f0638f16-a365-4a2e-b082-ebb991de74cd"></a><span class="todo TODO">TODO</span> cracks along porch<br/>
+<ul>
+<li id="sec-7-3-1-3-1">materials to masonry store<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3-1-4"><a name="ID-ae2263fd-705c-4474-9ba6-855ed219760b" id="ID-ae2263fd-705c-4474-9ba6-855ed219760b"></a><span class="todo TODO">TODO</span> Planting along fence<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3-1-5"><a name="ID-b20b7385-c41c-4a8b-b87b-56a660e66304" id="ID-b20b7385-c41c-4a8b-b87b-56a660e66304"></a><span class="todo TODO">TODO</span> Planting in ash pit<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3-1-6"><a name="ID-58d26941-0740-46b6-91ba-9214b59a397e" id="ID-58d26941-0740-46b6-91ba-9214b59a397e"></a><span class="todo TODO">TODO</span> weeds juniper<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3-1-7"><a name="ID-3de134fb-9ffc-4202-a6c2-35a324631d38" id="ID-3de134fb-9ffc-4202-a6c2-35a324631d38"></a><span class="todo TODO">TODO</span> the bed<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3-1-8"><a name="ID-256f6476-da0c-4e41-b4f3-0dae4bbcb31c" id="ID-256f6476-da0c-4e41-b4f3-0dae4bbcb31c"></a><span class="todo TODO">TODO</span> Ck gutters<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3-1-9"><a name="ID-1efc548b-e6b5-473c-a706-68172b48b738" id="ID-1efc548b-e6b5-473c-a706-68172b48b738"></a><span class="todo TODO">TODO</span> Keys redone &nbsp;&nbsp;&nbsp;<span class="tag"><span class="OL">OL</span></span><br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3-1-10"><a name="ID-ba7474ea-2f7e-4cf4-b3d4-b4ccd1e4039e" id="ID-ba7474ea-2f7e-4cf4-b3d4-b4ccd1e4039e"></a><span class="todo TODO">TODO</span> boiler work<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3-1-11"><a name="ID-e79d97b3-07c9-4707-9c1d-b52d1c78426b" id="ID-e79d97b3-07c9-4707-9c1d-b52d1c78426b"></a><span class="todo TODO">TODO</span> Maplewood plumber 645-6350<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3-2">Future<br/>
+<ul>
+<li id="sec-7-3-2-1">Wash U setup?<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3-2-2">basement walls<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3-2-3">bath downstairs<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3-2-4">garage<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3-2-5">Kitchen sink backdrop<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3-2-6">above screen porch<br/>
+<ul>
+<li id="sec-7-3-2-6-1"><a name="ID-877625df-c39e-47ab-98d8-d156f4582ef8" id="ID-877625df-c39e-47ab-98d8-d156f4582ef8"></a><span class="todo TODO">TODO</span> tear it all out<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-3-2-6-2"><a name="ID-9da720c7-1b30-4673-95fb-704dcc6ae649" id="ID-9da720c7-1b30-4673-95fb-704dcc6ae649"></a><span class="todo TODO">TODO</span> Window styles and orientation<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-7-4">591mp and trip to SF<br/>
+<ul>
+<li id="sec-7-4-1"><a name="ID-1dfe3704-daec-459c-830f-498e21b46210" id="ID-1dfe3704-daec-459c-830f-498e21b46210"></a><span class="todo TODO">TODO</span> schedule date<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-4-2"><a name="ID-12395c15-b1eb-4442-b97d-9a9f706aa49a" id="ID-12395c15-b1eb-4442-b97d-9a9f706aa49a"></a><span class="todo TODO">TODO</span> research shipping options<br/>
+<ul>
+<li id="sec-7-4-2-1">2 destinations still?<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-7-4-2-2">Matt $ started 2X ($153) due Dec11<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8">Machines</h2>
+<div class="outline-text-2" id="text-8">
+
+<ul>
+<li id="sec-8-1">X220<br/>
+<ul>
+<li id="sec-8-1-1">mSATA<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-1-2">320 g partition<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-1-3">virtual machine<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-2">X60<br/>
+<ul>
+<li id="sec-8-2-1">screen dead &ndash; plan is<br/>
+<ul>
+<li id="sec-8-2-1-1">W7 and still issues<br/>
+<ul>
+<li id="sec-8-2-1-1-1">email from OL on XP<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-2-1-1-2">email from C:AppData/TBird to X60?<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-2-1-1-3">check Parallels for programs, disk copy on Y:<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-2-1-2">Arch<br/>
+<ul>
+<li id="sec-8-2-1-2-1">libre office esp impress?<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-2-1-2-2">emacs aa pubs and pdf annotation &ndash; test before Windows?<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-3">Mini StL<br/>
+<ul>
+<li id="sec-8-3-1"><a name="ID-d29f1a7f-4cf3-4cea-a7c1-74510237bb78" id="ID-d29f1a7f-4cf3-4cea-a7c1-74510237bb78"></a><span class="todo TODO">TODO</span> Take instructions for 10.7 to a flash drive<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-4">R50 &ndash; amahi<br/>
+<ul>
+<li id="sec-8-4-1">ownCloud, monit, and openSSH setup<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-5">Hackintosh<br/>
+<ul>
+<li id="sec-8-5-1">SysRescCD<br/>
+<ul>
+<li id="sec-8-5-1-1">inventory all partitions<br/>
+<ul>
+<li id="sec-8-5-1-1-1">done &ndash; written on<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-5-2">Mac<br/>
+<ul>
+<li id="sec-8-5-2-1">Parallels usage<br/>
+<ul>
+<li id="sec-8-5-2-1-1">has OL dates, export<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-5-2-2">Fusion 3<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-5-3">W7<br/>
+<ul>
+<li id="sec-8-5-3-1">Vista Ghost &ndash; still true?<br/>
+<ul>
+<li id="sec-8-5-3-1-1">attached hard drive, XP ghost<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-5-3-1-2">needs test, then offload<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-6">Network<br/>
+<ul>
+<li id="sec-8-6-1">MBWE<br/>
+<ul>
+<li id="sec-8-6-1-1">minidlna w/ sony? w/ Roku? Plex is there<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-6-1-2">sync<br/>
+<ul>
+<li id="sec-8-6-1-2-1">RCS repo<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-6-1-2-2">dropbox<br/>
+<ul>
+<li id="sec-8-6-1-2-2-1">links have the fat32 issue<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-6-1-2-2-2">one more step? synctoy?<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-6-1-2-2-3">e: to c: to MBWE?<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-6-1-2-1">Usenet<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-7">iPad<br/>
+<ul>
+<li id="sec-8-7-1">LH how-to &ndash; how? lifehacker?<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-7-2">Have a look at:<br/>
+<ul>
+<li id="sec-8-7-2-1">MobileNoter<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-7-2-2">drafts<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-7-2-3">stylus to sketchbook sacha<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-8">4s<br/>
+<ul>
+<li id="sec-8-8-1">To install<br/>
+<ul>
+<li id="sec-8-8-1-1">dropbox ?owncloud?<br/>
+<ul>
+<li id="sec-8-8-1-1-1">dropbox works<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-8-1-1-2">owncloud on Amahi is ther.; not setup<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-8-1-1-3">now 50g on box<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-8-1-2">outlook integration w/4s<br/>
+<ul>
+<li id="sec-8-8-1-2-1">see below<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-8-1-3">Spokes NYC &ndash; can't find<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-8-1-4"><span class="todo TODO">TODO</span> mailbox<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-8-2">General config<br/>
+<ul>
+<li id="sec-8-8-2-1">email setup &ndash; g auto forward to fastmail<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-8-2-2">calendar &ndash; mark@mharp.org or is it net? &ndash; email tasks, also? test .ics from html?<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-8-2-3">google voice linked to above account<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-8-2-4">contacts &ndash; now yahoo<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-8-2-5">music dired to copy<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-8-2-6">populate newsstand<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-8-2-7">program $ at 11:30 &gt; echo meet Bob | mail mharp0@ovi.com &gt; <sup>D</sup> convert to ?<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-8-8-2-8">safari bookmarks &ndash; sync<br/>
+<ul>
+<li>populate w/ del.icio
+</li>
+</ul>
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-8-3">Issues<br/>
+<ul>
+<li id="sec-8-8-3-1">.m4a ck e.music.txt<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-8-1">5230<br/>
+<ul>
+<li id="sec-8-8-1-1">music starts w/ Freedy, try dired?<br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-8-9">Sansa<br/>
+<ul>
+<li id="sec-8-9-1">distro of music<br/>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-9" class="outline-2">
+<h2 id="sec-9">Projects</h2>
+<div class="outline-text-2" id="text-9">
+
+<ul>
+<li id="sec-9-1">Learn<br/>
+<ul>
+<li id="sec-9-1-1">vim<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-9-1-2">powershell<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-9-1-3">excel<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-9-1-4">elisp<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-9-2">Marriage legalities<br/>
+<ul>
+<li id="sec-9-2-1">AA, APA send<br/>
+<ul>
+<li id="sec-9-2-1-1">w-4<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-9-2-2">WSJ list<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-9-2-3">FAA change of address &ndash; next Class 1<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-9-3"><a name="ID-3da58ce7-8991-46fc-bbe0-edd7f04f1bed" id="ID-3da58ce7-8991-46fc-bbe0-edd7f04f1bed"></a><span class="todo TODO">TODO</span> send Barb and Keith thank-you<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-9-4">Dance Practice<br/>
+<ul>
+<li id="sec-9-4-1"><a name="ID-3456b4f7-7ac9-48dd-b883-2c1d41235e1e" id="ID-3456b4f7-7ac9-48dd-b883-2c1d41235e1e"></a><span class="todo TODO">TODO</span> make CD or Sansa &ndash; both<br/>
+<ul>
+<li>Trainspotting L Iggy Pop
+</li>
+<li>Ball R Mali
+</li>
+<li>Buble F Once in Life
+</li>
+<li>Buble L CrazyLove
+</li>
+<li>Buble R Sway
+</li>
+</ul>
+
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-10" class="outline-2">
+<h2 id="sec-10">Workflow</h2>
+<div class="outline-text-2" id="text-10">
+
+<ul>
+<li id="sec-10-1">test capture<br/>
+<ul>
+<li id="sec-10-1-1">need to write the template<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-10-2">combine all xdeskscratch<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-10-3">agenda ref is "just" an archive<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-10-4">collection points<br/>
+<ul>
+<li>I am currently using org-mode, the steno notebook, and then a bunch of random paper.
+</li>
+<li>I need to sort this in relation to the 4S .
+</li>
+<li>There are many candidates: Outlook tasks one notes written in the canvas, ever notes, and toodledo.
+</li>
+</ul>
+
+</li>
+</ul>
+<ul>
+<li id="sec-10-5">email<br/>
+<ul>
+<li id="sec-10-5-1">mwg<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-10-5-2">.fm<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-10-5-3">mark@<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-10-5-4">mharp000<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-10-5-5">mark.o<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-10-5-6">mark.y<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-10-6">home files<br/>
+<ul>
+<li id="sec-10-6-1">sources<br/>
+<ul>
+<li id="sec-10-6-1-1">E:/cyg/home<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-10-6-1-2">C:/Users/mh<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-10-6-1-3">scratchxdesk<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-10-6-2">tools<br/>
+<ul>
+<li id="sec-10-6-2-1">dired/sunrise commander<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-10-6-3">deployment dropbox vs. git<br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-10-7">bookmarks started &ndash; hang store links<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-10-8">a .maff link page? AHK powered?<br/>
+
+
+
+
+
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2013-08-15T15:20-0400</p>
+<p class="author">Author: </p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3d with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+         PILOT TRIP TRADE WITH OPEN TIME STATUS                 
+                   680672 HARPSTER MW                           
+                   AS OF 10SEP13/1025                           
+  SEQ DATE   TTOT STATUS   POSTED   DROP TYPE                   
+15100/17SEP     RED                                             
+15014/21SEP     RED                                             
+14941/26SEP     RED                                             
+
+SEQ 15145       BASE SLT  SEL  193 ORG SCH DOM S80              
+CAPT HARPSTER M             EMP NBR 680672                      
+    DT EQ  FLT STA DEP  M STA ARR  AC FLY    GTR  GRD     ACT   
+SKD 11 EF 2371 STL 1815 D DFW 2005    1.50        0.55          
+SKD 11 EF 2211 DFW 2100   PDX 2300    4.00                      
+D/P SKD  5.50        P/C  0.00  TL  5.50                        
+HALF DAY COUNT PDX  2                                           
+SKD ONDUTY  8.00 ODL  12.00                                     
+SKD 12 EF 1568 PDX 1215 L DFW 1800    3.45        1.55          
+SKD 12 EF 1359 DFW 1955 D FAT 2120    3.25                      
+D/P SKD  7.10        P/C  0.00  TL  7.10                        
+HALF DAY COUNT FAT  3                                           
+SKD ONDUTY 10.20 ODL  15.20                                     
+SKD 13 22 1627 FAT 1355   DFW 1910    3.15        0.45          
+SKD 13 22 2260 DFW 1955 D RDU 2330    2.35                      
+D/P SKD  5.50        P/C  0.00  TL  5.50                        
+HALF DAY COUNT RDU  2                                           
+SKD ONDUTY  7.50 ODL  14.05                                     
+SKD 14 EF  326 RDU 1450   ORD 1555    2.05        1.50          
+SKD 14 22 1186 ORD 1745 D STL 1855    1.10                      
+D/P SKD  3.15        P/C  0.00  TL  3.15                        
+SKD ONDUTY  6.20                                                
+SEQ SKD 22.05        P/C  0.00  TL 22.05 TAFB  73.55            
+HISEQ«                                                          
+SEQ 15100       BASE SLT  SEL  193         DOM S80              
+F/O  DENNIS WA              EMP NBR 640341                      
+CAPT HARPSTER MW            EMP NBR 680672                      
+    DT EQ  FLT STA DEP  M STA ARR  AC FLY    GTR  GRD     ACT   
+SKD 17 22 1450 STL 1150 L DCA 1445    1.55        1.40          
+SKD 17 22 2259 DCA 1625 D DFW 1840    3.15        0.45          
+SKD 17 22 1002 DFW 1925   CMH 2250    2.25                      
+D/P SKD  7.35        P/C  0.00  TL  7.35                        
+HALF DAY COUNT CMH  4                                           
+SKD ONDUTY 11.15 ODL  15.45                                     
+SKD 18 EF  334 CMH 1550   DFW 1735    2.45        2.50          
+SKD 18 22 1490 DFW 2025   MSP 2245    2.20                      
+D/P SKD  5.05        P/C  0.00  TL  5.05                        
+HALF DAY COUNT MSP  2                                           
+SKD ONDUTY  9.10 ODL  11.15                                     
+SKD 19 22  138 MSP 1115 L ORD 1240    1.25        0.45          
+SKD 19 22  335 ORD 1325   STL 1435    1.10                      
+D/P SKD  2.35        P/C  0.25E TL  3.00                        
+SKD ONDUTY  4.35                                                
+SEQ SKD 15.15        P/C  0.25  TL 15.40 TAFB  52.00            
+SEQ 15014       BASE SLT  SEL  193         DOM S80              
+F/O  BARBER RW              EMP NBR 624393                      
+CAPT HARPSTER MW            EMP NBR 680672                      
+    DT EQ  FLT STA DEP  M STA ARR  AC FLY    GTR  GRD     ACT   
+SKD 21 EF 1686 STL 1330   LAX 1535    4.05                      
+D/P SKD  4.05        P/C  0.00  TL  4.05                        
+HALF DAY COUNT LAX  2                                           
+SKD ONDUTY  5.20 ODL  14.30                                     
+SKD 22 EF 1006 LAX 0720 B AUS 1220    3.00        0.40          
+SKD 22 EF 1006 AUS 1300 L LAX 1410    3.10                      
+D/P SKD  6.10        P/C  0.00  TL  6.10                        
+HALF DAY COUNT LAX  3                                           
+SKD ONDUTY  8.05 ODL  20.35                                     
+SKD 23 EF  156 LAX 1200 L STL 1735    3.35                      
+D/P SKD  3.35        P/C  1.24F TL  4.59                        
+SKD ONDUTY  4.50                                                
+SEQ SKD 13.50        P/C  1.24  TL 15.14 TAFB  53.20            
+SEQ 14941       BASE SLT  SEL  193         DOM S80             
+F/O  CRAM JE                EMP NBR 635033                     
+CAPT HARPSTER MW            EMP NBR 680672                     
+    DT EQ  FLT STA DEP  M STA ARR  AC FLY    GTR  GRD     ACT  
+SKD 26 EF  365 STL 1730   ORD 1845    1.15        0.55         
+SKD 26 EF 2427 ORD 1940 D LAS 2135    3.55                     
+D/P SKD  5.10        P/C  0.00  TL  5.10                       
+HALF DAY COUNT LAS  2                                          
+SKD ONDUTY  7.20 ODL  13.40                                    
+SKD 27 EF 2224 LAS 1230   ORD 1810    3.40        0.45         
+SKD 27 EF  348 ORD 1855 D LGA 2210    2.15                     
+D/P SKD  5.55        P/C  0.00  TL  5.55                       
+HALF DAY COUNT LGA  2                                          
+SKD ONDUTY  7.55 ODL  10.34                                    
+SKD 28 22 1030 LGA 0959 L STL 1144    2.45                     
+D/P SKD  2.45        P/C  1.10G TL  3.55                       
+SKD ONDUTY  4.00                                               
+SEQ SKD 13.50        P/C  1.10  TL 15.00 TAFB  43.29           
+MONTH ENDING 30SEP13 AS OF 10SEP13/1036          TT-YES    SC-Y 
+HARPSTER MW         06007 680672 SLT  193-CA M83G               
+                                        MMAX    92.00   WAV48-N 
+H 845.290.1815                C 3147254990                      
+T 6195650058                                                    
+PROJ 90.04 GTD 22.05 PPROJ 90.04  SPROJ 90.04                   
+ORIG GUAR   0.00 ADJ GUAR   0.00 ADJ GUAR PENDING NO            
+D EXP 0.00   I EXP 0.00 MISC EXP 0.00     CPA 0.00 FTCPA  0.00  
+RALS 0.00 MMBA 0.00 FLT TIME 0.00 YTD TTL 447.07                
+ ACT/SKD PROJ 65.00 YTD 512.07                                  
+CPA BORROWED TIME 0.00 BCPFU N  CPA PAYOUT TIME 0.00            
+AVBL SK 725.34   YTD SK ACRL 60.00     SK USED MTD 0.00         
+RAPID SAVED 937.09                                              
+RAPID REACCRUAL IN EFFECT                                       
+ DD ST RMV ADD SEQ    FLT    FLT   SKED  STTL   ACT  GRTR  GTTL 
+ 31  1         48     0000                                      
+ 01  1         48            2400                               
+ 02  1 VC      DO                                               
+ 03T 1 VC      15113 -2371  -2211  5.50                         
+ 04W 1 VC            -1568  -1359  7.10                         
+ 05Q 1 VC            -1627  -2260  5.50                         
+ 06F 1 VC            -326   -1186  3.15 22.05             22.05 
+ 07  1 VC      DO                                             ¥ 
+ 08  1 VC      48     2359                                     ¥
+ 09  1         48                                               
+ 10  1         48            2359                               
+ 11W 1         15145 -2371  -2211  5.50                         
+ 12Q 1               -1568  -1359  7.10                         
+ 13F 1               -1627  -2260  5.50                         
+ 14J 1               -326   -1186  3.15 22.05                   
+              15145 EXP TAFB  73.55 PDX  2 FAT  3 RDU  2        
+ 14  1         48     1910                                      
+ 15  1         48                                               
+ 16  1         48            1910                               
+ 17T 1     OT  15100 -1450  -2259                               
+                     -1002         7.35                         
+ 18W 1     OT        -334   -1490  5.05                         
+ 19Q 1     OT        -138   -335   3.00 15.40                   
+              15100 EXP TAFB  52.00 CMH  4 MSP  2               
+ 20  1         DO                                               
+ 21J 1     SP  15014 -1686         4.05                         
+ 22S 1     SP        -1006  -1006  6.10                         
+ 23M 1     SP        -156          4.59 15.14                   
+              15014 EXP TAFB  53.20 LAX  2 LAX  3               
+ 23  1         48     1750                                      
+ 24  1         48                                              ¥
+ 25  1         48            1750                               
+ 26Q 1         14941 -365   -2427  5.10                         
+ 27F 1               -2224  -348   5.55                         
+ 28J 1               -1030         3.55 15.00                   
+              14941 EXP TAFB  43.29 LAS  2 LGA  2               
+ 28  1         48     1159                                      
+ 29  1         48                                               
+ 30  1         48            1159                               
+END OF DISPLAY                                                  

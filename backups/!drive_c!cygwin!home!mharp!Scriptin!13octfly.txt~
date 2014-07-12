@@ -1,0 +1,85 @@
+  SEQ DATE   TTOT STATUS   POSTED   DROP TYPE
+30097/04OCT     RED                           
+30097/11OCT     RED                           
+30065/17OCT     RED                           
+SEQ 30097       BASE SLT  SEL  143         DOM S80
+CAPT HARPSTER M             EMP NBR 680672                     
+    DT EQ  FLT STA DEP  M STA ARR  AC FLY    GTR  GRD     ACT
+SKD 04 EF 2371 STL 1815 D DFW 2005    1.50        0.55        
+SKD 04 EF 2211 DFW 2100   PDX 2300    4.00                    
+D/P SKD  5.50        P/C  0.00  TL  5.50
+HALF DAY COUNT PDX  2
+SKD ONDUTY  8.00 ODL  11.25
+SKD 05 EF 1568 PDX 1140 L DFW 1725    3.45        1.15        
+SKD 05 EF 1538 DFW 1840 D MCO 2215    2.35                    
+D/P SKD  6.20        P/C  0.00  TL  6.20
+HALF DAY COUNT MCO  3
+SKD ONDUTY  8.50 ODL  17.25
+SKD 06 EF 2290 MCO 1655 D DFW 1850    2.55        1.05        
+SKD 06 22 2260 DFW 1955   RDU 2330    2.35                    
+D/P SKD  5.30        P/C  0.00  TL  5.30
+HALF DAY COUNT RDU  2
+SKD ONDUTY  7.50 ODL  14.05
+SKD 07 22  326 RDU 1450   ORD 1555    2.05        2.45        
+SKD 07 22 1634 ORD 1840   STL 1950    1.10                    
+D/P SKD  3.15        P/C  0.27F TL  3.42
+SKD ONDUTY  7.15
+SEQ SKD 20.55        P/C  0.27  TL 21.22 TAFB  74.50
+
+same trip on the 11th
+
+MONTH ENDING 31OCT13 AS OF 28SEP13/2048          TT-YES    SC-Y
+HARPSTER MW         06008 680672 SLT  143-CA M83G
+                                        MMAX    90.00   WAV48-N
+H 845.290.1815                C 3147254990                 
+T 6195650058                 
+PROJ 57.44 GTD 0.00  PPROJ 75.14  SPROJ 57.44
+ORIG GUAR   0.00 ADJ GUAR   0.00 ADJ GUAR PENDING NO 
+D EXP 0.00   I EXP 0.00 MISC EXP 0.00     CPA 0.00 FTCPA  0.00
+RALS 0.00 MMBA 0.00 FLT TIME 0.00 YTD TTL 509.51
+ ACT/SKD PROJ 55.20 YTD 565.11
+CPA BORROWED TIME 0.00 BCPFU N  CPA PAYOUT TIME 0.00
+AVBL SK 725.34   YTD SK ACRL 60.00     SK USED MTD 0.00
+RAPID SAVED 937.09
+RAPID REACCRUAL IN EFFECT
+ DD ST RMV ADD SEQ    FLT    FLT   SKED  STTL   ACT  GRTR  GTTL
+ 01  1         72     0000
+ 02  1         72
+ 03  1         72            2400
+ 04F 1     OT  30097 -2371  -2211  5.50
+ 05J 1     OT        -1568  -1538  6.20
+ 06S 1     OT        -2290  -2260  5.30
+ 07M 1     OT        -326   -1634  3.42 21.22
+              30097 EXP TAFB  74.50 PDX  2 MCO  3 RDU  2      
+ 07  1         24     2005                                     
+ 08  1         24            2005
+ 09  1         DO  
+ 10  1         DO  
+ 11F 1     OT  30097 -2371  -2211  5.50
+ 12J 1     OT        -1568  -1538  6.20
+ 13S 1     OT        -2290  -2260  5.30
+ 14M 1     OT        -326   -1634  3.42 21.22
+              30097 EXP TAFB  74.50 PDX  2 MCO  3 RDU  2
+ 14  1         48     2005
+ 15  1         48
+ 16  1         48            2005
+ 17Q 1     OT  30065 -365   -2427  5.10
+ 18F 1     OT        -2224  -336   5.45
+ 19J 1     OT        -1170         4.05 15.00
+              30065 EXP TAFB  47.35 LAS  2 LGA  3
+ 19  1         48     1605
+ 20  1         48
+ 21  1         48            1605
+ 22  1         DO  
+ 23  1         DO  
+ 24  1         DO  
+ 25  1 2R      DO                                              
+ 26  1 2R      DO
+ 27S 1 2R      30156 -365   -2427  5.10
+ 28M 1 2R            -2224  -336   5.45
+ 29T 1 2R            -1170  -2414
+                     -2491         6.35 17.30              0.00
+ 29  1         48     2205
+ 30  1         48
+ 31  1         48            2205
+END OF DISPLAY

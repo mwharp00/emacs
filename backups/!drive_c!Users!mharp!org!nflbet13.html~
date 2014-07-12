@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Matt's Picks</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="title" content="Matt's Picks"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-09-09T11:31-0400"/>
+<meta name="author" content="Mark W. Harpster"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Matt's Picks</h1>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="right" /><col class="left" /><col class="right" /><col class="right" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Team</th><th scope="col" class="right">points</th><th scope="col" class="left">o/u</th><th scope="col" class="right">bet</th><th scope="col" class="right">pays</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">StL</td><td class="right">7.5</td><td class="left">o</td><td class="right">500</td><td class="right">-140</td></tr>
+<tr><td class="left">Ariz</td><td class="right">5.5</td><td class="left">o</td><td class="right">300</td><td class="right">-160</td></tr>
+<tr><td class="left">Clev</td><td class="right">6</td><td class="left">o</td><td class="right">200</td><td class="right">-175</td></tr>
+</tbody>
+</table>
+
+
+<p>  
+Mark's Picks
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="right" /><col class="left" /><col class="right" /><col class="right" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Team</th><th scope="col" class="right">points</th><th scope="col" class="left">o/u</th><th scope="col" class="right">bet</th><th scope="col" class="right">pays</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">Balt</td><td class="right">8.5</td><td class="left">o</td><td class="right">150</td><td class="right">120</td></tr>
+<tr><td class="left">Buff</td><td class="right">6.5</td><td class="left">u</td><td class="right">40</td><td class="right">-160</td></tr>
+<tr><td class="left">Caro</td><td class="right">7</td><td class="left">u</td><td class="right">100</td><td class="right">+160</td></tr>
+<tr><td class="left">Cinn</td><td class="right">8.5</td><td class="left">o</td><td class="right">20</td><td class="right">-160</td></tr>
+<tr><td class="left">NYJ</td><td class="right">6.5</td><td class="left">u</td><td class="right">40</td><td class="right">-200</td></tr>
+<tr><td class="left">SD</td><td class="right">7.5</td><td class="left">o</td><td class="right">100</td><td class="right">+110</td></tr>
+<tr><td class="left">SEA</td><td class="right">10.5</td><td class="left">u</td><td class="right">150</td><td class="right">+105</td></tr>
+<tr><td class="left">StL</td><td class="right">7.5</td><td class="left">o</td><td class="right">100</td><td class="right">-140</td></tr>
+<tr><td class="left">TB</td><td class="right">7.5</td><td class="left">o</td><td class="right">150</td><td class="right">-145</td></tr>
+<tr><td class="left">Wash</td><td class="right">8.5</td><td class="left">o</td><td class="right">150</td><td class="right">-105</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2013-09-09T11:31-0400</p>
+<p class="author">Author: Mark W. Harpster</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3d with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

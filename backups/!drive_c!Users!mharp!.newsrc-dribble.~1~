@@ -1,0 +1,3 @@
+(gnus-group-set-info '("gmane.emacs.planner.general" 3 ((925 . 927) 929 955 (1088 . 1089) 1091 (1102 . 1104) 1107 1114 1129 1231 1252 (1367 . 1375) (1379 . 1381) (1413 . 1418) (1421 . 1421)) ((seen (822 . 1421)))))
+(gnus-group-change-level "gwene.com.reddit.r.linux4noobs" 3 9 "gwene.com.reddit.r.linux" nil)
+(gnus-group-set-info '("gwene.com.reddit.r.linux4noobs" 3 nil))
